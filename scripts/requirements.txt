@@ -1,0 +1,2 @@
+# Reference-SVG generation for samples/ — see render_reference_svgs.py
+pyDEXPI==1.2.0

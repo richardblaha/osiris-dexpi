@@ -1,0 +1,9 @@
+Osiris DEXPI P&ID Editor
+Copyright (c) Richard Bláha
+
+This product bundles P&ID symbol stencils from draw.io / diagrams.net
+(https://github.com/jgraph/drawio), Copyright (c) JGraph Ltd, licensed under the
+Apache License, Version 2.0. The stencil XML files are used unmodified and live in
+src/maxgraph/stencils/vendor/ (see that directory's NOTICE.md for the exact
+upstream commit). A copy of the Apache License 2.0 is available at
+https://www.apache.org/licenses/LICENSE-2.0

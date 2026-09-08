@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="419.99999999999994" height="295.5180722891566" viewBox="0.0 -292.0 415.0 292.0">
+  <rect x="0.0" y="-292.0" width="419.99999999999994" height="295.5180722891566" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: Feed Water Preheating</metadata>
+  <g id="diagram-Feed Water Preheating" class="diagram" fill="rgb(255,255,255)">
+    <g class="border">
+      <polyline points="5.0,-5.0 415.0,-5.0 415.0,-292.0 5.0,-292.0 5.0,-5.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+    </g>
+    <g id="2d1800a2-2720-4bd0-953f-d8eaffd671fb" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="STORAGE_TANK_SHAPE" transform="translate(70.00,-100.00)">
+            <polyline points="-25.0,25.0 25.0,25.0 25.0,-25.0 -25.0,-25.0 -25.0,25.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g class="label">
+        <text x="70.0" y="-135.0" text-anchor="middle" dy="0.5em" font-family="'Calibri', Arial" font-size="4.0" fill="rgb(0,0,0)">TK-101</text>
+      </g>
+      <g id="f529fefa-4b80-41d4-ba34-d224d7f1a3eb" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="NOZZLE_SHAPE" transform="translate(100.00,-100.00)">
+              <polyline points="0.0,3.0 0.0,-3.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+        <g class="label" />
+        <g id="f529fefa-4b80-41d4-ba34-d224d7f1a3eb" class="representation-group" />
+      </g>
+    </g>
+    <g id="0040071d-cd1c-41e5-9f65-125b1387a650" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="CENTRIFUGAL_PUMP_SHAPE" transform="translate(185.00,-100.00)">
+            <polyline points="-10.0,-0.0 10.0,-0.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g class="label">
+        <text x="185.0" y="-120.0" text-anchor="middle" dy="0.5em" font-family="'Calibri', Arial" font-size="4.0" fill="rgb(0,0,0)">P-101A</text>
+      </g>
+      <g id="3b36773b-16f4-4e91-a4ca-51428c3a3df0" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="NOZZLE_SHAPE" transform="translate(175.00,-100.00)">
+              <polyline points="0.0,3.0 0.0,-3.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+        <g class="label" />
+        <g id="3b36773b-16f4-4e91-a4ca-51428c3a3df0" class="representation-group" />
+      </g>
+      <g id="97578c35-871c-490d-b5e2-aaab3e10f072" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="NOZZLE_SHAPE" transform="translate(195.00,-100.00)">
+              <polyline points="0.0,3.0 0.0,-3.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+        <g class="label" />
+        <g id="97578c35-871c-490d-b5e2-aaab3e10f072" class="representation-group" />
+      </g>
+    </g>
+    <g id="c93c98ba-2cb2-4e8b-b95e-eb3347b9caa9" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="PLATE_HEAT_EXCHANGER_SHAPE" transform="translate(300.00,-100.00)">
+            <polyline points="-15.0,20.0 15.0,20.0 15.0,-20.0 -15.0,-20.0 -15.0,20.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g class="label">
+        <text x="300.0" y="-125.0" text-anchor="middle" dy="0.5em" font-family="'Calibri', Arial" font-size="4.0" fill="rgb(0,0,0)">HEX-101</text>
+      </g>
+      <g id="1c7ec8a6-b428-4d69-bcb8-b9486d10c726" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="NOZZLE_SHAPE" transform="translate(285.00,-100.00)">
+              <polyline points="0.0,3.0 0.0,-3.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+        <g class="label" />
+        <g id="1c7ec8a6-b428-4d69-bcb8-b9486d10c726" class="representation-group" />
+      </g>
+      <g id="66f92740-800a-49da-953c-77cf3940c503" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="NOZZLE_SHAPE" transform="translate(315.00,-100.00)">
+              <polyline points="0.0,3.0 0.0,-3.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+        <g class="label" />
+        <g id="66f92740-800a-49da-953c-77cf3940c503" class="representation-group" />
+      </g>
+    </g>
+    <g id="8006e012-a1cd-4aa5-9344-3d0d1a461daa" class="representation-group">
+      <g id="436a7efd-be17-4ee4-8f19-141c6b7a1759" class="representation-group">
+        <g id="95c7c469-40a6-4fd6-b486-448380a30b82" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="GATE_VALVE_SHAPE" transform="translate(140.00,-100.00)" />
+            </g>
+          </g>
+          <g id="95c7c469-40a6-4fd6-b486-448380a30b82" class="representation-group" />
+        </g>
+        <g id="436a7efd-be17-4ee4-8f19-141c6b7a1759" class="representation-group">
+          <g class="static">
+            <polyline points="100.0,-100.0 140.0,-100.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="436a7efd-be17-4ee4-8f19-141c6b7a1759" class="representation-group">
+          <g class="static">
+            <polyline points="145.0,-100.0 175.0,-100.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="ff68d3a2-8742-415c-9306-c02c3b3a813a" class="representation-group">
+        <g id="ff68d3a2-8742-415c-9306-c02c3b3a813a" class="representation-group">
+          <g class="static">
+            <polyline points="195.0,-100.0 285.0,-100.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3d9d3aca-79ec-458f-8408-cb338ada96f3" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="INSTRUMENTATION_BUBBLE_SHAPE" transform="translate(235.00,-140.00)" />
+        </g>
+      </g>
+      <g class="label">
+        <text x="235.0" y="-140.0" text-anchor="middle" dy="0.5em" font-family="'Calibri', Arial" font-size="3.0" fill="rgb(0,0,0)">FT-101</text>
+      </g>
+    </g>
+  </g>
+</svg>

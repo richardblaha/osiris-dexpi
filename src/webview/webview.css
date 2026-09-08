@@ -1,0 +1,155 @@
+/* ============================================================================
+   OSIRIS DEXPI — Design canvas (100 % canvas, no chrome)
+   Professional monochrome P&ID rendering, theme-aware.
+   ========================================================================== */
+
+:root {
+  /* P&ID drawing tokens consumed by the maxGraph stylesheet (see canvas.ts). */
+  --pid-stroke: #1b1b1b;
+  --pid-fill: #ffffff;
+  --pid-font: #1b1b1b;
+  --pid-instrument-fill: #ffffff;
+  --pid-font-family: Helvetica, Arial, 'Segoe UI', sans-serif;
+
+  --canvas-bg: #ffffff;
+  --canvas-grid: rgba(0, 0, 0, 0.06);
+  --accent: #00f2fe;
+}
+
+body.vscode-dark,
+body.vscode-high-contrast {
+  --pid-stroke: #e6e6e6;
+  --pid-fill: #1e1e1e;
+  --pid-font: #e6e6e6;
+  --pid-instrument-fill: #1e1e1e;
+  --canvas-bg: #141414;
+  --canvas-grid: rgba(255, 255, 255, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--canvas-bg);
+  color: var(--pid-font);
+  font-family: var(--pid-font-family);
+  user-select: none;
+}
+
+.graph-canvas {
+  position: absolute;
+  inset: 0;
+  outline: none;
+  background-color: var(--canvas-bg);
+  background-image:
+    linear-gradient(var(--canvas-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--canvas-grid) 1px, transparent 1px);
+  background-size: 20px 20px;
+  cursor: default;
+}
+
+.graph-canvas.grid-hidden {
+  background-image: none;
+}
+
+/* ============================================================================
+   Canvas control overlay — zoom + grid. Container is click-through; only the
+   controls capture the pointer.
+   ========================================================================== */
+.canvas-overlay {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.canvas-overlay--top-right { top: 12px; right: 12px; align-items: flex-end; }
+.canvas-overlay--top-left { top: 12px; left: 12px; align-items: flex-start; }
+.canvas-overlay--bottom-right { bottom: 12px; right: 12px; align-items: flex-end; }
+.canvas-overlay--bottom-left { bottom: 12px; left: 12px; align-items: flex-start; }
+
+.canvas-overlay__group {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid var(--vscode-widget-border, var(--canvas-grid));
+  border-radius: 6px;
+  background: var(--vscode-editorWidget-background, var(--canvas-bg));
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  pointer-events: auto;
+}
+
+.canvas-overlay__btn,
+.canvas-overlay__zoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border: 0;
+  background: transparent;
+  color: var(--pid-font);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.canvas-overlay__btn:hover,
+.canvas-overlay__zoom:hover {
+  background: var(--vscode-toolbar-hoverBackground, rgba(127, 127, 127, 0.18));
+}
+
+.canvas-overlay__btn:focus-visible,
+.canvas-overlay__zoom:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.canvas-overlay__zoom {
+  min-width: 46px;
+  border-left: 1px solid var(--vscode-widget-border, var(--canvas-grid));
+  border-right: 1px solid var(--vscode-widget-border, var(--canvas-grid));
+  font-variant-numeric: tabular-nums;
+}
+
+.canvas-overlay__grid.is-off {
+  color: var(--vscode-descriptionForeground, #888);
+  opacity: 0.6;
+}
+
+/* ============================================================================
+   Level of detail — driven by LodController toggling a class on the root <svg>.
+   ========================================================================== */
+/* Ports/nozzles are hidden per-cell by LodController; shadows go here. */
+.lod-medium :is(g, path, rect, ellipse, polygon),
+.lod-low :is(g, path, rect, ellipse, polygon) {
+  filter: none !important;
+}
+
+/* Medium: keep only the primary component label (first text run per cell). */
+.lod-medium text + text {
+  display: none;
+}
+
+/* Low: macro view — drop all text, flatten line endings. */
+.lod-low text {
+  display: none !important;
+}
+
+.lod-low [marker-end],
+.lod-low [marker-start] {
+  marker-end: none !important;
+  marker-start: none !important;
+}

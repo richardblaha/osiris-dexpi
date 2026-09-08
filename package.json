@@ -1,0 +1,172 @@
+{
+  "name": "osiris-dexpi",
+  "displayName": "Osiris DEXPI P&ID Editor",
+  "description": "First-class DEXPI P&ID visual and XML editor with real-time bidirectional sync, Osiris theme, and embedded MCP server.",
+  "version": "0.1.0",
+  "publisher": "richardblaha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://git.k6labs.cz/richardblaha/osiris-dexpi.git"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "dexpi",
+    "pid",
+    "piping",
+    "instrumentation",
+    "maxgraph",
+    "osiris",
+    "mcp"
+  ],
+  "main": "./dist/extension.js",
+  "bin": {
+    "osiris-dexpi-mcp": "./dist/mcp.js"
+  },
+  "activationEvents": [
+    "onCustomEditor:osiris.dexpiEditor",
+    "onCommand:osiris-dexpi.openDesign",
+    "onCommand:osiris-dexpi.openSource",
+    "onCommand:osiris-dexpi.startMcpServer"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "osiris.dexpiEditor",
+        "displayName": "Osiris DEXPI Visual Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.dexpi"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "commands": [
+      {
+        "command": "osiris-dexpi.openDesign",
+        "title": "Open with DEXPI Design Editor",
+        "category": "Osiris DEXPI",
+        "icon": "$(type-hierarchy)"
+      },
+      {
+        "command": "osiris-dexpi.openSource",
+        "title": "Open Source (XML)",
+        "category": "Osiris DEXPI",
+        "icon": "$(code)"
+      },
+      {
+        "command": "osiris-dexpi.exportSvg",
+        "title": "Export Diagram as SVG",
+        "category": "Osiris DEXPI",
+        "icon": "$(export)"
+      },
+      {
+        "command": "osiris-dexpi.validate",
+        "title": "Validate DEXPI Schema & Topology",
+        "category": "Osiris DEXPI",
+        "icon": "$(check-all)"
+      },
+      {
+        "command": "osiris-dexpi.startMcpServer",
+        "title": "Start Embedded MCP Server",
+        "category": "Osiris DEXPI"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "osiris-dexpi.openDesign",
+          "when": "resourceExtname == .dexpi && activeCustomEditorId != osiris.dexpiEditor",
+          "group": "navigation@1"
+        },
+        {
+          "command": "osiris-dexpi.openSource",
+          "when": "activeCustomEditorId == osiris.dexpiEditor",
+          "group": "navigation@1"
+        },
+        {
+          "command": "osiris-dexpi.validate",
+          "when": "activeCustomEditorId == osiris.dexpiEditor",
+          "group": "navigation@2"
+        },
+        {
+          "command": "osiris-dexpi.exportSvg",
+          "when": "activeCustomEditorId == osiris.dexpiEditor",
+          "group": "navigation@3"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "osirisPid",
+          "title": "P&ID",
+          "icon": "media/pid-activitybar.svg"
+        }
+      ]
+    },
+    "views": {
+      "osirisPid": [
+        {
+          "id": "osiris.pidSymbols",
+          "name": "P&ID Symbols",
+          "type": "webview"
+        },
+        {
+          "id": "osiris.pidProperties",
+          "name": "Properties",
+          "type": "webview"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Osiris DEXPI",
+      "properties": {
+        "osirisDexpi.mcpPort": {
+          "type": "number",
+          "default": 45123,
+          "description": "Internal IPC port for the embedded MCP server to communicate with the active VS Code document buffer."
+        },
+        "osirisDexpi.autoValidateOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically run topological and schema validation when saving DEXPI files."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "compile": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch",
+    "build": "node esbuild.config.mjs --minify",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package": "vsce package --no-dependencies -o osiris-dexpi-$npm_package_version.vsix"
+  },
+  "dependencies": {
+    "@maxgraph/core": "^0.24.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "fast-xml-parser": "^4.5.1",
+    "rbush": "^4.0.1",
+    "ws": "^8.18.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/vscode": "^1.90.0",
+    "@types/ws": "^8.5.14",
+    "@vscode/vsce": "^3.9.2",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}
