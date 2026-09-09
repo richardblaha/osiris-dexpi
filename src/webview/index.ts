@@ -1,7 +1,7 @@
 import type { ExtensionToWebviewMessage } from '../common/types';
 import type { PidView } from '../model/view/projection';
 import { ThemeManager } from './theme';
-import { VisualCanvas } from './canvas';
+import { WebGpuVisualCanvas } from './webgpuCanvas';
 import { CanvasOverlay, OverlayPosition } from './overlay';
 
 declare function acquireVsCodeApi(): {
@@ -12,7 +12,7 @@ declare function acquireVsCodeApi(): {
 
 const vscode = acquireVsCodeApi();
 
-let canvas: VisualCanvas;
+let canvas: WebGpuVisualCanvas;
 
 interface WebviewState {
   gridVisible?: boolean;
@@ -27,7 +27,7 @@ function patchState(patch: WebviewState): void {
   vscode.setState({ ...readState(), ...patch });
 }
 
-function initWebview(): void {
+async function initWebview(): Promise<void> {
   ThemeManager.init();
 
   const graphContainer = document.getElementById('graph-container');
@@ -36,31 +36,39 @@ function initWebview(): void {
   const overlay = new CanvasOverlay(
     document.body,
     {
-      onZoomIn: () => canvas.zoomIn(),
-      onZoomOut: () => canvas.zoomOut(),
-      onZoomReset: () => canvas.zoomReset(),
-      onZoomFit: () => canvas.zoomFit(),
-      onToggleGrid: () => canvas.toggleGrid(),
+      onZoomIn: () => canvas?.zoomIn(),
+      onZoomOut: () => canvas?.zoomOut(),
+      onZoomReset: () => canvas?.zoomReset(),
+      onZoomFit: () => canvas?.zoomFit(),
+      onToggleGrid: () => canvas?.toggleGrid(),
     },
     { position: readState().overlayPosition ?? 'top-right' }
   );
 
-  canvas = new VisualCanvas(graphContainer, {
+  const callbacks = {
     onModelChanged: (view: PidView) => {
       vscode.postMessage({
         type: 'modelChanged',
         view,
       });
     },
-    onSelectionChanged: (selection) => {
+    onSelectionChanged: (selection: any) => {
       vscode.postMessage({ type: 'selectionChanged', selection });
     },
-    onGridChanged: (visible) => {
+    onGridChanged: (visible: boolean) => {
       patchState({ gridVisible: visible });
       overlay.setGridActive(visible);
     },
-    onZoomChanged: (scale) => overlay.setZoom(scale),
-  });
+    onZoomChanged: (scale: number) => overlay.setZoom(scale),
+  };
+
+  canvas = new WebGpuVisualCanvas(graphContainer, callbacks);
+  try {
+    await canvas.init();
+    console.log('[Osiris] High-performance WebGPU P&ID Engine initialized successfully.');
+  } catch (err) {
+    console.error('[Osiris] WebGPU initialization failed:', err);
+  }
 
   canvas.setGridVisible(readState().gridVisible ?? true);
   overlay.setZoom(canvas.getZoom());
@@ -101,4 +109,6 @@ function initWebview(): void {
   vscode.postMessage({ type: 'ready' });
 }
 
-window.addEventListener('DOMContentLoaded', initWebview);
+window.addEventListener('DOMContentLoaded', () => {
+  void initWebview();
+});

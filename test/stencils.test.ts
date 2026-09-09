@@ -1,7 +1,6 @@
 // @vitest-environment happy-dom
 import { describe, it, expect } from 'vitest';
-import { StencilShapeRegistry } from '@maxgraph/core';
-import { registerPidStencils, getStencilXml } from '../src/maxgraph/stencils/registry';
+import { registerPidStencils, getStencilXml, StencilShapeRegistry } from '../src/maxgraph/stencils/registry';
 import { SYMBOL_CATALOG, catalogStencilFor } from '../src/maxgraph/stencils/catalog';
 import { stencilToSvg } from '../src/maxgraph/stencils/thumbnail';
 

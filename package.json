@@ -153,7 +153,6 @@
     "package": "vsce package --no-dependencies -o osiris-dexpi-$npm_package_version.vsix"
   },
   "dependencies": {
-    "@maxgraph/core": "^0.24.0",
     "@modelcontextprotocol/sdk": "^1.30.0",
     "fast-xml-parser": "^4.5.1",
     "rbush": "^4.0.1",

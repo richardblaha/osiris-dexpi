@@ -34,7 +34,7 @@ const buildConfigs = [
     sourcemap: true,
     minify: isMinify,
   },
-  // 2. Design-canvas webview (browser IIFE, bundles @maxgraph/core + P&ID stencils)
+  // 2. Design-canvas webview (browser IIFE, WebGPU P&ID Engine + Stencils)
   {
     entryPoints: ['src/webview/index.ts'],
     bundle: true,
