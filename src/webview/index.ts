@@ -41,6 +41,16 @@ async function initWebview(): Promise<void> {
       onZoomReset: () => canvas?.zoomReset(),
       onZoomFit: () => canvas?.zoomFit(),
       onToggleGrid: () => canvas?.toggleGrid(),
+      onUndo: () => canvas?.undo(),
+      onRedo: () => canvas?.redo(),
+      onRotate: () => canvas?.rotateSelected(),
+      onMirror: () => canvas?.mirrorSelected(),
+      onReverseFlow: () => canvas?.reverseFlowSelected(),
+      onToggleLineMode: () => {
+        const next = canvas?.toggleLineMode();
+        if (next) overlay.setLineMode(next);
+      },
+      onDelete: () => canvas?.deleteSelected(),
     },
     { position: readState().overlayPosition ?? 'top-right' }
   );

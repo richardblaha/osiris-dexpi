@@ -124,7 +124,84 @@ export function createMcpServer(ipcPort: number = 45123): McpServer {
     }
   );
 
-  // Tool 5: validate_dexpi
+  // Tool 5: delete_element
+  server.tool(
+    'delete_element',
+    'Deletes an equipment node, inline valve/component, nozzle, or piping segment from the P&ID diagram.',
+    {
+      elementId: z.string().describe('ID of the equipment, valve, nozzle, or segment to delete (e.g. "P-101", "V-101", "SEG-001")'),
+      filePath: z.string().optional().describe('Path to target file. If omitted, applies to active VS Code buffer.'),
+    },
+    async (args) => {
+      try {
+        const result = await handler.deleteElement(args);
+        return {
+          content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
+        };
+      } catch (err: any) {
+        return {
+          isError: true,
+          content: [{ type: 'text', text: `Error deleting element: ${err.message}` }],
+        };
+      }
+    }
+  );
+
+  // Tool 6: reverse_piping_flow
+  server.tool(
+    'reverse_piping_flow',
+    'Reverses the flow direction (source <-> target) of a piping segment.',
+    {
+      segmentId: z.string().describe('ID of the piping network segment to reverse (e.g. "SEG-001")'),
+      filePath: z.string().optional().describe('Path to target file. If omitted, applies to active VS Code buffer.'),
+    },
+    async (args) => {
+      try {
+        const result = await handler.reversePipingFlow(args);
+        return {
+          content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
+        };
+      } catch (err: any) {
+        return {
+          isError: true,
+          content: [{ type: 'text', text: `Error reversing piping flow: ${err.message}` }],
+        };
+      }
+    }
+  );
+
+  // Tool 7: split_piping
+  server.tool(
+    'split_piping',
+    'Splits an existing pipeline segment by inserting an inline valve or piping component between two newly connected sub-segments.',
+    {
+      segmentId: z.string().describe('ID of the existing piping segment to split'),
+      valve: z
+        .object({
+          id: z.string().describe('Unique ID for the inserted valve (e.g. "V-105")'),
+          tagName: z.string().describe('Tag name for the valve (e.g. "V-105")'),
+          componentClass: z.string().describe('DEXPI ComponentClass (e.g. "GateValve", "ControlValve", "CheckValve")'),
+        })
+        .describe('Inline valve/component to place at the split point'),
+      newSegmentId: z.string().optional().describe('Optional ID for the new downstream segment'),
+      filePath: z.string().optional().describe('Path to target file. If omitted, applies to active VS Code buffer.'),
+    },
+    async (args) => {
+      try {
+        const result = await handler.splitPiping(args);
+        return {
+          content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
+        };
+      } catch (err: any) {
+        return {
+          isError: true,
+          content: [{ type: 'text', text: `Error splitting piping: ${err.message}` }],
+        };
+      }
+    }
+  );
+
+  // Tool 8: validate_dexpi
   server.tool(
     'validate_dexpi',
     'Runs complete DEXPI schema conformance and topological connectivity checks on the P&ID diagram.',

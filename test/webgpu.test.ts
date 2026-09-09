@@ -89,15 +89,18 @@ describe('WebGpuPidAdapter', () => {
     // Instances
     expect(pkg.instanceCount).toBe(2);
     expect(pkg.instances.byteLength).toBe(2 * SYMBOL_INSTANCE_BYTES);
+    expect(pkg.instanceBatches.length).toBe(2);
 
     const instU32 = new Uint32Array(pkg.instances.buffer);
 
-    // Node 0 (pump): Center should be (100 + 30, 200 + 20) = (130, 220)
-    expect(pkg.instances[3]).toBeCloseTo(130);
-    expect(pkg.instances[7]).toBeCloseTo(220);
+    // Node 0 (valve, symbolTypeId 0): Center (300 + 15, 200 + 15) = (315, 215), Mirrored flag bit 2
+    expect(pkg.instances[3]).toBeCloseTo(315);
+    expect(pkg.instances[7]).toBeCloseTo(215);
+    expect(instU32[0 * SYMBOL_INSTANCE_FLOATS + 17] & SYMBOL_FLAGS.MIRROR_X).toBeTruthy();
 
-    // Node 1 (valve): Mirrored flag bit 2
-    expect(instU32[1 * SYMBOL_INSTANCE_FLOATS + 17] & SYMBOL_FLAGS.MIRROR_X).toBeTruthy();
+    // Node 1 (pump, symbolTypeId 1): Center should be (100 + 30, 200 + 20) = (130, 220)
+    expect(pkg.instances[1 * SYMBOL_INSTANCE_FLOATS + 3]).toBeCloseTo(130);
+    expect(pkg.instances[1 * SYMBOL_INSTANCE_FLOATS + 7]).toBeCloseTo(220);
 
     // Edges
     // pipe_1 has src -> wp0 -> wp1 -> tgt = 3 segments

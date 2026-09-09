@@ -97,7 +97,69 @@ export class McpToolHandler {
   }
 
   /**
-   * Tool 5: validate_dexpi
+   * Tool 5: delete_element
+   */
+  public async deleteElement(params: {
+    filePath?: string;
+    elementId: string;
+  }): Promise<{ success: boolean; elementId: string; deletedType: string; message: string }> {
+    const isExtensionActive = await this.ipcClient.isExtensionRunning();
+    if (isExtensionActive && !params.filePath) {
+      return this.ipcClient.sendRequest('deleteElement', params as any);
+    }
+
+    const { service, source, filePath } = await this.getService(params.filePath);
+    const result = service.deleteElement(params.elementId);
+    await this.saveService(service, source, filePath);
+    return result;
+  }
+
+  /**
+   * Tool 6: reverse_piping_flow
+   */
+  public async reversePipingFlow(params: {
+    filePath?: string;
+    segmentId: string;
+  }): Promise<{ success: boolean; segmentId: string; newFrom: string; newTo: string; message: string }> {
+    const isExtensionActive = await this.ipcClient.isExtensionRunning();
+    if (isExtensionActive && !params.filePath) {
+      return this.ipcClient.sendRequest('reversePipingFlow', params as any);
+    }
+
+    const { service, source, filePath } = await this.getService(params.filePath);
+    const result = service.reversePipingFlow(params.segmentId);
+    await this.saveService(service, source, filePath);
+    return result;
+  }
+
+  /**
+   * Tool 7: split_piping
+   */
+  public async splitPiping(params: {
+    filePath?: string;
+    segmentId: string;
+    valve: { id: string; tagName: string; componentClass: string };
+    newSegmentId?: string;
+  }): Promise<{
+    success: boolean;
+    originalSegmentId: string;
+    newSegmentId: string;
+    valveId: string;
+    message: string;
+  }> {
+    const isExtensionActive = await this.ipcClient.isExtensionRunning();
+    if (isExtensionActive && !params.filePath) {
+      return this.ipcClient.sendRequest('splitPiping', params as any);
+    }
+
+    const { service, source, filePath } = await this.getService(params.filePath);
+    const result = service.splitPiping(params);
+    await this.saveService(service, source, filePath);
+    return result;
+  }
+
+  /**
+   * Tool 8: validate_dexpi
    */
   public async validateDexpi(params: { filePath?: string }): Promise<ValidationReport> {
     const isExtensionActive = await this.ipcClient.isExtensionRunning();

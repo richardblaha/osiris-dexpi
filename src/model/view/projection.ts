@@ -173,6 +173,27 @@ function flattenAttributes(obj: any): Record<string, string> {
   return result;
 }
 
+function extractRotation(item: any): number | undefined {
+  if (item?.attributes?.rotation) {
+    const val = parseFloat(item.attributes.rotation);
+    if (!isNaN(val)) return val;
+  }
+  if (item?.position?.reference) {
+    const rx = item.position.reference.x ?? 1;
+    const ry = item.position.reference.y ?? 0;
+    const deg = Math.round((Math.atan2(ry, rx) * 180) / Math.PI);
+    return (deg + 360) % 360;
+  }
+  return undefined;
+}
+
+function extractMirrored(item: any): boolean | undefined {
+  if (item?.attributes?.mirrored) {
+    return item.attributes.mirrored === 'true';
+  }
+  return undefined;
+}
+
 import { resolveIndex } from '../walk';
 
 export function projectToView(model: DexpiModel): PidView {
@@ -239,6 +260,8 @@ export function projectToView(model: DexpiModel): PidView {
       y,
       w: Math.round(w),
       h: Math.round(h),
+      rotation: extractRotation(eq),
+      mirrored: extractMirrored(eq),
       attributes: flattenAttributes(eq),
       sourcePath: ['conceptualModel', 'taggedPlantItems', eq.id],
     };
@@ -319,6 +342,8 @@ export function projectToView(model: DexpiModel): PidView {
           y: cy,
           w: Math.round(cw),
           h: Math.round(ch),
+          rotation: extractRotation(pComp),
+          mirrored: extractMirrored(pComp),
           attributes: flattenAttributes(pComp),
           sourcePath: ['conceptualModel', 'pipingNetworkSystems', pns.id, 'segments', seg.id, 'items', pComp.id],
         };

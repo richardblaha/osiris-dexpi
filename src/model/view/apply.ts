@@ -6,7 +6,7 @@
 
 import type { DexpiModel } from '../classes/dexpiModel';
 import type { Equipment } from '../classes/equipment';
-import type { PipingNetworkSystem, PipingNetworkSegment, Pipe } from '../classes/piping';
+import type { PipingNetworkSystem, PipingNetworkSegment, Pipe, PipingComponent } from '../classes/piping';
 import type { ProcessInstrumentationFunction } from '../classes/instrumentation';
 import type { PidView } from './projection';
 import { resolveIndex } from '../walk';
@@ -54,6 +54,20 @@ export function applyViewToModel(view: PidView, model: DexpiModel): DexpiModel {
         existing.position.location = { x: x_mm, y: y_mm, z: 0 };
       } else {
         existing.position = { location: { x: x_mm, y: y_mm, z: 0 } };
+      }
+
+      if (vNode.rotation !== undefined) {
+        const rad = (vNode.rotation * Math.PI) / 180;
+        const refX = Math.round(Math.cos(rad) * 1000) / 1000;
+        const refY = Math.round(Math.sin(rad) * 1000) / 1000;
+        existing.position.reference = { x: refX, y: refY, z: 0 };
+        existing.position.axis = { x: 0, y: 0, z: 1 };
+        existing.attributes = existing.attributes || {};
+        existing.attributes.rotation = String(vNode.rotation);
+      }
+      if (vNode.mirrored !== undefined) {
+        existing.attributes = existing.attributes || {};
+        existing.attributes.mirrored = String(vNode.mirrored);
       }
 
       if ('extent' in existing && existing.extent) {
@@ -106,6 +120,34 @@ export function applyViewToModel(view: PidView, model: DexpiModel): DexpiModel {
         );
         cm.processInstrumentationFunctions.push(newPif);
         idMap.set(newPif.id, newPif);
+      } else if (vNode.kind === 'pipingComponent') {
+        const halfW = vNode.w / scale / 2;
+        const halfH = vNode.h / scale / 2;
+        const newComp = make<PipingComponent>(vNode.dexpiClass || 'GateValve', {
+          id: vNode.id,
+          proteusId: vNode.id,
+          dexpiClass: vNode.dexpiClass || 'GateValve',
+          componentClassUri: vNode.componentClassUri || rdlUriForClass(vNode.dexpiClass),
+          tagName: vNode.tagName || vNode.id,
+          position: { location: { x: x_mm, y: y_mm, z: 0 } },
+          extent: {
+            min: { x: x_mm - halfW, y: y_mm - halfH },
+            max: { x: x_mm + halfW, y: y_mm + halfH },
+          },
+        });
+        if (!defaultPns.segments[0]) {
+          defaultPns.segments.push(
+            make<PipingNetworkSegment>('PipingNetworkSegment', {
+              id: `seg_${Date.now()}`,
+              items: [newComp],
+              connections: [],
+            })
+          );
+        } else {
+          defaultPns.segments[0].items = defaultPns.segments[0].items || [];
+          defaultPns.segments[0].items.push(newComp);
+        }
+        idMap.set(newComp.id, newComp);
       }
     }
   }
@@ -176,6 +218,28 @@ export function applyViewToModel(view: PidView, model: DexpiModel): DexpiModel {
     pns.segments = pns.segments.filter((seg) => {
       return viewedEdgeIds.has(seg.id) || viewedEdgeIds.has(`${seg.id}-edge`);
     });
+  }
+
+  // 4. Remove deleted nodes from conceptual model
+  cm.taggedPlantItems = cm.taggedPlantItems.filter((item) => {
+    const id = item.proteusId || item.id;
+    return viewedNodeIds.has(id) || viewedNodeIds.has(item.id);
+  });
+
+  cm.processInstrumentationFunctions = cm.processInstrumentationFunctions.filter((pif) => {
+    const id = pif.proteusId || pif.id;
+    return viewedNodeIds.has(id) || viewedNodeIds.has(pif.id);
+  });
+
+  for (const pns of cm.pipingNetworkSystems) {
+    for (const seg of pns.segments) {
+      if (seg.items) {
+        seg.items = seg.items.filter((comp) => {
+          const id = comp.proteusId || comp.id;
+          return viewedNodeIds.has(id) || viewedNodeIds.has(comp.id);
+        });
+      }
+    }
   }
 
   return model;

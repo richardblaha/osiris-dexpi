@@ -68,6 +68,9 @@ export interface McpIpcRequest {
     | 'addEquipment'
     | 'connectPiping'
     | 'updateAttributes'
+    | 'deleteElement'
+    | 'reversePipingFlow'
+    | 'splitPiping'
     | 'validateDexpi';
   params?: Record<string, unknown>;
 }

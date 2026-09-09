@@ -175,8 +175,6 @@ export function buildPipingNetworkSegmentNode(
         if (matchingComp && 'nodes' in matchingComp) {
           children.push(buildPipingComponentNode(matchingComp as PipingComponent));
           emittedItemIds.add(matchingComp.id);
-        } else {
-          children.push(child);
         }
       } else if (child.tag === 'PipeOffPageConnector') {
         const childId = child.attrs.ID;
@@ -186,8 +184,6 @@ export function buildPipingNetworkSegmentNode(
         if (matchingOpc) {
           children.push(buildPipeOffPageConnectorNode(matchingOpc as PipeOffPageConnector));
           emittedItemIds.add(matchingOpc.id);
-        } else {
-          children.push(child);
         }
       } else if (child.tag === 'CenterLine') {
         const pipe = pipes[pipeIndex++];
@@ -206,6 +202,23 @@ export function buildPipingNetworkSegmentNode(
         );
       } else {
         children.push(child);
+      }
+    }
+
+    // Any newly added items in seg.items not present in original extra
+    if (seg.items) {
+      for (const item of seg.items) {
+        if (!emittedItemIds.has(item.id)) {
+          if (
+            item.dexpiClass === 'PipeOffPageConnector' ||
+            (item as any).ComponentClass?.includes('OffPageConnector')
+          ) {
+            children.push(buildPipeOffPageConnectorNode(item as PipeOffPageConnector));
+          } else {
+            children.push(buildPipingComponentNode(item as PipingComponent));
+          }
+          emittedItemIds.add(item.id);
+        }
       }
     }
   } else {
@@ -288,8 +301,6 @@ export function buildPipingNetworkSystemNode(
         if (matchingSeg) {
           children.push(buildPipingNetworkSegmentNode(matchingSeg, objectMap));
           emittedSegIds.add(matchingSeg.id);
-        } else {
-          children.push(child);
         }
       } else {
         children.push(child);

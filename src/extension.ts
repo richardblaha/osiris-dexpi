@@ -182,6 +182,24 @@ function startIpcBridge(context: vscode.ExtensionContext): void {
             break;
           }
 
+          case 'deleteElement': {
+            resultData = service.deleteElement((payload.params as any).elementId);
+            await applyDocumentEdit(activeDoc, service.toXml());
+            break;
+          }
+
+          case 'reversePipingFlow': {
+            resultData = service.reversePipingFlow((payload.params as any).segmentId);
+            await applyDocumentEdit(activeDoc, service.toXml());
+            break;
+          }
+
+          case 'splitPiping': {
+            resultData = service.splitPiping(payload.params as any);
+            await applyDocumentEdit(activeDoc, service.toXml());
+            break;
+          }
+
           case 'validateDexpi': {
             resultData = service.validate();
             break;

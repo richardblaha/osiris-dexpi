@@ -57,10 +57,11 @@ export class WebGpuPidEngine {
   private dummyAtlasTexture!: GPUTexture;
   private atlasSampler!: GPUSampler;
 
-  // Counts for rendering
+  // Counts and batches for rendering
   private activeInstanceCount = 0;
   private activeLineCount = 0;
   private activeGlyphCount = 0;
+  private instanceBatches: Array<{ symbolTypeId: number; firstInstance: number; count: number }> = [];
 
   // Render loop control
   private animationFrameId: number | null = null;
@@ -123,29 +124,121 @@ export class WebGpuPidEngine {
   }
 
   private setupMasterStencilMeshes(): void {
-    // Combine basic stencils into a master vertex & index buffer:
-    // 0: Valve (two opposing triangles)
-    // 1: Instrument (circle / octagon)
-    const vertices: number[] = [
-      // 0: Valve: 5 vertices (pos.x, pos.y, is_stroke)
-      -0.5, -0.3, 1.0,
-       0.5, -0.3, 1.0,
-       0.0,  0.0, 1.0,
-       0.5,  0.3, 1.0,
-      -0.5,  0.3, 1.0,
-    ];
-    const indices: number[] = [
-      0, 1, 2, // left wing
-      2, 3, 4, // right wing
-    ];
+    const vertices: number[] = [];
+    const indices: number[] = [];
 
-    this.stencilSlices.set(0, {
-      symbolTypeId: 0,
-      name: 'valve',
-      firstIndex: 0,
-      indexCount: 6,
-      baseVertex: 0,
-    });
+    const addSlice = (typeId: number, name: string, verts: number[], idxs: number[]) => {
+      const baseVertex = vertices.length / 3;
+      const firstIndex = indices.length;
+      for (const v of verts) vertices.push(v);
+      for (const i of idxs) indices.push(i);
+      this.stencilSlices.set(typeId, {
+        symbolTypeId: typeId,
+        name,
+        firstIndex,
+        indexCount: idxs.length,
+        baseVertex,
+      });
+    };
+
+    // 0: Valve (two opposing triangles)
+    addSlice(
+      0,
+      'valve',
+      [
+        -0.5, -0.3, 1.0,
+         0.5, -0.3, 1.0,
+         0.0,  0.0, 1.0,
+         0.5,  0.3, 1.0,
+        -0.5,  0.3, 1.0,
+      ],
+      [0, 1, 2, 2, 3, 4]
+    );
+
+    // 1: Centrifugal Pump (circle + tangential nozzle)
+    const pumpVerts: number[] = [0, -0.05, 0.0];
+    const pumpIndices: number[] = [];
+    const pumpSteps = 8;
+    const pumpRadius = 0.35;
+    for (let i = 0; i < pumpSteps; i++) {
+      const angle = (i * 2 * Math.PI) / pumpSteps;
+      pumpVerts.push(Math.cos(angle) * pumpRadius, -0.05 + Math.sin(angle) * pumpRadius, 1.0);
+    }
+    for (let i = 0; i < pumpSteps; i++) {
+      pumpIndices.push(0, 1 + i, 1 + ((i + 1) % pumpSteps));
+    }
+    pumpVerts.push(0.35, -0.05, 1.0, 0.35, 0.45, 1.0, 0.15, 0.45, 1.0);
+    pumpIndices.push(9, 10, 11);
+    addSlice(1, 'pump', pumpVerts, pumpIndices);
+
+    // 2: Vessel / Tank (cylinder + top and bottom dished heads)
+    addSlice(
+      2,
+      'vessel',
+      [
+        -0.35, -0.35, 1.0,
+         0.35, -0.35, 1.0,
+         0.35,  0.35, 1.0,
+        -0.35,  0.35, 1.0,
+         0.0,   0.5,  1.0,
+         0.0,  -0.5,  1.0,
+      ],
+      [0, 1, 2, 2, 3, 0, 3, 2, 4, 0, 5, 1]
+    );
+
+    // 3: Process Instrument (circle bubble)
+    const instVerts: number[] = [0, 0, 0.0];
+    const instIndices: number[] = [];
+    const instSteps = 8;
+    for (let i = 0; i < instSteps; i++) {
+      const angle = (i * 2 * Math.PI) / instSteps;
+      instVerts.push(Math.cos(angle) * 0.45, Math.sin(angle) * 0.45, 1.0);
+    }
+    for (let i = 0; i < instSteps; i++) {
+      instIndices.push(0, 1 + i, 1 + ((i + 1) % instSteps));
+    }
+    addSlice(3, 'instrument', instVerts, instIndices);
+
+    // 4: Heat Exchanger
+    addSlice(
+      4,
+      'heatExchanger',
+      [
+        -0.45, -0.45, 1.0,
+         0.45, -0.45, 1.0,
+         0.45,  0.45, 1.0,
+        -0.45,  0.45, 1.0,
+        -0.4,   0.0,  1.0,
+         0.4,   0.0,  1.0,
+      ],
+      [0, 1, 2, 2, 3, 0, 4, 5, 2]
+    );
+
+    // 5: Compressor (trapezoid)
+    addSlice(
+      5,
+      'compressor',
+      [
+        -0.4, -0.4, 1.0,
+        -0.4,  0.4, 1.0,
+         0.4,  0.2, 1.0,
+         0.4, -0.2, 1.0,
+      ],
+      [0, 1, 2, 2, 3, 0]
+    );
+
+    // 6: Nozzle / Port (flange)
+    addSlice(
+      6,
+      'nozzle',
+      [
+        -0.2, -0.4, 1.0,
+         0.2, -0.4, 1.0,
+         0.2, -0.2, 1.0,
+        -0.2, -0.2, 1.0,
+      ],
+      [0, 1, 2, 2, 3, 0]
+    );
 
     const vArray = new Float32Array(vertices);
     const iArray = new Uint16Array(indices);
@@ -296,6 +389,7 @@ export class WebGpuPidEngine {
     this.activeInstanceCount = pkg.instanceCount;
     this.activeLineCount = pkg.lineCount;
     this.activeGlyphCount = pkg.glyphCount;
+    this.instanceBatches = pkg.instanceBatches || [];
 
     const instBuf = this.bufferManager.updateInstances(pkg.instances, pkg.instanceCount);
     const lineBuf = this.bufferManager.updateLines(pkg.lines, pkg.lineCount);
@@ -353,10 +447,12 @@ export class WebGpuPidEngine {
       viewportWidth, viewportHeight, zoom, 0.0,
     ]);
 
+    if (!this.device || !this.cameraUniformBuffer) return;
     this.device.queue.writeBuffer(this.cameraUniformBuffer, 0, uniformData);
   }
 
   public renderFrame(): void {
+    if (!this.device || !this.context) return;
     this.updateCameraUniforms();
 
     const commandEncoder = this.device.createCommandEncoder();
@@ -387,8 +483,21 @@ export class WebGpuPidEngine {
       renderPass.setVertexBuffer(0, this.stencilVertexBuffer);
       renderPass.setIndexBuffer(this.stencilIndexBuffer, 'uint16');
 
-      const slice = this.stencilSlices.get(0)!;
-      renderPass.drawIndexed(slice.indexCount, this.activeInstanceCount, slice.firstIndex, slice.baseVertex, 0);
+      if (this.instanceBatches.length > 0) {
+        for (const batch of this.instanceBatches) {
+          const slice = this.stencilSlices.get(batch.symbolTypeId) || this.stencilSlices.get(0)!;
+          renderPass.drawIndexed(
+            slice.indexCount,
+            batch.count,
+            slice.firstIndex,
+            slice.baseVertex,
+            batch.firstInstance
+          );
+        }
+      } else {
+        const slice = this.stencilSlices.get(0)!;
+        renderPass.drawIndexed(slice.indexCount, this.activeInstanceCount, slice.firstIndex, slice.baseVertex, 0);
+      }
     }
 
     // 3. Draw Text

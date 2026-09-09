@@ -2,7 +2,7 @@
  * WebGPU Adapter for PidView
  *
  * Translates the high-level topological/visual PidView model into flat binary GPU buffers
- * (SymbolInstance[], LineSegment[], TextGlyph[]).
+ * (SymbolInstance[], LineSegment[], TextGlyph[]) with multi-stencil bucketing.
  */
 
 import type { PidView, PidViewNode, PidViewEdge } from '../model/view/projection';
@@ -14,13 +14,34 @@ import {
   LINE_STYLE,
 } from './types';
 
+export interface InstanceBatch {
+  symbolTypeId: number;
+  firstInstance: number;
+  count: number;
+}
+
 export interface GpuBufferPackage {
   instances: Float32Array;
   instanceCount: number;
+  instanceBatches: InstanceBatch[];
   lines: Float32Array;
   lineCount: number;
   glyphs: Float32Array;
   glyphCount: number;
+}
+
+export function resolveSymbolTypeId(node: PidViewNode): number {
+  const cls = (node.dexpiClass || '').toLowerCase();
+  const kind = node.kind;
+
+  if (kind === 'nozzle') return 6; // Nozzle / port flange
+  if (cls.includes('pump')) return 1; // CentrifugalPump
+  if (cls.includes('vessel') || cls.includes('tank') || cls.includes('column') || cls.includes('reactor')) return 2; // Vessel
+  if (cls.includes('instrument') || cls.includes('indicator') || cls.includes('transmitter') || cls.includes('sensor') || kind === 'instrument') return 3; // Instrument
+  if (cls.includes('exchanger') || cls.includes('cooler') || cls.includes('heater') || cls.includes('condenser')) return 4; // HeatExchanger
+  if (cls.includes('compressor') || cls.includes('fan') || cls.includes('blower')) return 5; // Compressor
+  if (cls.includes('valve') || kind === 'pipingComponent' || kind === 'actuator') return 0; // Valve
+  return 0; // Default valve
 }
 
 export class WebGpuPidAdapter {
@@ -40,19 +61,38 @@ export class WebGpuPidAdapter {
    * Translates a PidView into a package of contiguous typed arrays ready for GPU upload.
    */
   public projectToGpuBuffers(view: PidView): GpuBufferPackage {
-    // 1. Process Nodes -> SymbolInstance[]
-    const nodes = view.nodes;
+    // 1. Sort nodes by symbolTypeId for bucketed instancing
+    const nodes = [...view.nodes].sort(
+      (a, b) => resolveSymbolTypeId(a) - resolveSymbolTypeId(b)
+    );
     const instanceCount = nodes.length;
     const instances = new Float32Array(instanceCount * SYMBOL_INSTANCE_FLOATS);
     const instanceUint32 = new Uint32Array(instances.buffer);
+
+    const instanceBatches: InstanceBatch[] = [];
+    let currentBatchType = -1;
+    let currentBatchStart = 0;
 
     for (let i = 0; i < instanceCount; i++) {
       const node = nodes[i];
       const offset = i * SYMBOL_INSTANCE_FLOATS;
       const eid = this.getEntityId(node.id);
+      const symbolTypeId = resolveSymbolTypeId(node);
+
+      // Batch tracking
+      if (symbolTypeId !== currentBatchType) {
+        if (currentBatchType !== -1) {
+          instanceBatches.push({
+            symbolTypeId: currentBatchType,
+            firstInstance: currentBatchStart,
+            count: i - currentBatchStart,
+          });
+        }
+        currentBatchType = symbolTypeId;
+        currentBatchStart = i;
+      }
 
       // 2D Affine Transformation (Scale & Translation)
-      // If rotation is present, construct rotation matrix: cos/sin
       let cos = 1.0;
       let sin = 0.0;
       if (node.rotation) {
@@ -112,7 +152,7 @@ export class WebGpuPidAdapter {
       }
 
       // Metadata
-      instanceUint32[offset + 16] = 0; // Stencil type 0 (default unit stencil)
+      instanceUint32[offset + 16] = symbolTypeId;
       let flags = 0;
       if (node.mirrored) flags |= SYMBOL_FLAGS.MIRROR_X;
       instanceUint32[offset + 17] = flags;
@@ -120,11 +160,18 @@ export class WebGpuPidAdapter {
       instances[offset + 19] = 0.0; // lod_min_zoom
     }
 
+    if (currentBatchType !== -1 && instanceCount > currentBatchStart) {
+      instanceBatches.push({
+        symbolTypeId: currentBatchType,
+        firstInstance: currentBatchStart,
+        count: instanceCount - currentBatchStart,
+      });
+    }
+
     // 2. Process Edges -> LineSegment[]
-    // Count total line segments from all edges with waypoints
     let totalSegments = 0;
     const nodeMap = new Map<string, PidViewNode>();
-    for (const n of nodes) nodeMap.set(n.id, n);
+    for (const n of view.nodes) nodeMap.set(n.id, n);
 
     for (const edge of view.edges) {
       const pts = this.collectEdgePoints(edge, nodeMap);
@@ -166,12 +213,11 @@ export class WebGpuPidAdapter {
         // _pad0
         lineUint32[offset + 7] = 0;
 
-        // color: Process lines white/cyan, signal lines dashed yellow
         if (isSignal) {
-          lines[offset + 8] = 0.95; // r
-          lines[offset + 9] = 0.85; // g
-          lines[offset + 10] = 0.2; // b
-          lines[offset + 11] = 1.0; // a
+          lines[offset + 8] = 0.95;
+          lines[offset + 9] = 0.85;
+          lines[offset + 10] = 0.2;
+          lines[offset + 11] = 1.0;
         } else {
           lines[offset + 8] = 0.85;
           lines[offset + 9] = 0.9;
@@ -184,14 +230,14 @@ export class WebGpuPidAdapter {
     }
 
     // 3. Process Labels -> TextGlyph[]
-    // For this prototype adapter, create text bounding quads for node tagNames
-    const glyphsCount = nodes.filter((n) => Boolean(n.tagName)).length;
+    const nodesWithTag = view.nodes.filter((n) => Boolean(n.tagName));
+    const glyphsCount = nodesWithTag.length;
     const glyphs = new Float32Array(glyphsCount * TEXT_GLYPH_FLOATS);
     const glyphsUint32 = new Uint32Array(glyphs.buffer);
     let glyphIndex = 0;
 
-    for (let i = 0; i < instanceCount; i++) {
-      const node = nodes[i];
+    for (let i = 0; i < view.nodes.length; i++) {
+      const node = view.nodes[i];
       if (!node.tagName) continue;
 
       const offset = glyphIndex * TEXT_GLYPH_FLOATS;
@@ -201,28 +247,24 @@ export class WebGpuPidAdapter {
       const labelW = node.tagName.length * fontSize * 0.6;
       const labelH = fontSize;
       const x0 = node.x + (node.w - labelW) * 0.5;
-      const y0 = node.y + node.h + 4; // Below component
+      const y0 = node.y + node.h + 4;
 
       glyphs[offset + 0] = x0;
       glyphs[offset + 1] = y0;
       glyphs[offset + 2] = x0 + labelW;
       glyphs[offset + 3] = y0 + labelH;
 
-      // UVs across atlas (placeholder full atlas)
       glyphs[offset + 4] = 0.0;
       glyphs[offset + 5] = 0.0;
       glyphs[offset + 6] = 1.0;
       glyphs[offset + 7] = 1.0;
 
-      // Color (subtle light gray)
       glyphs[offset + 8] = 0.9;
       glyphs[offset + 9] = 0.9;
       glyphs[offset + 10] = 0.95;
       glyphs[offset + 11] = 1.0;
 
-      // font_size
       glyphs[offset + 12] = fontSize;
-      // entity_id
       glyphsUint32[offset + 13] = eid;
       glyphsUint32[offset + 14] = 0;
       glyphsUint32[offset + 15] = 0;
@@ -233,6 +275,7 @@ export class WebGpuPidAdapter {
     return {
       instances,
       instanceCount,
+      instanceBatches,
       lines,
       lineCount: segmentIndex,
       glyphs,
@@ -265,4 +308,3 @@ export class WebGpuPidAdapter {
     return pts;
   }
 }
-

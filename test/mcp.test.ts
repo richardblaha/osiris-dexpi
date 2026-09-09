@@ -124,5 +124,75 @@ describe('MCP Tools (Standalone File Mode)', () => {
     expect(report.isValid).toBe(true);
     expect(report.summary.errorsCount).toBe(0);
   });
+
+  it('delete_element removes equipment and cleans up connected piping segments', async () => {
+    const beforeStructure = await handler.getPidStructure({ filePath: tempXmlPath });
+    expect(beforeStructure.plantModel.equipmentCount).toBe(3);
+
+    const deleteResult = await handler.deleteElement({
+      filePath: tempXmlPath,
+      elementId: 'HEX-101',
+    });
+
+    expect(deleteResult.success).toBe(true);
+    expect(deleteResult.deletedType).toBe('Equipment');
+
+    const afterStructure = await handler.getPidStructure({ filePath: tempXmlPath });
+    expect(afterStructure.plantModel.equipmentCount).toBe(2);
+    expect(afterStructure.equipment.find((e) => e.id === 'HEX-101')).toBeUndefined();
+  });
+
+  it('reverse_piping_flow swaps source and target items of a segment', async () => {
+    const before = await handler.getPidStructure({ filePath: tempXmlPath });
+    const seg = before.pipingSystems[0].segments[0];
+    const initialFrom = seg.connections[0].fromId;
+    const initialTo = seg.connections[0].toId;
+
+    const reverseResult = await handler.reversePipingFlow({
+      filePath: tempXmlPath,
+      segmentId: seg.id,
+    });
+
+    expect(reverseResult.success).toBe(true);
+    expect(reverseResult.newFrom).toBe(initialTo);
+    expect(reverseResult.newTo).toBe(initialFrom);
+
+    const after = await handler.getPidStructure({ filePath: tempXmlPath });
+    const updatedSeg = after.pipingSystems[0].segments.find((s) => s.id === seg.id);
+    expect(updatedSeg?.connections[0].fromId).toBe(initialTo);
+    expect(updatedSeg?.connections[0].toId).toBe(initialFrom);
+  });
+
+  it('split_piping inserts inline valve and creates two connected segments', async () => {
+    const before = await handler.getPidStructure({ filePath: tempXmlPath });
+    const targetSegId = before.pipingSystems[0].segments[0].id;
+
+    const splitResult = await handler.splitPiping({
+      filePath: tempXmlPath,
+      segmentId: targetSegId,
+      valve: {
+        id: 'V-SPLIT-1',
+        tagName: 'V-105',
+        componentClass: 'GateValve',
+      },
+      newSegmentId: `${targetSegId}-DOWNSTREAM`,
+    });
+
+    expect(splitResult.success).toBe(true);
+    expect(splitResult.valveId).toBe('V-SPLIT-1');
+    expect(splitResult.newSegmentId).toBe(`${targetSegId}-DOWNSTREAM`);
+
+    const after = await handler.getPidStructure({ filePath: tempXmlPath });
+    const segments = after.pipingSystems[0].segments;
+    expect(segments.length).toBe(before.pipingSystems[0].segments.length + 1);
+
+    const segA = segments.find((s) => s.id === targetSegId);
+    const segB = segments.find((s) => s.id === `${targetSegId}-DOWNSTREAM`);
+
+    expect(segA).toBeDefined();
+    expect(segB).toBeDefined();
+    expect(segA?.connections[0].toId).toBe('V-SPLIT-1');
+    expect(segB?.connections[0].fromId).toBe('V-SPLIT-1');
+  });
 });
 

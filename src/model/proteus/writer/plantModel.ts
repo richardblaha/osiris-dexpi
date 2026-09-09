@@ -101,8 +101,6 @@ export function buildPlantModelNode(model: DexpiModel): RawNode {
         if (matchingEq) {
           children.push(buildEquipmentNode(matchingEq as Equipment));
           emittedEqIds.add(matchingEq.id);
-        } else {
-          children.push(child);
         }
       } else if (child.tag === 'PipingNetworkSystem') {
         const childId = child.attrs.ID;
@@ -112,8 +110,6 @@ export function buildPlantModelNode(model: DexpiModel): RawNode {
         if (matchingPns) {
           children.push(buildPipingNetworkSystemNode(matchingPns, objectMap));
           emittedPnsIds.add(matchingPns.id);
-        } else {
-          children.push(child);
         }
       } else if (child.tag === 'ActuatingSystem') {
         const childId = child.attrs.ID;
@@ -123,8 +119,6 @@ export function buildPlantModelNode(model: DexpiModel): RawNode {
         if (matchingAct) {
           children.push(buildActuatingSystemNode(matchingAct));
           emittedActIds.add(matchingAct.id);
-        } else {
-          children.push(child);
         }
       } else if (child.tag === 'ProcessInstrumentationFunction') {
         const childId = child.attrs.ID;
@@ -134,8 +128,6 @@ export function buildPlantModelNode(model: DexpiModel): RawNode {
         if (matchingPif) {
           children.push(buildProcessInstrumentationFunctionNode(matchingPif, objectMap));
           emittedPifIds.add(matchingPif.id);
-        } else {
-          children.push(child);
         }
       } else if (child.tag === 'InstrumentationLoopFunction') {
         const childId = child.attrs.ID;
@@ -145,8 +137,6 @@ export function buildPlantModelNode(model: DexpiModel): RawNode {
         if (matchingIlf) {
           children.push(buildInstrumentationLoopFunctionNode(matchingIlf, objectMap));
           emittedIlfIds.add(matchingIlf.id);
-        } else {
-          children.push(child);
         }
       } else if (child.tag === 'Drawing') {
         if (model.diagram) {

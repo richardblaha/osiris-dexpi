@@ -17,6 +17,13 @@ export interface CanvasOverlayHandlers {
   /** Double click on the percentage — fit the diagram to the viewport. */
   onZoomFit(): void;
   onToggleGrid(): void;
+  onUndo?(): void;
+  onRedo?(): void;
+  onRotate?(): void;
+  onMirror?(): void;
+  onReverseFlow?(): void;
+  onToggleLineMode?(): void;
+  onDelete?(): void;
 }
 
 const POSITION_CLASS: Record<OverlayPosition, string> = {
@@ -40,6 +47,7 @@ export class CanvasOverlay {
   public readonly element: HTMLDivElement;
   private readonly zoomLabel?: HTMLButtonElement;
   private readonly gridButton?: HTMLButtonElement;
+  private lineModeButton?: HTMLButtonElement;
 
   constructor(
     parent: HTMLElement,
@@ -51,6 +59,7 @@ export class CanvasOverlay {
     this.element = document.createElement('div');
     this.element.className = `canvas-overlay ${POSITION_CLASS[position]}`;
 
+    // 1. Navigation & Zoom Group
     if (showZoom) {
       const group = document.createElement('div');
       group.className = 'canvas-overlay__group';
@@ -73,6 +82,41 @@ export class CanvasOverlay {
       this.zoomLabel = label;
     }
 
+    // 2. CAD Actions Group (Undo, Redo, Rotate, Mirror, Flow, LineMode, Delete)
+    if (handlers.onUndo || handlers.onRotate || handlers.onDelete) {
+      const cadGroup = document.createElement('div');
+      cadGroup.className = 'canvas-overlay__group';
+
+      if (handlers.onUndo) {
+        cadGroup.appendChild(makeButton('↶', 'Undo (Ctrl+Z)', () => handlers.onUndo?.()));
+      }
+      if (handlers.onRedo) {
+        cadGroup.appendChild(makeButton('↷', 'Redo (Ctrl+Y)', () => handlers.onRedo?.()));
+      }
+      if (handlers.onRotate) {
+        cadGroup.appendChild(makeButton('↻', 'Rotate 90° (R)', () => handlers.onRotate?.()));
+      }
+      if (handlers.onMirror) {
+        cadGroup.appendChild(makeButton('⇄', 'Mirror (M)', () => handlers.onMirror?.()));
+      }
+      if (handlers.onReverseFlow) {
+        cadGroup.appendChild(makeButton('⇅', 'Reverse Flow (F)', () => handlers.onReverseFlow?.()));
+      }
+      if (handlers.onToggleLineMode) {
+        const lineBtn = makeButton('Pipe', 'Toggle Line Type (Pipe / Signal)', () => {
+          handlers.onToggleLineMode?.();
+        });
+        cadGroup.appendChild(lineBtn);
+        this.lineModeButton = lineBtn;
+      }
+      if (handlers.onDelete) {
+        cadGroup.appendChild(makeButton('✕', 'Delete Selected (Delete)', () => handlers.onDelete?.()));
+      }
+
+      this.element.append(cadGroup);
+    }
+
+    // 3. Grid Toggle Group
     if (showGrid) {
       const group = document.createElement('div');
       group.className = 'canvas-overlay__group';
@@ -95,6 +139,13 @@ export class CanvasOverlay {
   /** Reflects the live view scale (1 = 100 %). */
   public setZoom(scale: number): void {
     if (this.zoomLabel) this.zoomLabel.textContent = `${Math.round(scale * 100)}%`;
+  }
+
+  public setLineMode(kind: 'pipe' | 'signal'): void {
+    if (this.lineModeButton) {
+      this.lineModeButton.textContent = kind === 'pipe' ? 'Pipe' : 'Signal';
+      this.lineModeButton.title = `Current Mode: ${kind === 'pipe' ? 'Process Pipe' : 'Signal Line'} (Click to toggle)`;
+    }
   }
 
   public setGridActive(active: boolean): void {

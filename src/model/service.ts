@@ -503,6 +503,282 @@ export class DexpiModelService {
     };
   }
 
+  public deleteElement(elementId: string): {
+    success: boolean;
+    elementId: string;
+    deletedType: string;
+    message: string;
+  } {
+    const cm = this._model.conceptualModel;
+    if (!cm) throw new Error('ConceptualModel not found');
+
+    // 1. Check Equipment
+    const eqIdx = cm.taggedPlantItems.findIndex(
+      (e) => e.id === elementId || e.proteusId === elementId
+    );
+    if (eqIdx !== -1) {
+      const eq = cm.taggedPlantItems[eqIdx] as Equipment;
+      const nozzleIds = new Set<string>();
+      for (const n of eq.nozzles || []) {
+        if (n.id) nozzleIds.add(n.id);
+        if (n.proteusId) nozzleIds.add(n.proteusId);
+        for (const pn of n.nodes || []) {
+          if (pn.id) nozzleIds.add(pn.id);
+          if (pn.proteusId) nozzleIds.add(pn.proteusId);
+        }
+      }
+
+      cm.taggedPlantItems.splice(eqIdx, 1);
+
+      // Clean up connected piping segments
+      for (const pns of cm.pipingNetworkSystems || []) {
+        if (!pns.segments) continue;
+        pns.segments = pns.segments.filter((seg) => {
+          const connects =
+            seg.sourceItem === elementId ||
+            seg.targetItem === elementId ||
+            (seg.sourceItem && nozzleIds.has(seg.sourceItem)) ||
+            (seg.targetItem && nozzleIds.has(seg.targetItem));
+          return !connects;
+        });
+      }
+
+      return {
+        success: true,
+        elementId,
+        deletedType: 'Equipment',
+        message: `Deleted equipment "${elementId}" and removed connected piping references`,
+      };
+    }
+
+    // 2. Check Process Instrumentation Functions
+    const pifIdx = (cm.processInstrumentationFunctions || []).findIndex(
+      (p) => p.id === elementId || p.proteusId === elementId
+    );
+    if (pifIdx !== -1) {
+      cm.processInstrumentationFunctions.splice(pifIdx, 1);
+      for (const loop of cm.instrumentationLoopFunctions || []) {
+        if (loop.processInstrumentationFunctions) {
+          loop.processInstrumentationFunctions = loop.processInstrumentationFunctions.filter(
+            (memId) => memId !== elementId
+          );
+        }
+      }
+      return {
+        success: true,
+        elementId,
+        deletedType: 'ProcessInstrumentationFunction',
+        message: `Deleted instrument "${elementId}"`,
+      };
+    }
+
+    // 3. Check Piping Segments and Inline Piping Components
+    for (const pns of cm.pipingNetworkSystems || []) {
+      if (!pns.segments) continue;
+
+      const segIdx = pns.segments.findIndex(
+        (s) => s.id === elementId || s.proteusId === elementId
+      );
+      if (segIdx !== -1) {
+        pns.segments.splice(segIdx, 1);
+        return {
+          success: true,
+          elementId,
+          deletedType: 'PipingNetworkSegment',
+          message: `Deleted piping segment "${elementId}"`,
+        };
+      }
+
+      for (const seg of pns.segments) {
+        if (!seg.items) continue;
+        const itemIdx = seg.items.findIndex(
+          (it) => it.id === elementId || it.proteusId === elementId
+        );
+        if (itemIdx !== -1) {
+          seg.items.splice(itemIdx, 1);
+          return {
+            success: true,
+            elementId,
+            deletedType: 'PipingComponent',
+            message: `Deleted piping component "${elementId}" from segment "${seg.id}"`,
+          };
+        }
+      }
+    }
+
+    // 4. Check Nozzles on Equipment
+    for (const item of cm.taggedPlantItems) {
+      const eq = item as Equipment;
+      if (!eq.nozzles) continue;
+      const nozIdx = eq.nozzles.findIndex(
+        (n) => n.id === elementId || n.proteusId === elementId
+      );
+      if (nozIdx !== -1) {
+        eq.nozzles.splice(nozIdx, 1);
+        return {
+          success: true,
+          elementId,
+          deletedType: 'Nozzle',
+          message: `Deleted nozzle "${elementId}" from equipment "${eq.id}"`,
+        };
+      }
+    }
+
+    throw new Error(`Element with ID "${elementId}" not found in model`);
+  }
+
+  public reversePipingFlow(segmentId: string): {
+    success: boolean;
+    segmentId: string;
+    newFrom: string;
+    newTo: string;
+    message: string;
+  } {
+    const cm = this._model.conceptualModel;
+    if (!cm) throw new Error('ConceptualModel not found');
+
+    let targetSeg: PipingNetworkSegment | undefined;
+    for (const pns of cm.pipingNetworkSystems || []) {
+      const seg = pns.segments?.find((s) => s.id === segmentId || s.proteusId === segmentId);
+      if (seg) {
+        targetSeg = seg;
+        break;
+      }
+    }
+
+    if (!targetSeg) {
+      throw new Error(`Piping segment with ID "${segmentId}" not found in model`);
+    }
+
+    const prevSource = targetSeg.sourceItem;
+    const prevSourceNode = targetSeg.sourceNode;
+    targetSeg.sourceItem = targetSeg.targetItem;
+    targetSeg.sourceNode = targetSeg.targetNode;
+    targetSeg.targetItem = prevSource;
+    targetSeg.targetNode = prevSourceNode;
+
+    if (targetSeg.items && targetSeg.items.length > 1) {
+      targetSeg.items.reverse();
+    }
+    if (targetSeg.connections && targetSeg.connections.length > 1) {
+      targetSeg.connections.reverse();
+    }
+
+    const index = resolveIndex(this._model);
+    const objectMap = new Map<string, any>();
+    for (const [id, entry] of index.entries()) {
+      objectMap.set(id, entry.obj);
+      if (entry.obj.proteusId) {
+        objectMap.set(entry.obj.proteusId, entry.obj);
+      }
+    }
+    const resolveProteusId = (itemId?: string): string => {
+      if (!itemId) return '';
+      const obj = objectMap.get(itemId);
+      return obj?.proteusId || obj?.id || itemId;
+    };
+
+    const resolvedFrom = resolveProteusId(targetSeg.sourceItem);
+    const resolvedTo = resolveProteusId(targetSeg.targetItem);
+
+    return {
+      success: true,
+      segmentId,
+      newFrom: resolvedFrom,
+      newTo: resolvedTo,
+      message: `Reversed flow for segment "${segmentId}" (now ${resolvedFrom} -> ${resolvedTo})`,
+    };
+  }
+
+  public splitPiping(params: {
+    segmentId: string;
+    valve: { id: string; tagName: string; componentClass: string };
+    newSegmentId?: string;
+  }): {
+    success: boolean;
+    originalSegmentId: string;
+    newSegmentId: string;
+    valveId: string;
+    message: string;
+  } {
+    const cm = this._model.conceptualModel;
+    if (!cm) throw new Error('ConceptualModel not found');
+
+    let targetSeg: PipingNetworkSegment | undefined;
+    let targetSystem: PipingNetworkSystem | undefined;
+
+    for (const pns of cm.pipingNetworkSystems || []) {
+      const seg = pns.segments?.find((s) => s.id === params.segmentId || s.proteusId === params.segmentId);
+      if (seg) {
+        targetSeg = seg;
+        targetSystem = pns;
+        break;
+      }
+    }
+
+    if (!targetSeg || !targetSystem) {
+      throw new Error(`Piping segment with ID "${params.segmentId}" not found in model`);
+    }
+
+    const originalTargetItem = targetSeg.targetItem;
+    const originalTargetNode = targetSeg.targetNode;
+
+    const valveNode1Id = `${params.valve.id}-Node-1`;
+    const valveNode2Id = `${params.valve.id}-Node-2`;
+
+    const valveComp = make<PipingComponent>(params.valve.componentClass, {
+      id: params.valve.id,
+      proteusId: params.valve.id,
+      tagName: params.valve.tagName,
+      dexpiClass: params.valve.componentClass,
+      componentClassUri: rdlUriForClass(params.valve.componentClass),
+      nodes: [
+        make<PipingNode>('PipingNode', {
+          id: valveNode1Id,
+          proteusId: valveNode1Id,
+          nodeType: 'process',
+        }),
+        make<PipingNode>('PipingNode', {
+          id: valveNode2Id,
+          proteusId: valveNode2Id,
+          nodeType: 'process',
+        }),
+      ],
+    });
+
+    targetSeg.targetItem = params.valve.id;
+    targetSeg.targetNode = valveNode1Id;
+    if (!targetSeg.items) targetSeg.items = [];
+    targetSeg.items.push(valveComp);
+
+    const newSegId = params.newSegmentId || `${params.segmentId}-B`;
+    const pipe = make<Pipe>('Pipe');
+
+    const newSeg = make<PipingNetworkSegment>('PipingNetworkSegment', {
+      id: newSegId,
+      proteusId: newSegId,
+      dexpiClass: 'PipingNetworkSegment',
+      fluidCode: targetSeg.fluidCode,
+      nominalDiameterRepresentation: targetSeg.nominalDiameterRepresentation,
+      sourceItem: params.valve.id,
+      sourceNode: valveNode2Id,
+      targetItem: originalTargetItem,
+      targetNode: originalTargetNode,
+      items: [],
+      connections: [pipe],
+    });
+
+    targetSystem.segments.push(newSeg);
+
+    return {
+      success: true,
+      originalSegmentId: params.segmentId,
+      newSegmentId: newSegId,
+      valveId: params.valve.id,
+      message: `Split segment "${params.segmentId}" at valve "${params.valve.tagName}" (${params.valve.id})`,
+    };
+  }
+
   public validate(): ValidationReport {
     return this.validator.validate(this._model);
   }
