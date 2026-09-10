@@ -15,6 +15,7 @@
  */
 import { buildCorpus, loadCorpus, writeCorpus } from './corpus.js';
 import { renderReferences } from './render-reference.js';
+import { renderOurs } from './render-ours.js';
 
 function parseArgs(argv: string[]): { cmd: string; only?: string; flags: Set<string> } {
   const [cmd = 'run', ...rest] = argv;
@@ -50,6 +51,16 @@ async function cmdReference(only?: string): Promise<void> {
   console.log(`  official svg : ${official}`);
 }
 
+async function cmdOurs(only?: string): Promise<void> {
+  const m = renderOurs(only);
+  console.log('ours (headless ProteusReader → projectToView → exportPidViewToSvg):');
+  console.log(`  rendered : ${m.counts.ok}`);
+  console.log(`  errors   : ${m.counts.error}`);
+  for (const e of m.entries.filter((x) => x.status === 'error').slice(0, 10)) {
+    console.log(`    ✗ ${e.id}: ${e.reason}`);
+  }
+}
+
 async function notImplemented(name: string): Promise<void> {
   console.error(`\`${name}\` is not implemented yet (Phase 2, in progress).`);
   process.exitCode = 2;
@@ -63,7 +74,7 @@ async function main(): Promise<void> {
     case 'reference':
       return cmdReference(only);
     case 'ours':
-      return notImplemented('ours');
+      return cmdOurs(only);
     case 'diff':
       return notImplemented('diff');
     case 'report':
@@ -75,8 +86,8 @@ async function main(): Promise<void> {
     case 'run': {
       await cmdCorpus();
       await cmdReference(only);
-      loadCorpus();
-      return notImplemented('run (ours/diff/report stages)');
+      await cmdOurs(only);
+      return notImplemented('run (diff/report stages)');
     }
     default:
       console.error(`unknown command: ${cmd}`);
