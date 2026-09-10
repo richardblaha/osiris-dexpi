@@ -14,4 +14,7 @@ export interface DexpiModel extends DexpiObject {
   originatingSystemName?: string;
   originatingSystemVendorName?: string;
   originatingSystemVersion?: string;
+  /** Raw `PlantInformation/@Units` value ("mm", "Metre", "m", …). Coordinates in
+   *  the Proteus file are expressed in this unit; consumers normalise to mm. */
+  units?: string;
 }
