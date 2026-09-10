@@ -16,6 +16,8 @@
 import { buildCorpus, loadCorpus, writeCorpus } from './corpus.js';
 import { renderReferences } from './render-reference.js';
 import { renderOurs } from './render-ours.js';
+import { runDiff } from './structural-diff.js';
+import { dump } from './dump.js';
 
 function parseArgs(argv: string[]): { cmd: string; only?: string; flags: Set<string> } {
   const [cmd = 'run', ...rest] = argv;
@@ -61,6 +63,18 @@ async function cmdOurs(only?: string): Promise<void> {
   }
 }
 
+async function cmdDiff(only?: string): Promise<void> {
+  const r = runDiff(only);
+  const s = r.summary;
+  console.log('diff (structural):');
+  console.log(`  PASS ${s.pass}  WARN ${s.warn}  FAIL ${s.fail}  NO-REFERENCE ${s.noReference}  (of ${s.total})`);
+  console.log(`  mean structural score: ${(s.meanStructuralScore * 100).toFixed(1)}%`);
+  const cat: Record<string, number> = {};
+  for (const row of r.rows) for (const f of row.findings) cat[f.category] = (cat[f.category] || 0) + 1;
+  console.log('  findings by category:');
+  for (const [k, v] of Object.entries(cat).sort((a, b) => b[1] - a[1])) console.log(`    ${v.toString().padStart(4)}  ${k}`);
+}
+
 async function notImplemented(name: string): Promise<void> {
   console.error(`\`${name}\` is not implemented yet (Phase 2, in progress).`);
   process.exitCode = 2;
@@ -76,7 +90,9 @@ async function main(): Promise<void> {
     case 'ours':
       return cmdOurs(only);
     case 'diff':
-      return notImplemented('diff');
+      return cmdDiff(only);
+    case 'dump':
+      return void dump(process.argv.slice(3).find((a) => !a.startsWith('--')) || '');
     case 'report':
       return notImplemented('report');
     case 'symbol-matrix':
@@ -87,7 +103,8 @@ async function main(): Promise<void> {
       await cmdCorpus();
       await cmdReference(only);
       await cmdOurs(only);
-      return notImplemented('run (diff/report stages)');
+      await cmdDiff(only);
+      return notImplemented('run (report stage)');
     }
     default:
       console.error(`unknown command: ${cmd}`);
