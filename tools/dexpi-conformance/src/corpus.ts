@@ -108,6 +108,9 @@ export function buildCorpus(): CorpusManifest {
       if (ref.status === 'ok') {
         klass = 'proteus-graphics';
         reason = undefined;
+      } else if (/no <Drawing>|no geometry|carries no/i.test(ref.reason ?? '')) {
+        klass = 'semantic-only';
+        reason = ref.reason;
       } else {
         klass = 'unrenderable';
         reason = ref.reason ?? 'pyDEXPI wrapper could not render it';

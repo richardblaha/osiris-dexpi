@@ -14,6 +14,7 @@
  *   baseline       copy the current results.json to fixtures/baseline.json
  */
 import { buildCorpus, loadCorpus, writeCorpus } from './corpus.js';
+import { renderReferences } from './render-reference.js';
 
 function parseArgs(argv: string[]): { cmd: string; only?: string; flags: Set<string> } {
   const [cmd = 'run', ...rest] = argv;
@@ -38,18 +39,29 @@ async function cmdCorpus(): Promise<void> {
   console.log(`  with official .svg: ${official}`);
 }
 
+async function cmdReference(only?: string): Promise<void> {
+  const m = await renderReferences(only);
+  console.log(`reference (pyDEXPI ${m.pydexpiVersion}):`);
+  console.log(`  rendered     : ${m.counts.ok}`);
+  console.log(`  unrenderable : ${m.counts.unrenderable}`);
+  const withNotes = m.entries.filter((e) => e.notes.length).length;
+  const official = m.entries.filter((e) => e.officialSvg).length;
+  console.log(`  sanitised    : ${withNotes} (see reference-manifest.json notes)`);
+  console.log(`  official svg : ${official}`);
+}
+
 async function notImplemented(name: string): Promise<void> {
   console.error(`\`${name}\` is not implemented yet (Phase 2, in progress).`);
   process.exitCode = 2;
 }
 
 async function main(): Promise<void> {
-  const { cmd } = parseArgs(process.argv.slice(2));
+  const { cmd, only } = parseArgs(process.argv.slice(2));
   switch (cmd) {
     case 'corpus':
       return cmdCorpus();
     case 'reference':
-      return notImplemented('reference');
+      return cmdReference(only);
     case 'ours':
       return notImplemented('ours');
     case 'diff':
@@ -62,9 +74,9 @@ async function main(): Promise<void> {
       return notImplemented('baseline');
     case 'run': {
       await cmdCorpus();
-      // downstream stages land in later commits
+      await cmdReference(only);
       loadCorpus();
-      return notImplemented('run (reference/ours/diff/report stages)');
+      return notImplemented('run (ours/diff/report stages)');
     }
     default:
       console.error(`unknown command: ${cmd}`);
