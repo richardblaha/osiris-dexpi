@@ -5,3 +5,9 @@ dist/
 *.log
 coverage/
 
+
+# Python venv for pyDEXPI conformance tooling
+.venv/
+
+# Conformance test suite outputs
+tools/dexpi-conformance/test-output/
