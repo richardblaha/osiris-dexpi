@@ -43,7 +43,8 @@ async function cmdCorpus(): Promise<void> {
   writeCorpus(manifest);
   const c = manifest.counts;
   console.log(`corpus: ${manifest.entries.length} sample XML files`);
-  console.log(`  proteus-graphics : ${c['proteus-graphics']}  (PASS/FAIL corpus)`);
+  console.log(`  proteus-graphics : ${c['proteus-graphics']}  (PASS/FAIL corpus — geometry-rich pyDEXPI reference)`);
+  console.log(`  empty-reference  : ${c['empty-reference']}  (pyDEXPI render near-empty — external ShapeCatalogue)`);
   console.log(`  semantic-only    : ${c['semantic-only']}  (excluded — no geometry)`);
   console.log(`  unrenderable     : ${c['unrenderable']}  (excluded — parser/data error)`);
   const official = manifest.entries.filter((e) => e.officialSvg).length;
@@ -53,8 +54,9 @@ async function cmdCorpus(): Promise<void> {
 async function cmdReference(only?: string): Promise<void> {
   const m = await renderReferences(only);
   console.log(`reference (pyDEXPI ${m.pydexpiVersion}):`);
-  console.log(`  rendered     : ${m.counts.ok}`);
-  console.log(`  unrenderable : ${m.counts.unrenderable}`);
+  console.log(`  geometry-rich : ${m.counts.ok}`);
+  console.log(`  near-empty    : ${m.counts.empty}  (shapes in an external ShapeCatalogue)`);
+  console.log(`  unrenderable  : ${m.counts.unrenderable}`);
   const withNotes = m.entries.filter((e) => e.notes.length).length;
   const official = m.entries.filter((e) => e.officialSvg).length;
   console.log(`  sanitised    : ${withNotes} (see reference-manifest.json notes)`);

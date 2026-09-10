@@ -25,11 +25,15 @@ import type { CorpusEntry } from './types.js';
 
 const execFileAsync = promisify(execFile);
 
+/** min drawn primitives for a reference SVG to be worth a geometric comparison */
+export const MIN_REFERENCE_PRIMITIVES = 15;
+
 export interface ReferenceManifestEntry {
   id: string;
-  status: 'ok' | 'unrenderable';
+  status: 'ok' | 'empty' | 'unrenderable';
   reason?: string;
   notes: string[];
+  primitives?: number; // drawn primitives in the reference SVG
   svg?: string; // repo-relative path to the generated reference SVG
   officialSvg?: string; // repo-relative path to a copied official reference SVG
 }
@@ -37,7 +41,7 @@ export interface ReferenceManifestEntry {
 interface ReferenceManifest {
   generatedAt: string;
   pydexpiVersion: string;
-  counts: { ok: number; unrenderable: number };
+  counts: { ok: number; empty: number; unrenderable: number };
   entries: ReferenceManifestEntry[];
 }
 
@@ -68,12 +72,20 @@ async function renderOne(entry: CorpusEntry): Promise<ReferenceManifestEntry> {
       reason?: string;
       notes?: string[];
     };
+    if (res.status !== 'ok') {
+      return { id: entry.id, status: res.status, reason: res.reason || undefined, notes: res.notes ?? [] };
+    }
+    const prims = (fs.readFileSync(outAbs, 'utf-8').match(/<(polyline|polygon|circle|ellipse|path|rect)\b/g) || []).length;
+    const empty = prims < MIN_REFERENCE_PRIMITIVES;
     return {
       id: entry.id,
-      status: res.status,
-      reason: res.reason || undefined,
+      status: empty ? 'empty' : 'ok',
+      reason: empty
+        ? `pyDEXPI reference has only ${prims} drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve`
+        : undefined,
       notes: res.notes ?? [],
-      svg: res.status === 'ok' ? path.relative(REPO_ROOT, outAbs) : undefined,
+      primitives: prims,
+      svg: path.relative(REPO_ROOT, outAbs),
     };
   } catch (err: unknown) {
     // wrapper exits 1 on unrenderable but still prints JSON on stdout
@@ -145,6 +157,7 @@ export async function renderReferences(only?: string): Promise<ReferenceManifest
     pydexpiVersion: pydexpiVersion(),
     counts: {
       ok: results.filter((r) => r.status === 'ok').length,
+      empty: results.filter((r) => r.status === 'empty').length,
       unrenderable: results.filter((r) => r.status === 'unrenderable').length,
     },
     entries: results.sort((a, b) => a.id.localeCompare(b.id)),

@@ -63,7 +63,7 @@ function heuristicClass(xml: string): { klass: CorpusClassification; reason?: st
 
 interface ReferenceManifestEntry {
   id: string;
-  status: 'ok' | 'unrenderable';
+  status: 'ok' | 'empty' | 'unrenderable';
   reason?: string;
 }
 
@@ -108,6 +108,9 @@ export function buildCorpus(): CorpusManifest {
       if (ref.status === 'ok') {
         klass = 'proteus-graphics';
         reason = undefined;
+      } else if (ref.status === 'empty') {
+        klass = 'empty-reference';
+        reason = ref.reason;
       } else if (/no <Drawing>|no geometry|carries no/i.test(ref.reason ?? '')) {
         klass = 'semantic-only';
         reason = ref.reason;
@@ -136,6 +139,7 @@ export function buildCorpus(): CorpusManifest {
 
   const counts: Record<CorpusClassification, number> = {
     'proteus-graphics': 0,
+    'empty-reference': 0,
     'semantic-only': 0,
     unrenderable: 0,
   };

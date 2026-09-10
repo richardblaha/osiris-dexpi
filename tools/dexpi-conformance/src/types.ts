@@ -1,8 +1,10 @@
 /** Shared types for the conformance suite. */
 
 export type CorpusClassification =
-  | 'proteus-graphics' // has drawing primitives AND pyDEXPI renders it → in corpus
-  | 'semantic-only' // parses, but carries no geometry → excluded
+  | 'proteus-graphics' // pyDEXPI produces a geometry-rich reference → in the PASS/FAIL corpus
+  | 'empty-reference' // parses + has positions, but pyDEXPI's render is near-empty
+  //                     (shapes live in an external ShapeCatalogue) → structural-only
+  | 'semantic-only' // parses, but carries no geometry at all → excluded
   | 'unrenderable'; // parser/data error even after the wrapper's fixes → excluded
 
 export interface CorpusEntry {
