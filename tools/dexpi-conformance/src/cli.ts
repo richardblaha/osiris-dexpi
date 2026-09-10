@@ -4,20 +4,28 @@
  *   node test-output/.bin/cli.mjs <command> [--only <glob>]
  *
  * Commands:
- *   corpus         (re)discover + classify samples/ → fixtures/corpus.json
- *   reference      render pyDEXPI reference SVGs      → test-output/reference/
- *   ours           render our SVG export (headless)   → test-output/ours/
- *   diff           structural + visual comparison     → test-output/report/results.json
- *   report         render the HTML / Markdown report  → test-output/report/
- *   run            corpus → reference → ours → diff → report
- *   symbol-matrix  ISO 10628-2 coverage matrix        → test-output/report/symbol-matrix.*
- *   baseline       copy the current results.json to fixtures/baseline.json
+ *   corpus            (re)discover + classify samples/ → fixtures/corpus.json
+ *   reference         render pyDEXPI reference SVGs      → test-output/reference/
+ *   ours              render our SVG export (headless)   → test-output/ours/
+ *   diff              structural comparison (model-level)→ test-output/report/results.json
+ *   visual            headless-Chromium pixel diff       → test-output/report/*.diff.png
+ *   report            render the HTML / Markdown report  → test-output/report/
+ *   run               corpus → reference → ours → diff → visual → report
+ *   dump <id>         print both extracted models for one file
+ *   symbol-matrix     ISO 10628-2 coverage matrix        → test-output/report/symbol-matrix.*
+ *   baseline          freeze current results             → fixtures/baseline.json
+ *   check-regression  compare current run to the baseline (exit 1 on regression)
+ *
+ * Flags: --only <glob>   filter by corpus id      --no-visual   skip Chromium in `run`
  */
 import { buildCorpus, loadCorpus, writeCorpus } from './corpus.js';
 import { renderReferences } from './render-reference.js';
 import { renderOurs } from './render-ours.js';
 import { runDiff } from './structural-diff.js';
 import { dump } from './dump.js';
+import { renderReport } from './report.js';
+import { runVisualDiff } from './visual-diff.js';
+import { checkRegression, writeBaseline } from './baseline.js';
 
 function parseArgs(argv: string[]): { cmd: string; only?: string; flags: Set<string> } {
   const [cmd = 'run', ...rest] = argv;
@@ -81,7 +89,7 @@ async function notImplemented(name: string): Promise<void> {
 }
 
 async function main(): Promise<void> {
-  const { cmd, only } = parseArgs(process.argv.slice(2));
+  const { cmd, only, flags } = parseArgs(process.argv.slice(2));
   switch (cmd) {
     case 'corpus':
       return cmdCorpus();
@@ -93,18 +101,34 @@ async function main(): Promise<void> {
       return cmdDiff(only);
     case 'dump':
       return void dump(process.argv.slice(3).find((a) => !a.startsWith('--')) || '');
+    case 'visual':
+      return runVisualDiff(only);
     case 'report':
-      return notImplemented('report');
+      renderReport();
+      console.log(`report → ${new URL('../report/index.html', import.meta.url).pathname}`);
+      return;
     case 'symbol-matrix':
       return notImplemented('symbol-matrix');
     case 'baseline':
-      return notImplemented('baseline');
+      return void writeBaseline();
+    case 'check-regression':
+      process.exitCode = checkRegression();
+      return;
     case 'run': {
       await cmdCorpus();
       await cmdReference(only);
       await cmdOurs(only);
       await cmdDiff(only);
-      return notImplemented('run (report stage)');
+      if (!flags.has('no-visual')) {
+        try {
+          await runVisualDiff(only);
+        } catch (e) {
+          console.warn(`visual diff skipped: ${e instanceof Error ? e.message : e}`);
+        }
+      }
+      renderReport();
+      console.log('report → test-output/report/index.html');
+      return;
     }
     default:
       console.error(`unknown command: ${cmd}`);

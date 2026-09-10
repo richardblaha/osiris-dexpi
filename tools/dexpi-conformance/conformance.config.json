@@ -16,11 +16,9 @@
   },
 
   "visual": {
-    "renderDpi": 96,
     "hardFailRatio": 0.25,
-    "$visualNote": "Visual diff is NON-BLOCKING — it never turns a structural PASS into a FAIL. hardFailRatio only flags rows as `visual-way-off` in the report for human triage. Rendering via headless Chromium (Playwright) for browser-faithful output.",
-    "monochrome": true,
-    "$monochromeNote": "Our SVG carries the Osiris light theme; the pyDEXPI reference is neutral black-on-white. Both are flattened to monochrome before pixelmatch so colour choices don't dominate the diff."
+    "$visualNote": "Visual diff is NON-BLOCKING — it never turns a structural PASS into a FAIL. `visualMismatch` is reported INK-RELATIVE (mismatched px / px dark on either side), because a whole-canvas ratio is ~0 for sparse P&ID line art. hardFailRatio flags rows as `visualWayOff` for human triage. Rendering via headless Chromium (Playwright), both sides scaled-to-fit a 900x650 white canvas and grayscaled.",
+    "$v1Limitation": "Ink-relative diff has no content-alignment step, so a global offset between our layout and pyDEXPI's inflates the number. Treat it as 'go look at the heatmap', not a metric to optimise."
   },
 
   "corpus": {

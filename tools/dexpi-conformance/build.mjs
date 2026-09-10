@@ -24,7 +24,7 @@ await esbuild.build({
   sourcemap: true,
   loader: { '.xml': 'text', '.dexpi': 'text' },
   // Keep native / heavy deps external — resolved from node_modules at runtime.
-  external: ['@resvg/resvg-js', 'playwright', 'pixelmatch', 'pngjs'],
+  external: ['playwright', 'pixelmatch', 'pngjs'],
   logLevel: 'info',
   banner: {
     js: "import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);",

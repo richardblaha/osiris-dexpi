@@ -11,10 +11,11 @@
     "ours": "node build.mjs && node test-output/.bin/cli.mjs ours",
     "report": "node build.mjs && node test-output/.bin/cli.mjs report",
     "symbol-matrix": "node build.mjs && node test-output/.bin/cli.mjs symbol-matrix",
-    "build": "node build.mjs"
+    "build": "node build.mjs",
+    "visual": "node build.mjs && node test-output/.bin/cli.mjs visual",
+    "baseline": "node build.mjs && node test-output/.bin/cli.mjs baseline"
   },
   "devDependencies": {
-    "@resvg/resvg-js": "^2.6.2",
     "@xmldom/xmldom": "^0.9.6",
     "esbuild": "^0.25.0",
     "pixelmatch": "^6.0.0",
