@@ -109,7 +109,13 @@ export class PlantSchematicGenerator {
       };
     }
 
-    return { nodes, edges };
+    const bounds = {
+      x: 0,
+      y: 0,
+      w: cols * cellSpacingX,
+      h: Math.ceil(nodeCount / cols) * cellSpacingY,
+    };
+    return { nodes, edges, labels: [], bounds };
   }
 
   /**
@@ -251,6 +257,7 @@ export class PlantSchematicGenerator {
     return {
       instances,
       instanceCount: nodeCount,
+      instanceBatches: [{ symbolTypeId: 0, firstInstance: 0, count: nodeCount }],
       lines,
       lineCount: segIdx,
       glyphs,

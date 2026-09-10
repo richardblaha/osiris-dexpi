@@ -9,15 +9,32 @@ import { Point2D } from './orthogonalRouter';
 
 export interface OrthogonalSegment {
   id: string | number;
+  edgeId?: string;
   p1: Point2D;
   p2: Point2D;
   priority: number; // Higher number = higher priority (unbroken continuous line)
   isVertical: boolean;
+  metadata?: any;
 }
 
 export interface JumperOptions {
   jumperRadius?: number; // Size of the jumper arc in world units (default: 6)
   horizontalPriorityBonus?: number; // Preference for horizontal lines to remain unbroken
+}
+
+export interface EdgeJumperInput {
+  id: string;
+  points: Point2D[];
+  priority?: number;
+  isSignal?: boolean;
+}
+
+export interface ProcessedEdgePath {
+  edgeId: string;
+  polylines: Point2D[][]; // List of polylines (one per segment, with jumpers inserted)
+  combinedPoints: Point2D[]; // Stitched contiguous polyline with all jumpers
+  svgPathD: string; // SVG path string including 'A' arc commands for smooth vector jumpers
+  hasJumpers: boolean;
 }
 
 export class JumperDetector {
@@ -37,10 +54,11 @@ export class JumperDetector {
       if (Math.abs(seg.p1.x - seg.p2.x) < 0.001) {
         seg.isVertical = true;
         vertical.push(seg);
-      } else {
+      } else if (Math.abs(seg.p1.y - seg.p2.y) < 0.001) {
         seg.isVertical = false;
         horizontal.push(seg);
       }
+      // Non-orthogonal (slanted) segments do not participate in orthogonal jumper arcs
     }
 
     // Map segment ID -> list of crossing points along the segment
@@ -56,6 +74,12 @@ export class JumperDetector {
 
       for (let v = 0; v < vertical.length; v++) {
         const vert = vertical[v];
+
+        // Do not jump over segments of the same pipeline
+        if (horiz.edgeId && vert.edgeId && horiz.edgeId === vert.edgeId) {
+          continue;
+        }
+
         const vX = vert.p1.x;
         const vMinY = Math.min(vert.p1.y, vert.p2.y);
         const vMaxY = Math.max(vert.p1.y, vert.p2.y);
@@ -106,10 +130,18 @@ export class JumperDetector {
       const isForward = isVert ? seg.p2.y > seg.p1.y : seg.p2.x > seg.p1.x;
       crossings.sort((a, b) => (isForward ? a - b : b - a));
 
+      // Deduplicate crossings that are too close
+      const deduped: number[] = [];
+      for (const c of crossings) {
+        if (deduped.length === 0 || Math.abs(c - deduped[deduped.length - 1]) > jumperRadius * 2) {
+          deduped.push(c);
+        }
+      }
+
       const points: Point2D[] = [seg.p1];
       const r = jumperRadius;
 
-      for (const crossCoord of crossings) {
+      for (const crossCoord of deduped) {
         if (isVert) {
           const x = seg.p1.x;
           const yPre = isForward ? crossCoord - r : crossCoord + r;
@@ -142,6 +174,134 @@ export class JumperDetector {
     }
 
     return outputPolylines;
+  }
+
+  /**
+   * High-level method to process complete multi-segment edges and compute both
+   * GPU polyline segments and SVG vector paths with jumper arcs.
+   */
+  public static processEdges(
+    edges: EdgeJumperInput[],
+    options: JumperOptions = {}
+  ): Map<string, ProcessedEdgePath> {
+    const { jumperRadius = 6, horizontalPriorityBonus = 10 } = options;
+
+    // 1. Flatten all edges into OrthogonalSegments
+    const segments: OrthogonalSegment[] = [];
+    const edgeSegMap = new Map<string, number[]>(); // edgeId -> indices into segments array
+
+    for (const edge of edges) {
+      if (!edge.points || edge.points.length < 2) continue;
+      const segIndices: number[] = [];
+      const basePriority = edge.priority ?? (edge.isSignal ? 10 : 100);
+
+      for (let i = 0; i < edge.points.length - 1; i++) {
+        const p1 = edge.points[i];
+        const p2 = edge.points[i + 1];
+        const isVert = Math.abs(p1.x - p2.x) < 0.001;
+
+        const segIdx = segments.length;
+        segments.push({
+          id: `${edge.id}_seg_${i}`,
+          edgeId: edge.id,
+          p1,
+          p2,
+          priority: basePriority,
+          isVertical: isVert,
+        });
+        segIndices.push(segIdx);
+      }
+      edgeSegMap.set(edge.id, segIndices);
+    }
+
+    // 2. Run core jumper detection
+    const outputPolylines = this.processJumpers(segments, options);
+
+    // 3. Reconstruct per-edge results
+    const resultMap = new Map<string, ProcessedEdgePath>();
+
+    for (const edge of edges) {
+      const segIndices = edgeSegMap.get(edge.id) || [];
+      if (segIndices.length === 0) {
+        resultMap.set(edge.id, {
+          edgeId: edge.id,
+          polylines: [],
+          combinedPoints: edge.points || [],
+          svgPathD: '',
+          hasJumpers: false,
+        });
+        continue;
+      }
+
+      const polylines: Point2D[][] = [];
+      const combinedPoints: Point2D[] = [];
+      let hasJumpers = false;
+      let svgD = '';
+
+      for (let s = 0; s < segIndices.length; s++) {
+        const segIdx = segIndices[s];
+        const poly = outputPolylines[segIdx];
+        polylines.push(poly);
+
+        if (poly.length > 2) {
+          hasJumpers = true;
+        }
+
+        // Build combinedPoints
+        if (s === 0) {
+          for (let p = 0; p < poly.length; p++) {
+            combinedPoints.push(poly[p]);
+          }
+        } else {
+          // Skip first point since it connects to previous segment's end
+          for (let p = 1; p < poly.length; p++) {
+            combinedPoints.push(poly[p]);
+          }
+        }
+      }
+
+      // Build smooth SVG path with 'A' arc commands
+      for (let s = 0; s < segIndices.length; s++) {
+        const segIdx = segIndices[s];
+        const origSeg = segments[segIdx];
+        const poly = outputPolylines[segIdx];
+
+        if (s === 0) {
+          svgD += `M ${origSeg.p1.x.toFixed(1)} ${origSeg.p1.y.toFixed(1)}`;
+        }
+
+        if (poly.length === 2) {
+          // Straight segment without jumpers
+          svgD += ` L ${origSeg.p2.x.toFixed(1)} ${origSeg.p2.y.toFixed(1)}`;
+        } else {
+          // Segment with jumpers
+          const isVert = origSeg.isVertical;
+          const isForward = isVert ? origSeg.p2.y > origSeg.p1.y : origSeg.p2.x > origSeg.p1.x;
+          const r = jumperRadius;
+
+          let ptIdx = 1;
+          while (ptIdx + 4 < poly.length) {
+            const pPre = poly[ptIdx];
+            const pPost = poly[ptIdx + 4];
+            svgD += ` L ${pPre.x.toFixed(1)} ${pPre.y.toFixed(1)}`;
+            const sweep = isVert ? (isForward ? 1 : 0) : (isForward ? 0 : 1);
+            svgD += ` A ${r} ${r} 0 0 ${sweep} ${pPost.x.toFixed(1)} ${pPost.y.toFixed(1)}`;
+            ptIdx += 5;
+          }
+          svgD += ` L ${origSeg.p2.x.toFixed(1)} ${origSeg.p2.y.toFixed(1)}`;
+        }
+      }
+
+      resultMap.set(edge.id, {
+        edgeId: edge.id,
+        polylines,
+        combinedPoints,
+        svgPathD: svgD,
+        hasJumpers,
+      });
+    }
+
+    return resultMap;
   }
 }
 

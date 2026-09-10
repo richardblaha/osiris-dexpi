@@ -160,7 +160,7 @@ npm run watch
 ## Releasing
 
 Packaging the `.vsix` and publishing a GitHub release is automated by
-[`.github/workflows/release.yml`](.github/workflows/release.yml).
+`.github/workflows/release.yml`.
 
 ```bash
 # 1. Bump the version in package.json (npm keeps it in sync with the tag)
@@ -191,5 +191,5 @@ MIT © Richard Blaha
 The P&ID symbol geometry in `src/maxgraph/stencils/vendor/` is from
 [draw.io / diagrams.net](https://github.com/jgraph/drawio) (© JGraph Ltd), used
 unmodified under the **Apache License 2.0**. See
-[`src/maxgraph/stencils/vendor/NOTICE.md`](src/maxgraph/stencils/vendor/NOTICE.md).
+`src/maxgraph/stencils/vendor/NOTICE.md`.
 

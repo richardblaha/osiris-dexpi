@@ -127,4 +127,40 @@ describe('JumperDetector (CAD Line Crossing Bridge)', () => {
     const maxBulge = Math.max(...arcPoints.map((p) => p.x));
     expect(maxBulge).toBeGreaterThan(55);
   });
+
+  it('processes complete edges and generates smooth SVG arc paths', () => {
+    const edgeH = {
+      id: 'pipe-horiz',
+      points: [
+        { x: 10, y: 50 },
+        { x: 90, y: 50 },
+      ],
+      isSignal: false,
+    };
+
+    const edgeV = {
+      id: 'pipe-vert',
+      points: [
+        { x: 50, y: 10 },
+        { x: 50, y: 90 },
+      ],
+      isSignal: false,
+    };
+
+    const results = JumperDetector.processEdges([edgeH, edgeV], { jumperRadius: 6 });
+    expect(results.size).toBe(2);
+
+    const resH = results.get('pipe-horiz')!;
+    const resV = results.get('pipe-vert')!;
+
+    // Horizontal pipe remains unbroken
+    expect(resH.hasJumpers).toBe(false);
+    expect(resH.svgPathD).toBe('M 10.0 50.0 L 90.0 50.0');
+
+    // Vertical pipe yields and gets jumper bridge
+    expect(resV.hasJumpers).toBe(true);
+    expect(resV.svgPathD).toContain('A 6 6 0 0 1');
+    expect(resV.svgPathD).toContain('50.0 56.0');
+    expect(resV.combinedPoints.length).toBeGreaterThan(2);
+  });
 });

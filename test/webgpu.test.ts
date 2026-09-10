@@ -115,9 +115,9 @@ describe('WebGpuPidAdapter', () => {
     // Signal segment style should be dashed
     expect(lineU32[3 * LINE_SEGMENT_FLOATS + 5]).toBe(LINE_STYLE.DASHED);
 
-    // Glyphs for tagNames
-    expect(pkg.glyphCount).toBe(2);
-    expect(pkg.glyphs.byteLength).toBe(2 * TEXT_GLYPH_BYTES);
+    // Glyphs for tagNames and pipeline line labels
+    expect(pkg.glyphCount).toBe(4);
+    expect(pkg.glyphs.byteLength).toBe(4 * TEXT_GLYPH_BYTES);
   });
 });
 

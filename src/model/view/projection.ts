@@ -33,6 +33,8 @@ export interface PidViewNode {
   mirrored?: boolean;
   parentId?: string;
   portRel?: { x: number; y: number };
+  selected?: boolean;
+  hovered?: boolean;
   attributes: Record<string, string>;
   sourcePath?: string[];
 }
@@ -40,6 +42,7 @@ export interface PidViewNode {
 export interface PidViewEdge {
   id: string;
   kind: PidEdgeKind;
+  lineKind?: PidEdgeKind;
   dexpiClass: string;
   sourceId: string;
   sourceNode?: string;
@@ -47,6 +50,7 @@ export interface PidViewEdge {
   targetNode?: string;
   waypoints: { x: number; y: number }[];
   label?: string;
+  fluidCode?: string;
   attributes?: Record<string, string>;
   sourcePath?: string[];
 }
@@ -365,6 +369,7 @@ export function projectToView(model: DexpiModel): PidView {
         const edge: PidViewEdge = {
           id: `${segId}-edge`,
           kind: 'pipe',
+          lineKind: 'pipe',
           dexpiClass: 'PipingNetworkSegment',
           sourceId: resolveNodeId(seg.sourceItem),
           sourceNode: resolveNodeId(seg.sourceNode),
@@ -372,6 +377,7 @@ export function projectToView(model: DexpiModel): PidView {
           targetNode: resolveNodeId(seg.targetNode),
           waypoints,
           label,
+          fluidCode: seg.fluidCode,
           attributes: flattenAttributes(seg),
           sourcePath: ['conceptualModel', 'pipingNetworkSystems', pns.id, 'segments', seg.id],
         };
@@ -413,6 +419,7 @@ export function projectToView(model: DexpiModel): PidView {
         const sigEdge: PidViewEdge = {
           id: sig.proteusId || sig.id,
           kind: 'signal',
+          lineKind: 'signal',
           dexpiClass: 'SignalConveyingFunction',
           sourceId: resolveNodeId(sig.sourceItem),
           targetId: resolveNodeId(sig.targetItem),

@@ -13,3 +13,7 @@ vitest.config.*
 package-lock.json
 .gitignore
 .editorconfig
+.venv/**
+scripts/**
+*.vsix
+

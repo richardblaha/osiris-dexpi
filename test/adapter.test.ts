@@ -4,7 +4,12 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { ProteusReader } from '../src/model/proteus';
 import { projectToView } from '../src/model/view';
-import { WebGpuPidAdapter, SYMBOL_INSTANCE_FLOATS } from '../src/webgpu';
+import {
+  WebGpuPidAdapter,
+  SYMBOL_INSTANCE_FLOATS,
+  LINE_STYLE,
+  LINE_SEGMENT_FLOATS,
+} from '../src/webgpu';
 
 describe('WebGpuPidAdapter (Replaces legacy DexpiMaxGraphAdapter)', () => {
   const sampleXmlPath = path.resolve(__dirname, '../samples/simple-pid.dexpi');
@@ -57,5 +62,58 @@ describe('WebGpuPidAdapter (Replaces legacy DexpiMaxGraphAdapter)', () => {
     expect(eid2).toBeGreaterThan(0);
     expect(eid1).not.toBe(eid2);
     expect(eid1).toBe(eid3); // Idempotent
+  });
+
+  it('inserts jumper arc line segments and generates midpoint line label glyphs', () => {
+    const crossingView = {
+      nodes: [
+        { id: 'node_1', x: 0, y: 0, w: 20, h: 20, tagName: 'TAG-1', attributes: {} },
+      ],
+      edges: [
+        {
+          id: 'pipe_h',
+          kind: 'pipe' as const,
+          sourceId: 'node_1',
+          targetId: 'node_1',
+          waypoints: [
+            { x: 10, y: 50 },
+            { x: 90, y: 50 },
+          ],
+          label: '100-CW-01',
+          attributes: {},
+        },
+        {
+          id: 'pipe_v',
+          kind: 'pipe' as const,
+          sourceId: 'node_1',
+          targetId: 'node_1',
+          waypoints: [
+            { x: 50, y: 10 },
+            { x: 50, y: 90 },
+          ],
+          label: '50-PW-02',
+          attributes: {},
+        },
+      ],
+    };
+
+    const pkg = adapter.projectToGpuBuffers(crossingView as any);
+
+    // Line segments should be generated with jumper arc
+    expect(pkg.lineCount).toBeGreaterThan(2);
+
+    const lineU32 = new Uint32Array(pkg.lines.buffer);
+    let foundJumperArc = false;
+    for (let i = 0; i < pkg.lineCount; i++) {
+      const styleFlags = lineU32[i * LINE_SEGMENT_FLOATS + 5];
+      if (styleFlags & LINE_STYLE.JUMPER_ARC) {
+        foundJumperArc = true;
+        break;
+      }
+    }
+    expect(foundJumperArc).toBe(true);
+
+    // Glyphs should be generated for 1 node tag + 2 pipeline line labels = 3 glyphs
+    expect(pkg.glyphCount).toBe(3);
   });
 });

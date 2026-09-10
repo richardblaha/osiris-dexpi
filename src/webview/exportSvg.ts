@@ -8,6 +8,7 @@
 import type { PidView, PidViewNode, PidViewEdge } from '../model/view/projection';
 import { catalogStencilFor, SymbolElementType } from '../maxgraph/stencils/catalog';
 import { getStencilXml } from '../maxgraph/stencils/registry';
+import { JumperDetector } from '../webgpu/routing/jumperDetector';
 
 export interface SvgExportOptions {
   theme?: 'dark' | 'light';
@@ -104,15 +105,37 @@ export function exportPidViewToSvg(view: PidView, options: SvgExportOptions = {}
 
   // 3. Render Pipelines & Edges (underneath symbols)
   parts.push('<g id="pipelines">');
+
+  const edgeInputs = view.edges
+    .filter((e) => e.waypoints && e.waypoints.length >= 2)
+    .map((e) => {
+      const isSignal = e.lineKind === 'signal' || e.kind === 'signal';
+      return {
+        id: e.id,
+        points: e.waypoints,
+        isSignal,
+        priority: isSignal ? 10 : 100,
+      };
+    });
+
+  const jumperResults = JumperDetector.processEdges(edgeInputs, {
+    jumperRadius: 6,
+    horizontalPriorityBonus: 10,
+  });
+
   for (const edge of view.edges) {
-    const isSignal = edge.lineKind === 'signal';
+    const isSignal = edge.lineKind === 'signal' || edge.kind === 'signal';
     const pipeClass = isSignal ? 'pipe-signal' : 'pipe-process';
     const arrowClass = isSignal ? 'flow-arrow-signal' : 'flow-arrow-process';
 
     if (edge.waypoints && edge.waypoints.length >= 2) {
-      let pathD = '';
-      for (let i = 0; i < edge.waypoints.length; i++) {
-        pathD += (i === 0 ? 'M ' : ' L ') + `${edge.waypoints[i].x} ${edge.waypoints[i].y}`;
+      const processed = jumperResults.get(edge.id);
+      let pathD = processed?.svgPathD;
+      if (!pathD) {
+        pathD = '';
+        for (let i = 0; i < edge.waypoints.length; i++) {
+          pathD += (i === 0 ? 'M ' : ' L ') + `${edge.waypoints[i].x} ${edge.waypoints[i].y}`;
+        }
       }
       parts.push(`<path class="${pipeClass}" d="${pathD}" />`);
 

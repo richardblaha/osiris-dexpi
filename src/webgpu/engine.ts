@@ -96,7 +96,7 @@ export class WebGpuPidEngine {
       },
     });
 
-    this.context = this.canvas.getContext('webgpu') as GPUCanvasContext;
+    this.context = this.canvas.getContext('webgpu') as unknown as GPUCanvasContext;
     this.format = navigator.gpu.getPreferredCanvasFormat();
 
     this.context.configure({

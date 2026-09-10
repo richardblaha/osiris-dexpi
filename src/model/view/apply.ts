@@ -33,6 +33,15 @@ export function applyViewToModel(view: PidView, model: DexpiModel): DexpiModel {
     }
   }
 
+  let defaultPns = cm.pipingNetworkSystems[0];
+  if (!defaultPns) {
+    defaultPns = make<PipingNetworkSystem>('PipingNetworkSystem', {
+      lineNumber: 'L-101',
+      segments: [],
+    });
+    cm.pipingNetworkSystems.push(defaultPns);
+  }
+
   // 1. Process Nodes
   const viewedNodeIds = new Set<string>();
 
@@ -153,14 +162,6 @@ export function applyViewToModel(view: PidView, model: DexpiModel): DexpiModel {
   }
 
   // 2. Process Edges / Connectivity
-  let defaultPns = cm.pipingNetworkSystems[0];
-  if (!defaultPns) {
-    defaultPns = make<PipingNetworkSystem>('PipingNetworkSystem', {
-      lineNumber: 'L-101',
-      segments: [],
-    });
-    cm.pipingNetworkSystems.push(defaultPns);
-  }
 
   const existingSegments = new Map<string, { pns: PipingNetworkSystem; seg: PipingNetworkSegment }>();
   for (const pns of cm.pipingNetworkSystems) {

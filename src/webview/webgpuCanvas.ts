@@ -18,7 +18,7 @@ import { InteractionOverlay } from './interactionOverlay';
 import type { PidView, PidViewNode, PidViewEdge } from '../model/view/projection';
 import { projectToView } from '../model/view/projection';
 import { exportPidViewToSvg } from './exportSvg';
-import type { SelectionInfo } from '../common/types';
+import type { SelectionInfo, ValidationIssue } from '../common/types';
 
 export interface CanvasCallbacks {
   onModelChanged: (view: PidView) => void;
@@ -376,8 +376,9 @@ export class WebGpuVisualCanvas {
     const node = this.currentView.nodes.find((n) => n.id === id);
     if (node) {
       this.saveUndoState();
-      node.attributes[property] = String(value);
-      if (property === 'tagName' || property === 'tag') {
+      const key = property.startsWith('attr:') ? property.slice(5) : property;
+      node.attributes[key] = String(value);
+      if (key === 'tagName' || key === 'tag') {
         node.tagName = String(value);
       }
       this.renderModel(this.currentView);
@@ -827,20 +828,26 @@ export class WebGpuVisualCanvas {
 
     if (nodes.length === 1) {
       const node = nodes[0];
+      const attrs: Record<string, { value: string; units?: string }> = {};
+      for (const [k, v] of Object.entries(node.attributes || {})) {
+        attrs[k] = { value: String(v) };
+      }
       this.callbacks.onSelectionChanged({
         id: node.id,
-        kind: node.kind,
+        elementType: node.kind,
+        componentClass: node.dexpiClass,
         tagName: node.tagName,
-        dexpiClass: node.dexpiClass,
-        attributes: node.attributes,
+        isEdge: false,
+        attributes: attrs,
       });
     } else if (nodes.length > 1) {
       this.callbacks.onSelectionChanged({
         id: 'multiple',
-        kind: 'multiple',
+        elementType: 'multiple',
+        componentClass: 'MultiSelection',
         tagName: `${nodes.length} items selected`,
-        dexpiClass: 'MultiSelection',
-        attributes: { count: String(nodes.length) },
+        isEdge: false,
+        attributes: { count: { value: String(nodes.length) } },
       });
     } else {
       this.callbacks.onSelectionChanged(null);
@@ -853,12 +860,18 @@ export class WebGpuVisualCanvas {
     this.overlay.setSelectedEdge(edge);
     this.overlay.update(this.engine.camera);
 
+    const attrs: Record<string, { value: string; units?: string }> = {};
+    for (const [k, v] of Object.entries(edge.attributes || {})) {
+      attrs[k] = { value: String(v) };
+    }
+
     this.callbacks.onSelectionChanged({
       id: edge.id,
-      kind: edge.kind,
+      elementType: edge.kind,
+      componentClass: edge.dexpiClass,
       tagName: edge.label || 'PIPELINE',
-      dexpiClass: edge.dexpiClass,
-      attributes: edge.attributes || {},
+      isEdge: true,
+      attributes: attrs,
     });
   }
 
@@ -995,7 +1008,43 @@ export class WebGpuVisualCanvas {
       }
     }
 
+    // Merge external ISO 15926 / DEXPI schema & semantic issues
+    for (const ext of this.externalValidationIssues) {
+      if (!ext.elementId) continue;
+      const n = this.currentView.nodes.find(
+        (node) => node.id === ext.elementId || node.tagName === ext.elementId
+      );
+      if (n) {
+        issues.push({
+          x: n.x + (n.w || 40) - 2,
+          y: n.y - 2,
+          message: `[${ext.code}] ${ext.message}`,
+          severity: ext.severity === 'error' ? 'error' : 'warning',
+        });
+      } else {
+        const edge = this.currentView.edges.find(
+          (ed) => ed.id === ext.elementId || ed.id.startsWith(ext.elementId!)
+        );
+        if (edge && edge.waypoints && edge.waypoints.length > 0) {
+          const mid = edge.waypoints[Math.floor(edge.waypoints.length / 2)];
+          issues.push({
+            x: mid.x,
+            y: mid.y,
+            message: `[${ext.code}] ${ext.message}`,
+            severity: ext.severity === 'error' ? 'error' : 'warning',
+          });
+        }
+      }
+    }
+
     this.overlay.setValidationIssues(issues);
+  }
+
+  private externalValidationIssues: ValidationIssue[] = [];
+
+  public setExternalValidationIssues(issues: ValidationIssue[]): void {
+    this.externalValidationIssues = issues;
+    this.updateFlowArrowsAndDrc();
   }
 
   // ── Nozzle Ports & Connection Logic ─────────────────────────────────────

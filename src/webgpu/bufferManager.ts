@@ -43,7 +43,7 @@ export class GpuBufferManager {
     }
 
     if (count > 0) {
-      this.device.queue.writeBuffer(this.instanceBuffer, 0, data.buffer, data.byteOffset, count * SYMBOL_INSTANCE_BYTES);
+      this.device.queue.writeBuffer(this.instanceBuffer, 0, data.buffer as ArrayBuffer, data.byteOffset, count * SYMBOL_INSTANCE_BYTES);
     }
     return this.instanceBuffer;
   }
@@ -66,7 +66,7 @@ export class GpuBufferManager {
     }
 
     if (count > 0) {
-      this.device.queue.writeBuffer(this.lineBuffer, 0, data.buffer, data.byteOffset, count * LINE_SEGMENT_BYTES);
+      this.device.queue.writeBuffer(this.lineBuffer, 0, data.buffer as ArrayBuffer, data.byteOffset, count * LINE_SEGMENT_BYTES);
     }
     return this.lineBuffer;
   }
@@ -89,7 +89,7 @@ export class GpuBufferManager {
     }
 
     if (count > 0) {
-      this.device.queue.writeBuffer(this.textBuffer, 0, data.buffer, data.byteOffset, count * TEXT_GLYPH_BYTES);
+      this.device.queue.writeBuffer(this.textBuffer, 0, data.buffer as ArrayBuffer, data.byteOffset, count * TEXT_GLYPH_BYTES);
     }
     return this.textBuffer;
   }

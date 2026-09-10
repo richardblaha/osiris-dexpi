@@ -51,12 +51,12 @@ export class DexpiEditorProvider implements vscode.CustomTextEditorProvider {
     webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
 
     editorHub.register(webviewPanel, document);
-    this.runValidation(document);
+    this.runValidation(document, webviewPanel);
 
     const changeDocSubscription = vscode.workspace.onDidChangeTextDocument((e) => {
       if (e.document.uri.toString() === document.uri.toString()) {
         syncManager.handleDocumentChange();
-        this.runValidation(document);
+        this.runValidation(document, webviewPanel);
       }
     });
 

@@ -52,11 +52,11 @@ export class DexpiWorkerBridge {
         id: this.nextMessageId++,
         type: 'BUILD_INDEX_REQUEST',
         payload: {
-          boxesBuffer: boxes.buffer,
-          idsBuffer: ids.buffer,
+          boxesBuffer: boxes.buffer as ArrayBuffer,
+          idsBuffer: ids.buffer as ArrayBuffer,
         },
       },
-      [boxes.buffer, ids.buffer]
+      [boxes.buffer as ArrayBuffer, ids.buffer as ArrayBuffer]
     );
     return res.itemCount;
   }

@@ -13,6 +13,7 @@ import {
   SYMBOL_FLAGS,
   LINE_STYLE,
 } from './types';
+import { JumperDetector } from './routing/jumperDetector';
 
 export interface InstanceBatch {
   symbolTypeId: number;
@@ -155,6 +156,8 @@ export class WebGpuPidAdapter {
       instanceUint32[offset + 16] = symbolTypeId;
       let flags = 0;
       if (node.mirrored) flags |= SYMBOL_FLAGS.MIRROR_X;
+      if (node.selected) flags |= SYMBOL_FLAGS.SELECTED;
+      if (node.hovered) flags |= SYMBOL_FLAGS.HOVERED;
       instanceUint32[offset + 17] = flags;
       instanceUint32[offset + 18] = eid;
       instances[offset + 19] = 0.0; // lod_min_zoom
@@ -168,15 +171,43 @@ export class WebGpuPidAdapter {
       });
     }
 
-    // 2. Process Edges -> LineSegment[]
-    let totalSegments = 0;
+    // 2. Process Edges -> LineSegment[] with Jumper Detection
     const nodeMap = new Map<string, PidViewNode>();
     for (const n of view.nodes) nodeMap.set(n.id, n);
 
+    const edgeInputs: Array<{
+      id: string;
+      points: Array<{ x: number; y: number }>;
+      isSignal: boolean;
+      priority: number;
+    }> = [];
+
+    const edgeMap = new Map<string, PidViewEdge>();
     for (const edge of view.edges) {
+      edgeMap.set(edge.id, edge);
       const pts = this.collectEdgePoints(edge, nodeMap);
       if (pts.length >= 2) {
-        totalSegments += pts.length - 1;
+        const isSignal = edge.kind === 'signal' || edge.lineKind === 'signal';
+        edgeInputs.push({
+          id: edge.id,
+          points: pts,
+          isSignal,
+          priority: isSignal ? 10 : 100,
+        });
+      }
+    }
+
+    const jumperResults = JumperDetector.processEdges(edgeInputs, {
+      jumperRadius: 6,
+      horizontalPriorityBonus: 10,
+    });
+
+    let totalSegments = 0;
+    for (const res of jumperResults.values()) {
+      for (const poly of res.polylines) {
+        if (poly.length >= 2) {
+          totalSegments += poly.length - 1;
+        }
       }
     }
 
@@ -184,58 +215,100 @@ export class WebGpuPidAdapter {
     const lineUint32 = new Uint32Array(lines.buffer);
     let segmentIndex = 0;
 
-    for (const edge of view.edges) {
-      const pts = this.collectEdgePoints(edge, nodeMap);
-      if (pts.length < 2) continue;
+    for (const [edgeId, res] of jumperResults.entries()) {
+      const edge = edgeMap.get(edgeId);
+      if (!edge) continue;
 
       const eid = this.getEntityId(edge.id);
-      const isSignal = edge.kind === 'signal';
+      const isSignal = edge.kind === 'signal' || edge.lineKind === 'signal';
       const width = isSignal ? 1.5 : 2.5;
-      const style = isSignal ? LINE_STYLE.DASHED : LINE_STYLE.SOLID;
+      const baseStyle = isSignal ? LINE_STYLE.DASHED : LINE_STYLE.SOLID;
 
-      for (let p = 0; p < pts.length - 1; p++) {
-        const offset = segmentIndex * LINE_SEGMENT_FLOATS;
-        const p1 = pts[p];
-        const p2 = pts[p + 1];
+      for (const poly of res.polylines) {
+        if (poly.length < 2) continue;
 
-        // point_a
-        lines[offset + 0] = p1.x;
-        lines[offset + 1] = p1.y;
-        // point_b
-        lines[offset + 2] = p2.x;
-        lines[offset + 3] = p2.y;
-        // width_px
-        lines[offset + 4] = width;
-        // style_flags
-        lineUint32[offset + 5] = style;
-        // entity_id
-        lineUint32[offset + 6] = eid;
-        // _pad0
-        lineUint32[offset + 7] = 0;
+        const hasArc = poly.length > 2;
+        for (let p = 0; p < poly.length - 1; p++) {
+          const offset = segmentIndex * LINE_SEGMENT_FLOATS;
+          const p1 = poly[p];
+          const p2 = poly[p + 1];
 
-        if (isSignal) {
-          lines[offset + 8] = 0.95;
-          lines[offset + 9] = 0.85;
-          lines[offset + 10] = 0.2;
-          lines[offset + 11] = 1.0;
-        } else {
-          lines[offset + 8] = 0.85;
-          lines[offset + 9] = 0.9;
-          lines[offset + 10] = 0.95;
-          lines[offset + 11] = 1.0;
+          // Set jumper arc flag on intermediate arc segments
+          const isJumperSegment = hasArc && p >= 1 && p <= poly.length - 3;
+          const style = isJumperSegment ? (baseStyle | LINE_STYLE.JUMPER_ARC) : baseStyle;
+
+          // point_a
+          lines[offset + 0] = p1.x;
+          lines[offset + 1] = p1.y;
+          // point_b
+          lines[offset + 2] = p2.x;
+          lines[offset + 3] = p2.y;
+          // width_px
+          lines[offset + 4] = width;
+          // style_flags
+          lineUint32[offset + 5] = style;
+          // entity_id
+          lineUint32[offset + 6] = eid;
+          // _pad0
+          lineUint32[offset + 7] = 0;
+
+          if (isSignal) {
+            lines[offset + 8] = 0.95;
+            lines[offset + 9] = 0.85;
+            lines[offset + 10] = 0.2;
+            lines[offset + 11] = 1.0;
+          } else {
+            lines[offset + 8] = 0.85;
+            lines[offset + 9] = 0.9;
+            lines[offset + 10] = 0.95;
+            lines[offset + 11] = 1.0;
+          }
+
+          segmentIndex++;
         }
-
-        segmentIndex++;
       }
     }
 
-    // 3. Process Labels -> TextGlyph[]
+    // 3. Process Labels -> TextGlyph[] (Equipment Tags + Pipeline Labels)
     const nodesWithTag = view.nodes.filter((n) => Boolean(n.tagName));
-    const glyphsCount = nodesWithTag.length;
-    const glyphs = new Float32Array(glyphsCount * TEXT_GLYPH_FLOATS);
+
+    interface EdgeLabelInfo {
+      edge: PidViewEdge;
+      text: string;
+      mid: { x: number; y: number };
+    }
+    const edgesWithLabel: EdgeLabelInfo[] = [];
+
+    for (const edge of view.edges) {
+      const text = edge.fluidCode || edge.label;
+      if (!text) continue;
+
+      const pts = this.collectEdgePoints(edge, nodeMap);
+      if (pts.length < 2) continue;
+
+      let longestLen = 0;
+      let longestMid = { x: 0, y: 0 };
+      for (let p = 0; p < pts.length - 1; p++) {
+        const dx = pts[p + 1].x - pts[p].x;
+        const dy = pts[p + 1].y - pts[p].y;
+        const len = Math.hypot(dx, dy);
+        if (len > longestLen) {
+          longestLen = len;
+          longestMid = { x: (pts[p].x + pts[p + 1].x) * 0.5, y: (pts[p].y + pts[p + 1].y) * 0.5 };
+        }
+      }
+
+      if (longestLen >= 30) {
+        edgesWithLabel.push({ edge, text, mid: longestMid });
+      }
+    }
+
+    const totalGlyphsCount = nodesWithTag.length + edgesWithLabel.length;
+    const glyphs = new Float32Array(totalGlyphsCount * TEXT_GLYPH_FLOATS);
     const glyphsUint32 = new Uint32Array(glyphs.buffer);
     let glyphIndex = 0;
 
+    // 3a. Node Tags
     for (let i = 0; i < view.nodes.length; i++) {
       const node = view.nodes[i];
       if (!node.tagName) continue;
@@ -246,8 +319,10 @@ export class WebGpuPidAdapter {
       const fontSize = 12;
       const labelW = node.tagName.length * fontSize * 0.6;
       const labelH = fontSize;
-      const x0 = node.x + (node.w - labelW) * 0.5;
-      const y0 = node.y + node.h + 4;
+      const nodeW = node.w || 40;
+      const nodeH = node.h || 40;
+      const x0 = node.x + (nodeW - labelW) * 0.5;
+      const y0 = node.y + nodeH + 4;
 
       glyphs[offset + 0] = x0;
       glyphs[offset + 1] = y0;
@@ -262,6 +337,40 @@ export class WebGpuPidAdapter {
       glyphs[offset + 8] = 0.9;
       glyphs[offset + 9] = 0.9;
       glyphs[offset + 10] = 0.95;
+      glyphs[offset + 11] = 1.0;
+
+      glyphs[offset + 12] = fontSize;
+      glyphsUint32[offset + 13] = eid;
+      glyphsUint32[offset + 14] = 0;
+      glyphsUint32[offset + 15] = 0;
+
+      glyphIndex++;
+    }
+
+    // 3b. Pipeline Labels
+    for (const item of edgesWithLabel) {
+      const offset = glyphIndex * TEXT_GLYPH_FLOATS;
+      const eid = this.getEntityId(item.edge.id);
+
+      const fontSize = 10;
+      const labelW = item.text.length * fontSize * 0.6;
+      const labelH = fontSize;
+      const x0 = item.mid.x - labelW * 0.5;
+      const y0 = item.mid.y - labelH - 3;
+
+      glyphs[offset + 0] = x0;
+      glyphs[offset + 1] = y0;
+      glyphs[offset + 2] = x0 + labelW;
+      glyphs[offset + 3] = y0 + labelH;
+
+      glyphs[offset + 4] = 0.0;
+      glyphs[offset + 5] = 0.0;
+      glyphs[offset + 6] = 1.0;
+      glyphs[offset + 7] = 1.0;
+
+      glyphs[offset + 8] = 0.65;
+      glyphs[offset + 9] = 0.78;
+      glyphs[offset + 10] = 0.9;
       glyphs[offset + 11] = 1.0;
 
       glyphs[offset + 12] = fontSize;

@@ -113,6 +113,12 @@ async function initWebview(): Promise<void> {
         vscode.postMessage({ type: 'svgExported', svg: canvas.exportSvg() });
         break;
       }
+      case 'validationResult': {
+        if (message.result && canvas) {
+          canvas.setExternalValidationIssues(message.result.issues || []);
+        }
+        break;
+      }
     }
   });
 
