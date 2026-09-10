@@ -24,7 +24,6 @@ export interface CorpusEntry {
 }
 
 export interface CorpusManifest {
-  generatedAt: string;
   toolVersion: string;
   counts: Record<CorpusClassification, number>;
   entries: CorpusEntry[];

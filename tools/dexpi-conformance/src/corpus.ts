@@ -141,8 +141,8 @@ export function buildCorpus(): CorpusManifest {
   };
   for (const e of entries) counts[e.classification]++;
 
+  // No timestamp here — corpus.json is committed and must be diff-stable.
   return {
-    generatedAt: new Date().toISOString(),
     toolVersion: TOOL_VERSION,
     counts,
     entries,

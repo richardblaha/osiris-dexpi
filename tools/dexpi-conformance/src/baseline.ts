@@ -19,7 +19,6 @@ interface BaselineRow {
   structuralScore: number;
 }
 interface Baseline {
-  generatedAt: string;
   rows: BaselineRow[];
 }
 
@@ -31,7 +30,6 @@ function loadResults(): RunResults {
 export function writeBaseline(): void {
   const r = loadResults();
   const baseline: Baseline = {
-    generatedAt: r.generatedAt,
     rows: r.rows.map((x) => ({ id: x.id, status: x.status, structuralScore: Number(x.structuralScore.toFixed(4)) })),
   };
   fs.writeFileSync(BASELINE_JSON, JSON.stringify(baseline, null, 2) + '\n');
