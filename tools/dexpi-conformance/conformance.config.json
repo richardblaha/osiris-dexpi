@@ -1,0 +1,31 @@
+{
+  "$comment": "Tolerances and thresholds for the DEXPI conformance suite. Every value is intentional — see the notes.",
+
+  "structural": {
+    "positionToleranceMm": 2.0,
+    "positionTolerancePct": 5.0,
+    "$positionNote": "A symbol centroid may differ by up to 2 mm OR 5% of the diagram's bbox diagonal (whichever is larger) before it counts as `position-off`. pyDEXPI and our projection both work in native DEXPI millimetres, so absolute mm is meaningful; the % term keeps large drawings fair.",
+
+    "sizeTolerancePct": 15.0,
+    "$sizeNote": "Symbol width/height may differ by 15%. Stencil bounding boxes are authored independently of DEXPI Extent, so exact size parity is not expected — this only catches gross mismatches (e.g. default 40x40 fallback vs a real 160mm vessel).",
+
+    "rotationToleranceDeg": 1.0,
+    "$rotationNote": "Rotation is quantised to 90° steps in practice; 1° absorbs float noise.",
+
+    "$passRule": "PASS = no symbol-missing / symbol-extra / symbol-class-mismatch / position-off / rotation-mismatch / connection-missing / connection-extra. WARN = only size-off / label-mismatch / style-diff. FAIL = anything else."
+  },
+
+  "visual": {
+    "renderDpi": 96,
+    "hardFailRatio": 0.25,
+    "$visualNote": "Visual diff is NON-BLOCKING — it never turns a structural PASS into a FAIL. hardFailRatio only flags rows as `visual-way-off` in the report for human triage. Rendering via headless Chromium (Playwright) for browser-faithful output.",
+    "monochrome": true,
+    "$monochromeNote": "Our SVG carries the Osiris light theme; the pyDEXPI reference is neutral black-on-white. Both are flattened to monochrome before pixelmatch so colour choices don't dominate the diff."
+  },
+
+  "corpus": {
+    "include": ["samples/dexpi 1.2/**/*.xml", "samples/dexpi 1.3/**/*.xml"],
+    "classification": "proteus-graphics only (has drawing primitives AND pyDEXPI renders it); semantic-only and unrenderable files are recorded but excluded from PASS/FAIL.",
+    "officialSvgAsReference": true
+  }
+}

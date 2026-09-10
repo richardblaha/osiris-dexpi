@@ -1,0 +1,1597 @@
+{
+  "generatedAt": "2026-09-10T15:08:57.034Z",
+  "toolVersion": "0.1.0",
+  "counts": {
+    "proteus-graphics": 178,
+    "semantic-only": 42,
+    "unrenderable": 0
+  },
+  "entries": [
+    {
+      "id": "1.2/C01/c01v01-hex-ex01",
+      "path": "samples/dexpi 1.2/example pids/C01 the complete DEXPI PnID/C01V01-HEX.EX01.xml",
+      "version": "1.2",
+      "task": "C01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C01/c01v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/C01 the complete DEXPI PnID/C01V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "C01",
+      "classification": "proteus-graphics",
+      "officialSvg": "samples/dexpi 1.2/example pids/C01 the complete DEXPI PnID/C01V01-HEX.EX02.svg"
+    },
+    {
+      "id": "1.2/C01/c01v01-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/C01 the complete DEXPI PnID/C01V01-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "C01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C01/c01v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/C01 the complete DEXPI PnID/C01V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "C01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C01/c01v01-sag-ex02",
+      "path": "samples/dexpi 1.2/example pids/C01 the complete DEXPI PnID/C01V01-SAG.EX02.XML",
+      "version": "1.2",
+      "task": "C01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C02/c02v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/C02 DEXPI Example Complete E+P/C02V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "C02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C02/c02v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/C02 DEXPI Example Complete E+P/C02V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "C02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C02/c02v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/C02 DEXPI Example Complete E+P/C02V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "C02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C02/c02v01-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/C02 DEXPI Example Complete E+P/C02V01-VER.EX01.xml",
+      "version": "1.2",
+      "task": "C02",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/C03/c03v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/C03 DEXPI Example Tank Displ Pump Pipe with Tee/C03V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "C03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C03/c03v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/C03 DEXPI Example Tank Displ Pump Pipe with Tee/C03V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "C03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C03/c03v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/C03 DEXPI Example Tank Displ Pump Pipe with Tee/C03V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "C03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C03/c03v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/C03 DEXPI Example Tank Displ Pump Pipe with Tee/C03V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "C03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C04/c04v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/C04 DEXPI Example Pump Plate Heat Exchanger/C04V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "C04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C04/c04v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/C04 DEXPI Example Pump Plate Heat Exchanger/C04V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "C04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C04/c04v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/C04 DEXPI Example Pump Plate Heat Exchanger/C04V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "C04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C04/c04v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/C04 DEXPI Example Pump Plate Heat Exchanger/C04V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "C04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C05/c05v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/C05 Pump- Tank- and Control loop/C05V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "C05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/C06/c06v01-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/C06 Tank in PlantStructure/C06V01-VER.EX01.xml",
+      "version": "1.2",
+      "task": "C06",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/E01/e01-v02-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01.V02.ING.EX01.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-aud-ex02",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-AUD.EX02.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-aud-ex03",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-AUD.EX03.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-aud-ex04",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-AUD.EX04.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-avv-ex02",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-AVV.EX02.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-avv-ex03",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-AVV.EX03.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-avv-ex04",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-AVV.EX04.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-ing-ex02",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-ING.EX02.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-sag-ex02",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-SAG.EX02.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v01-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-VER.EX01.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/E01/e01v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V02-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v02-hex-ex1",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V02-HEX.EX1.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E01/e01v02-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V02-VER.EX01.xml",
+      "version": "1.2",
+      "task": "E01",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/E02/e02v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-aud-ex02",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-AUD.EX02.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-avv-ex02",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-AVV.EX02.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-avv-ex03",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-AVV.EX03.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-ing-ex02-aud-im01",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-ING.EX02-AUD.IM01.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-sag-ex02",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-SAG.EX02.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-VER.EX01.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/E02/e02v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V02-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v02-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V02-VER.EX01.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/E02/e02v02-hex-ex1",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V02.HEX.EX1.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E02/e02v01-hex-ex04",
+      "path": "samples/dexpi 1.2/example pids/E02 Tank with nozzels/E02V01-HEX.EX04.xml",
+      "version": "1.2",
+      "task": "E02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E03/e03v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/E03 HeatExchanger With Nozzles/E03V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "E03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E03/e03v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E03 Pump With Nozzles/E03V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E03/e03v01-aud-ex02",
+      "path": "samples/dexpi 1.2/example pids/E03 Pump With Nozzles/E03V01-AUD.EX02.xml",
+      "version": "1.2",
+      "task": "E03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E03/e03v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/E03 Pump With Nozzles/E03V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "E03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E03/e03v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E03 Pump With Nozzles/E03V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E03/e03v01-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/E03 Pump With Nozzles/E03V01-VER.EX01.xml",
+      "version": "1.2",
+      "task": "E03",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/E03/e03v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E03 Pump With Nozzles/E03V02-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E04/e04v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E04 HeatExchanger With Nozzles/E04V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E04/e04v01-aud-ex02",
+      "path": "samples/dexpi 1.2/example pids/E04 HeatExchanger With Nozzles/E04V01-AUD.EX02.xml",
+      "version": "1.2",
+      "task": "E04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E04/e04v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/E04 HeatExchanger With Nozzles/E04V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "E04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E04/e04v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/E04 HeatExchanger With Nozzles/E04V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "E04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E04/e04v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E04 HeatExchanger With Nozzles/E04V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E04/e04v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E04 HeatExchanger With Nozzles/E04V02-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E05/e05v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E05/e05v01-aud-ex02",
+      "path": "samples/dexpi 1.2/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V01-AUD.EX02.xml",
+      "version": "1.2",
+      "task": "E05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E05/e05v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "E05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E05/e05v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "E05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E05/e05v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E05/e05v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V02-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E06/e06v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/E06 Pump%2C HeatExchanger%2C Nozzles Connected With PNS/E06V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "E06",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E06/e06v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E06 Pump, HeatExchanger, Nozzles Connected With PNS/E06V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E06",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E06/e06v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/E06 Pump, HeatExchanger, Nozzles Connected With PNS/E06V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "E06",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E06/e06v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E06 Pump, HeatExchanger, Nozzles Connected With PNS/E06V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E06",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E06/e06v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/E06 Pump, HeatExchanger, Nozzles Connected With PNS/E06V02-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "E06",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E07/e07v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/E07 PressureVessel with ColumnSections/E07V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "E07",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E07/e07v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E07 PressureVessel with ColumnSections/E07V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E07",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E07/e07v01-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/E07 PressureVessel with ColumnSections/E07V01-VER.EX01.xml",
+      "version": "1.2",
+      "task": "E07",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/E08/e08v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E08 ProcessColumn with ColumnSections/E08V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E08",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E09/e09v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/E09 Tank with equipment bar/E09V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "E09",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E09/e09v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E09 Tank with equipment bar/E09V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E09",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E11/e11v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E11 Heat Exchanger with Chambers and Equipment Bar/E11V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E11",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E12/e12v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E12 Heat Exchanger with Chambers, Nozzles and Equipment Bar/E12V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E12",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E13/e13v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/E13 Tank with Plant Structure Information/E13V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "E13",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/E14/e14v01-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/E14 Tank with Standard Plant Structure Information/E14V01-VER.EX01.xml",
+      "version": "1.2",
+      "task": "E14",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/I01/i01v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v01-dxi-ex01",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V01-DXI.EX01.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v01-sag-ex02",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V01-SAG.EX02.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v01-ver-ex01",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V01-VER.EX01.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.2/I01/i01v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v02-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v02-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02-ING.EX01.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v02-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v02-sag-ex02",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02-SAG.EX02.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v02-sag-ex03",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02-SAG.EX03.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v02-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02.HEX.EX02.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v02-hex-ex1",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02.HEX.EX1.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I01/i01v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I02/i02-v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/I02 Control/I02.V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "I02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I02/i02-v01-ing-ex02",
+      "path": "samples/dexpi 1.2/example pids/I02 Control/I02.V01-ING.EX02.xml",
+      "version": "1.2",
+      "task": "I02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I02/i02v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/I02 Control/I02V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "I02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I02/i02v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/I02 Control/I02V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "I02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I02/i02v01-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/I02 Control/I02V01-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "I02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I02/i02v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I02 Control/I02V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I02/i02v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I02 Control/I02V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I02/i02v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I02 Control/I02V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I03/i03v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/I03 Measurement and Control/I03V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "I03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I03/i03v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/I03 Measurement and Control/I03V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "I03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I03/i03v01-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/I03 Measurement and Control/I03V01-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "I03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I03/i03v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I03 Measurement and Control/I03V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I03/i03v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I03 Measurement and Control/I03V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I03/i03v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I03 Measurement and Control/I03V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I04/i04-v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04.V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "I04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I04/i04-v01-ing-ex02",
+      "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04.V01-ING.EX02.xml",
+      "version": "1.2",
+      "task": "I04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I04/i04-v01-ing-ex03",
+      "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04.V01-ING.EX03.xml",
+      "version": "1.2",
+      "task": "I04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I04/i04v01-hex-ex04",
+      "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04V01-HEX.EX04.xml",
+      "version": "1.2",
+      "task": "I04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I04/i04v01-hex-ex05",
+      "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04V01-HEX.EX05.xml",
+      "version": "1.2",
+      "task": "I04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I04/i04v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I04/i04v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I04/i04v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I05/i05v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I05 Two flow indications and flow ratio control in CCR/I05V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I05/i05v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I05 Two flow indications and flow ratio control in CCR/I05V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I05/i05v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I05 Two flow indications and flow ratio control in CCR/I05V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I05",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I06/i06v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I06 CCR flow indication and high alarm, flow control, control valve/I06V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I06",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I06/i06v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I06 CCR flow indication and high alarm, flow control, control valve/I06V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I06",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I06/i06v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I06 CCR flow indication and high alarm, flow control, control valve/I06V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I06",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I07/i07v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I07 Local and CCR pressure indic., alarm and safety switch/I07V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I07",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I07/i07v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I07 Local and CCR pressure indic., alarm and safety switch/I07V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I07",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I07/i07v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I07 Local and CCR pressure indic., alarm and safety switch/I07V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I07",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I08/i08v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I08 Local pressure indication, CCR pressure indication, alarms and switches/I08V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I08",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I08/i08v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I08 Local pressure indication, CCR pressure indication, alarms and switches/I08V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I08",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I08/i08v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I08 Local pressure indication, CCR pressure indication, alarms and switches/I08V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I08",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I09/i09v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I09 Measurement/I09V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I09",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I09/i09v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I09 Measurement/I09V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I09",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I09/i09v02-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/I09 Measurement/I09V02-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "I09",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I09/i09v02-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/I09 Measurement/I09V02-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "I09",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I09/i09v02-hex-ex1",
+      "path": "samples/dexpi 1.2/example pids/I09 Measurement/I09V02.HEX.EX1.xml",
+      "version": "1.2",
+      "task": "I09",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I09/i09v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I09 Measurement/I09V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I09",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I10/i10v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I10 Measurement/I10V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I10",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I10/i10v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I10 Measurement/I10V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I10",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I10/i10v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I10 Measurement/I10V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I10",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I11/i11-v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/I11 Measurement/I11.V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "I11",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I11/i11v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/I11 Measurement/I11V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "I11",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I11/i11v01-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/I11 Measurement/I11V01-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "I11",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I11/i11v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I11 Measurement/I11V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I11",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I11/i11v01-aud-ex01i",
+      "path": "samples/dexpi 1.2/example pids/I11 Measurement/I11V01_AUD.EX01I.xml",
+      "version": "1.2",
+      "task": "I11",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I11/i11v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I11 Measurement/I11V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I11",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I12/i12-v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/I12 Control/I12.V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "I12",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I12/i12v01-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/I12 Control/I12V01-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "I12",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I12/i12v01-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/I12 Control/I12V01-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "I12",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I12/i12v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/I12 Control/I12V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "I12",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I12/i12v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I12 Control/I12V01_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I12",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/I12/i12v02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/I12 Control/I12V02_AUD.EX01.xml",
+      "version": "1.2",
+      "task": "I12",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-avv-ex02",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-AVV.EX02.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-hex-ex03",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-HEX.EX03.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-ing-ex01",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-ING.EX01.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-ing-ex02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-ING.EX02-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-ing-ex02",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-ING.EX02.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-SAG.EX01.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-sag-ex02-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-SAG.EX02-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v01-sag-ex02",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-SAG.EX02.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P01/p01v02-aud-ex01-xml",
+      "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V02-AUD.EX01.xml.xml",
+      "version": "1.2",
+      "task": "P01",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v01-intergraph-post",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/2RENAME/P02V01-INTERGRAPH_Post.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v01-intergraph-post-c",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/2RENAME/P02V01-INTERGRAPH_Post_C.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v01-ingv02-audv01",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/2RENAME/P02V01_INGV02-AUDV01.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/P02V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v01-avv-ex02",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/P02V01-AVV.EX02.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v01-sag-ex02-aud-im01",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/P02V01-SAG.EX02-AUD.IM01.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v01-sag-ex02",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/P02V01-SAG.EX02.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/P02V01_SAG.EX01.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P02/p02v02-hex-ex02",
+      "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/P02V02-HEX.EX02.xml",
+      "version": "1.2",
+      "task": "P02",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P03/p03v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/P03 Pipe With Edge/P03V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "P03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P03/p03v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/P03 Pipe With Edge/P03V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "P03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P03/p03v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/P03 Pipe With Edge/P03V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "P03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P03/p03v02-aud-ex01-xml",
+      "path": "samples/dexpi 1.2/example pids/P03 Pipe With Edge/P03V02-AUD.EX01.xml.xml",
+      "version": "1.2",
+      "task": "P03",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P04/p04v01-aud-ex01",
+      "path": "samples/dexpi 1.2/example pids/P04 Pipe With Intersection/P04V01-AUD.EX01.xml",
+      "version": "1.2",
+      "task": "P04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P04/p04v01-avv-ex01",
+      "path": "samples/dexpi 1.2/example pids/P04 Pipe With Intersection/P04V01-AVV.EX01.xml",
+      "version": "1.2",
+      "task": "P04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P04/p04v01-avv-ex02",
+      "path": "samples/dexpi 1.2/example pids/P04 Pipe With Intersection/P04V01-AVV.EX02.xml",
+      "version": "1.2",
+      "task": "P04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P04/p04v01-sag-ex01",
+      "path": "samples/dexpi 1.2/example pids/P04 Pipe With Intersection/P04V01-SAG.EX01.XML",
+      "version": "1.2",
+      "task": "P04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.2/P04/p04v02-aud-ex01-xml",
+      "path": "samples/dexpi 1.2/example pids/P04 Pipe With Intersection/P04V02-AUD.EX01.xml.xml",
+      "version": "1.2",
+      "task": "P04",
+      "classification": "proteus-graphics"
+    },
+    {
+      "id": "1.3/C01/c01v04-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/C01 DEXPI Reference P&ID/C01V04-VER.EX01.xml",
+      "version": "1.3",
+      "task": "C01",
+      "classification": "proteus-graphics",
+      "officialSvg": "samples/dexpi 1.3/example pids/C01 DEXPI Reference P&ID/C01V04-VER.EX01.svg"
+    },
+    {
+      "id": "1.3/C02/c02v03-ver-ex02",
+      "path": "samples/dexpi 1.3/example pids/C02 Process Column (BASF)/C02V03-VER.EX02.xml",
+      "version": "1.3",
+      "task": "C02",
+      "classification": "proteus-graphics",
+      "officialSvg": "samples/dexpi 1.3/example pids/C02 Process Column (BASF)/C02V03-VER.EX02.svg"
+    },
+    {
+      "id": "1.3/C03/c03v04-ver-ex02",
+      "path": "samples/dexpi 1.3/example pids/C03 Piping (Equinor)/C03V04-VER.EX02.xml",
+      "version": "1.3",
+      "task": "C03",
+      "classification": "proteus-graphics",
+      "officialSvg": "samples/dexpi 1.3/example pids/C03 Piping (Equinor)/C03V04-VER.EX02.svg"
+    },
+    {
+      "id": "1.3/E01/e01v02-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E01 Tank/E01V02-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E01",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E02/e02v02-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E02 Tank with Nozzles/E02V02-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E02",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E03/e03v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E03 Pump With Nozzles/E03V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E03",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E04/e04v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E04 HeatExchanger With Nozzles/E04V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E04",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E05/e05v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E05",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E06/e06v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E06 Pump, HeatExchanger, Nozzles Connected With PNS/E06V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E06",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E07/e07v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E07 PressureVessel with ColumnSections/E07V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E07",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E08/e08v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E08 ProcessColumn with ColumnSections/E08V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E08",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E09/e09v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E09 Tank with equipment bar/E09V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E09",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E11/e11v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E11 Heat Exchanger with Chambers and Equipment Bar/E11V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E11",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E12/e12v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E12 Heat Exchanger with Chambers, Nozzles and Equipment Bar/E12V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E12",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E13/e13v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E13 Tank with Plant Structure Information/E13V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E13",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/E14/e14v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/E14 Tank with Standard Plant Structure Information/E14V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "E14",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I01/i01v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I01 Measurement/I01V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I01",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I02/i02v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I02 Control/I02V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I02",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I03/i03v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I03 Measurement and Control/I03V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I03",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I04/i04v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I04 Measurement and Control/I04V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I04",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I05/i05v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I05 Two flow indications and flow ratio control in CCR/I05V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I05",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I06/i06v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I06 CCR flow indication and high alarm, flow control, control valve/I06V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I06",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I07/i07v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I07 Local and CCR pressure indic., alarm and safety switch/I07V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I07",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I08/i08v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I08 Local pressure indication, CCR pressure indication, alarms and switches/I08V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I08",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I09/i09v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I09 Measurement/I09V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I09",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I10/i10v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I10 Measurement/I10V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I10",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I11/i11v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I11 Measurement/I11V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I11",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I12/i12v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I12 Control/I12V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I12",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I13/i13v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I13 Measurement/I13V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I13",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I14/i14v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I14 Measurement/I14V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I14",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/I15/i15v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/I15 Measurement/I15V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "I15",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/P01/p01v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/P01 Pipe FromTo Nozzles/P01V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "P01",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/P02/p02v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/P02 Pipe From OPC to Nozzle/P02V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "P02",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/P03/p03v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/P03 Pipe With Edge/P03V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "P03",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    },
+    {
+      "id": "1.3/P04/p04v01-ver-ex01",
+      "path": "samples/dexpi 1.3/example pids/P04 Pipe With Intersection/P04V01-VER.EX01.xml",
+      "version": "1.3",
+      "task": "P04",
+      "classification": "semantic-only",
+      "reason": "no <Position>/<Extent> or <ShapeCatalogue> drawing primitives"
+    }
+  ]
+}
