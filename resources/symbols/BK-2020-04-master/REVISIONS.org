@@ -1,0 +1,143 @@
+* Drawing Revisions
+** File Properties
+| Identification code   | SVG  | PDF  | Title                       | Supplementary title           |
+|-----------------------+------+------+-----------------------------+-------------------------------|
+| BK-2020-04-PID-1-SHT1 | [[file:DWG/BK-2020-04-PID-1-SHT1.svg][link]] | [[file:DEL/BK-2020-04-PID-1-SHT1.pdf][link]] | P&ID Symbols                | ISO 10628-2:2012 Groups 1-2   |
+| BK-2020-04-PID-1-SHT2 | [[file:DWG/BK-2020-04-PID-1-SHT2.svg][link]] | [[file:DWG/BK-2020-04-PID-1-SHT2.pdf][link]] | P&ID Symbols                | ISO 10628-2:2012 Groups 3-5   |
+| BK-2020-04-PID-1-SHT3 | [[file:DWG/BK-2020-04-PID-1-SHT3.svg][link]] | [[file:DWG/BK-2020-04-PID-1-SHT3.pdf][link]] | P&ID Symbols                | ISO 10628-2:2012 Groups 6-9   |
+| BK-2020-04-PID-1-SHT4 | [[file:DWG/BK-2020-04-PID-1-SHT4.svg][link]] | [[file:DWG/BK-2020-04-PID-1-SHT4.pdf][link]] | P&ID Symbols                | ISO 10628-2:2012 Groups 10-17 |
+| BK-2020-04-PID-1-SHT5 | [[file:DWG/BK-2020-04-PID-1-SHT5.svg][link]] | [[file:DWG/BK-2020-04-PID-1-SHT5.pdf][link]] | P&ID Symbols                | ISO 10628-2:2012 Groups 18-20 |
+| BK-2020-04-PID-1-SHT6 | [[file:DWG/BK-2020-04-PID-1-SHT6.svg][link]] | [[file:DWG/BK-2020-04-PID-1-SHT6.pdf][link]] | P&ID Symbols                | ISO 10628-2:2012 Groups 21-25 |
+| BK-2020-04-PID-1-SHT7 | [[file:DWG/BK-2020-04-PID-1-SHT7.svg][link]] | [[file:DWG/BK-2020-04-PID-1-SHT7.pdf][link]] | P&ID Symbols                | ISO 10628-2:2012 Groups 26-29 |
+|-----------------------+------+------+-----------------------------+-------------------------------|
+| BK-2020-04-TMP-1-SHTX | [[file:DWG/BK-2020-04-TMP-1-SHTX.svg][link]] | [[file:DWG/BK-2020-04-TMP-1-SHTX.pdf][link]] | Technical Drawing Templates | ISO 5457:1999 Sizes A0-A4     |
+| BK-2020-04-TMP-1-SHT1 | [[file:DWG/BK-2020-04-TMP-1-SHT1.svg][link]] | [[file:DWG/BK-2020-04-TMP-1-SHT1.pdf][link]] | Technical Drawing Template  | ISO 5457:1999 Size A0         |
+| BK-2020-04-TMP-1-SHT2 | [[file:DWG/BK-2020-04-TMP-1-SHT2.svg][link]] | [[file:DWG/BK-2020-04-TMP-1-SHT2.pdf][link]] | Technical Drawing Template  | ISO 5457:1999 Size A1         |
+| BK-2020-04-TMP-1-SHT3 | [[file:DWG/BK-2020-04-TMP-1-SHT3.svg][link]] | [[file:DWG/BK-2020-04-TMP-1-SHT3.pdf][link]] | Technical Drawing Template  | ISO 5457:1999 Size A2         |
+| BK-2020-04-TMP-1-SHT4 | [[file:DWG/BK-2020-04-TMP-1-SHT4.svg][link]] | [[file:DWG/BK-2020-04-TMP-1-SHT4.pdf][link]] | Technical Drawing Template  | ISO 5457:1999 Size A3         |
+| BK-2020-04-TMP-1-SHT5 | [[file:DWG/BK-2020-04-TMP-1-SHT4.svg][link]] | [[file:DWG/BK-2020-04-TMP-1-SHT4.pdf][link]] | Technical Drawing Template  | ISO 5457:1999 Size A4         |
+
+** Revision History
+*** BK-2020-04-PID-1-SHT1
+| Revision date     | Rev. | Created by | Approved by | Comment                      |
+|-------------------+------+------------+-------------+------------------------------|
+| 2020-09-23T14:23Z | A    | SBS        |             | Initial draft                |
+| 2020-09-23T14:46Z | B    | SBS        |             | Remove alignment lines       |
+| 2020-09-23T14:46Z | C    | SBS        |             | Group symbols, add legend    |
+| 2020-09-24T05:34Z | D    | SBS        |             | Align symbols                |
+| 2020-09-25T20:31Z | E    | SBS        |             | Fix metadata, update legend  |
+| 2020-09-25T22:13Z | F    | SBS        |             | Add source, fix legend (L13) |
+| 2023-03-01T20:18Z | G    | SBS        |             | Group symbols, adjust titles |
+
+*** BK-2020-04-PID-1-SHT2
+| Revision date     | Rev. | Created by | Approved by | Comment                                     |
+|-------------------+------+------------+-------------+---------------------------------------------|
+| 2020-09-24T03:33Z | A    | SBS        |             | Initial draft                               |
+| 2020-09-24T05:14Z | B    | SBS        |             | Align group titles, fix legend              |
+| 2020-09-24T06:07Z | C    | SBS        |             | Remove minor errant line                    |
+| 2020-09-24T06:17Z | D    | SBS        |             | Fix minor text misalign                     |
+| 2020-09-24T09:23Z | E    | SBS        |             | New layer: group partition objects          |
+| 2020-09-24T11:51Z | F    | SBS        |             | Fix minor text misalign                     |
+| 2020-09-25T20:38Z | G    | SBS        |             | Fix metadata, update legend                 |
+| 2020-09-25T22:26Z | H    | SBS        |             | Fix legend @L13, add wikiURL, mark released |
+| 2020-10-01T13:01Z | J    | SBS        |             | Fix line width @H1                          |
+| 2023-03-01T20:18Z | K    | SBS        |             | Group symbols, adjust titles                |
+
+*** BK-2020-04-PID-1-SHT3
+| Revision date     | Rev. | Created by | Approved by | Comment                                                  |
+|-------------------+------+------------+-------------+----------------------------------------------------------|
+| 2020-09-24T14:37Z | A    | SBS        |             | Initial draft                                            |
+| 2020-09-24T14:47Z | B    | SBS        |             | Fix title group numbers, metadata                        |
+| 2020-09-25T10:08Z | C    | SBS        |             | Fix legend arrow color                                   |
+| 2020-09-25T20:26Z | D    | SBS        |             | Fix metadata, improve X8124                              |
+| 2020-09-25T22:34Z | E    | SBS        |             | Fix legend @13,update metadata,add wikiURL,mark released |
+| 2023-03-01T20:18Z | F    | SBS        |             | Group symbols, adjust titles                             |
+
+*** BK-2020-04-PID-1-SHT4
+| Revision date     | Rev. | Created by | Approved by | Comment                                                   |
+|-------------------+------+------------+-------------+-----------------------------------------------------------|
+| 2020-09-25T09:02Z | A    | SBS        |             | Initial draft                                             |
+| 2020-09-25T09:28Z | B    | SBS        |             | Fix legend arrow color                                    |
+| 2020-09-25T20:45Z | C    | SBS        |             | Fix metadata, update legend, remove test shapes           |
+| 2020-09-25T22:39Z | D    | SBS        |             | Fix legend,update metadata, mark as released, add wikiURL |
+| 2023-03-01T20:18Z | E    | SBS        |             | Group symbols, adjust titles                              |
+
+*** BK-2020-04-PID-1-SHT5
+| Revision date     | Rev. | Created by | Approved by | Comment                                     |
+|-------------------+------+------------+-------------+---------------------------------------------|
+| 2020-09-25T14:05Z | A    | SBS        |             | Initial draft                               |
+| 2020-09-25T20:52Z | B    | SBS        |             | Update metadata/legend; remove test objects |
+| 2020-09-25T22:43Z | C    | SBS        |             | Fix legend,mark as released, add wikiURL    |
+| 2023-03-01T20:18Z | D    | SBS        |             | Group symbols, adjust titles                |
+
+*** BK-2020-04-PID-1-SHT6
+| Revision date     | Rev. | Created by | Approved by | Comment                                      |
+|-------------------+------+------------+-------------+----------------------------------------------|
+| 2020-09-2517:51Z  | A    | SBS        |             | Initial draft                                |
+| 2020-09-25T20:56Z | B    | SBS        |             | Update metadata, legend; remove test objects |
+| 2020-09-25T22:47Z | C    | SBS        |             | Fix legend, mark released, add wikiURL       |
+| 2023-03-01T20:18Z | D    | SBS        |             | Group symbols, adjust titles                 |
+| 2023-08-19T19:43Z | E    | SBS        |             | Correct symbol name typo                     |
+
+*** BK-2020-04-PID-1-SHT7
+| Revision date     | Rev. | Created by | Approved by | Comment                                |
+|-------------------+------+------------+-------------+----------------------------------------|
+| 2020-09-25T20:08Z | A    | SBS        |             | Initial draft                          |
+| 2020-09-25T21:08Z | B    | SBS        |             | Remove test objs; see IMG              |
+| 2020-09-25T22:50Z | C    | SBS        |             | Fix legend, mark released, add wikiURL |
+| 2023-03-01T20:18Z | D    | SBS        |             | Group symbols, adjust titles           |
+
+*** BK-2020-04-TMP-1-SHTX
+| Revision date     | Rev. | Created by | Approved by | Comment                                                        |
+|-------------------+------+------------+-------------+----------------------------------------------------------------|
+| 2020-09-27T17:43Z | A    | SBS        |             | Initial draft. Is template of templates.                       |
+| 2020-09-27T18:46Z | B    | SBS        |             | Compact most template layers into single layer with sublayers. |
+| 2020-09-27T18:58Z | C    | SBS        |             | Make sample title identification number more generic.          |
+| 2020-09-27T20:05Z | D    | SBS        |             | Change title to be more plainly understandable                 |
+
+*** BK-2020-04-TMP-1-SHT1
+| Revision date     | Rev. | Created by | Approved by | Comment                                     |
+|-------------------+------+------------+-------------+---------------------------------------------|
+| 2020-09-27T19:26Z | A    | SBS        |             | Initial draft.                              |
+| 2020-09-27T20:09Z | B    | SBS        |             | Change title to be more readable.           |
+| 2020-09-28T13:13Z | C    | SBS        |             | Change license from CC BY-SA 4.0 to CC0 1.0 |
+| 2020-09-28T14:12Z | D    | SBS        |             | Add pathed version of reference grid text.  |
+|                   |      |            |             |                                             |
+
+*** BK-2020-04-TMP-1-SHT2
+| Revision date     | Rev. | Created by | Approved by | Comment                                          |
+|-------------------+------+------------+-------------+--------------------------------------------------|
+| 2020-09-26T22:09Z | A    | SBS        |             | Initial draft.                                   |
+| 2020-09-27T17:41Z | B    | SBS        |             | Change dwg. id from 'TMP-1-SHT1' to 'TMP-1-SHT2' |
+| 2020-09-27T19:21Z | C    | SBS        |             | Reimplement with new SHTX template of template   |
+| 2020-09-27T20:21Z | D    | SBS        |             | Make title more readable                         |
+| 2020-09-28T13:17Z | E    | SBS        |             | Change license from CC BY-SA 4.0 to CC0 1.0      |
+| 2020-09-28T14:11Z | F    | SBS        |             | Add pathed version of reference grid text.       |
+|                   |      |            |             |                                                  |
+
+*** BK-2020-04-TMP-1-SHT3
+| Revision date     | Rev. | Created by | Approved by | Comment                                     |
+|-------------------+------+------------+-------------+---------------------------------------------|
+| 2020-09-27T19:36Z | A    | SBS        |             | Initial draft.                              |
+| 2020-09-27T20:13Z | B    | SBS        |             | Make title more readable                    |
+| 2020-09-28T13:23Z | C    | SBS        |             | Change license from CC BY-SA 4.0 to CC0 1.0 |
+| 2020-09-28T14:10Z | D    | SBS        |             | Add pathed version of reference grid text.  |
+|                   |      |            |             |                                             |
+
+*** BK-2020-04-TMP-1-SHT4
+| Revision date     | Rev. | Created by | Approved by | Comment                                     |
+|-------------------+------+------------+-------------+---------------------------------------------|
+| 2020-09-27T19:40Z | A    | SBS        |             | Initial draft                               |
+| 2020-09-27T20:20Z | B    | SBS        |             | Make title more readable                    |
+| 2020-09-28T13:28Z | C    | SBS        |             | Change license from CC BY-SA 4.0 to CC0 1.0 |
+| 2020-09-28T14:08Z | D    | SBS        |             | Add pathed version of reference grid text.  |
+|                   |      |            |             |                                             |
+
+*** BK-2020-04-TMP-1-SHT5
+| Revision date     | Rev. | Created by | Approved by | Comment                                     |
+|-------------------+------+------------+-------------+---------------------------------------------|
+| 2020-09-27T19:44Z | A    | SBS        |             | Initial draft.                              |
+| 2020-09-27T20:21Z | B    | SBS        |             | Make title more readable                    |
+| 2020-09-28T13:30Z | C    | SBS        |             | Change license from CC BY-SA 4.0 to CC0 1.0 |
+| 2020-09-28T14:06Z | D    | SBS        |             | Add pathed version of reference grid text.  |
+|                   |      |            |             |                                             |

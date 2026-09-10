@@ -1,0 +1,48 @@
+* Symbol groups
+
+This file contains a list of symbol groups specified by the ISO
+10628-2:2012 standard and which drawing contains them.
+
+** PID-1 ISO 10628-2:2012 Symbol Grouping
+| Grp | Count | Category Desc.                                        | DWG. ID.              | Status   |
+|-----+-------+-------------------------------------------------------+-----------------------+----------|
+|   1 |    29 | Vessels and Tanks                                     | BK-2020-04-PID-1-SHT1 | released |
+|   2 |     8 | Columns with Internals                                | BK-2020-04-PID-1-SHT1 | released |
+|-----+-------+-------------------------------------------------------+-----------------------+----------|
+|   3 |    16 | Heat Exchangers                                       | BK-2020-04-PID-1-SHT2 | released |
+|   4 |     8 | Steam Generators, Furnaces, Recooling Device          | BK-2020-04-PID-1-SHT2 | released |
+|   5 |     9 | Cooling Tower                                         | BK-2020-04-PID-1-SHT2 | released |
+|-----+-------+-------------------------------------------------------+-----------------------+----------|
+|   6 |    15 | Filters, Liquid Filters, Gas Filters                  | BK-2020-04-PID-1-SHT3 | released |
+|   7 |     7 | Screening Devices, Sieves and Rakes                   | BK-2020-04-PID-1-SHT3 | released |
+|   8 |    13 | Separators                                            | BK-2020-04-PID-1-SHT3 | released |
+|   9 |     8 | Centrifuges                                           | BK-2020-04-PID-1-SHT3 | released |
+|-----+-------+-------------------------------------------------------+-----------------------+----------|
+|  10 |     8 | Drier                                                 | BK-2020-04-PID-1-SHT4 | released |
+|  11 |    12 | Crushing/Grinding Machines                            | BK-2020-04-PID-1-SHT4 | released |
+|  12 |     4 | Mixers/Kneaders                                       | BK-2020-04-PID-1-SHT4 | released |
+|  13 |     4 | Shaping Machines — Processing in Vertical Direction   | BK-2020-04-PID-1-SHT4 | released |
+|  14 |     3 | Shaping Machines — Processing in Horizontal Direction | BK-2020-04-PID-1-SHT4 | released |
+|  15 |     8 | Liquid Pumps                                          | BK-2020-04-PID-1-SHT4 | released |
+|  16 |    10 | Compressors, Vacuum Pumps                             | BK-2020-04-PID-1-SHT4 | released |
+|  17 |     1 | Blowers, Fans                                         | BK-2020-04-PID-1-SHT4 | released |
+|-----+-------+-------------------------------------------------------+-----------------------+----------|
+|  18 |    22 | Lifting, Conveying and Transport Equipment            | BK-2020-04-PID-1-SHT5 | released |
+|  19 |     5 | Proportioners, Feeders and Distribution Facilities    | BK-2020-04-PID-1-SHT5 | released |
+|  20 |     8 | Engines                                               | BK-2020-04-PID-1-SHT5 | released |
+|-----+-------+-------------------------------------------------------+-----------------------+----------|
+|  21 |    14 | Valve                                                 | BK-2020-04-PID-1-SHT6 | released |
+|  22 |     4 | Check Valve                                           | BK-2020-04-PID-1-SHT6 | released |
+|  23 |     9 | Valves and Fittings with Safety Function              | BK-2020-04-PID-1-SHT6 | released |
+|  24 |    24 | Fittings                                              | BK-2020-04-PID-1-SHT6 | released |
+|  25 |     9 | Graphical Symbols for Piping                          | BK-2020-04-PID-1-SHT6 | released |
+|-----+-------+-------------------------------------------------------+-----------------------+----------|
+|  26 |     6 | Apparatus Elements                                    | BK-2020-04-PID-1-SHT7 | released |
+|  27 |     8 | Internals                                             | BK-2020-04-PID-1-SHT7 | released |
+|  28 |    10 | Agitators, Stirrers                                   | BK-2020-04-PID-1-SHT7 | released |
+|  29 |    14 | Internal Characteristics and Built-In Components      | BK-2020-04-PID-1-SHT7 | released |
+|-----+-------+-------------------------------------------------------+-----------------------+----------|
+| all |   296 |                                                       |                       |          |
+
+** License
+🄯 2020 Steven Baltakatei Sandoval CC BY-SA 4.0

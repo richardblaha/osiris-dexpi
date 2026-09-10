@@ -1,0 +1,22 @@
+* Task list
+** Add blank layer to template for user to fill in.
+** Update BK-2020-04-PID-1 drawings
+*** Update REVISIONS.org
+
+* Completed Tasks
+** DONE Change licenses to CC0 (public domain) for all templates
+   CLOSED: [2020-09-28 Mon 14:44]
+This change will facilitate their use by the general public. This
+makes sense since the templates themselves do not in-and-of themselves
+provide much complexity; their nature is to facilitate production of
+other works.
+** DONE Create ISO 5457:1999 SVG templates for A2, A3, and A4 paper sizes.
+   CLOSED: [2020-09-28 Mon 14:45]
+| Drawing ID. No.        | ISO 216 Desig. |
+|------------------------+----------------|
+| BK-2020-04-TMP-1-SHT-1 | A0             |
+| BK-2020-04-TMP-1-SHT-2 | A1             |
+| BK-2020-04-TMP-1-SHT-3 | A2             |
+| BK-2020-04-TMP-1-SHT-4 | A3             |
+| BK-2020-04-TMP-1-SHT-5 | A4             |
+

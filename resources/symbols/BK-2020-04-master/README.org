@@ -1,0 +1,49 @@
+* BK-2020-04: Baltakatei Engineering Drawing Templates
+#+AUTHOR: Steven Baltakatei Sandoval
+#+DATE: 2023-08-19
+#+EMAIL: baltakatei@gmail.com
+
+** Scope
+This repository contains drawing files for constructing personal P&IDs
+([[https://en.wikipedia.org/wiki/Piping_and_instrumentation_diagram][Piping and Instrumentation Diagrams]]) and PFDs ([[Process flow diagram][Process Flow
+Diagrams]]).
+
+** Summary
+See the [[File:REVISION.org][drawing revision history]] for a list of tracked files.
+
+Some drawings may be uploaded to Wikimedia Commons. Notable sets include:
+
+- [[https://commons.wikimedia.org/wiki/File:ISO_10628-2_2012_Symbols.pdf][BK-2020-04-PID-1]]: Chemical engineering symbols ([[https://en.wikipedia.org/wiki/ISO_10628][ISO 10628]]-2:2012 Symbols)
+- [[https://commons.wikimedia.org/wiki/File:Technical_drawing_templates_(ISO_5457_1999_Sizes_A0-A4).pdf][BK-2020-04-TMP-1]]: Technical drawing templates (ISO 5457:1999 Sizes A0—A4)
+
+** Contents
+*** Directories
+- ~DEL~: Deliverables. A directory that may include plain SVG files
+  and exported PDF files. *This is probably what you want*.
+- ~DWG~: Drawing source files. A directory that may include [[https://inkscape.org/][Inkscape]]
+  SVG files.
+- ~EXEC~: Executable files. A directory that may include scripts
+  useful for manipulating files.
+- ~IMG~: Reference image files. A directory that may include various
+  image files used in creation of project source files.
+*** Files
+- ~README.org~: This file.
+- ~REVISIONS.org~: A file containing a detailed version history of
+  each drawing.
+- ~TODO.org~: A file containing a list of pending tasks for the
+  project.
+
+** Usage
+*** Generate a combined PDF
+A script is available at ~./EXEC/combine_pdfs.sh~ to merge multiple
+single-page PDFs into a single PDF file; the script uses the [[https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/][pdftk
+utility]] available on typical [[https://www.debian.org/][Debian]]-based [[https://en.wikipedia.org/wiki/Gnu-Linux][GNU/Linux]] machines
+of 2023. On a typical Debian 12 system, the following command may be
+used to merge ~input1.pdf~ and ~input2.pdf~ files into ~output.pdf~.
+
+: $ /bin/bash combine_pdfs.sh output.pdf input1.pdf input2.pdf
+
+** License
+Unless otherwise specified, source and deliverable files are copyright
+2023 [[https://baltakatei.com][Steven Baltakatei Sandoval]] and available under a [[https://creativecommons.org/licenses/by-sa/4.0/][CC BY-SA 4.0]]
+license.
