@@ -200,23 +200,71 @@ function extractMirrored(item: any): boolean | undefined {
 
 import { resolveIndex } from '../walk';
 
+/** Factor that converts a coordinate in `PlantInformation/@Units` to millimetres. */
+export function unitsToMm(units?: string): number {
+  switch ((units || 'mm').trim().toLowerCase()) {
+    case 'mm':
+    case 'millimetre':
+    case 'millimeter':
+      return 1;
+    case 'cm':
+    case 'centimetre':
+    case 'centimeter':
+      return 10;
+    case 'm':
+    case 'metre':
+    case 'meter':
+      return 1000;
+    case 'in':
+    case 'inch':
+      return 25.4;
+    case 'ft':
+    case 'foot':
+      return 304.8;
+    case 'angstrom':
+      // Some vendor exports mislabel millimetre drawings as "Angstrom"; 1e-7 mm
+      // would collapse the diagram to a point, so treat it as millimetres.
+      return 1;
+    default:
+      return 1;
+  }
+}
+
 export function projectToView(model: DexpiModel): PidView {
   const nodes: PidViewNode[] = [];
   const edges: PidViewEdge[] = [];
   const labels: PidViewLabel[] = [];
 
-  const maxY = model.diagram?.maxY ?? 900;
-  const maxX = model.diagram?.maxX ?? 1600;
-  const minX = model.diagram?.minX ?? 0;
-  const minY = model.diagram?.minY ?? 0;
+  // Proteus coordinates are in PlantInformation/@Units. Normalise everything to
+  // millimetres so the canvas, SVG export and downstream tooling share one unit.
+  const U = unitsToMm(model.units);
 
-  // Scale factor to make diagram visible nicely in maxGraph if bounds are small (e.g. A3 mm: 420x297 -> 3x scale)
-  const scale = maxX <= 500 && maxY <= 500 ? 3 : 1;
+  const maxY = (model.diagram?.maxY ?? 900 / U) * U;
+  const maxX = (model.diagram?.maxX ?? 1600 / U) * U;
+  const minX = (model.diagram?.minX ?? 0) * U;
+  const minY = (model.diagram?.minY ?? 0) * U;
 
-  const flipY = (y: number, h: number = 0): number => {
-    return Math.round((maxY - y - h) * scale);
+  // Scale factor to make small (A3-ish) diagrams comfortable on the maxGraph canvas.
+  const scale = maxX - minX <= 500 && maxY - minY <= 500 ? 3 : 1;
+
+  // Inputs are raw file-unit coordinates; output is display pixels.
+  const flipY = (y: number, hMm: number = 0): number => {
+    return Math.round((maxY - y * U - hMm) * scale);
   };
-  const scaleX = (x: number): number => Math.round(x * scale);
+  const scaleX = (x: number): number => Math.round(x * U * scale);
+
+  // Fallback layout for items with no <Position> at all (common in semantic-only
+  // / partial DEXPI files, e.g. the DEXPI instrumentation test cases). Every
+  // fallback used to be a fixed point per item type, so 2+ unpositioned items
+  // of the same kind rendered exactly on top of each other. Cascade them into
+  // a small grid instead so at least nothing is literally invisible.
+  let fallbackSlot = 0;
+  const nextFallback = (baseXmm: number, baseYmm: number): { x: number; y: number } => {
+    const col = fallbackSlot % 6;
+    const row = Math.floor(fallbackSlot / 6);
+    fallbackSlot++;
+    return { x: (baseXmm + col * 70) / U, y: (baseYmm + row * 70) / U };
+  };
 
   const cm = model.conceptualModel;
   if (!cm) {
@@ -243,11 +291,18 @@ export function projectToView(model: DexpiModel): PidView {
     const eq = item as Equipment;
     const dexpiClass = eq.dexpiClass || 'Equipment';
 
-    const w = (eq.extent?.max.x && eq.extent?.min.x ? eq.extent.max.x - eq.extent.min.x : getDefaultWidth(dexpiClass)) * scale;
-    const h = (eq.extent?.max.y && eq.extent?.min.y ? eq.extent.max.y - eq.extent.min.y : getDefaultHeight(dexpiClass)) * scale;
+    // `extent?.max.x && extent?.min.x` used to gate on numeric truthiness, which
+    // wrongly fell through to the default size whenever a bound was exactly 0
+    // (common — extents are frequently expressed relative to the item's own
+    // position). Gate on the extent's *presence* instead.
+    const extW = eq.extent && eq.extent.max.x - eq.extent.min.x > 0 ? (eq.extent.max.x - eq.extent.min.x) * U : undefined;
+    const extH = eq.extent && eq.extent.max.y - eq.extent.min.y > 0 ? (eq.extent.max.y - eq.extent.min.y) * U : undefined;
+    const w = (extW ?? getDefaultWidth(dexpiClass)) * scale;
+    const h = (extH ?? getDefaultHeight(dexpiClass)) * scale;
 
-    const rawX = eq.position?.location.x ?? 100;
-    const rawY = eq.position?.location.y ?? 100;
+    const eqFallback = nextFallback(100, 100);
+    const rawX = eq.position?.location.x ?? eqFallback.x;
+    const rawY = eq.position?.location.y ?? eqFallback.y;
 
     const x = scaleX(rawX);
     const y = flipY(rawY, h / scale);
@@ -326,11 +381,14 @@ export function projectToView(model: DexpiModel): PidView {
         if (!('dexpiClass' in comp)) continue;
         const pComp = comp as PipingComponent;
         const dexpiClass = pComp.dexpiClass || 'PipingComponent';
-        const cw = getDefaultWidth(dexpiClass) * scale;
-        const ch = getDefaultHeight(dexpiClass) * scale;
+        const compExtW = pComp.extent && pComp.extent.max.x - pComp.extent.min.x > 0 ? (pComp.extent.max.x - pComp.extent.min.x) * U : undefined;
+        const compExtH = pComp.extent && pComp.extent.max.y - pComp.extent.min.y > 0 ? (pComp.extent.max.y - pComp.extent.min.y) * U : undefined;
+        const cw = (compExtW ?? getDefaultWidth(dexpiClass)) * scale;
+        const ch = (compExtH ?? getDefaultHeight(dexpiClass)) * scale;
 
-        const rawX = pComp.position?.location.x ?? 200;
-        const rawY = pComp.position?.location.y ?? 200;
+        const pCompFallback = nextFallback(200, 200);
+        const rawX = pComp.position?.location.x ?? pCompFallback.x;
+        const rawY = pComp.position?.location.y ?? pCompFallback.y;
 
         const cx = scaleX(rawX);
         const cy = flipY(rawY, ch / scale);
@@ -388,8 +446,9 @@ export function projectToView(model: DexpiModel): PidView {
 
   // 3. Process Instrumentation Functions & Actuators
   for (const pif of cm.processInstrumentationFunctions) {
-    const rawX = pif.position?.location.x ?? 300;
-    const rawY = pif.position?.location.y ?? 300;
+    const pifFallback = nextFallback(300, 300);
+    const rawX = pif.position?.location.x ?? pifFallback.x;
+    const rawY = pif.position?.location.y ?? pifFallback.y;
     const size = 44 * scale;
 
     const tagName = [pif.processInstrumentationFunctionCategory, pif.processInstrumentationFunctionNumber]
@@ -436,8 +495,17 @@ export function projectToView(model: DexpiModel): PidView {
 
   // 4. Actuating Systems
   for (const act of cm.actuatingSystems) {
-    const rawX = act.position?.location.x ?? 350;
-    const rawY = act.position?.location.y ?? 350;
+    // `<ActuatingSystem>` itself rarely carries its own <Position> — the real
+    // placement lives on its first `<ActuatingSystemComponent>` child (the
+    // controlled actuator), which projectToView used to ignore entirely, so
+    // every actuator without an (essentially always absent) system-level
+    // position fell back to the same fixed point and stacked on top of each
+    // other.
+    const actuator = act.controlledActuators?.[0];
+    const position = act.position ?? actuator?.position;
+    const actFallback = nextFallback(350, 350);
+    const rawX = position?.location.x ?? actFallback.x;
+    const rawY = position?.location.y ?? actFallback.y;
     const aw = 44 * scale;
     const ah = 52 * scale;
 

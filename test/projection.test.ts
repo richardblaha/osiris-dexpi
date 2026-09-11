@@ -5,7 +5,7 @@ import { ProteusReader } from '../src/model/proteus/reader';
 import { projectToView } from '../src/model/view/projection';
 
 describe('PidView Projection', () => {
-  const c01Path = path.resolve(__dirname, '../samples/c01v04-ver.ex01.dexpi');
+  const c01Path = path.resolve(__dirname, '../samples/dexpi 1.3/example pids/C01 DEXPI Reference P&ID/C01V04-VER.EX01.xml');
   const c01Xml = fs.readFileSync(c01Path, 'utf-8');
   const { model } = ProteusReader.read(c01Xml);
 

@@ -1,0 +1,25 @@
+{
+  "name": "dexpi-conformance",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Regression suite: compares the Osiris DEXPI renderer/SVG export against pyDEXPI reference renders of the samples/ corpus.",
+  "type": "module",
+  "scripts": {
+    "conformance": "node build.mjs && node test-output/.bin/cli.mjs run",
+    "corpus": "node build.mjs && node test-output/.bin/cli.mjs corpus",
+    "reference": "node build.mjs && node test-output/.bin/cli.mjs reference",
+    "ours": "node build.mjs && node test-output/.bin/cli.mjs ours",
+    "report": "node build.mjs && node test-output/.bin/cli.mjs report",
+    "symbol-matrix": "node build.mjs && node test-output/.bin/cli.mjs symbol-matrix",
+    "build": "node build.mjs",
+    "visual": "node build.mjs && node test-output/.bin/cli.mjs visual",
+    "baseline": "node build.mjs && node test-output/.bin/cli.mjs baseline"
+  },
+  "devDependencies": {
+    "@xmldom/xmldom": "^0.9.6",
+    "esbuild": "^0.25.0",
+    "pixelmatch": "^6.0.0",
+    "playwright": "^1.49.0",
+    "pngjs": "^7.0.0"
+  }
+}

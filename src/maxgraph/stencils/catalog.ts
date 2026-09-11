@@ -187,6 +187,7 @@ export const SYMBOL_CATALOG: SymbolCatalogItem[] = [
   FITTING('fit-flange-single', 'Flange', 'pid.piping.flange', 'PipingFlange', 'PF', 18, 30),
   FITTING('fit-cap', 'Pipe Cap', 'pid.piping.cap', 'PipeCap', 'PF', 24, 30),
   FITTING('fit-blind', 'Spectacle Blind', 'pid.piping.closed_figure_8_blind', 'SpectacleBlind', 'PF', 26, 34),
+  FITTING('fit-blind-flange', 'Blind Flange', 'pid.fittings.blind_disc', 'BlindFlange', 'PF', 22, 30),
   FITTING('fit-strainer', 'Strainer', 'pid.fittings.strainer', 'Strainer', 'ST', 40, 30),
   FITTING('fit-strainer-y', 'Y-Type Strainer', 'pid.piping.y_type_strainer', 'Strainer', 'ST', 40, 34),
   FITTING('fit-steam-trap', 'Steam Trap', 'pid.piping.steam_trap', 'SteamTrap', 'STR', 34, 34),
@@ -259,13 +260,49 @@ function buildClassMap(elementType: SymbolElementType): Map<string, string> {
   return map;
 }
 
+/**
+ * DEXPI RDL `ComponentClass` values that name the same symbol as a catalog
+ * entry but under a different string. Real DEXPI example P&IDs use these
+ * routinely; without the alias they silently fall through to
+ * `DEFAULT_STENCILS` — a *different-looking* shape (e.g. a plate heat
+ * exchanger rendered as the default tank/vessel outline, a reducer rendered
+ * as a gate valve), not just an imprecise one. Found via the
+ * `tools/dexpi-conformance/` regression suite; extend as new gaps surface.
+ */
+const RDL_CLASS_ALIASES: Record<string, string> = {
+  // Equipment
+  Tank: 'StorageTank',
+  Vessel: 'VerticalVessel',
+  PressureVessel: 'VerticalVessel',
+  ProcessColumn: 'DistillationColumn',
+  PlateAndShellHeatExchanger: 'PlateHeatExchanger',
+  ReciprocatingPump: 'PositiveDisplacementPump',
+  DisplacementPump: 'PositiveDisplacementPump',
+  // Valves
+  ShutOffValve: 'GateValve',
+  TightShutOffValve: 'GateValve',
+  OperatedValve: 'GateValve',
+  SwingCheckValve: 'CheckValve',
+  SpringLoadedGlobeSafetyValve: 'SafetyReliefValve',
+  SpringLoadedAngleGlobeSafetyValve: 'SafetyReliefValve',
+  AngleSafetyValve: 'SafetyReliefValve',
+  // Fittings
+  PipeReducer: 'Reducer',
+  RestrictionOrifice: 'OrificePlate',
+};
+
+function resolveComponentClass(componentClass: string): string {
+  return RDL_CLASS_ALIASES[componentClass] ?? componentClass;
+}
+
 /** Resolves the stencil id to draw for a DEXPI model element. */
 export function catalogStencilFor(elementType: SymbolElementType, componentClass: string): string {
+  const cls = resolveComponentClass(componentClass);
   if (elementType === 'Equipment') {
-    return EQUIPMENT_STENCIL_BY_CLASS.get(componentClass) ?? DEFAULT_STENCILS.equipment;
+    return EQUIPMENT_STENCIL_BY_CLASS.get(cls) ?? DEFAULT_STENCILS.equipment;
   }
   if (elementType === 'ProcessInstrument') {
-    return INSTRUMENT_STENCIL_BY_CLASS.get(componentClass) ?? DEFAULT_STENCILS.instrument;
+    return INSTRUMENT_STENCIL_BY_CLASS.get(cls) ?? DEFAULT_STENCILS.instrument;
   }
-  return VALVE_STENCIL_BY_CLASS.get(componentClass) ?? DEFAULT_STENCILS.valve;
+  return VALVE_STENCIL_BY_CLASS.get(cls) ?? DEFAULT_STENCILS.valve;
 }

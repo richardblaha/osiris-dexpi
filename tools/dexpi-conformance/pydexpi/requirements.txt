@@ -1,0 +1,3 @@
+# Reference-SVG generation for the DEXPI conformance suite.
+# Install into the repo-root .venv:  .venv/bin/pip install -r tools/dexpi-conformance/pydexpi/requirements.txt
+pyDEXPI==1.2.0

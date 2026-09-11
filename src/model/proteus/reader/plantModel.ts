@@ -38,6 +38,7 @@ export function parsePlantModel(
   const originatingSystemName = plantInfoNode?.attrs.OriginatingSystem;
   const originatingSystemVendorName = plantInfoNode?.attrs.OriginatingSystemVendor;
   const originatingSystemVersion = plantInfoNode?.attrs.OriginatingSystemVersion;
+  const units = plantInfoNode?.attrs.Units;
 
   // PASS 1: Compositional Pass
   const metaDataNodes = childrenNamed(rootNode, 'MetaData');
@@ -132,6 +133,7 @@ export function parsePlantModel(
     originatingSystemName,
     originatingSystemVendorName,
     originatingSystemVersion,
+    units,
     conceptualModel,
     diagram,
     shapeCatalogues,
