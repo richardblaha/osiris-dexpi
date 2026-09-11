@@ -9,6 +9,7 @@ import type { RawNode } from '../raw';
 import { childNamed, childrenNamed } from '../raw';
 import { parseGenericAttributeSets } from './genericAttributes';
 import { parsePosition, parseExtent, parseScale } from './geometry';
+import { parseInlinePrimitives } from './graphics';
 import type { ParseContext } from '../core';
 
 export function parseNozzle(node: RawNode, parentEquipmentId: string, ctx: ParseContext): Nozzle {
@@ -132,6 +133,7 @@ export function parseEquipment(node: RawNode, ctx: ParseContext): Equipment {
     extent,
     scale,
     componentName: node.attrs.ComponentName,
+    graphics: parseInlinePrimitives(node),
     nozzles,
     chambers,
     attributes: typedAttributes,

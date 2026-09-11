@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="192.6964285714265" height="297.0" viewBox="0.0 -0.42000000000000043 0.27249999999999736 0.42000000000000043">
+  <rect x="0.0" y="-0.42000000000000043" width="192.6964285714265" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: P01-INTERGRAPH</metadata>
+  <g id="diagram-P01-INTERGRAPH" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g id="8540765d-f381-4d92-aa91-04dc0809ded2" class="representation-group">
+      <g id="d2d2e16e-6052-4017-a5b2-4ae9c966e5fe" class="representation-group" />
+    </g>
+    <g id="ffa0d45a-ea3a-44ee-bb15-9250131d855f" class="representation-group">
+      <g id="a0bc636c-35ab-4ed7-b67c-34763da990ac" class="representation-group">
+        <g id="a0bc636c-35ab-4ed7-b67c-34763da990ac" class="representation-group">
+          <g class="static">
+            <polyline points="0.24000000000000066,-0.42000000000000043 0.27249999999999736,-0.41999999999999893" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

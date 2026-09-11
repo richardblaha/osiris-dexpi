@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: import5.dwg</metadata>
+  <g id="diagram-import5.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="83d450c8-2b6f-44fe-8cd5-2813a77245fa" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A1502" transform="translate(436.25,-357.50)" />
+        </g>
+      </g>
+      <g id="d1b22e22-6fda-4c4f-bdf0-5dd78c2c75e6" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Assumed Nozzle" transform="translate(443.75,-357.50) scale(2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+      <g id="d055f201-596b-4d1e-8302-9a0e6926ae55" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(428.75,-357.50) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="96e4a091-4f38-4393-9fa8-8d07b477ee85" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A0306" transform="translate(528.76,-368.97) rotate(270.00)" />
+        </g>
+      </g>
+      <g id="770bafc4-cad6-497b-8c0e-e5173140e42a" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Assumed Nozzle" transform="translate(523.76,-357.50) rotate(180.00) scale(2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+      <g id="dcff9d71-a245-4a6b-bb32-a7723991c9b5" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(523.76,-377.50) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="4ab306db-4d1f-4078-aabe-7688351113da" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(533.76,-357.50)" />
+          </g>
+        </g>
+      </g>
+      <g id="a86d2d56-faca-4ed7-9088-ed2dc30c94a4" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Assumed Nozzle" transform="translate(533.76,-377.50) scale(2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="8db35ca2-55b8-4b55-a677-3a3b8df041ff" class="representation-group">
+      <g id="01091ab9-0557-4151-988f-a7dcfd2dd571" class="representation-group" />
+    </g>
+  </g>
+</svg>

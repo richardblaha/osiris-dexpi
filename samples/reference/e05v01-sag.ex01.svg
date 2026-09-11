@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="231.55932203389827" height="296.99999999999994" viewBox="0.0 -295.0 230.0 295.0">
+  <rect x="0.0" y="-295.0" width="231.55932203389827" height="296.99999999999994" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g id="47df4726-bd7a-41f1-8483-0b7ec429c406" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="232215" transform="translate(160.00,-260.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="160.0" y="-250.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">P-4713</text>
+      </g>
+      <g id="a80f09dc-2dd9-4b40-899c-062e70d0db5b" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816021" transform="translate(152.50,-260.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="430db457-057f-4be7-8185-540c105dc527" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="251619" transform="translate(230.00,-272.50)" />
+        </g>
+        <text x="230.0" y="-295.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">H-1009</text>
+      </g>
+      <g id="9c103a95-706b-4c81-a40e-e6ee6178844c" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816020" transform="translate(225.00,-260.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="209.8616326530612" height="296.99999999999994" viewBox="0.0 -269.5 190.43 269.5">
+  <rect x="0.0" y="-269.5" width="209.8616326530612" height="296.99999999999994" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label">
+      <text x="123.75" y="-265.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">MNb </text>
+    </g>
+    <g class="label">
+      <text x="132.5" y="-265.01" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">47122 </text>
+    </g>
+    <g class="label">
+      <text x="143.75" y="-265.02" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">75HB13 </text>
+    </g>
+    <g class="label">
+      <text x="157.5" y="-265.03" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">80 </text>
+    </g>
+    <g id="27ab460c-0930-4a56-bc1b-53fb26e31590" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2301" transform="translate(106.50,-260.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="105.5" y="-269.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">P4712</text>
+      </g>
+      <g id="e3ca0d6b-13e4-4e4a-a654-ea81c47573ba" class="representation-group" />
+      <g id="a9601ee4-caae-4964-a290-de43779d92bf" class="representation-group" />
+    </g>
+    <g id="32fdc0f6-0671-4694-afef-9d88de8b91fb" class="representation-group">
+      <g class="static">
+        <text x="190.43" y="-252.54" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">H1008</text>
+      </g>
+      <g id="e69b9c03-f4f6-4bd6-bc76-eb878d05915f" class="representation-group" />
+      <g id="ff438599-07ab-4158-b2a7-9cdf3aad48de" class="representation-group" />
+      <g id="3963a373-dfa2-4f0c-b2fa-88313c586327" class="representation-group" />
+      <g id="16b6ccad-1d2f-4569-85d0-a532d6407ce2" class="representation-group" />
+    </g>
+    <g id="23722379-d553-461c-a046-9e4b14f62f05" class="representation-group">
+      <g id="e1be2645-84af-4da0-8398-aa8a790d4f87" class="representation-group">
+        <g id="e1be2645-84af-4da0-8398-aa8a790d4f87" class="representation-group">
+          <g class="static">
+            <polyline points="119.0,-260.0 180.43,-260.04" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

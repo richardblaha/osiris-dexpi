@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import type { DexpiModel } from '../model/classes/dexpiModel';
 import { SelectionInfo } from '../common/types';
-import { SymbolCatalogItem } from '../maxgraph/stencils/catalog';
+import { SymbolCatalogItem } from '../panel/symbolPalette';
 
 interface ActiveEditor {
   panel: vscode.WebviewPanel;

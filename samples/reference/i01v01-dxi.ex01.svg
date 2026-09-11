@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="171.40954495005548" height="297.0" viewBox="0.0 -450.5 260.0 450.5">
+  <rect x="0.0" y="-450.5" width="171.40954495005548" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I01-DEXPI</metadata>
+  <g id="diagram-I01-DEXPI" class="diagram" fill="rgb(255,255,255)">
+    <g id="1c6fbfaa-523b-4476-a9cf-ee98d6a22c70" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="TankShape1" transform="translate(250.00,-402.00) scale(2.00,2.00)">
+            <path d="M 10.00,-12.50 A 20.00,20.00 0.00 0,0 -10.00,-12.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -10.00,12.50 A 20.00,20.00 0.00 0,0 10.00,12.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g class="label">
+        <text x="242.0" y="-400.0" text-anchor="start" dy="0.5em" font-family="'Calibri', Arial" font-size="7.0" fill="rgb(0,0,0)">V-4701</text>
+      </g>
+      <g id="3908fa96-4617-4550-aaee-cf8a0febddca" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="NozzleShape1" transform="translate(260.00,-431.09) scale(2.00,2.00)" />
+          </g>
+        </g>
+        <g class="label" />
+        <g id="3908fa96-4617-4550-aaee-cf8a0febddca" class="representation-group" />
+      </g>
+    </g>
+    <g id="6b4eb21d-db57-4bbd-8730-0e9aaeb03355" class="representation-group">
+      <g id="6333616c-4bb9-4d21-983c-b38e033a5316" class="representation-group">
+        <g id="c8baed45-d1aa-495c-9c89-f236401e4775" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="BlindFlangeShape1" transform="translate(260.00,-433.09) scale(2.00,2.00)" />
+            </g>
+          </g>
+          <g id="c8baed45-d1aa-495c-9c89-f236401e4775" class="representation-group" />
+        </g>
+      </g>
+    </g>
+    <g id="c566eb86-de63-41bf-9d4d-035a22f89532" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="ProcessInstrumentationFunctionShape1" transform="translate(260.00,-450.00) scale(2.00,2.00)">
+            <path d="M -2.00,-2.00 A 2.00,2.00 0.00 0,0 -2.00,2.00" fill="none" stroke="rgb(255,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.00,2.00 A 2.00,2.00 0.00 0,0 2.00,-2.00" fill="none" stroke="rgb(255,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g class="label">
+        <text x="256.0" y="-450.5" text-anchor="start" dy="0.5em" font-family="'Calibri', Arial" font-size="4.0" fill="rgb(255,0,0)">LICSA</text>
+        <text x="254.3" y="-446.9" text-anchor="start" dy="0.5em" font-family="'Calibri', Arial" font-size="4.0" fill="rgb(255,0,0)">470103</text>
+      </g>
+      <g id="e3bad853-6fbc-4a8d-b35d-c2868adfeca2" class="representation-group">
+        <g class="static">
+          <polyline points="260.0,-433.08881731069664 260.0,-446.0" fill="none" stroke="rgb(255,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

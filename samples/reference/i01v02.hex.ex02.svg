@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200.13938020518947" height="297.0" viewBox="0.0 -0.4600293882299282 0.3099999886751189 0.4600293882299282">
+  <rect x="0.0" y="-0.4600293882299282" width="200.13938020518947" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I01-HEXAGON</metadata>
+  <g id="diagram-I01-HEXAGON" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label">
+      <text x="0.28485562285312815" y="-0.4600293882299282" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">LI01</text>
+    </g>
+    <g id="1afedd31-2c6c-4d03-b7c2-cf07eade9326" class="representation-group">
+      <g class="static">
+        <path d="M 0.29,-0.44 A 0.04,0.04 0.00 0,0 0.25,-0.44" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 0.25,-0.38 A 0.04,0.04 0.00 0,0 0.29,-0.38" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+      </g>
+      <g id="8cb8989f-ff32-4270-a8ea-62ffe97112fa" class="representation-group">
+        <g id="8cb8989f-ff32-4270-a8ea-62ffe97112fa" class="representation-group" />
+      </g>
+    </g>
+    <g id="88a22e2f-047d-4462-a378-816c397e5f45" class="representation-group">
+      <g id="71571b0d-804d-437f-8cc0-1efdedc1b8f5" class="representation-group">
+        <g id="967e0c38-c21a-42ec-8e61-f52b410fa87c" class="representation-group">
+          <g id="967e0c38-c21a-42ec-8e61-f52b410fa87c" class="representation-group" />
+        </g>
+      </g>
+    </g>
+    <g id="b1c527f9-f75a-43ed-a0cd-098b4c720fe1" class="representation-group">
+      <g id="8dc31994-0b7c-4733-99c8-3b8839011b7b" class="representation-group">
+        <g class="static">
+          <polyline points="0.2848556228482089,-0.4550295693113368 0.2848556228482087,-0.45026155712052107" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

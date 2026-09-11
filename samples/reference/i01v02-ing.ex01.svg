@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200.13938020518898" height="297.0" viewBox="0.0 -0.46002938822992934 0.3099999886751189 0.46002938822992934">
+  <rect x="0.0" y="-0.46002938822992934" width="200.13938020518898" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I01-INTERGRAPH</metadata>
+  <g id="diagram-I01-INTERGRAPH" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="0.2701270874666986" y="-0.438594680007158" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">T01</text>
+    </g>
+    <g class="label">
+      <text x="0.2848556228531275" y="-0.46002938822992934" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">LI01</text>
+    </g>
+    <g id="de5d42e5-90ed-4766-88b8-0728487ed273" class="representation-group">
+      <g class="static">
+        <path d="M 0.29,-0.44 A 0.04,0.04 0.00 0,0 0.25,-0.44" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 0.25,-0.38 A 0.04,0.04 0.00 0,0 0.29,-0.38" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <text x="0.2701270874666986" y="-0.438594680007158" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">T01</text>
+      </g>
+      <g id="fc7f0bf2-7175-4a18-81af-343c693b48dc" class="representation-group" />
+    </g>
+    <g id="5434fab3-c79f-408c-a613-50f1b5d2d34a" class="representation-group">
+      <g id="702857b2-870b-411e-8527-1ce22144e7bf" class="representation-group">
+        <g id="05121284-9beb-4061-8a7d-ed3c0093675f" class="representation-group" />
+      </g>
+    </g>
+    <g id="6058a1ac-348b-45a8-ae27-251690c64fc1" class="representation-group">
+      <g id="10e68010-349d-4198-a642-cfa9c7ebc261" class="representation-group">
+        <g class="static">
+          <polyline points="0.2848556228482089,-0.45026155712052107 0.2848556228482089,-0.4550295693113368" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

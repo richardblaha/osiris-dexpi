@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200.13938020518904" height="297.0" viewBox="0.0 -0.460029388229929 0.3099999886751188 0.460029388229929">
+  <rect x="0.0" y="-0.460029388229929" width="200.13938020518904" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I09-HEXAGON</metadata>
+  <g id="diagram-I09-HEXAGON" class="diagram" fill="rgb(255,255,255)">
+    <g class="border" />
+    <g class="label">
+      <text x="0.270127087466699" y="-0.43859468000715807" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">T09</text>
+    </g>
+    <g class="label">
+      <text x="0.284855622853127" y="-0.460029388229929" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">LI09</text>
+    </g>
+    <g id="6fd392c1-45c9-4d43-bad2-dcd16d3ca42e" class="representation-group">
+      <g class="static">
+        <path d="M 0.29,-0.44 A 0.04,0.04 0.00 0,0 0.25,-0.44" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 0.25,-0.38 A 0.04,0.04 0.00 0,0 0.29,-0.38" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+      </g>
+      <g id="3d0f5fb3-72b1-4ad7-9d50-258eceff252c" class="representation-group">
+        <g id="3d0f5fb3-72b1-4ad7-9d50-258eceff252c" class="representation-group" />
+      </g>
+    </g>
+    <g id="c65b614d-562a-401a-a540-1c7f6cbb2251" class="representation-group">
+      <g id="d882928b-c695-4c6d-857e-f99f05ee7d46" class="representation-group">
+        <g class="static">
+          <polyline points="0.2848556228482097,-0.44963905712052094 0.2848556228482084,-0.4550295693113365" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

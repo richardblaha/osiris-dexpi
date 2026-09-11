@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I02V01.dwg</metadata>
+  <g id="diagram-I02V01.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="5db253dc-7ebc-4040-a248-04156afcb016" class="representation-group">
+      <g id="491997ae-5c00-4e4e-892f-8305acf213f1" class="representation-group" />
+      <g id="7375e653-ba5f-4df5-bc18-4d16eff3bf58" class="representation-group" />
+    </g>
+    <g id="606ded24-b5b0-47b0-b52a-f471525f4156" class="representation-group">
+      <g id="2cdcfcf7-1d0d-4072-97d0-4812f9dba0ca" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A5103" transform="translate(121.30,-85.02) rotate(270.00) scale(5.13,5.13)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3c2fc1f5-1be5-4a85-83fa-c96b6f4c8102" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A5052ContRoom" transform="translate(-12.69,-84.92) scale(2.39,2.39)" />
+        </g>
+      </g>
+    </g>
+    <g id="44ddd894-df56-4250-81b9-50b0bf0b2ffb" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A2101" transform="translate(121.30,-85.02) rotate(270.00) scale(5.13,5.13)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: Imp1.dwg</metadata>
+  <g id="diagram-Imp1.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="abc83d84-74a4-4158-8df4-64c8989cc313" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="ISO 0105 - Tank Vessel with dished ends" transform="translate(181.97,-437.67) scale(2.00,2.30)" />
+        </g>
+      </g>
+      <g id="8920bc24-2ffa-4525-b343-55f7461e9a6c" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(170.24,-505.11) rotate(270.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="7128560c-f801-4690-9014-83e382af4a43" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(181.97,-437.67) rotate(90.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="e3f144ff-1590-44c2-ba2f-1ef28a307c55" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(202.06,-482.57)" />
+          </g>
+        </g>
+      </g>
+      <g id="a05082b2-4a26-4647-a73d-4ca90e914d75" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(202.06,-497.67)" />
+          </g>
+        </g>
+      </g>
+      <g id="e04c4e3a-899c-4023-baed-89cb48ba9ef2" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(193.29,-505.41) rotate(270.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="7b3c7ec4-6cf9-48a2-b86d-2c85630012d9" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="MISSING MAP" transform="translate(161.93,-473.81) rotate(180.00) scale(-1.00,1.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

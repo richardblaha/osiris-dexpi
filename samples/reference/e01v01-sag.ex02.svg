@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g id="1a5b7fef-68da-4a55-8bdc-8e30778a1b54" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A50|A10|A10|A10|A10|A70" transform="translate(212.50,-411.50)">
+            <path d="M 10.00,-12.50 A 21.25,21.25 0.00 0,0 -10.00,-12.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -10.00,12.50 A 21.25,21.25 0.00 0,0 10.00,12.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

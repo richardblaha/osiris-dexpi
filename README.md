@@ -22,11 +22,10 @@ The extension provides dual-mode editing (interactive maxGraph visual canvas and
 - **"P&ID" panel** (Activity Bar):
   - **P&ID Symbols** — the professional symbol palette; click a symbol to drop it on the active diagram.
   - **Properties** — DEXPI attribute inspector for the selected element.
-- **Professional P&ID symbol library**:
-  - ISO 10628 / DIN 2429 / ISA-5.1 vector symbols from the Apache-2.0 [draw.io](https://github.com/jgraph/drawio) P&ID stencil set, loaded via maxGraph's `StencilShapeRegistry` — the **same drawing** renders in the palette and on the canvas.
+- **DEXPI-spec-driven symbol rendering — no pre-baked stencil library**:
+  - Every symbol is drawn directly from the DEXPI graphics primitives the document itself provides: either a `<ShapeCatalogue>` `Shape` referenced by `ComponentName`, or graphical primitives (`PolyLine`/`Polygon`/`Circle`/`Ellipse`/`EllipseArc`) embedded inline on the placed element — the same two sources pyDEXPI's own reference renderer draws from. No fixed per-class shape image/stencil is consulted; an element with no DEXPI graphics of its own renders as a neutral placeholder box.
   - Theme-aware monochrome rendering (black-on-white / white-on-dark); the Osiris cyan accent is reserved for selection and hover.
-  - ISA-5.1 instrument bubbles are authored locally (no baked tag text — the DEXPI tag name is the label).
-  - Coverage: pumps & compressors, vessels, tanks & columns, reactors, heat exchangers, ~17 valve types, fittings & in-line piping, flow elements, and instrument bubbles (field / shared-display / computer / logic).
+  - The insertable symbol palette (`src/panel/symbolPalette.ts`) carries only class/tag/default-size metadata for placing new elements — no shape geometry.
 - **Embedded MCP Server (`osiris-dexpi-mcp`)**:
   - Embeds standard Model Context Protocol (MCP) server tools for LLM agents.
   - **Live Buffer Synchronization**: Mutates the active VS Code `TextDocument` buffer via extension IPC with undo/redo stack preserved.
@@ -57,17 +56,6 @@ osiris-dexpi/
 │   │   ├── dexpiEditorProvider.ts  # CustomTextEditorProvider implementation (canvas-only webview)
 │   │   ├── syncManager.ts         # Bi-directional sync coordinator with change debouncing
 │   │   └── editorHub.ts           # Bridge between the active editor and the "P&ID" panel views
-│   ├── maxgraph/                  # maxGraph Visual Canvas Integration
-│   │   ├── adapter.ts             # DEXPI <-> maxGraph cell graph model mapper
-│   │   ├── stencils/              # Professional P&ID symbol library
-│   │   │   ├── vendor/*.xml       # draw.io P&ID stencils (Apache-2.0) — see vendor/NOTICE.md
-│   │   │   ├── local/instruments.xml  # locally authored ISA-5.1 instrument bubbles
-│   │   │   ├── sources.ts         # stencil id scheme + raw <shape> XML index
-│   │   │   ├── registry.ts        # registers every stencil with StencilShapeRegistry
-│   │   │   ├── catalog.ts         # curated palette + DEXPI class -> stencil mapping
-│   │   │   └── thumbnail.ts       # stencil -> inline SVG for palette previews
-│   │   ├── styles.ts              # theme-aware monochrome P&ID stylesheet
-│   │   └── index.ts
 │   ├── webview/                   # Design canvas webview (100 % canvas)
 │   │   ├── index.ts               # Webview entry point
 │   │   ├── canvas.ts              # maxGraph canvas: move/pan/connect config, grid, zoom, selection
@@ -185,11 +173,4 @@ npm run package
 
 ## License
 MIT © Richard Blaha
-
-### Third-party
-
-The P&ID symbol geometry in `src/maxgraph/stencils/vendor/` is from
-[draw.io / diagrams.net](https://github.com/jgraph/drawio) (© JGraph Ltd), used
-unmodified under the **Apache License 2.0**. See
-`src/maxgraph/stencils/vendor/NOTICE.md`.
 

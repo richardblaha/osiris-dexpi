@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="241.53614457831327" height="297.0" viewBox="0.0 -0.41500000000000004 0.3375 0.41500000000000004">
+  <rect x="0.0" y="-0.41500000000000004" width="241.53614457831327" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I11-INTERGRAPH</metadata>
+  <g id="diagram-I11-INTERGRAPH" class="diagram" fill="rgb(255,255,255)">
+    <g class="border" />
+    <g class="label">
+      <text x="0.3249999999990155" y="-0.41500000000000004" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">FI11</text>
+    </g>
+    <g class="label">
+      <text x="0.3249999999999993" y="-0.3849999999999993" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">FE 11</text>
+    </g>
+    <g id="6d9c0b55-9b5d-4075-a37f-bf78d3abaa68" class="representation-group">
+      <g id="dbb3cc4a-d625-492d-9073-a544b4c95407" class="representation-group">
+        <g id="c04ce6bc-73fc-424c-86a5-581fd846706c" class="representation-group" />
+        <g id="dbb3cc4a-d625-492d-9073-a544b4c95407" class="representation-group">
+          <g class="static">
+            <polyline points="0.31,-0.39 0.322499999999999,-0.390000000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="dbb3cc4a-d625-492d-9073-a544b4c95407" class="representation-group">
+          <g class="static">
+            <polyline points="0.327499999999999,-0.390000000000001 0.3375,-0.390000000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="c918e7d0-5812-43b6-86a4-068cdb2f4245" class="representation-group">
+      <g id="74a47414-d3ff-4c9a-ba62-d2adc1546473" class="representation-group">
+        <g class="static">
+          <polyline points="0.32499999999409696,-0.41000018108140746 0.324999999999999,-0.391250000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="c51c44a1-e8df-4007-b76e-e42ac4571d68" class="representation-group">
+      <g id="a4d8b364-771d-45ed-8325-b640cc69a67c" class="representation-group" />
+    </g>
+  </g>
+</svg>

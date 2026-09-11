@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: TestCases.dwg</metadata>
+  <g id="diagram-TestCases.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="22d9b3d9-7f24-4e33-8996-e655e444eba6" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A1502" transform="translate(436.25,-357.50)" />
+        </g>
+      </g>
+      <g id="de88e716-d789-43ee-9a20-cbe3eb044be0" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(443.75,-357.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3b579644-9d58-48fe-98d8-1eb0cdf9aed8" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A0306" transform="translate(528.76,-368.97) rotate(270.00)" />
+        </g>
+      </g>
+      <g id="a9f3d2ac-059d-4c1b-afbe-37cf1b34794b" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(523.76,-357.50) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="1ba2f6a9-cfa1-47be-beed-a69c87d313a4" class="representation-group">
+      <g id="16182021-b718-4cc0-bc30-a33b83e0c864" class="representation-group" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: Imp1.dwg</metadata>
+  <g id="diagram-Imp1.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="f270e8da-0578-4ee4-a305-e22ebbb00dc2" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A0306" transform="translate(211.26,-386.47) rotate(270.00)" />
+        </g>
+      </g>
+      <g id="6a786579-8147-4fa4-bc76-1bff5db64944" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Assumed Nozzle" transform="translate(216.26,-395.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="0837c7e7-17e2-47e5-a923-eb4d851e0380" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(216.26,-375.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="d450df7a-beb7-4e8b-aaec-55441f7af9f9" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A1502" transform="translate(118.75,-375.00)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

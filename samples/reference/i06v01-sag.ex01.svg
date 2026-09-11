@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420.0" height="274.75" viewBox="0.0 -157.0 240.0 157.0">
+  <rect x="0.0" y="-157.0" width="420.0" height="274.75" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g id="8f223e98-aa21-4c7f-b165-5f683ba150b2" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A50|A15|A60|A10|A10" transform="translate(210.00,-157.00)">
+            <ellipse cx="0.0" cy="-12.5" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="b78b2df3-fc00-40a7-aa72-1db686051fd2" class="representation-group">
+      <g id="7079d23a-2a35-4b28-aef2-6e19cff36941" class="representation-group">
+        <g id="7079d23a-2a35-4b28-aef2-6e19cff36941" class="representation-group">
+          <g class="static">
+            <polyline points="152.5,-157.0 205.0,-157.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="7079d23a-2a35-4b28-aef2-6e19cff36941" class="representation-group">
+          <g class="static">
+            <polyline points="215.0,-157.0 240.0,-157.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="d18c2ee3-daf5-43c0-ae5b-001c0e17841c" class="representation-group">
+        <g id="d18c2ee3-daf5-43c0-ae5b-001c0e17841c" class="representation-group">
+          <g class="static">
+            <polyline points="120.0,-157.0 147.5,-157.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="f5fc6550-fa38-42c1-81f7-002f15c3b4d3" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|F" transform="translate(150.00,-197.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="941e3937-6e24-49e8-969e-ac48132268d1" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A20|Y" transform="translate(210.00,-197.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="d2eef51e-622c-47ad-a85e-a754f02d71c4" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|U" transform="translate(210.00,-227.00)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

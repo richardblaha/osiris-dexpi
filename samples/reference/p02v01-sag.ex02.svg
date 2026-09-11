@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="116.26530612244896" height="296.99999999999994" viewBox="0.0 -269.5 105.5 269.5">
+  <rect x="0.0" y="-269.5" width="116.26530612244896" height="296.99999999999994" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g id="e1f888c2-e3a9-42ff-83c8-e2eed6639214" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2301" transform="translate(106.50,-260.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="105.5" y="-269.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">P4712</text>
+      </g>
+      <g id="91a0c121-1a98-443f-9b8b-a6006708b836" class="representation-group" />
+      <g id="0c720713-c184-4542-af1f-632b707958db" class="representation-group" />
+    </g>
+    <g id="dd615707-af7a-4abf-b9f2-727d200f2052" class="representation-group">
+      <g id="30c01d61-9456-4394-b913-80565462f679" class="representation-group">
+        <g id="30c01d61-9456-4394-b913-80565462f679" class="representation-group">
+          <g class="static">
+            <polyline points="56.25,-260.0 94.0,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -64,11 +64,14 @@ export interface TextTemplate {
 }
 
 export interface PolyLine {
+  /** Discriminant — `PolyLine` and `Polygon` are otherwise structurally identical. */
+  kind: 'polyline';
   points: Point[];
   presentation?: Presentation;
 }
 
 export interface Polygon {
+  kind: 'polygon';
   points: Point[];
   presentation?: Presentation;
 }

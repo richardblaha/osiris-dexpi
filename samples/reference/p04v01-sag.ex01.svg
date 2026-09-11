@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="195.46153846153845" height="297.0" viewBox="0.0 -292.5 192.5 292.5">
+  <rect x="0.0" y="-292.5" width="195.46153846153845" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="135.15" y="-262.08" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">=A10.A20.P04.A80.Q001.001</text>
+    </g>
+    <g class="label">
+      <text x="155.42" y="-229.15" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 155.42 -229.15)" fill="rgb(0,0,0)">=A10.A20.P04.A80.Q002.001</text>
+    </g>
+    <g id="65a6558b-5611-4272-800f-c684d4e929bd" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="251662" transform="translate(192.50,-270.00)" />
+        </g>
+        <text x="192.5" y="-292.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">H-1008</text>
+      </g>
+      <g id="92be1f33-6af9-4ed4-8219-04d9535d8fa6" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816063" transform="translate(197.50,-257.50)" />
+          </g>
+        </g>
+      </g>
+      <g id="1f22c29d-9ca6-4356-be81-177f06c4aa28" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816064" transform="translate(187.50,-282.50) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="257ee384-0cfe-4649-9cf1-63646b9cfde1" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816065" transform="translate(187.50,-257.50) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="634ee8d8-21a3-4c99-9048-613bfaa39806" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816066" transform="translate(197.50,-282.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3a784b5b-c4c5-467c-98e3-510c0e03f3c0" class="representation-group">
+      <g id="33131142-ba06-434c-bc2f-d1e16a3e6258" class="representation-group">
+        <g id="33131142-ba06-434c-bc2f-d1e16a3e6258" class="representation-group">
+          <g class="static">
+            <polyline points="107.5,-257.5 182.5,-257.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="49ac8bce-d719-451d-b256-794778131a68" class="representation-group">
+      <g id="b05ef2da-b6b2-4c0b-a95f-011f3d2ec975" class="representation-group">
+        <g id="b05ef2da-b6b2-4c0b-a95f-011f3d2ec975" class="representation-group">
+          <g class="static">
+            <polyline points="160.0,-202.5 160.0,-282.5 182.5,-282.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

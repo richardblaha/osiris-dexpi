@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="94.42830857604451" height="297.0" viewBox="0.0 -668.49 212.54 668.49">
+  <rect x="0.0" y="-668.49" width="94.42830857604451" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g id="26bf103c-669c-494f-abcb-0b530ba2b8a0" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A50|A10|A10|A10|A10|A70" transform="translate(206.25,-629.75) scale(2.38,2.08)">
+            <path d="M 10.00,-12.50 A 21.25,21.25 0.00 0,0 -10.00,-12.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -10.00,12.50 A 21.25,21.25 0.00 0,0 10.00,12.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="e8823935-4bb2-404c-a28d-439efc51bff3" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X8160" transform="translate(212.49,-661.09) rotate(270.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="6e2265de-5dde-4e1e-bb39-61c805758503" class="representation-group">
+      <g id="544dee73-271e-4f3a-86c0-1e2415b5a254" class="representation-group">
+        <g id="f8e7b908-dbfc-4923-8f0f-5cd39c27bb51" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="511" transform="translate(212.54,-669.74) rotate(270.00)">
+                <ellipse cx="1.25" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="544dee73-271e-4f3a-86c0-1e2415b5a254" class="representation-group">
+          <g class="static">
+            <polyline points="212.49,-666.09 212.54,-668.49" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

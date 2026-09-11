@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="358.6224489795918" height="296.99999999999994" viewBox="0.0 -147.0 177.5 147.0">
+  <rect x="0.0" y="-147.0" width="358.6224489795918" height="296.99999999999994" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g id="e2e16ac8-9179-4c9a-a235-ba8f9ce41a60" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2062" transform="translate(170.00,-149.50)">
+            <path d="M 10.00,-27.50 A 21.25,21.25 0.00 0,0 -10.00,-27.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -10.00,-2.50 A 21.25,21.25 0.00 0,0 10.00,-2.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="177.5" y="-147.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">B001</text>
+      </g>
+      <g id="5e2ba51b-aa8c-4456-86ae-efc604395855" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X8160" transform="translate(177.50,-178.13) rotate(270.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3445e2a9-c4d9-418a-823a-b555ad94d004" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|L" transform="translate(177.50,-202.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

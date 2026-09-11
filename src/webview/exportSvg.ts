@@ -6,10 +6,9 @@
  */
 
 import type { PidView, PidViewNode, PidViewEdge } from '../model/view/projection';
-import { catalogStencilFor, SymbolElementType } from '../maxgraph/stencils/catalog';
-import { getStencilXml } from '../maxgraph/stencils/registry';
+import type { GraphicPrimitive } from '../model/classes/graphics';
+import { boundsOfPrimitives, type Bounds } from '../model/shapeGeometry';
 import { JumperDetector } from '../webgpu/routing/jumperDetector';
-import { getComponentShape, type ShapePrimitive } from '../model/componentShapes';
 
 export interface SvgExportOptions {
   theme?: 'dark' | 'light';
@@ -320,12 +319,6 @@ function boxesOverlap(a: LabelCandidate, b: LabelCandidate, padding: number): bo
   return aLeft < bRight && aRight > bLeft && aTop < bBottom && aBottom > bTop;
 }
 
-function resolveElementType(kind: string): SymbolElementType {
-  if (kind === 'equipment') return 'Equipment';
-  if (kind === 'instrument') return 'ProcessInstrument';
-  return 'PipingComponent';
-}
-
 function renderNodeBody(node: PidViewNode, w: number, h: number, out: string[]): void {
   const styleClass =
     node.kind === 'equipment'
@@ -336,198 +329,88 @@ function renderNodeBody(node: PidViewNode, w: number, h: number, out: string[]):
       ? 'nozzle-shape'
       : 'valve-shape';
 
-  // The real Proteus `ComponentName` (e.g. "VESSEL_WITH_DISHED_HEADS_SHAPE") is a
-  // far more precise signal for which symbol to draw than guessing from the DEXPI
-  // class alone — try it first.
-  const knownShape = getComponentShape(node.componentName);
-  if (knownShape) {
-    const rendered = renderComponentShape(knownShape, w, h, styleClass);
-    if (rendered) {
-      out.push(rendered);
-      return;
-    }
+  // Draw directly from the document's own DEXPI graphics data — primitives
+  // embedded on the element itself, or a `<ShapeCatalogue>` `Shape` referenced
+  // by its `ComponentName` — exactly the two sources pyDEXPI's own renderer
+  // draws from (`EquipmentParser.drawing_pass`). No fixed/pre-baked shape
+  // library is consulted.
+  const primitives = node.symbolPrimitives ?? node.symbolShape?.primitives;
+  const bounds = boundsOfPrimitives(primitives);
+  if (primitives && bounds && bounds.w > 0 && bounds.h > 0) {
+    out.push(renderPrimitives(primitives, bounds, w, h, styleClass));
+    return;
   }
 
-  const elemType = resolveElementType(node.kind);
-  const stencilId = catalogStencilFor(elemType, node.dexpiClass || '');
-  const stencilXml = getStencilXml(stencilId);
-
-  if (stencilXml) {
-    const rendered = renderStencilGeometry(stencilXml, w, h, styleClass);
-    if (rendered) {
-      out.push(rendered);
-      return;
-    }
-  }
-
-  // Fallback parametric CAD geometries matching WebGPU slices
-  renderFallbackGeometry(node, w, h, styleClass, out);
+  // No geometry available anywhere in the document for this element — a
+  // neutral placeholder, not a guessed/pre-baked shape.
+  out.push(`<rect class="${styleClass}" x="0" y="0" width="${w}" height="${h}" rx="2" />`);
 }
 
-/** Renders a precise `componentShapes.ts` definition, stretched from its native box to `w` x `h`. */
-function renderComponentShape(
-  shape: { w: number; h: number; primitives: ShapePrimitive[] },
+/**
+ * Renders `GraphicPrimitive`s scaled-to-fit from their own native `bounds` into
+ * a `w`x`h` box, flipping Y (DEXPI's graphics coordinates are math-convention
+ * Y-up; SVG is Y-down) — the same `to_svg_y` treatment pyDEXPI's `svg_loader.py`
+ * applies. `Text`/`TextTemplate` primitives are skipped: tag/label text is
+ * already rendered separately (see the `labelCandidates` pass below).
+ */
+function renderPrimitives(
+  primitives: GraphicPrimitive[],
+  bounds: Bounds,
   w: number,
   h: number,
   styleClass: string
-): string | null {
-  if (shape.primitives.length === 0) return null;
-
-  const sx = shape.w > 0 ? w / shape.w : 1;
-  const sy = shape.h > 0 ? h / shape.h : 1;
-  const tx = (x: number) => (x * sx).toFixed(2);
-  const ty = (y: number) => (y * sy).toFixed(2);
+): string {
+  const sx = bounds.w > 0 ? w / bounds.w : 1;
+  const sy = bounds.h > 0 ? h / bounds.h : 1;
+  const tx = (x: number) => ((x - bounds.minX) * sx).toFixed(2);
+  const ty = (y: number) => ((bounds.maxY - y) * sy).toFixed(2);
 
   const parts: string[] = [];
-  for (const prim of shape.primitives) {
-    if (prim.kind === 'polyline') {
-      const pts = prim.points.map(([x, y]) => `${tx(x)},${ty(y)}`).join(' ');
+  for (const prim of primitives) {
+    if ('kind' in prim && prim.kind === 'polyline') {
+      const pts = prim.points.map((p) => `${tx(p.x)},${ty(p.y)}`).join(' ');
       parts.push(`<polyline class="${styleClass}" points="${pts}" />`);
-    } else if (prim.kind === 'ellipse') {
-      if (prim.fillBackground) {
-        parts.push(
-          `<ellipse class="${styleClass}" cx="${tx(prim.cx)}" cy="${ty(prim.cy)}" rx="${(prim.rx * sx).toFixed(2)}" ry="${(prim.ry * sy).toFixed(2)}" style="fill: var(--canvas-bg, #161a22)" />`
-        );
-      }
+    } else if ('kind' in prim && prim.kind === 'polygon') {
+      const pts = prim.points.map((p) => `${tx(p.x)},${ty(p.y)}`).join(' ');
+      parts.push(`<polygon class="${styleClass}" points="${pts}" />`);
+    } else if ('radius' in prim) {
+      const c = prim.position?.location ?? { x: 0, y: 0 };
       parts.push(
-        `<ellipse class="${styleClass}" cx="${tx(prim.cx)}" cy="${ty(prim.cy)}" rx="${(prim.rx * sx).toFixed(2)}" ry="${(prim.ry * sy).toFixed(2)}" />`
+        `<ellipse class="${styleClass}" cx="${tx(c.x)}" cy="${ty(c.y)}" rx="${(prim.radius * sx).toFixed(2)}" ry="${(prim.radius * sy).toFixed(2)}" />`
       );
-    } else if (prim.kind === 'arc') {
-      const rx = (prim.r * sx).toFixed(2);
-      const ry = (prim.r * sy).toFixed(2);
+    } else if ('startAngle' in prim) {
+      parts.push(renderEllipseArcPath(prim, tx, ty, sx, sy, styleClass));
+    } else if ('majorRadius' in prim) {
+      const c = prim.position?.location ?? { x: 0, y: 0 };
       parts.push(
-        `<path class="${styleClass}" d="M ${tx(prim.from[0])} ${ty(prim.from[1])} A ${rx} ${ry} 0 ${prim.largeArc ?? 0} ${prim.sweep ?? 0} ${tx(prim.to[0])} ${ty(prim.to[1])}" />`
+        `<ellipse class="${styleClass}" cx="${tx(c.x)}" cy="${ty(c.y)}" rx="${(prim.majorRadius * sx).toFixed(2)}" ry="${(prim.minorRadius * sy).toFixed(2)}" />`
       );
     }
+    // Text / TextTemplate: intentionally not drawn here — see doc comment above.
   }
   return parts.join('\n');
 }
 
-function renderStencilGeometry(
-  shapeXml: string,
-  w: number,
-  h: number,
-  styleClass: string
-): string | null {
-  try {
-    if (typeof DOMParser === 'undefined') return null;
-    const doc = new DOMParser().parseFromString(shapeXml, 'text/xml');
-    const shape = doc.getElementsByTagName('shape')[0];
-    if (!shape) return null;
-
-    const w0 = Number(shape.getAttribute('w')) || 100;
-    const h0 = Number(shape.getAttribute('h')) || 100;
-    const sx = w / w0;
-    const sy = h / h0;
-
-    const tx = (x: number) => x * sx;
-    const ty = (y: number) => y * sy;
-
-    const parts: string[] = [];
-    for (const section of ['background', 'foreground']) {
-      const el = shape.getElementsByTagName(section)[0];
-      if (!el) continue;
-
-      for (let i = 0; i < el.children.length; i++) {
-        const c = el.children[i];
-        const tag = c.tagName.toLowerCase();
-
-        if (tag === 'path') {
-          const d = buildPathData(c, tx, ty, sx, sy);
-          if (d) parts.push(`<path class="${styleClass}" d="${d}" />`);
-        } else if (tag === 'ellipse') {
-          const ex = num(c, 'x');
-          const ey = num(c, 'y');
-          const ew = num(c, 'w');
-          const eh = num(c, 'h');
-          parts.push(
-            `<ellipse class="${styleClass}" cx="${tx(ex + ew * 0.5).toFixed(2)}" cy="${ty(ey + eh * 0.5).toFixed(2)}" ` +
-              `rx="${((ew * 0.5) * sx).toFixed(2)}" ry="${((eh * 0.5) * sy).toFixed(2)}" />`
-          );
-        } else if (tag === 'rect' || tag === 'roundrect') {
-          const rxVal = tag === 'roundrect' ? num(c, 'arcsize') * sx || 2 : 0;
-          const rAttr = rxVal > 0 ? ` rx="${rxVal.toFixed(2)}"` : '';
-          parts.push(
-            `<rect class="${styleClass}" x="${tx(num(c, 'x')).toFixed(2)}" y="${ty(num(c, 'y')).toFixed(2)}" ` +
-              `width="${(num(c, 'w') * sx).toFixed(2)}" height="${(num(c, 'h') * sy).toFixed(2)}"${rAttr} />`
-          );
-        }
-      }
-    }
-
-    return parts.length > 0 ? parts.join('\n') : null;
-  } catch {
-    return null;
-  }
-}
-
-function buildPathData(
-  pathNode: Element,
-  tx: (x: number) => number,
-  ty: (y: number) => number,
+function renderEllipseArcPath(
+  arc: Extract<GraphicPrimitive, { startAngle: number }>,
+  tx: (x: number) => string,
+  ty: (y: number) => string,
   sx: number,
-  sy: number
+  sy: number,
+  styleClass: string
 ): string {
-  const seg: string[] = [];
-  for (let i = 0; i < pathNode.children.length; i++) {
-    const c = pathNode.children[i];
-    const t = c.tagName.toLowerCase();
-    if (t === 'move') {
-      seg.push(`M ${tx(num(c, 'x')).toFixed(2)} ${ty(num(c, 'y')).toFixed(2)}`);
-    } else if (t === 'line') {
-      seg.push(`L ${tx(num(c, 'x')).toFixed(2)} ${ty(num(c, 'y')).toFixed(2)}`);
-    } else if (t === 'quad') {
-      seg.push(
-        `Q ${tx(num(c, 'x1')).toFixed(2)} ${ty(num(c, 'y1')).toFixed(2)} ` +
-          `${tx(num(c, 'x2')).toFixed(2)} ${ty(num(c, 'y2')).toFixed(2)}`
-      );
-    } else if (t === 'curve') {
-      seg.push(
-        `C ${tx(num(c, 'x1')).toFixed(2)} ${ty(num(c, 'y1')).toFixed(2)} ` +
-          `${tx(num(c, 'x2')).toFixed(2)} ${ty(num(c, 'y2')).toFixed(2)} ` +
-          `${tx(num(c, 'x3')).toFixed(2)} ${ty(num(c, 'y3')).toFixed(2)}`
-      );
-    } else if (t === 'arc') {
-      const rx = (num(c, 'rx') * sx).toFixed(2);
-      const ry = (num(c, 'ry') * sy).toFixed(2);
-      const xrot = num(c, 'x-axis-rotation');
-      const laf = c.getAttribute('large-arc-flag') ?? '0';
-      const sf = c.getAttribute('sweep-flag') ?? '0';
-      seg.push(`A ${rx} ${ry} ${xrot} ${laf} ${sf} ${tx(num(c, 'x')).toFixed(2)} ${ty(num(c, 'y')).toFixed(2)}`);
-    } else if (t === 'close') {
-      seg.push('Z');
-    }
-  }
-  return seg.join(' ');
-}
+  const c = arc.position?.location ?? { x: 0, y: 0 };
+  const toRad = (deg: number) => (deg * Math.PI) / 180;
+  const startX = c.x + arc.majorRadius * Math.cos(toRad(arc.startAngle));
+  const startY = c.y + arc.minorRadius * Math.sin(toRad(arc.startAngle));
+  const endX = c.x + arc.majorRadius * Math.cos(toRad(arc.endAngle));
+  const endY = c.y + arc.minorRadius * Math.sin(toRad(arc.endAngle));
 
-function renderFallbackGeometry(
-  node: PidViewNode,
-  w: number,
-  h: number,
-  styleClass: string,
-  out: string[]
-): void {
-  const cls = (node.dexpiClass || '').toLowerCase();
-  const kind = node.kind;
+  let span = arc.endAngle - arc.startAngle;
+  span = ((span % 360) + 360) % 360;
+  const largeArc = span > 180 ? 1 : 0;
 
-  if (kind === 'instrument' || cls.includes('instrument')) {
-    out.push(`<circle class="${styleClass}" cx="${w * 0.5}" cy="${h * 0.5}" r="${Math.min(w, h) * 0.45}" />`);
-  } else if (cls.includes('pump')) {
-    out.push(`<circle class="${styleClass}" cx="${w * 0.5}" cy="${h * 0.5}" r="${Math.min(w, h) * 0.4}" />`);
-    out.push(`<rect class="${styleClass}" x="${w * 0.5}" y="0" width="${w * 0.2}" height="${h * 0.5}" />`);
-  } else if (cls.includes('vessel') || cls.includes('tank') || cls.includes('column')) {
-    out.push(`<rect class="${styleClass}" x="0" y="0" width="${w}" height="${h}" rx="${Math.min(w, h) * 0.2}" />`);
-  } else if (cls.includes('valve') || kind === 'pipingComponent') {
-    // Valve: opposing triangles
-    out.push(
-      `<polygon class="${styleClass}" points="0,0 ${w},${h} ${w},0 0,${h}" />`
-    );
-  } else {
-    out.push(`<rect class="${styleClass}" x="0" y="0" width="${w}" height="${h}" rx="2" />`);
-  }
-}
-
-function num(el: Element, attr: string): number {
-  return Number(el.getAttribute(attr)) || 0;
+  const rx = (arc.majorRadius * sx).toFixed(2);
+  const ry = (arc.minorRadius * sy).toFixed(2);
+  return `<path class="${styleClass}" d="M ${tx(startX)} ${ty(startY)} A ${rx} ${ry} 0 ${largeArc} 0 ${tx(endX)} ${ty(endY)}" fill="none" />`;
 }

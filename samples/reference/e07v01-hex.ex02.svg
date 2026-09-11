@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="313.67150028447656" height="297.0" viewBox="0.0 -0.40972838327367406 0.43272766562487 0.40972838327367406">
+  <rect x="0.0" y="-0.40972838327367406" width="313.67150028447656" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: E07V01-HEX.EX02</metadata>
+  <g id="diagram-E07V01-HEX.EX02" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="0.43272766562487" y="-0.38490594256465865" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">S3211</text>
+    </g>
+    <g class="label">
+      <text x="0.432474714995699" y="-0.3461845945559373" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">S3212</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="0.4200022088807933" y="-0.40972838327367406" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" transform="rotate(2.375107116129833e-11 0.4200022088807933 -0.40972838327367406)" fill="rgb(0,0,0)">N1</text>
+    </g>
+    <g class="label">
+      <text x="0.3997349925017327" y="-0.3750383104708238" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N2</text>
+    </g>
+    <g class="label">
+      <text x="0.39996265812660203" y="-0.3699838037896704" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N3</text>
+    </g>
+    <g class="label">
+      <text x="0.41746265812660077" y="-0.3274838037896726" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" transform="rotate(4.7465286866290305e-11 0.41746265812660077 -0.3274838037896726)" fill="rgb(0,0,0)">N4</text>
+    </g>
+  </g>
+</svg>

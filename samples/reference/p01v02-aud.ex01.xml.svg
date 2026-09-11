@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: Imp1.dwg</metadata>
+  <g id="diagram-Imp1.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="b112fc19-998c-4858-b95e-d3e8dc89da1a" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A1502" transform="translate(246.25,-178.75)" />
+        </g>
+      </g>
+      <g id="aff54196-63af-421e-ad10-d3fa411e9eb8" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(253.75,-178.75)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="64a5fed4-d8e7-4505-866e-4671ec6a56db" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A0306" transform="translate(338.76,-190.22) rotate(270.00)" />
+        </g>
+      </g>
+      <g id="58cae7f4-33de-4173-b68c-c3a7c79ab000" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(333.76,-178.75) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="8375d520-acc6-4f17-b886-cef1cdb5a7b1" class="representation-group">
+      <g id="b63a7da7-09ad-4ca3-97c9-b25a942fb01b" class="representation-group" />
+    </g>
+  </g>
+</svg>

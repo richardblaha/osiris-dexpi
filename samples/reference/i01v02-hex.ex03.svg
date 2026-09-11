@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="183.90590286613147" height="297.0" viewBox="0.0 -0.460029388229928 0.284855622853128 0.460029388229928">
+  <rect x="0.0" y="-0.460029388229928" width="183.90590286613147" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I01V02-HEX.EX03</metadata>
+  <g id="diagram-I01V02-HEX.EX03" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label">
+      <text x="0.284855622853128" y="-0.460029388229928" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.003" fill="rgb(0,0,0)">LI01</text>
+    </g>
+    <g id="afd72d29-cc56-4d16-81c1-182223d89b21" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_8b33f0ea-4a05-47d6-85bf-cfb9c6002af5" transform="translate(0.27,-0.41)">
+            <path d="M 0.02,-0.03 A 0.04,0.04 0.00 0,0 -0.02,-0.03" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -0.02,0.03 A 0.04,0.04 0.00 0,0 0.02,0.03" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="fd8a4d28-d92b-407e-8d5c-377902e22f18" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_eac749be-9a6c-4431-904d-9b115c3cdad2" transform="translate(0.28,-0.45)" />
+          </g>
+        </g>
+        <g id="fd8a4d28-d92b-407e-8d5c-377902e22f18" class="representation-group" />
+      </g>
+    </g>
+    <g id="5f0262ec-23f3-4a66-a566-9ec0ab2938fd" class="representation-group">
+      <g id="24cb7867-c3ce-43d8-b07b-c5d82f324d92" class="representation-group">
+        <g id="933cde57-39a3-4360-82b4-167ed3469683" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_f7247e92-9b9a-4dc6-b404-dd3613bc2517" transform="translate(0.28,-0.45)" />
+            </g>
+          </g>
+          <g id="933cde57-39a3-4360-82b4-167ed3469683" class="representation-group" />
+        </g>
+      </g>
+    </g>
+    <g id="e7e9d76c-aef6-4c69-92e0-3263ad50f657" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="ProcessInstrumentationFunction_5229c270-9587-4abf-bd0c-c5b3edf8d233" transform="translate(0.28,-0.46)">
+            <path d="M 0.00,0.01 A 0.01,0.01 0.00 0,0 0.00,-0.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -0.00,-0.00 A 0.01,0.01 0.00 0,0 -0.00,0.01" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <text x="0.0" y="-0.0" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.003" fill="rgb(0,0,0)">LI01</text>
+          </g>
+        </g>
+      </g>
+      <g id="44955267-dcca-4b70-b95f-68569dcf37bc" class="representation-group">
+        <g class="static">
+          <polyline points="0.2848556228482094,-0.4550295693113355 0.2848556228482105,-0.45026155712052107" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

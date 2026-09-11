@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: Imp7.dwg</metadata>
+  <g id="diagram-Imp7.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="cb49ab0d-e45e-44fa-b6df-8c57bc6ff0ba" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="ISO 0105 - Tank Vessel with dished ends" transform="translate(321.97,-351.42) scale(2.00,2.30)" />
+        </g>
+      </g>
+      <g id="5d41515a-14e4-46c8-99d0-2593398b4a80" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(310.24,-418.86) rotate(270.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="68e6c61f-46f4-4218-9300-4c58b5c69c06" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(321.97,-351.42) rotate(90.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="321d3b7c-6519-4bdb-a62b-10ac829df2d1" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(342.06,-396.32)" />
+          </g>
+        </g>
+      </g>
+      <g id="afddbe10-baad-4383-9d47-471197df93df" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(342.06,-411.42)" />
+          </g>
+        </g>
+      </g>
+      <g id="3616ad94-1876-41a6-ba20-68c7bed8bf08" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(333.29,-419.16) rotate(270.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

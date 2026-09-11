@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="195.72189623895093" height="297.0" viewBox="0.0 -0.43250653288058233 0.28502019781522475 0.43250653288058233">
+  <rect x="0.0" y="-0.43250653288058233" width="195.72189623895093" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: E02V01-HEX.EX02</metadata>
+  <g id="diagram-E02V01-HEX.EX02" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="0.26" y="-0.3955349967482234" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">T4750</text>
+    </g>
+    <g class="label">
+      <text x="0.2550804952642553" y="-0.3575802322928942" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" transform="rotate(4.7465286866290305e-11 0.2550804952642553 -0.3575802322928942)" fill="rgb(0,0,0)">N-2</text>
+    </g>
+    <g class="label">
+      <text x="0.2649626581266008" y="-0.357677116242525" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" transform="rotate(4.7465286866290305e-11 0.2649626581266008 -0.357677116242525)" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.2397436639499082" y="-0.43250653288058105" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" transform="rotate(2.375107116129833e-11 0.2397436639499082 -0.43250653288058105)" fill="rgb(0,0,0)">N-1</text>
+    </g>
+    <g class="label">
+      <text x="0.26996265812660464" y="-0.43250653288058233" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" transform="rotate(2.375107116129833e-11 0.26996265812660464 -0.43250653288058233)" fill="rgb(0,0,0)">N-7</text>
+    </g>
+    <g class="label">
+      <text x="0.2849669948682957" y="-0.42248380378967343" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N-6</text>
+    </g>
+    <g class="label">
+      <text x="0.28489544238996156" y="-0.4101406196081612" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N-5</text>
+    </g>
+    <g class="label">
+      <text x="0.24996265812660462" y="-0.43248380378967277" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" transform="rotate(2.375107116129833e-11 0.24996265812660462 -0.43248380378967277)" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.27996265812660465" y="-0.43248380378967327" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" transform="rotate(2.375107116129833e-11 0.27996265812660465 -0.43248380378967327)" fill="rgb(0,0,0)">25</text>
+    </g>
+    <g class="label">
+      <text x="0.2849486453368906" y="-0.41748814053136757" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.28502019781522475" y="-0.4050596930097008" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g id="ef7d6b32-4dbe-4924-bc89-3f3622a67a7b" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_bd28f2be-b576-4327-9bb0-e3bde5a880a8" transform="translate(0.26,-0.39)">
+            <path d="M 0.02,-0.03 A 0.04,0.04 0.00 0,0 -0.02,-0.03" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -0.02,0.03 A 0.04,0.04 0.00 0,0 0.02,0.03" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="56719d18-ac43-44a1-9d3b-4b7a32f38fc3" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_1251377c-ed05-4241-bf47-23ba24878efd" transform="translate(0.28,-0.42)" />
+          </g>
+        </g>
+        <g id="56719d18-ac43-44a1-9d3b-4b7a32f38fc3" class="representation-group" />
+      </g>
+      <g id="ed8c265b-bb9b-4889-8738-64f365cc2db1" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_08eef90c-604b-4475-8354-799d529df91e" transform="translate(0.25,-0.43)" />
+          </g>
+        </g>
+        <g id="ed8c265b-bb9b-4889-8738-64f365cc2db1" class="representation-group" />
+      </g>
+      <g id="5be621e3-4037-4159-9ba0-09324bf428ed" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_d2abde38-d566-4300-9652-b5161200a80a" transform="translate(0.27,-0.43)" />
+          </g>
+        </g>
+        <g id="5be621e3-4037-4159-9ba0-09324bf428ed" class="representation-group" />
+      </g>
+      <g id="cccc0983-d259-4fdc-b9f1-d6e950839217" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_e9d10c65-a47b-4a69-890e-feda65fe3042" transform="translate(0.28,-0.41)" />
+          </g>
+        </g>
+        <g id="cccc0983-d259-4fdc-b9f1-d6e950839217" class="representation-group" />
+      </g>
+      <g id="5152ab1c-8f64-456e-b520-92a0871a70cc" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_0eecac82-b8c6-46ac-ac00-e8504b4157bb" transform="translate(0.26,-0.36)" />
+          </g>
+        </g>
+        <g id="5152ab1c-8f64-456e-b520-92a0871a70cc" class="representation-group" />
+      </g>
+    </g>
+  </g>
+</svg>

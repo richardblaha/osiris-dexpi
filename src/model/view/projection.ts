@@ -8,7 +8,8 @@ import type { DexpiModel } from '../classes/dexpiModel';
 import type { TaggedPlantItem, Equipment, Nozzle } from '../classes/equipment';
 import type { PipingComponent, Pipe } from '../classes/piping';
 import type { ProcessInstrumentationFunction, ActuatingSystem } from '../classes/instrumentation';
-import { getComponentShape } from '../componentShapes';
+import type { Shape, GraphicPrimitive } from '../classes/graphics';
+import { boundsOfPrimitives } from '../shapeGeometry';
 
 export type PidNodeKind =
   | 'equipment'
@@ -27,6 +28,10 @@ export interface PidViewNode {
   componentClassUri?: string;
   /** Proteus `ComponentName` (e.g. "GLOBE_VALVE_SHAPE") — the most precise signal for which symbol to draw. */
   componentName?: string;
+  /** `<ShapeCatalogue>` `Shape` matched by `componentName`, if the document defines one — drawn scaled-to-fit `w`x`h`. */
+  symbolShape?: Shape;
+  /** Graphical primitives embedded directly on this element, already in world units matching `x/y/w/h` — drawn as-is (translate only). */
+  symbolPrimitives?: GraphicPrimitive[];
   tagName: string;
   x: number;
   y: number;
@@ -163,25 +168,33 @@ function getNominalEquipmentSize(dexpiClass: string): { w: number; h: number } {
   }
 }
 
+/**
+ * Resolves a node's placed size. `<Extent>` (if present) always wins. Failing
+ * that: primitives embedded directly on the element (`inlineNative`) are
+ * already in final world units, used as-is; a `<ShapeCatalogue>` `Shape`'s own
+ * bounding box (`catalogNative`) is in the shape's native pre-`<Scale>` units
+ * and gets multiplied by the instance's `<Scale>`, mirroring pyDEXPI's
+ * `ShapeUsage.scaleX/scaleY`. With neither, fall back to a generic per-class
+ * default box (not shape imagery — just a layout-sized placeholder).
+ */
 function resolveScaledSize(
   extentW: number | undefined,
   extentH: number | undefined,
   instanceScale: { x: number; y: number } | undefined,
-  componentName: string | undefined,
+  catalogNative: { w: number; h: number } | undefined,
+  inlineNative: { w: number; h: number } | undefined,
   nominal: { w: number; h: number },
   fallback: { w: number; h: number },
   U: number
 ): { w: number; h: number } {
   if (extentW !== undefined && extentH !== undefined) return { w: extentW, h: extentH };
-  // The real Proteus `ComponentName` shape's own native footprint beats our rough
-  // per-class guess whenever we recognize it (see componentShapes.ts).
-  const knownShape = getComponentShape(componentName);
-  const nativeSize = knownShape ?? nominal;
+  if (inlineNative) return { w: inlineNative.w * U, h: inlineNative.h * U };
+  const nativeSize = catalogNative ?? nominal;
   if (instanceScale) {
     return { w: nativeSize.w * instanceScale.x * U, h: nativeSize.h * instanceScale.y * U };
   }
-  if (knownShape) {
-    return { w: knownShape.w * U, h: knownShape.h * U };
+  if (catalogNative) {
+    return { w: catalogNative.w * U, h: catalogNative.h * U };
   }
   return { w: fallback.w * U, h: fallback.h * U };
 }
@@ -347,6 +360,40 @@ export function projectToView(model: DexpiModel): PidView {
     return { nodes, edges, labels, bounds: { x: 0, y: 0, w: 1200, h: 800 } };
   }
 
+  // `<ShapeCatalogue>` `Shape`s, keyed by `ComponentName` for O(1) lookup per
+  // placed element — mirrors pyDEXPI's `ShapeUsage` resolving a `Shape` by
+  // reference out of the document's own catalogue.
+  const shapesByComponentName = new Map<string, Shape>();
+  for (const catalogue of model.shapeCatalogues || []) {
+    for (const shape of catalogue.shapes) {
+      if (shape.componentName && !shapesByComponentName.has(shape.componentName)) {
+        shapesByComponentName.set(shape.componentName, shape);
+      }
+    }
+  }
+
+  /** Resolves the real geometry available for a placed element: a catalogue `Shape` reference and/or inline primitives. */
+  function resolveSymbolGeometry(
+    componentName: string | undefined,
+    graphics: GraphicPrimitive[] | undefined
+  ): {
+    symbolShape?: Shape;
+    symbolPrimitives?: GraphicPrimitive[];
+    catalogNative?: { w: number; h: number };
+    inlineNative?: { w: number; h: number };
+  } {
+    const symbolShape = componentName ? shapesByComponentName.get(componentName) : undefined;
+    const symbolPrimitives = graphics && graphics.length > 0 ? graphics : undefined;
+    const catalogBounds = symbolShape ? boundsOfPrimitives(symbolShape.primitives) : undefined;
+    const inlineBounds = symbolPrimitives ? boundsOfPrimitives(symbolPrimitives) : undefined;
+    return {
+      symbolShape,
+      symbolPrimitives,
+      catalogNative: catalogBounds && catalogBounds.w > 0 && catalogBounds.h > 0 ? { w: catalogBounds.w, h: catalogBounds.h } : undefined,
+      inlineNative: inlineBounds && inlineBounds.w > 0 && inlineBounds.h > 0 ? { w: inlineBounds.w, h: inlineBounds.h } : undefined,
+    };
+  }
+
   const index = resolveIndex(model);
   const idMap = new Map<string, any>();
   for (const [id, entry] of index.entries()) {
@@ -373,11 +420,13 @@ export function projectToView(model: DexpiModel): PidView {
     // position). Gate on the extent's *presence* instead.
     const extW = eq.extent && eq.extent.max.x - eq.extent.min.x > 0 ? (eq.extent.max.x - eq.extent.min.x) * U : undefined;
     const extH = eq.extent && eq.extent.max.y - eq.extent.min.y > 0 ? (eq.extent.max.y - eq.extent.min.y) * U : undefined;
+    const eqGeometry = resolveSymbolGeometry(eq.componentName, eq.graphics);
     const eqSize = resolveScaledSize(
       extW,
       extH,
       eq.scale,
-      eq.componentName,
+      eqGeometry.catalogNative,
+      eqGeometry.inlineNative,
       getNominalEquipmentSize(dexpiClass),
       { w: getDefaultWidth(dexpiClass), h: getDefaultHeight(dexpiClass) },
       U
@@ -400,6 +449,8 @@ export function projectToView(model: DexpiModel): PidView {
       dexpiClass,
       componentClassUri: eq.componentClassUri,
       componentName: eq.componentName,
+      symbolShape: eqGeometry.symbolShape,
+      symbolPrimitives: eqGeometry.symbolPrimitives,
       tagName: eq.tagName || eqId,
       x,
       y,
@@ -469,11 +520,13 @@ export function projectToView(model: DexpiModel): PidView {
         const dexpiClass = pComp.dexpiClass || 'PipingComponent';
         const compExtW = pComp.extent && pComp.extent.max.x - pComp.extent.min.x > 0 ? (pComp.extent.max.x - pComp.extent.min.x) * U : undefined;
         const compExtH = pComp.extent && pComp.extent.max.y - pComp.extent.min.y > 0 ? (pComp.extent.max.y - pComp.extent.min.y) * U : undefined;
+        const compGeometry = resolveSymbolGeometry(pComp.componentName, pComp.graphics);
         const compSize = resolveScaledSize(
           compExtW,
           compExtH,
           pComp.scale,
-          pComp.componentName,
+          compGeometry.catalogNative,
+          compGeometry.inlineNative,
           { w: NOMINAL_PIPING_SYMBOL_W, h: NOMINAL_PIPING_SYMBOL_H },
           { w: getDefaultWidth(dexpiClass), h: getDefaultHeight(dexpiClass) },
           U
@@ -495,6 +548,8 @@ export function projectToView(model: DexpiModel): PidView {
           dexpiClass,
           componentClassUri: pComp.componentClassUri,
           componentName: pComp.componentName,
+          symbolShape: compGeometry.symbolShape,
+          symbolPrimitives: compGeometry.symbolPrimitives,
           // No fallback to the raw element ID here: most piping components
           // legitimately carry no TagName, and `PidViewNode.tagName` being ''
           // is what suppresses the label in the renderer (see exportSvg.ts).
@@ -576,9 +631,10 @@ export function projectToView(model: DexpiModel): PidView {
     const pifFallback = nextFallback(300, 300);
     const rawX = pif.position?.location.x ?? pifFallback.x;
     const rawY = pif.position?.location.y ?? pifFallback.y;
-    const instShape = getComponentShape(pif.componentName);
-    const instW = (instShape?.w ?? NOMINAL_INSTRUMENT_SYMBOL_SIZE) * U * scale;
-    const instH = (instShape?.h ?? NOMINAL_INSTRUMENT_SYMBOL_SIZE) * U * scale;
+    const instGeometry = resolveSymbolGeometry(pif.componentName, pif.graphics);
+    const instNative = instGeometry.inlineNative ?? instGeometry.catalogNative;
+    const instW = (instNative?.w ?? NOMINAL_INSTRUMENT_SYMBOL_SIZE) * U * scale;
+    const instH = (instNative?.h ?? NOMINAL_INSTRUMENT_SYMBOL_SIZE) * U * scale;
 
     const tagName = [pif.processInstrumentationFunctionCategory, pif.processInstrumentationFunctionNumber]
       .filter(Boolean)
@@ -592,6 +648,8 @@ export function projectToView(model: DexpiModel): PidView {
       dexpiClass: pif.dexpiClass || 'ProcessInstrumentationFunction',
       componentClassUri: pif.componentClassUri,
       componentName: pif.componentName,
+      symbolShape: instGeometry.symbolShape,
+      symbolPrimitives: instGeometry.symbolPrimitives,
       tagName,
       x: scaleX(rawX) - instW / 2,
       y: flipY(rawY) - instH / 2,
@@ -637,9 +695,10 @@ export function projectToView(model: DexpiModel): PidView {
     const rawX = position?.location.x ?? actFallback.x;
     const rawY = position?.location.y ?? actFallback.y;
     const actuatorScale = actuator?.scale;
-    const actShape = getComponentShape(actuator?.componentName);
-    const nominalActW = actShape?.w ?? NOMINAL_ACTUATOR_SYMBOL_W;
-    const nominalActH = actShape?.h ?? NOMINAL_ACTUATOR_SYMBOL_H;
+    const actGeometry = resolveSymbolGeometry(actuator?.componentName, actuator?.graphics);
+    const actNative = actGeometry.inlineNative ?? actGeometry.catalogNative;
+    const nominalActW = actNative?.w ?? NOMINAL_ACTUATOR_SYMBOL_W;
+    const nominalActH = actNative?.h ?? NOMINAL_ACTUATOR_SYMBOL_H;
     const aw = (actuatorScale ? nominalActW * actuatorScale.x : 44) * U * scale;
     const ah = (actuatorScale ? nominalActH * actuatorScale.y : 52) * U * scale;
 
@@ -650,6 +709,8 @@ export function projectToView(model: DexpiModel): PidView {
       kind: 'actuator',
       dexpiClass: 'ActuatingSystem',
       componentName: actuator?.componentName,
+      symbolShape: actGeometry.symbolShape,
+      symbolPrimitives: actGeometry.symbolPrimitives,
       tagName: act.actuatingSystemNumber || actId,
       x: scaleX(rawX) - aw / 2,
       y: flipY(rawY) - ah / 2,

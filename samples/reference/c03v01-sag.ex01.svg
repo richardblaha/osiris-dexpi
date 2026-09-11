@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="368.52883440092506" height="297.0" viewBox="0.0 -318.3333 395.0 318.3333">
+  <rect x="0.0" y="-318.3333" width="368.52883440092506" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g id="1fa881cd-629e-4645-9aff-525fc059fe2a" class="representation-group">
+      <g class="static">
+        <path d="M 170.00,-261.67 A 21.25,21.25 0.00 0,0 150.00,-261.67" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 150.00,-278.33 A 21.25,21.25 0.00 0,0 170.00,-278.33" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <text x="160.0" y="-270.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="7.76111111111111" fill="rgb(0,0,0)">T4712</text>
+      </g>
+      <g id="abcdec5b-46ff-40f3-9ac5-f9f89f7dca61" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X8160" transform="translate(200.00,-290.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="2c44baf6-bef6-49e6-a158-78c9d6daf73c" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81601" transform="translate(160.00,-205.00) rotate(90.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="22e692e9-6b08-43c0-b59e-a0fd5c75fc65" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A50|A10|A20|A10|A30" transform="translate(282.50,-130.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="282.5" y="-120.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">P001</text>
+      </g>
+      <g id="7cd71a6e-3b59-4343-9da2-6a66ebab57a3" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81603" transform="translate(275.00,-130.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="fd4ab845-607d-4bfd-9e87-44ce1c28f413" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81604" transform="translate(291.00,-130.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="16d2d9a3-8641-4c0f-ba98-f3388faeee2b" class="representation-group">
+      <g id="1dd258c7-9f03-425a-9915-cef35edbb271" class="representation-group">
+        <g id="1dd258c7-9f03-425a-9915-cef35edbb271" class="representation-group">
+          <g class="static">
+            <polyline points="315.0,-290.0 205.0,-290.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="dad968a2-6cd4-4e7e-b580-6fd6819eeac0" class="representation-group">
+        <g id="685dfbdb-eb6b-4315-97c1-9022370a4ca3" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X80715" transform="translate(310.00,-105.00) rotate(270.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="dad968a2-6cd4-4e7e-b580-6fd6819eeac0" class="representation-group">
+          <g class="static">
+            <polyline points="310.0,-130.0 310.0,-110.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="e7abbe3f-52e8-4040-b9cd-96caddfcdedd" class="representation-group">
+        <g id="e7abbe3f-52e8-4040-b9cd-96caddfcdedd" class="representation-group">
+          <g class="static">
+            <polyline points="320.0,-130.0 320.0,-282.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="3e2b663f-77f0-4d68-b16c-4b1bb48d7afc" class="representation-group">
+        <g id="531fd3ac-dbe6-472a-a5ce-23c97fa7f968" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X80716" transform="translate(340.00,-155.00) rotate(270.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="3e2b663f-77f0-4d68-b16c-4b1bb48d7afc" class="representation-group">
+          <g class="static">
+            <polyline points="340.0,-130.0 340.0,-150.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="8c2a5b4d-05d7-4269-9a30-3c3591f6e044" class="representation-group">
+        <g id="ce1d4f8c-bda5-44f0-b6a2-84b88e340d52" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X80717" transform="translate(360.00,-130.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="1a3a4309-7f75-4992-a645-4464a75d5228" class="representation-group" />
+        <g id="a55c070b-706a-4a2f-ad31-4c55d3481ce3" class="representation-group" />
+        <g id="193a0eed-5666-4f42-a49a-8caa12e6fa68" class="representation-group" />
+        <g id="8c2a5b4d-05d7-4269-9a30-3c3591f6e044" class="representation-group">
+          <g class="static">
+            <polyline points="296.0,-130.0 355.0,-130.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="8c2a5b4d-05d7-4269-9a30-3c3591f6e044" class="representation-group">
+          <g class="static">
+            <polyline points="365.0,-130.0 395.0,-130.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="2214d848-0cf7-47aa-bff7-90448f075ef1" class="representation-group">
+      <g id="4246fe5e-5b4c-4d4a-83b6-40ccb882e876" class="representation-group">
+        <g id="1079609d-2866-4d75-b660-104b614d6cc9" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A30|A10|A10|A40|A102" transform="translate(179.25,-130.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="0.75" ry="0.75" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-0.0" rx="0.75" ry="0.75" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="cd2b7a24-fd8c-43a4-a84c-83dfbfe80f14" class="representation-group" />
+        <g id="fa43db2c-281e-434d-b3c3-2124c300ec58" class="representation-group" />
+        <g id="4246fe5e-5b4c-4d4a-83b6-40ccb882e876" class="representation-group">
+          <g class="static">
+            <polyline points="160.0,-200.0 160.0,-130.0 174.25,-130.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="4246fe5e-5b4c-4d4a-83b6-40ccb882e876" class="representation-group">
+          <g class="static">
+            <polyline points="184.25,-130.0 211.0,-130.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="35206462-df13-4767-a668-291f1983e3e2" class="representation-group">
+        <g id="43031c95-bdf1-4ed3-9066-d6eae4283366" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X8071" transform="translate(245.00,-130.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="35206462-df13-4767-a668-291f1983e3e2" class="representation-group">
+          <g class="static">
+            <polyline points="221.0,-130.0 240.0,-130.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="35206462-df13-4767-a668-291f1983e3e2" class="representation-group">
+          <g class="static">
+            <polyline points="250.0,-130.0 270.0,-130.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3f538eef-d9a4-4568-82f8-01061b257a2c" class="representation-group">
+      <g id="2ce1e19d-9ce9-440c-99d0-139990e46b56" class="representation-group">
+        <g id="e8241c87-29be-4998-bbd4-3cfdf0ecd3fb" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A30|A10|A10|A40|A10" transform="translate(159.67,-169.33) rotate(90.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="0.75" ry="0.75" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-0.0" rx="0.75" ry="0.75" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

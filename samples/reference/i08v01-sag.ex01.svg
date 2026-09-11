@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="346.86131386861314" height="297.0" viewBox="0.0 -137.0 160.0 137.0">
+  <rect x="0.0" y="-137.0" width="346.86131386861314" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g id="ff7d5d7f-6bb4-41b7-9320-2c1c0ae477e0" class="representation-group">
+      <g id="dc46c6e2-11e5-4537-86c5-5a7350089700" class="representation-group">
+        <g id="f557b810-5bda-4cef-9091-638d31809658" class="representation-group" />
+        <g id="dc46c6e2-11e5-4537-86c5-5a7350089700" class="representation-group">
+          <g class="static">
+            <polyline points="120.0,-137.0 160.0,-137.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="cc06154b-beef-49f0-b97d-0d858e47ff97" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|P" transform="translate(140.00,-174.50)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="972bdc03-776e-453a-b396-8a5e2c50651a" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|P" transform="translate(140.00,-184.50)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="59259939-e22d-4af1-9a8e-9cd4667a8490" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|U" transform="translate(180.00,-157.00)" />
+        </g>
+      </g>
+    </g>
+    <g id="7b92100c-1ce3-444c-b149-6a55e160889b" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|U" transform="translate(210.00,-157.00)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

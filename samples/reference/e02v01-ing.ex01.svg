@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="202.4768412206319" height="297.0" viewBox="0.0 -0.44020640589385696 0.30010640589385695 0.44020640589385696">
+  <rect x="0.0" y="-0.44020640589385696" width="202.4768412206319" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: E02-INTERGRAPH</metadata>
+  <g id="diagram-E02-INTERGRAPH" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label">
+      <text x="0.1925" y="-0.2924999999999999" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Material Chamber 1 / 2</text>
+      <text x="0.1925" y="-0.29749999999999993" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Nominal Capacity Chamber 1 / 2</text>
+      <text x="0.1925" y="-0.30249999999999994" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Nominal Diameter / Overall Height/Length</text>
+      <text x="0.1925" y="-0.30749999999999994" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. max. Chamber 1 / 2</text>
+      <text x="0.1925" y="-0.31249999999999994" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. min. Chamber 1 / 2</text>
+      <text x="0.1925" y="-0.31749999999999995" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. max. Chamber 1 / 2</text>
+      <text x="0.1925" y="-0.32249999999999995" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. min. Chamber 1 / 2</text>
+      <text x="0.1925" y="-0.32749999999999996" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Description</text>
+      <text x="0.1925" y="-0.33499999999999996" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">Ident</text>
+    </g>
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g id="44570e4f-0eb9-47f1-b4af-11c91346855e" class="representation-group">
+      <g class="static">
+        <path d="M 0.28,-0.42 A 0.04,0.04 0.00 0,0 0.24,-0.42" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 0.24,-0.37 A 0.04,0.04 0.00 0,0 0.28,-0.37" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+      </g>
+      <g id="1d2e5bd5-6628-4c54-b726-4038e501ef01" class="representation-group" />
+      <g id="d167d8a1-89d4-4a9a-b485-9a8f82602b98" class="representation-group" />
+      <g id="a04e88f1-388d-4db0-b97b-e44373cb3969" class="representation-group" />
+      <g id="8c06fb1c-42e8-4355-bfbe-683e414a86a1" class="representation-group" />
+      <g id="4926309b-f9ee-446c-a0a0-c3031bda0644" class="representation-group" />
+    </g>
+  </g>
+</svg>

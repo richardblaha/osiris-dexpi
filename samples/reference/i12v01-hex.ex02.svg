@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="187.99456063290828" height="297.0" viewBox="0.0 -0.4897482123420732 0.31000000000000105 0.4897482123420732">
+  <rect x="0.0" y="-0.4897482123420732" width="187.99456063290828" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I12-HEXAGON</metadata>
+  <g id="diagram-I12-HEXAGON" class="diagram" fill="rgb(255,255,255)">
+    <g class="border" />
+    <g class="label">
+      <text x="0.28992620477951625" y="-0.4799905643422868" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">HC12</text>
+    </g>
+    <g class="label">
+      <text x="0.3049939563665617" y="-0.47493670081199557" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">HV 12</text>
+    </g>
+    <g id="c0243e5b-7b0a-4f2c-be9b-3de2a7499eec" class="representation-group">
+      <g id="8bce57b2-1d9c-4e8c-82ec-a4fc04acf66a" class="representation-group">
+        <g id="8bce57b2-1d9c-4e8c-82ec-a4fc04acf66a" class="representation-group">
+          <g class="static">
+            <polyline points="0.30999999999999894,-0.4897482123420732 0.30999999999999894,-0.48249999999999993" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="c6bfb9cb-f92a-477c-8ce3-7f473fddf55c" class="representation-group">
+        <g id="c6bfb9cb-f92a-477c-8ce3-7f473fddf55c" class="representation-group">
+          <g class="static">
+            <polyline points="0.31000000000000105,-0.4774999999999999 0.31000000000000105,-0.47016300905461283" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="ca8395d5-f9bb-4d0c-aa06-d7b53947e3b0" class="representation-group">
+      <g id="40db9d43-b0cc-446a-9852-32463a064df9" class="representation-group" />
+      <g id="0507037b-d607-457f-8697-af22c2ed580c" class="representation-group" />
+      <g id="229abf4f-454e-4a16-834d-d03ef7006745" class="representation-group" />
+    </g>
+    <g id="9e08f01d-5599-441d-9d4b-8fc60784e927" class="representation-group">
+      <g id="31f55e3e-04a4-4766-b848-3cbbdaf25aa5" class="representation-group">
+        <g class="static">
+          <polyline points="0.2974262047745977,-0.47999074542369435 0.2974999999994721,-0.47999074542369435 0.2974999999994721,-0.4799999999999949 0.2999999999994721,-0.4799999999999959" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

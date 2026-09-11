@@ -18,7 +18,7 @@
  */
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { SYMBOL_CATALOG, type SymbolCatalogItem } from '../../../src/maxgraph/stencils/catalog.js';
+import { SYMBOL_CATALOG, type SymbolCatalogItem } from '../../../src/panel/symbolPalette.js';
 import { FIXTURES_DIR, REPORT_DIR } from './paths.js';
 
 interface IsoGroup {
@@ -100,7 +100,7 @@ export function renderSymbolMatrix(): void {
   );
   const coveredGroups = groups.length - zeroGroups.length;
   md.push(
-    `Catalog: **${SYMBOL_CATALOG.length}** stencil entries, placed into **${coveredGroups}/${groups.length}** ISO groups ` +
+    `Catalog: **${SYMBOL_CATALOG.length}** palette entries, placed into **${coveredGroups}/${groups.length}** ISO groups ` +
       `(${totalOurs} entries total; the 29 groups cover ${totalSymbols} ISO symbols).`,
     ''
   );
@@ -119,7 +119,7 @@ export function renderSymbolMatrix(): void {
   for (const r of rows) {
     if (r.items.length === 0) continue;
     md.push(`### ${r.n}. ${r.name}`, '');
-    for (const it of r.items) md.push(`- \`${it.componentClass}\` — ${it.label} (\`${it.stencil}\`)`);
+    for (const it of r.items) md.push(`- \`${it.componentClass}\` — ${it.label}`);
     md.push('');
   }
   md.push('## Out of scope for ISO 10628-2 (ISA-5.1 / ISO 14617 instruments)', '');

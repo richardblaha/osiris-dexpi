@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I09V01.dwg</metadata>
+  <g id="diagram-I09V01.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="20a5c698-a74c-4238-9b1f-7700cf868f4c" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="ISO 0105 - Tank Vessel with dished endsXMP_20453" transform="translate(156.98,-93.63) scale(7.31,7.31)" />
+        </g>
+      </g>
+      <g id="06aa2513-1d19-464e-a440-bbe4f0749888" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Single Lined NozzleXMP_21625" transform="translate(208.07,-305.98) rotate(270.00) scale(2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

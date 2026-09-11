@@ -1,6 +1,6 @@
 import type { DexpiModel } from '../model/classes/dexpiModel';
 import type { PidView } from '../model/view/projection';
-import type { SymbolCatalogItem } from '../maxgraph/stencils/catalog';
+import type { SymbolCatalogItem } from '../panel/symbolPalette';
 
 export type ViewMode = 'design' | 'source';
 

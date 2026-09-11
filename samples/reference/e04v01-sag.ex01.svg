@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="209.00000000000003" height="297.0" viewBox="0.0 -270.0 190.0 270.0">
+  <rect x="0.0" y="-270.0" width="209.00000000000003" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g id="5426ad20-143f-4cfe-95b2-12ba4d440273" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2516" transform="translate(190.00,-247.50)" />
+        </g>
+        <text x="190.0" y="-270.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">H-1009</text>
+      </g>
+      <g id="85a684e3-45ae-4e00-af5e-a7d11d462ed4" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816011" transform="translate(195.00,-235.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="3b79b275-2b0d-45be-9fe5-b9a47082b329" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816012" transform="translate(185.00,-260.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="fa61d9af-8423-4360-9713-83a6800f1f59" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816013" transform="translate(195.00,-260.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="bb53273a-c1a9-4834-ada8-89bd759aaa74" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816014" transform="translate(185.00,-235.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

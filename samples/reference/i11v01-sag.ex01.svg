@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="378.343949044586" height="297.0" viewBox="0.0 -157.0 200.0 157.0">
+  <rect x="0.0" y="-157.0" width="378.343949044586" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g id="6a71efea-7870-49fc-a408-1c7c66ff01f8" class="representation-group">
+      <g id="730bae30-2788-4899-94a8-9469f2f064fe" class="representation-group">
+        <g id="730bae30-2788-4899-94a8-9469f2f064fe" class="representation-group">
+          <g class="static">
+            <polyline points="160.0,-157.0 177.5,-157.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="86fa5f31-3426-41dc-ab33-d816a6b27e40" class="representation-group">
+        <g id="86fa5f31-3426-41dc-ab33-d816a6b27e40" class="representation-group">
+          <g class="static">
+            <polyline points="182.5,-157.0 200.0,-157.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="15b82a6a-cde7-478e-bc0f-64cfc071d08a" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|F" transform="translate(180.00,-192.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

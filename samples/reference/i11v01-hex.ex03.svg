@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420.0" height="296.27018601814905" viewBox="0.0 -0.5705 0.8087550192624574 0.5705">
+  <rect x="0.0" y="-0.5705" width="420.0" height="296.27018601814905" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I11V01-HEX.EX03</metadata>
+  <g id="diagram-I11V01-HEX.EX03" class="diagram" fill="rgb(255,255,255)">
+    <g class="border">
+      <text x="0.035" y="-0.0205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">0</text>
+      <text x="0.035" y="-0.07050000000000001" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">50</text>
+      <text x="0.035" y="-0.1205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">100</text>
+      <text x="0.035" y="-0.1705" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">150</text>
+      <text x="0.035" y="-0.2205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">200</text>
+      <text x="0.035" y="-0.2705" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">250</text>
+      <text x="0.035" y="-0.3205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">300</text>
+      <text x="0.035" y="-0.3705" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">350</text>
+      <text x="0.035" y="-0.4205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">400</text>
+      <text x="0.035" y="-0.47050000000000003" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">450</text>
+      <text x="0.035" y="-0.5205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">500</text>
+      <text x="0.035" y="-0.5705" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">550</text>
+      <text x="0.039000000000000035" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">0</text>
+      <text x="0.08900000000000004" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">50</text>
+      <text x="0.13900000000000004" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">100</text>
+      <text x="0.18900000000000003" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">150</text>
+      <text x="0.23900000000000005" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">200</text>
+      <text x="0.28900000000000003" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">250</text>
+      <text x="0.339" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">300</text>
+      <text x="0.38900000000000007" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">350</text>
+      <text x="0.43900000000000006" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">400</text>
+      <text x="0.48900000000000005" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">450</text>
+      <text x="0.539" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">500</text>
+      <text x="0.5890000000000001" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">550</text>
+      <text x="0.639" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">600</text>
+      <text x="0.6890000000000001" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">650</text>
+      <text x="0.7390000000000001" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">700</text>
+      <text x="0.789" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">750</text>
+      <text x="0.8087550192624574" y="-0.013515679381080548" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">840 MM X 595 MM - SIZE A1</text>
+      <text x="0.6546194096588509" y="-0.031177213541666565" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">CHECKED BY</text>
+      <text x="0.6546194096588509" y="-0.023730598958333276" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">APPROVED BY</text>
+      <text x="0.6546194096588509" y="-0.038757319641946654" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DRAWN BY</text>
+      <text x="0.7272929773671842" y="-0.04830572916666659" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">PROJECT NO</text>
+      <text x="0.7272929773671842" y="-0.03341276041666662" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DRAWING NO</text>
+      <text x="0.6578362065338509" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">REV</text>
+      <text x="0.6790263107005176" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DATE</text>
+      <text x="0.701061206533851" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">BY</text>
+      <text x="0.7130938888255176" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">CHK</text>
+      <text x="0.7687505294505176" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DESCRIPTION</text>
+      <text x="0.7354730554921843" y="-0.14287513020833323" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">REVISIONS</text>
+      <text x="0.6851222028074334" y="-0.04737664254453421" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DATE</text>
+      <text x="0.7027351856064068" y="-0.04747964244394342" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">SIGNATURE</text>
+    </g>
+    <g class="label">
+      <text x="0.3250240422168158" y="-0.4024449708044079" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">FI11</text>
+    </g>
+    <g class="label">
+      <text x="0.32505841911111694" y="-0.38489349377681614" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">FE 11</text>
+    </g>
+    <g id="e6b96805-17d5-4909-a0c9-5ded1a5605aa" class="representation-group" />
+    <g id="91e999f9-7e14-409e-9d52-055777cf6bfb" class="representation-group">
+      <g id="8f7fad89-7f92-40aa-8b15-fcb025522406" class="representation-group">
+        <g id="f4252543-54a4-4f7e-bf94-14ad5f555d4e" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_ecdacaf1-6d0f-4249-8984-7c06aac28ffc" transform="translate(0.33,-0.39)">
+                <text x="0.0025" y="-0.00125" text-anchor="end" dy="0.0em" font-family="'Intergraph ISO', Arial" font-size="0.001" fill="rgb(0,0,0)">F</text>
+                <text x="5.8e-05" y="0.005106" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">FE 11</text>
+              </g>
+            </g>
+          </g>
+          <g id="f4252543-54a4-4f7e-bf94-14ad5f555d4e" class="representation-group" />
+        </g>
+        <g id="8f7fad89-7f92-40aa-8b15-fcb025522406" class="representation-group">
+          <g class="static">
+            <polyline points="0.3275,-0.39000000000000057 0.3375,-0.390000000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="14a2e5a1-1753-4a47-9740-9c02b64dda78" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="ProcessInstrumentationFunction_63add32b-223e-4150-80f0-655ec6ee2fe0" transform="translate(0.33,-0.40)">
+            <path d="M 0.00,0.01 A 0.01,0.01 0.00 0,0 0.00,-0.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -0.00,-0.00 A 0.01,0.01 0.00 0,0 -0.00,0.01" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <text x="0.0" y="-0.0" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">FI11</text>
+          </g>
+        </g>
+      </g>
+      <g id="52af9887-a10c-44b6-a663-d7b1f229ca64" class="representation-group">
+        <g class="static">
+          <polyline points="0.325,-0.39125000000000054 0.325,-0.3943408889934198 0.32502404221189723,-0.3943408889934198 0.32502404221189723,-0.3974451518858153" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="835326cd-0901-4fba-93dd-254ee92abbea" class="representation-group">
+      <g id="7a583db1-a26f-406c-845f-8de96fd2c257" class="representation-group" />
+    </g>
+  </g>
+</svg>

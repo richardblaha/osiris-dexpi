@@ -19,6 +19,7 @@ import { childNamed, childrenNamed } from '../raw';
 import { parseGenericAttributeSets } from './genericAttributes';
 import { parsePosition, parseScale, parseCenterLine } from './geometry';
 import { parseAssociations, AssociationEntry } from './association';
+import { parseInlinePrimitives } from './graphics';
 import type { ParseContext } from '../core';
 
 export interface PendingInstrumentation {
@@ -58,6 +59,7 @@ export function parseActuatingSystem(
       position: compPos,
       scale: compScale,
       componentName: cn.attrs.ComponentName,
+      graphics: parseInlinePrimitives(cn),
       customAttributes,
       ...typedAttributes,
       _proteus: {
@@ -193,6 +195,7 @@ export function parseProcessInstrumentationFunction(
     componentClassUri,
     position,
     componentName: node.attrs.ComponentName,
+    graphics: parseInlinePrimitives(node),
     processSignalGeneratingFunctions,
     signalConveyingFunctions,
     actuatingFunctions,

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="198.27539177146457" height="297.0" viewBox="0.0 -0.3294857162047637 0.21996265812660307 0.3294857162047637">
+  <rect x="0.0" y="-0.3294857162047637" width="198.27539177146457" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: E05V01-HEX.EX02</metadata>
+  <g id="diagram-E05V01-HEX.EX02" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="0.19021614732446607" y="-0.316436743757708" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.18996265812660207" y="-0.32248380378967195" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N3</text>
+    </g>
+    <g class="label">
+      <text x="0.18996265812660207" y="-0.282483803789672" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N1</text>
+    </g>
+    <g class="label">
+      <text x="0.21973592360257407" y="-0.31619139186464995" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.21996265812660107" y="-0.32248380378967295" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N2</text>
+    </g>
+    <g class="label">
+      <text x="0.20474273030955456" y="-0.3294857162047637" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">H1005</text>
+    </g>
+    <g class="label">
+      <text x="0.21984929086458807" y="-0.27669023295557293" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.21996265812660307" y="-0.28248380378967297" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N4</text>
+    </g>
+    <g class="label">
+      <text x="0.18996265812660207" y="-0.27669023295557194" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.09996265812660278" y="-0.2749838037896722" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N1.</text>
+    </g>
+    <g class="label">
+      <text x="0.09996265812660278" y="-0.2849838037896722" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.11000000000000106" y="-0.2925" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">P4713</text>
+    </g>
+    <g class="label">
+      <text x="0.11996265812660234" y="-0.27498380378967247" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N2.</text>
+    </g>
+    <g class="label">
+      <text x="0.11996265812660234" y="-0.2849838037896725" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g id="1fb351e3-c601-4a5b-9c14-3f81573ec810" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_9016b52c-af60-4655-adf5-1ec82650b085" transform="translate(0.11,-0.28)">
+            <ellipse cx="0.0" cy="-0.0" rx="0.0075" ry="0.0075" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="0a9bf600-79cf-4ffd-85ff-18221b4973c2" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_5c91d303-5091-44f6-884d-c48567447944" transform="translate(0.12,-0.28)" />
+          </g>
+        </g>
+        <g id="0a9bf600-79cf-4ffd-85ff-18221b4973c2" class="representation-group" />
+      </g>
+      <g id="859831ba-1a99-430c-a61b-a9a839ce02af" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_ea2d1649-79ae-431e-a12b-ed35e4b19f12" transform="translate(0.10,-0.28)" />
+          </g>
+        </g>
+        <g id="859831ba-1a99-430c-a61b-a9a839ce02af" class="representation-group" />
+      </g>
+    </g>
+    <g id="ccf6f998-d8f3-4fc5-b500-40030584c0cd" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_96a690b7-ccb3-4046-bb5c-1fb3fd7827b2" transform="translate(0.20,-0.27)" />
+        </g>
+      </g>
+      <g id="8430980c-fb54-453f-a83b-cf8abc057ef6" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_be47c3f1-6d0c-4326-abf6-30214244f55d" transform="translate(0.20,-0.28)" />
+          </g>
+        </g>
+        <g id="8430980c-fb54-453f-a83b-cf8abc057ef6" class="representation-group" />
+      </g>
+      <g id="2c1ccca4-e2ee-41c5-97b2-91f311fbd25c" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_7d9b46ae-27cb-4816-af6e-f87b2932ec71" transform="translate(0.20,-0.32)" />
+          </g>
+        </g>
+        <g id="2c1ccca4-e2ee-41c5-97b2-91f311fbd25c" class="representation-group" />
+      </g>
+      <g id="73ef3c2b-1144-490a-8224-c8559606b199" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_ea57d1c4-7ecf-4022-b9e6-cb6aedcacc54" transform="translate(0.21,-0.32)" />
+          </g>
+        </g>
+        <g id="73ef3c2b-1144-490a-8224-c8559606b199" class="representation-group" />
+      </g>
+      <g id="4b38abab-c6e2-4d0d-8cb4-cf5b61de6227" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_409e7a6a-c946-465b-91ae-1ebf49fbaa25" transform="translate(0.21,-0.28)" />
+          </g>
+        </g>
+        <g id="4b38abab-c6e2-4d0d-8cb4-cf5b61de6227" class="representation-group" />
+      </g>
+    </g>
+  </g>
+</svg>

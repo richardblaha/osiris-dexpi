@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="170.73529411764704" height="297.0" viewBox="0.0 -187.0 107.5 187.0">
+  <rect x="0.0" y="-187.0" width="170.73529411764704" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label">
+      <text x="107.5" y="-157.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">T-9</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="107.5" y="-152.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">Vessel</text>
+    </g>
+    <g class="label" />
+    <g id="e2424c47-8718-471a-af47-303f3c930ae1" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2062" transform="translate(102.50,-172.00)">
+            <path d="M 10.00,-27.50 A 21.25,21.25 0.00 0,0 -10.00,-27.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -10.00,-2.50 A 21.25,21.25 0.00 0,0 10.00,-2.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="102.5" y="-187.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">T-9</text>
+      </g>
+    </g>
+  </g>
+</svg>

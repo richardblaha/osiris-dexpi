@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="361.8274111675127" height="297.0" viewBox="0.0 -197.0 240.0 197.0">
+  <rect x="0.0" y="-197.0" width="361.8274111675127" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g id="dc76945c-467f-483d-a6ff-cd046ff75ce9" class="representation-group">
+      <g id="73ed0cdc-fd3e-49b4-be61-7d48b0714f0b" class="representation-group">
+        <g id="f885d21e-b85f-4557-954e-e3510ae7853c" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A15|A30|A10|A10|A10|A10" transform="translate(240.00,-177.00) rotate(90.00) scale(-1.00,1.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-5.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="73ed0cdc-fd3e-49b4-be61-7d48b0714f0b" class="representation-group">
+          <g class="static">
+            <polyline points="240.0,-197.0 240.0,-182.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="73ed0cdc-fd3e-49b4-be61-7d48b0714f0b" class="representation-group">
+          <g class="static">
+            <polyline points="240.0,-172.0 240.0,-157.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="56e6f3a6-c2ac-4a3c-86a9-b5fb1871e2e2" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|H" transform="translate(180.00,-177.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I07V01.dwg</metadata>
+  <g id="diagram-I07V01.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="e89d0021-ccf0-4ed7-ae1e-6586a9862bed" class="representation-group">
+      <g id="b0f1cc6d-f56f-4e0f-a12b-28eea8c068fd" class="representation-group" />
+    </g>
+    <g id="c7c827b5-f675-4b76-8ed5-a276dd4a300f" class="representation-group">
+      <g id="46d6262b-264a-40b4-86b1-8883ec084a4a" class="representation-group" />
+    </g>
+    <g id="8796a19a-b31d-498a-8493-65a87cfb1a06" class="representation-group">
+      <g id="1d7c486f-c0c9-4b6c-9f40-b2880ec9509c" class="representation-group">
+        <g class="pipeflowarrow">
+          <g>
+            <g id="A2503" transform="translate(221.91,-172.50) scale(-2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="e9850e85-c4bf-4336-9000-f4609bed57bc" class="representation-group" />
+    <g id="e81fadb9-3300-4582-8011-62348b5a694d" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A5052GenInst" transform="translate(111.73,-80.47) scale(5.33,5.33)" />
+        </g>
+      </g>
+    </g>
+    <g id="0e781f05-48e5-4365-91c3-8279e91fa943" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A5052ContRoom" transform="translate(112.03,-133.76) scale(5.33,5.33)" />
+        </g>
+      </g>
+    </g>
+    <g id="9dbff25c-8e53-41ff-802f-f8dde937d731" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="PIF_A5056ContRoom" transform="translate(281.96,-172.50) scale(5.33,5.33)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

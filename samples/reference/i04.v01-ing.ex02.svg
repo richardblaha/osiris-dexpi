@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="229.93539432897882" height="297.0" viewBox="0.0 -0.4650001810814075 0.36 0.4650001810814075">
+  <rect x="0.0" y="-0.4650001810814075" width="229.93539432897882" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I04-INTERGRAPH</metadata>
+  <g id="diagram-I04-INTERGRAPH" class="diagram" fill="rgb(255,255,255)">
+    <g class="border" />
+    <g class="label">
+      <text x="0.325" y="-0.46499999999999997" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">FIC04</text>
+    </g>
+    <g class="label">
+      <text x="0.344908522585415" y="-0.39283060538906" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">FV 04</text>
+    </g>
+    <g class="label">
+      <text x="0.3525" y="-0.395010087900709" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" fill="rgb(0,0,0)">NC</text>
+    </g>
+    <g class="label">
+      <text x="0.330091477414584" y="-0.394910197110531" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">FE 04</text>
+    </g>
+    <g id="a1b3d94f-ff46-42d1-801b-de0fc2ce7dd2" class="representation-group">
+      <g id="9e526de8-0c29-437d-8b32-c91ff57a283c" class="representation-group">
+        <g id="9e526de8-0c29-437d-8b32-c91ff57a283c" class="representation-group">
+          <g class="static">
+            <polyline points="0.34,-0.390000000000001 0.3475,-0.390000000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="c21acab1-debe-4436-a1e8-31de064f06b2" class="representation-group">
+        <g id="c21acab1-debe-4436-a1e8-31de064f06b2" class="representation-group">
+          <g class="static">
+            <polyline points="0.3525,-0.390000000000001 0.36,-0.390000000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3150ef43-990e-4b77-8cac-6066a6cb635e" class="representation-group">
+      <g id="2934a6b9-8c5e-48dc-8812-499dd1ab7b01" class="representation-group">
+        <g id="c8461aa9-809c-42b0-b939-c0c8881e4dea" class="representation-group" />
+        <g id="2934a6b9-8c5e-48dc-8812-499dd1ab7b01" class="representation-group">
+          <g class="static">
+            <polyline points="0.31,-0.39 0.322499999999999,-0.390000000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="2934a6b9-8c5e-48dc-8812-499dd1ab7b01" class="representation-group">
+          <g class="static">
+            <polyline points="0.327499999999999,-0.390000000000001 0.3375,-0.390000000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="bb820802-7ac7-462e-ab08-11d6ad153391" class="representation-group">
+      <g id="601ea59a-9843-4bf3-b620-ce04767e910e" class="representation-group" />
+      <g id="5756b986-1c0c-49be-956d-5298c7de0372" class="representation-group" />
+    </g>
+    <g id="2d9c416e-7677-4ca7-b970-be3be146e7a5" class="representation-group">
+      <g id="45d115d0-7121-4510-950a-a3f394918d87" class="representation-group">
+        <g class="static">
+          <polyline points="0.32499999999508145,-0.46000018108140744 0.324999999999999,-0.391250000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+      <g id="5e871627-ac8a-420f-90e2-7b970fc3f6b6" class="representation-group">
+        <g class="static">
+          <polyline points="0.33249999999508145,-0.4650001810814075 0.349999999999995,-0.4650001810814075 0.34999999999999587,-0.4000000000005299" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="f05f43c4-e862-4406-97cf-eba5305a9bd6" class="representation-group">
+      <g id="0a957a91-3386-41c0-8b2e-7f9e5d395237" class="representation-group" />
+    </g>
+  </g>
+</svg>

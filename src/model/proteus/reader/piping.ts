@@ -21,6 +21,7 @@ import type { RawNode } from '../raw';
 import { childNamed, childrenNamed } from '../raw';
 import { parseGenericAttributeSets } from './genericAttributes';
 import { parsePosition, parseExtent, parseScale, parseCenterLine } from './geometry';
+import { parseInlinePrimitives } from './graphics';
 import type { ParseContext } from '../core';
 
 export interface PendingSegmentConnection {
@@ -101,6 +102,7 @@ export function parsePipingComponent(node: RawNode, ctx: ParseContext): PipingCo
     extent,
     scale,
     componentName: node.attrs.ComponentName,
+    graphics: parseInlinePrimitives(node),
     attributes: typedAttributes,
     customAttributes,
     _proteus: {
@@ -142,6 +144,7 @@ export function parsePipeOffPageConnector(
     position: parsePosition(node),
     scale: parseScale(node),
     componentName: node.attrs.ComponentName,
+    graphics: parseInlinePrimitives(node),
     _proteus: {
       attrs: { ...node.attrs },
       extra: [...node.children],

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="362.5147058823529" height="297.0" viewBox="0.0 -340.0 415.0 340.0">
+  <rect x="0.0" y="-340.0" width="362.5147058823529" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g id="43eceefa-3e0d-4485-888e-5f8d1beebf99" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2062" transform="translate(232.50,-172.50) scale(3.75,4.50)">
+            <path d="M 10.00,-27.50 A 21.25,21.25 0.00 0,0 -10.00,-27.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -10.00,-2.50 A 21.25,21.25 0.00 0,0 10.00,-2.50" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="250.0" y="-315.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">TA-113</text>
+      </g>
+      <g id="7d7fe0ef-9fa8-48c3-87b2-d01b2db258d7" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X8160" transform="translate(232.50,-307.49) rotate(270.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="47f32b68-e3ae-4584-ab9d-1d7ae1696694" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81604" transform="translate(270.00,-280.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="9ecbe332-69a9-4f85-a656-c035262b936e" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81605" transform="translate(270.00,-200.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="5a852bc0-6f2c-46fa-bbbe-61f08501fafe" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81609" transform="translate(232.50,-172.50) rotate(90.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="6d4ffa55-74f8-47dc-8b81-f94c153d3f27" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2301" transform="translate(120.00,-200.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="120.0" y="-212.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">PU-112</text>
+      </g>
+      <g id="119f7d6f-f399-4e28-8523-f8f418eb565c" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81601" transform="translate(127.50,-200.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="a93920a3-fdc1-42ab-9fac-6533469ad87a" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81602" transform="translate(112.50,-200.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="592197b1-1909-4d5c-98e5-9f5113637f4b" class="representation-group">
+      <g id="f89b20a6-fdf1-47fd-8892-63ffe5c637ed" class="representation-group">
+        <g id="f89b20a6-fdf1-47fd-8892-63ffe5c637ed" class="representation-group">
+          <g class="static">
+            <polyline points="80.0,-200.0 107.5,-200.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="e975e1c9-7a11-416f-9299-fbc723de7773" class="representation-group">
+      <g id="377b2818-f8b5-4f60-a7e5-20e0a6a55435" class="representation-group">
+        <g id="377b2818-f8b5-4f60-a7e5-20e0a6a55435" class="representation-group">
+          <g class="static">
+            <polyline points="132.5,-200.0 160.0,-200.0 160.0,-340.0 232.5,-340.0 232.5,-312.4923" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="996f50f8-a6b0-4ec1-9bea-2c97b29cba42" class="representation-group">
+      <g id="9d02f36a-d23e-408c-b723-19ecda945cb7" class="representation-group">
+        <g id="37375bc6-98ce-4cf2-99fb-5b7c77558e78" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A15|A30|A10|A10|A10|A10" transform="translate(282.50,-280.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="9d02f36a-d23e-408c-b723-19ecda945cb7" class="representation-group">
+          <g class="static">
+            <polyline points="275.0,-280.0 277.5,-280.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="d5322452-3460-4e7a-9653-488cbf0270dc" class="representation-group">
+      <g id="aaa87115-f486-4764-84c6-2dbf6a7d5e98" class="representation-group">
+        <g id="f4422732-a490-43d3-bd97-9b4a9eb18cc2" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A15|A30|A10|A10|A10|A103" transform="translate(282.50,-200.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="aaa87115-f486-4764-84c6-2dbf6a7d5e98" class="representation-group">
+          <g class="static">
+            <polyline points="275.0,-200.0 277.5,-200.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="734adb01-73c1-481a-8dd0-058db8029b05" class="representation-group">
+      <g id="bbd44dc7-34a1-44fe-b382-034a86b528af" class="representation-group">
+        <g id="222a1f4f-54d9-4c6f-9e59-2f35a26c571e" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X8071" transform="translate(310.00,-140.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="bbd44dc7-34a1-44fe-b382-034a86b528af" class="representation-group">
+          <g class="static">
+            <polyline points="232.5,-167.5 232.5,-140.0 305.0,-140.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="bbd44dc7-34a1-44fe-b382-034a86b528af" class="representation-group">
+          <g class="static">
+            <polyline points="315.0,-140.0 380.0,-140.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="559d0520-f98d-4e35-b641-a407c0973022" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|L" transform="translate(317.50,-240.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="76695783-eee5-4d1e-b011-a371613918e1" class="representation-group">
+        <g class="static">
+          <polyline points="287.5,-280.0 317.5,-280.0 317.5,-245.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+      <g id="aa260c22-70e8-438d-9ef3-18a1e0571fde" class="representation-group">
+        <g class="static">
+          <polyline points="287.5,-200.0 317.5,-200.0 317.5,-235.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="e05d148c-de32-4e12-b73a-0fd025069342" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|L" transform="translate(422.50,-240.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="2b5d5be8-6572-4f42-89f8-1655be85825e" class="representation-group">
+        <g class="static">
+          <polyline points="325.0,-240.0 415.0,-240.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="91cb8181-0a68-4078-870f-2c75124883e1" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|L" transform="translate(380.00,-220.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="740ddcdc-084b-4c6a-80cc-a50ac90d39ae" class="representation-group">
+        <g class="static">
+          <polyline points="380.0,-240.0 380.0,-225.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="a175f3ec-bede-462a-8aec-527d493358d7" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A30|A10|L" transform="translate(340.00,-180.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="b2438bf0-af74-48c4-8df8-89ad36fe9cc8" class="representation-group">
+        <g class="static">
+          <polyline points="380.0,-215.0 380.0,-180.0 347.5,-180.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+      <g id="c635f818-dbda-4c8b-a833-5533cdac46f3" class="representation-group">
+        <g class="static">
+          <polyline points="309.74,-157.63 310.0,-157.63 310.0,-180.0 332.5,-180.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

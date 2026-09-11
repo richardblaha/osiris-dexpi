@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I08V01.dwg</metadata>
+  <g id="diagram-I08V01.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="ca28f1b0-ba5a-43d0-899b-021e4ac4004e" class="representation-group">
+      <g id="79a795de-5181-4f91-9c4b-2ee6684321af" class="representation-group" />
+    </g>
+    <g id="6cf51d3e-9de1-4ba0-950a-43001afe60c1" class="representation-group">
+      <g id="0acc7df8-5513-45d2-bdaa-5f92148f8af1" class="representation-group" />
+    </g>
+    <g id="7c1307b8-0e50-4ea9-8987-f30b54256963" class="representation-group">
+      <g id="328d97e4-a479-4c4f-824d-2bd901415f93" class="representation-group">
+        <g class="pipeflowarrow">
+          <g>
+            <g id="A2503" transform="translate(112.22,-23.01) rotate(90.00) scale(-2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+      <g id="8279f32e-11f3-40d6-b6f4-ab85b99fc86e" class="representation-group" />
+    </g>
+    <g id="6a47dc8d-6176-497e-ba5a-8c4434afdc37" class="representation-group">
+      <g id="8e94bb8f-dfa4-4fb2-8390-33982c6e0db1" class="representation-group">
+        <g class="pipeflowarrow">
+          <g>
+            <g id="A2503" transform="translate(12.50,-23.10) rotate(90.00) scale(-2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+      <g id="2d1f9a3f-bfab-4514-b5d5-7dd036862dcf" class="representation-group" />
+    </g>
+    <g id="c182c222-3548-4919-8cd7-05768a73fd6f" class="representation-group" />
+    <g id="3c381015-ff48-473f-bc81-500d51d818dc" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A5052ContRoom" transform="translate(-115.93,-46.33) scale(3.52,3.52)" />
+        </g>
+      </g>
+    </g>
+    <g id="13590775-b548-489b-ac6e-d9e7d43e95bf" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A5052GenInst" transform="translate(-116.16,-10.95) scale(3.52,3.52)" />
+        </g>
+      </g>
+    </g>
+    <g id="4fbfe464-6b53-45ef-8187-298b323ad87c" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="PIF_A5056ContRoom" transform="translate(11.01,0.77) scale(3.52,3.52)" />
+        </g>
+      </g>
+    </g>
+    <g id="76591bb2-a1a8-4b53-8a85-7630167cde0f" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="PIF_A5056ContRoom" transform="translate(109.89,0.92) scale(3.52,3.52)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

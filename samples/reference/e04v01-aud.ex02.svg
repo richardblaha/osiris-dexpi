@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: Imp7.dwg</metadata>
+  <g id="diagram-Imp7.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="81d8166d-adfc-44b9-8b4b-ad673b0437e1" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A0306" transform="translate(312.50,-382.50) rotate(270.00)" />
+        </g>
+      </g>
+      <g id="b2e1f43e-9dd2-45e9-9552-585b4b91eda7" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(307.50,-391.03) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="ca3b4e5e-851d-424b-b29e-c3e15ccdda4b" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(317.50,-371.03)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

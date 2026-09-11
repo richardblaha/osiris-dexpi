@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="249.07131973756577" height="297.0" viewBox="0.0 -0.4024449708044079 0.3375 0.4024449708044079">
+  <rect x="0.0" y="-0.4024449708044079" width="249.07131973756577" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I11-HEXAGON</metadata>
+  <g id="diagram-I11-HEXAGON" class="diagram" fill="rgb(255,255,255)">
+    <g class="border" />
+    <g class="label">
+      <text x="0.3250240422168158" y="-0.4024449708044079" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">FI11</text>
+    </g>
+    <g class="label">
+      <text x="0.32505841911111694" y="-0.38489349377681614" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">FE 11</text>
+    </g>
+    <g id="c8a2aa27-a78e-48ad-816d-c1d7fe625822" class="representation-group">
+      <g id="50a51b30-fb4a-46e6-bf10-780c08c92756" class="representation-group">
+        <g id="50a51b30-fb4a-46e6-bf10-780c08c92756" class="representation-group">
+          <g class="static">
+            <polyline points="0.3275,-0.39000000000000057 0.3375,-0.390000000000001" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="1ec20bdf-c224-4d74-a245-53c11f297015" class="representation-group" />
+  </g>
+</svg>

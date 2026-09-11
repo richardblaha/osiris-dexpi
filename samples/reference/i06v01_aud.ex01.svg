@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I06V01.dwg</metadata>
+  <g id="diagram-I06V01.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="7d84aec5-fb25-4eef-9a45-964482067bd0" class="representation-group">
+      <g id="3303dc7e-4ae9-4b51-9334-4d5008c67f3f" class="representation-group" />
+    </g>
+    <g id="90aa4bb0-a390-4f6b-946c-91cba3f5822e" class="representation-group">
+      <g id="14e187b9-e6b6-4919-adde-77871b7d2f29" class="representation-group" />
+    </g>
+    <g id="a190a3e9-98df-4218-921e-ba80d0a007dc" class="representation-group">
+      <g id="5e437450-5c3c-4b68-aeb5-3c156f059582" class="representation-group">
+        <g class="pipeflowarrow">
+          <g>
+            <g id="A2503" transform="translate(1.67,-117.09) scale(2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="e217e95a-137c-4629-87c2-bce5b9b2033f" class="representation-group">
+      <g id="69d940d9-6046-4131-be13-33090ec5a512" class="representation-group">
+        <g class="pipeflowarrow">
+          <g>
+            <g id="A2503" transform="translate(44.48,-146.29) rotate(90.00) scale(2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="a111dbc2-6648-454d-a458-389dc737ae64" class="representation-group">
+      <g id="b6c2f100-6a37-420a-b2e5-f33d18b0f601" class="representation-group" />
+      <g id="c65f3605-2a15-4226-bf0a-7b247066194d" class="representation-group" />
+    </g>
+    <g id="5b8227af-062b-4073-bcef-faae05d22777" class="representation-group">
+      <g id="45345c02-2e0f-4b65-9dbe-16523ca641c5" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A5101" transform="translate(49.59,-27.66)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3518abe5-3310-4d40-b7b4-6008ed4f1982" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A2101" transform="translate(49.59,-27.66)" />
+        </g>
+      </g>
+    </g>
+    <g id="2976d151-0ce9-4207-bd08-04c0c412ee5e" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A5052ContRoom" transform="translate(47.72,-120.24) scale(3.96,3.96)" />
+        </g>
+      </g>
+    </g>
+    <g id="404bc8cb-c09e-4988-b224-d64e8ef3a07c" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A5052ContRoom" transform="translate(-86.79,-117.17) scale(3.96,3.96)" />
+        </g>
+      </g>
+    </g>
+    <g id="24102085-efc4-49ee-91c0-117ddfc0e8c4" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="PIF_A5056ContRoom" transform="translate(43.82,-223.56) scale(4.28,4.28)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

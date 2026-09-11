@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="258.26086956521743" height="297.0" viewBox="0.0 -230.0 200.0 230.0">
+  <rect x="0.0" y="-230.0" width="258.26086956521743" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g id="0ec43dce-81da-4ee2-be0f-c23e28c78aad" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2322" transform="translate(200.00,-240.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="200.0" y="-230.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">P-4713</text>
+      </g>
+      <g id="8390d0e5-99e1-4da4-acbd-a6c70672b657" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816010" transform="translate(192.50,-240.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

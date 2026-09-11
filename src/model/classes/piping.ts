@@ -3,7 +3,7 @@
  */
 
 import type { DexpiObject, CustomAttributeOwner, CustomAttribute, DexpiValue, Ref } from './base';
-import type { Position, Extent, Scale } from './graphics';
+import type { Position, Extent, Scale, GraphicPrimitive } from './graphics';
 import type { PipingNode } from './equipment';
 
 export interface PipingConnection extends DexpiObject {
@@ -36,6 +36,8 @@ export interface PipingComponent extends PipingNetworkSegmentItem {
   extent?: Extent;
   scale?: Scale;
   componentName?: string;
+  /** Graphical primitives embedded directly under this element (world/drawing units matching `extent`), as opposed to a `ShapeCatalogue` reference by `componentName`. */
+  graphics?: GraphicPrimitive[];
 }
 
 export interface PipeOffPageConnector extends PipingNetworkSegmentItem {
@@ -47,6 +49,7 @@ export interface PipeOffPageConnector extends PipingNetworkSegmentItem {
   position?: Position;
   scale?: Scale;
   componentName?: string;
+  graphics?: GraphicPrimitive[];
 }
 
 export interface PropertyBreak extends PipingNetworkSegmentItem {

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="226.52542372881354" height="296.99999999999994" viewBox="0.0 -295.0 225.0 295.0">
+  <rect x="0.0" y="-295.0" width="226.52542372881354" height="296.99999999999994" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="225.0" y="-232.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 225.0 -232.5)" fill="rgb(0,0,0)">=A10.A20.P03.A80.Q001.001</text>
+    </g>
+    <g id="46a86dc6-375b-4917-b4d8-54e9f673c75b" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="251657" transform="translate(190.00,-272.50)" />
+        </g>
+        <text x="190.0" y="-295.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">H-1008</text>
+      </g>
+      <g id="3535bfba-654a-4ef5-bcd9-a71686894094" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816058" transform="translate(195.00,-260.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="2fd660a9-825d-4d59-aed1-fb8690b4f6f8" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816059" transform="translate(185.00,-285.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="3fe7cefe-6ee1-4e74-9214-c52ac00c2ed7" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816060" transform="translate(185.00,-260.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="ec487eaf-9859-4559-adbe-cb0faf132896" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816061" transform="translate(195.00,-285.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="ff1c13b2-8247-473f-9319-5383dfed5cac" class="representation-group">
+      <g id="b9cf2bf5-3081-4893-a534-6086b8b39fc7" class="representation-group">
+        <g id="b9cf2bf5-3081-4893-a534-6086b8b39fc7" class="representation-group">
+          <g class="static">
+            <polyline points="200.0,-260.0 220.0,-260.0 220.0,-202.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

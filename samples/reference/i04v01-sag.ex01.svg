@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="301.5228426395939" height="297.0" viewBox="0.0 -197.0 200.0 197.0">
+  <rect x="0.0" y="-197.0" width="301.5228426395939" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g id="4406af1e-f281-4490-9c40-85ae7014aae7" class="representation-group">
+      <g id="bec5ed78-9fc5-48d1-b2c6-e6b0147f941a" class="representation-group">
+        <g id="bec5ed78-9fc5-48d1-b2c6-e6b0147f941a" class="representation-group">
+          <g class="static">
+            <polyline points="102.5,-197.0 135.0,-197.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="bec5ed78-9fc5-48d1-b2c6-e6b0147f941a" class="representation-group">
+          <g class="static">
+            <polyline points="145.0,-197.0 172.5,-197.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="bec5ed78-9fc5-48d1-b2c6-e6b0147f941a" class="representation-group">
+          <g class="static">
+            <polyline points="182.5,-197.0 200.0,-197.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="35b2a340-f5cd-4637-9dab-20fe83d6ed4f" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A10|A10|F" transform="translate(140.00,-232.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

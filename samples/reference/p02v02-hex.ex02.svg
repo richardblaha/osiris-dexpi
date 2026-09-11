@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="124.70718232044243" height="297.0" viewBox="0.0 -0.4524999999999992 0.1900000000000003 0.4524999999999992">
+  <rect x="0.0" y="-0.4524999999999992" width="124.70718232044243" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: P02V02-HEX.EX02</metadata>
+  <g id="diagram-P02V02-HEX.EX02" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="0.1900000000000003" y="-0.4524999999999992" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">P4712</text>
+    </g>
+    <g class="label">
+      <text x="0.13500000000000115" y="-0.433125" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO WIDE', Arial" font-size="0.0025" fill="rgb(0,0,0)">123</text>
+    </g>
+    <g class="label">
+      <text x="0.17996265812660178" y="-0.43748380378967217" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g id="4f8ec99f-1b30-4b49-bba9-87d3195336c7" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_28e47a54-3741-4fc7-a66e-6dd8dd8bf339" transform="translate(0.19,-0.44)">
+            <ellipse cx="0.0" cy="-0.0" rx="0.0075" ry="0.0075" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="409cafe3-2d0b-4ab3-a0e5-2eddc3c0c6f9" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_718e8a94-ed47-4758-addf-4fcc1301a611" transform="translate(0.18,-0.44)" />
+          </g>
+        </g>
+        <g id="409cafe3-2d0b-4ab3-a0e5-2eddc3c0c6f9" class="representation-group" />
+      </g>
+    </g>
+    <g id="20114fda-5eba-439a-8c25-9c40961138a5" class="representation-group">
+      <g id="11c051b9-e010-4ee6-8b54-c86fd887e396" class="representation-group">
+        <g id="11c051b9-e010-4ee6-8b54-c86fd887e396" class="representation-group">
+          <g class="static">
+            <polyline points="0.13500000000000115,-0.44 0.1799999999999998,-0.4399999999999985" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

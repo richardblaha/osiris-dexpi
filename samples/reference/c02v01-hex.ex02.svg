@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420.0" height="296.27018601814905" viewBox="0.0 -0.5705 0.8087550192624574 0.5705">
+  <rect x="0.0" y="-0.5705" width="420.0" height="296.27018601814905" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: C02V01-HEX.EX02</metadata>
+  <g id="diagram-C02V01-HEX.EX02" class="diagram" fill="rgb(255,255,255)">
+    <g class="border">
+      <text x="0.035" y="-0.0205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">0</text>
+      <text x="0.035" y="-0.07050000000000001" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">50</text>
+      <text x="0.035" y="-0.1205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">100</text>
+      <text x="0.035" y="-0.1705" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">150</text>
+      <text x="0.035" y="-0.2205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">200</text>
+      <text x="0.035" y="-0.2705" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">250</text>
+      <text x="0.035" y="-0.3205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">300</text>
+      <text x="0.035" y="-0.3705" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">350</text>
+      <text x="0.035" y="-0.4205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">400</text>
+      <text x="0.035" y="-0.47050000000000003" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">450</text>
+      <text x="0.035" y="-0.5205" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">500</text>
+      <text x="0.035" y="-0.5705" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">550</text>
+      <text x="0.039000000000000035" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">0</text>
+      <text x="0.08900000000000004" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">50</text>
+      <text x="0.13900000000000004" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">100</text>
+      <text x="0.18900000000000003" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">150</text>
+      <text x="0.23900000000000005" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">200</text>
+      <text x="0.28900000000000003" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">250</text>
+      <text x="0.339" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">300</text>
+      <text x="0.38900000000000007" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">350</text>
+      <text x="0.43900000000000006" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">400</text>
+      <text x="0.48900000000000005" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">450</text>
+      <text x="0.539" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">500</text>
+      <text x="0.5890000000000001" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">550</text>
+      <text x="0.639" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">600</text>
+      <text x="0.6890000000000001" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">650</text>
+      <text x="0.7390000000000001" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">700</text>
+      <text x="0.789" y="-0.017" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">750</text>
+      <text x="0.8087550192624574" y="-0.013515679381080548" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">840 MM X 595 MM - SIZE A1</text>
+      <text x="0.6546194096588509" y="-0.031177213541666565" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">CHECKED BY</text>
+      <text x="0.6546194096588509" y="-0.023730598958333276" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">APPROVED BY</text>
+      <text x="0.6546194096588509" y="-0.038757319641946654" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DRAWN BY</text>
+      <text x="0.7272929773671842" y="-0.04830572916666659" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">PROJECT NO</text>
+      <text x="0.7272929773671842" y="-0.03341276041666662" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DRAWING NO</text>
+      <text x="0.6578362065338509" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">REV</text>
+      <text x="0.6790263107005176" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DATE</text>
+      <text x="0.701061206533851" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">BY</text>
+      <text x="0.7130938888255176" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">CHK</text>
+      <text x="0.7687505294505176" y="-0.15032174479166657" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DESCRIPTION</text>
+      <text x="0.7354730554921843" y="-0.14287513020833323" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">REVISIONS</text>
+      <text x="0.6851222028074334" y="-0.04737664254453421" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">DATE</text>
+      <text x="0.7027351856064068" y="-0.04747964244394342" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="0.003" fill="rgb(0,0,0)">SIGNATURE</text>
+    </g>
+    <g class="label">
+      <text x="0.08500000000000042" y="-0.27312499999999984" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">125</text>
+    </g>
+    <g class="label">
+      <text x="0.6825000000000006" y="-0.27298219882446295" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" fill="rgb(0,0,0)">124</text>
+    </g>
+    <g class="label">
+      <text x="0.5292990828106744" y="-0.34298727850103605" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">H4703</text>
+    </g>
+    <g class="label">
+      <text x="0.5449156716592565" y="-0.03241983204015533" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">46.8 m^2</text>
+      <text x="0.5149156716592564" y="-0.03241983204015533" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">313.00 kW</text>
+      <text x="0.5299156716592565" y="-0.022419832040155324" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+      <text x="0.5449156716592565" y="-0.03741983204015534" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+      <text x="0.5449156716592565" y="-0.04741983204015532" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">30.0 barg</text>
+      <text x="0.5449156716592565" y="-0.04241983204015534" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+      <text x="0.5449156716592565" y="-0.05241983204015532" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-1.0 barg</text>
+      <text x="0.5149156716592564" y="-0.03741983204015534" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+      <text x="0.5149156716592564" y="-0.04741983204015532" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">60.0 barg</text>
+      <text x="0.5149156716592564" y="-0.04241983204015534" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+      <text x="0.5149156716592564" y="-0.05241983204015532" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-1.0 barg</text>
+      <text x="0.5299156716592565" y="-0.05741983204015533" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">PLATE HEAT EXCHANGER</text>
+      <text x="0.5299156716592565" y="-0.06491983204015533" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">H4702</text>
+      <text x="0.43241567165925643" y="-0.022419832040155324" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Material Plates</text>
+      <text x="0.43241567165925643" y="-0.02741983204015533" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Plate Height / Plate Width</text>
+      <text x="0.43241567165925643" y="-0.03241983204015533" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Duty / Design Heat Transfer Area</text>
+      <text x="0.43241567165925643" y="-0.03741983204015534" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. max. Chamber 1 / 2</text>
+      <text x="0.43241567165925643" y="-0.04241983204015534" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. min. Chamber 1 / 2</text>
+      <text x="0.43241567165925643" y="-0.04741983204015532" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. max. Chamber 1 / 2</text>
+      <text x="0.43241567165925643" y="-0.05241983204015532" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. min. Chamber 1 / 2</text>
+      <text x="0.43241567165925643" y="-0.05741983204015533" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Description</text>
+      <text x="0.43241567165925643" y="-0.06491983204015533" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">Ident</text>
+    </g>
+    <g class="label">
+      <text x="0.20439655089764364" y="-0.26250000000000073" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">H4702</text>
+    </g>
+    <g class="label">
+      <text x="0.44000302859077733" y="-0.2949999999999978" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">P4703</text>
+    </g>
+    <g class="label">
+      <text x="0.36550928480646105" y="-0.43319258751647294" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N5</text>
+    </g>
+    <g class="label">
+      <text x="0.4150000000000016" y="-0.02749999999999922" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">2.2 m</text>
+      <text x="0.38500000000000156" y="-0.02749999999999922" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">0.8 m</text>
+      <text x="0.4150000000000016" y="-0.032499999999999224" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">46.8 m^2</text>
+      <text x="0.38500000000000156" y="-0.032499999999999224" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">313.00 kW</text>
+      <text x="0.38500000000000156" y="-0.022499999999999215" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+      <text x="0.4150000000000016" y="-0.022499999999999215" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4308</text>
+      <text x="0.4150000000000016" y="-0.03749999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+      <text x="0.4150000000000016" y="-0.04749999999999921" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">30.0 barg</text>
+      <text x="0.4150000000000016" y="-0.04249999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+      <text x="0.4150000000000016" y="-0.052499999999999214" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-1.0 barg</text>
+      <text x="0.38500000000000156" y="-0.03749999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+      <text x="0.38500000000000156" y="-0.04749999999999921" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">60.0 barg</text>
+      <text x="0.38500000000000156" y="-0.04249999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+      <text x="0.38500000000000156" y="-0.052499999999999214" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-1.0 barg</text>
+      <text x="0.4000000000000016" y="-0.05749999999999922" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">SHELL TUBE HEAT EXCHANGER</text>
+      <text x="0.4000000000000016" y="-0.06499999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">H4703</text>
+      <text x="0.30250000000000155" y="-0.022499999999999215" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Material Tubes / Material Shell</text>
+      <text x="0.30250000000000155" y="-0.02749999999999922" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Nominal Diameter / Tube Length</text>
+      <text x="0.30250000000000155" y="-0.032499999999999224" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Duty / Design Heat Transfer Area</text>
+      <text x="0.30250000000000155" y="-0.03749999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. max. Chamber 1 / 2</text>
+      <text x="0.30250000000000155" y="-0.04249999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. min. Chamber 1 / 2</text>
+      <text x="0.30250000000000155" y="-0.04749999999999921" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. max. Chamber 1 / 2</text>
+      <text x="0.30250000000000155" y="-0.052499999999999214" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. min. Chamber 1 / 2</text>
+      <text x="0.30250000000000155" y="-0.05749999999999922" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Description</text>
+      <text x="0.30250000000000155" y="-0.06499999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">Ident</text>
+    </g>
+    <g class="label">
+      <text x="0.26529262518578406" y="-0.37378814222095896" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N3</text>
+    </g>
+    <g class="label">
+      <text x="0.26529262518578406" y="-0.36698610650009894" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.26166487280132505" y="-0.41414688749806394" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N8</text>
+    </g>
+    <g class="label">
+      <text x="0.21996265812660307" y="-0.28248380378967297" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N4</text>
+    </g>
+    <g class="label">
+      <text x="0.21996265812660107" y="-0.32248380378967295" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N2</text>
+    </g>
+    <g class="label">
+      <text x="0.18996265812660207" y="-0.282483803789672" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N1</text>
+    </g>
+    <g class="label">
+      <text x="0.12746265812660207" y="-0.27532180336131495" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N1</text>
+    </g>
+    <g class="label">
+      <text x="0.42767842849174204" y="-0.27640799133783894" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N1</text>
+    </g>
+    <g class="label">
+      <text x="0.3096322537525051" y="-0.3258969885794599" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.36550928480646006" y="-0.44588972086207895" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.36550928480646006" y="-0.45314522563099696" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N6</text>
+    </g>
+    <g class="label">
+      <text x="0.12495473514794411" y="-0.027409212104663766" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1400.0 rpm</text>
+      <text x="0.15500000000000003" y="-0.032499999999999224" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">40.0 m</text>
+      <text x="0.155" y="-0.02749999999999922" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">84.00 kW</text>
+      <text x="0.155" y="-0.022499999999999215" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4305</text>
+      <text x="0.125" y="-0.022499999999999215" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+      <text x="0.125" y="-0.032499999999999224" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">420.0 m^3/hr</text>
+      <text x="0.14" y="-0.03749999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+      <text x="0.14" y="-0.04249999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+      <text x="0.14" y="-0.04749999999999921" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">35.0 barg</text>
+      <text x="0.14" y="-0.052499999999999214" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-1.0 barg</text>
+      <text x="0.14" y="-0.05749999999999922" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">DISPLACEMENT PUMP</text>
+      <text x="0.14" y="-0.06499999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">P4703</text>
+      <text x="0.0425" y="-0.03749999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. Casing max.</text>
+      <text x="0.0425" y="-0.04249999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. Casing min.</text>
+      <text x="0.0425" y="-0.04749999999999921" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. Casing max.</text>
+      <text x="0.0425" y="-0.022499999999999215" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Material Case Press. Side / Material Displacer</text>
+      <text x="0.0425" y="-0.02749999999999922" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Speed / Design Power max. Diam.. Wheel</text>
+      <text x="0.0425" y="-0.032499999999999224" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Capacity / Design Pressure Head</text>
+      <text x="0.0425" y="-0.052499999999999214" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. Casing min.</text>
+      <text x="0.0425" y="-0.05749999999999922" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Description</text>
+      <text x="0.0425" y="-0.06499999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">Ident</text>
+    </g>
+    <g class="label">
+      <text x="0.2603044656571531" y="-0.409983803789673" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">800</text>
+    </g>
+    <g class="label">
+      <text x="0.31018634929365463" y="-0.33116140246477754" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" transform="rotate(1.0000000000475042 0.31018634929365463 -0.33116140246477754)" fill="rgb(0,0,0)">N2</text>
+    </g>
+    <g class="label">
+      <text x="0.27376246257016806" y="-0.48137589021538696" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N1</text>
+    </g>
+    <g class="label">
+      <text x="0.21984929086458807" y="-0.27669023295557293" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.18996265812660207" y="-0.27669023295557194" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.21973592360257407" y="-0.31619139186464995" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.5569017619070605" y="-0.3598428584084475" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" transform="rotate(1.0000000000474298 0.5569017619070605 -0.3598428584084475)" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.539915342439079" y="-0.35862153080426196" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.5393541578693419" y="-0.36395278421676097" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N2</text>
+    </g>
+    <g class="label">
+      <text x="0.557171767958481" y="-0.36459503247563896" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N3</text>
+    </g>
+    <g class="label">
+      <text x="0.2549547351479449" y="-0.027409212104663766" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">600.0 rpm</text>
+      <text x="0.2850000000000008" y="-0.032499999999999224" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">10.0 m</text>
+      <text x="0.2850000000000008" y="-0.02749999999999922" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">60.00 kW</text>
+      <text x="0.2850000000000008" y="-0.022499999999999215" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4308</text>
+      <text x="0.2550000000000008" y="-0.022499999999999215" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+      <text x="0.2550000000000008" y="-0.032499999999999224" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">200.0 m^3/hr</text>
+      <text x="0.2700000000000008" y="-0.03749999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">80.00 C</text>
+      <text x="0.2700000000000008" y="-0.04249999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+      <text x="0.2700000000000008" y="-0.04749999999999921" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">60.0 barg</text>
+      <text x="0.2700000000000008" y="-0.052499999999999214" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-0.5 barg</text>
+      <text x="0.2700000000000008" y="-0.05749999999999922" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">CENTRIFUGAL PUMP</text>
+      <text x="0.2700000000000008" y="-0.06499999999999923" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">P4702</text>
+      <text x="0.1725000000000008" y="-0.03749999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. Casing max.</text>
+      <text x="0.1725000000000008" y="-0.04249999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. Casing min.</text>
+      <text x="0.1725000000000008" y="-0.04749999999999921" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. Casing max.</text>
+      <text x="0.1725000000000008" y="-0.022499999999999215" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Material Case Press. Side / Material Impeller</text>
+      <text x="0.1725000000000008" y="-0.02749999999999922" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Speed / Design Power max. Diam.. Wheel</text>
+      <text x="0.1725000000000008" y="-0.032499999999999224" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Capacity / Design Pressure Head</text>
+      <text x="0.1725000000000008" y="-0.052499999999999214" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. Casing min.</text>
+      <text x="0.1725000000000008" y="-0.05749999999999922" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Description</text>
+      <text x="0.1725000000000008" y="-0.06499999999999923" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">Ident</text>
+    </g>
+    <g class="label">
+      <text x="0.1425000000000024" y="-0.2949999999999978" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">P4702</text>
+    </g>
+    <g class="label">
+      <text x="0.5874626581266" y="-0.32998380378967296" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N4</text>
+    </g>
+    <g class="label">
+      <text x="0.587462658126601" y="-0.32498380742760896" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.3556645923273031" y="-0.47858875979520493" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N7</text>
+    </g>
+    <g class="label">
+      <text x="0.35594388845677605" y="-0.47238744391920495" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">25</text>
+    </g>
+    <g class="label">
+      <text x="0.19021614732446607" y="-0.316436743757708" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.5499626581266001" y="-0.32998380378967296" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N1</text>
+    </g>
+    <g class="label">
+      <text x="0.18996265812660207" y="-0.32248380378967195" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N3</text>
+    </g>
+    <g class="label">
+      <text x="0.155" y="-0.07249999999999993" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4305</text>
+      <text x="0.125" y="-0.07249999999999993" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+      <text x="0.155" y="-0.08249999999999993" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">4.0 m</text>
+      <text x="0.125" y="-0.08249999999999993" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">2.0 m</text>
+      <text x="0.15500000000000003" y="-0.08749999999999994" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+      <text x="0.15500000000000003" y="-0.09249999999999994" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+      <text x="0.155" y="-0.09749999999999992" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">0.1 barg</text>
+      <text x="0.125" y="-0.08749999999999994" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+      <text x="0.125" y="-0.09249999999999994" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+      <text x="0.125" y="-0.09749999999999992" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">0.1 barg</text>
+      <text x="0.15450229843274607" y="-0.10249999999999992" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-0.1 barg</text>
+      <text x="0.125" y="-0.10249999999999992" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-1.0 barg</text>
+      <text x="0.14" y="-0.10749999999999993" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">TANK</text>
+      <text x="0.0425" y="-0.07249999999999993" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Material Chamber 1 / 2</text>
+      <text x="0.0425" y="-0.07749999999999993" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Nominal Capacity Chamber 1 / 2</text>
+      <text x="0.0425" y="-0.08249999999999993" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Nominal Diameter / Overall Height/Length</text>
+      <text x="0.0425" y="-0.08749999999999994" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. max. Chamber 1 / 2</text>
+      <text x="0.0425" y="-0.09249999999999994" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. min. Chamber 1 / 2</text>
+      <text x="0.0425" y="-0.09749999999999992" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. max. Chamber 1 / 2</text>
+      <text x="0.0425" y="-0.10249999999999992" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Press. min. Chamber 1 / 2</text>
+      <text x="0.1404541673878238" y="-0.11860013084646984" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">T4702</text>
+    </g>
+    <g class="label">
+      <text x="0.15246265812660206" y="-0.27498380378967296" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N2</text>
+    </g>
+    <g class="label">
+      <text x="0.45208995727528806" y="-0.27640799133783994" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">N2</text>
+    </g>
+    <g class="label">
+      <text x="0.36511440507215204" y="-0.42624447726690595" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.2739693094225373" y="-0.47564161674632316" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" transform="rotate(2.00000000002383 0.2739693094225373 -0.47564161674632316)" fill="rgb(0,0,0)">80</text>
+    </g>
+    <g class="label">
+      <text x="0.5499626581266011" y="-0.32498380742760896" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.00352778" fill="rgb(0,0,0)">50</text>
+    </g>
+    <g class="label">
+      <text x="0.3155818079469791" y="-0.40520545881748726" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">T4702</text>
+    </g>
+    <g class="label" />
+    <g id="38acfc45-5909-43ba-a7c9-f3d991a31dc5" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_6340c7bd-5936-4ab3-aca0-733d2e473032" transform="translate(0.32,-0.41)">
+            <path d="M 0.04,-0.06 A 0.09,0.09 0.00 0,0 -0.04,-0.06" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -0.04,0.06 A 0.09,0.09 0.00 0,0 0.04,0.06" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <text x="-0.160582" y="0.332706" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4305</text>
+            <text x="-0.190582" y="0.332706" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+            <text x="-0.160582" y="0.322705" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">4.0 m</text>
+            <text x="-0.190582" y="0.322705" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">2.0 m</text>
+            <text x="-0.160582" y="0.317706" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+            <text x="-0.160582" y="0.312706" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+            <text x="-0.160582" y="0.307706" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">0.1 barg</text>
+            <text x="-0.190582" y="0.317706" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+            <text x="-0.190582" y="0.312706" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+            <text x="-0.273082" y="0.317706" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. max. Chamber 1 / 2</text>
+            <text x="-0.273082" y="0.297706" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Description</text>
+            <text x="-0.273082" y="0.290205" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0035" fill="rgb(0,0,0)">Ident</text>
+          </g>
+        </g>
+      </g>
+      <g id="dd6cad94-474d-4a21-9584-a43314cedce3" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_2cf0224c-ea79-47ff-bce8-ef9148608c47" transform="translate(0.32,-0.34)" />
+          </g>
+        </g>
+        <g id="dd6cad94-474d-4a21-9584-a43314cedce3" class="representation-group" />
+      </g>
+      <g id="54679166-ecd0-49b6-a614-73cd27f046b4" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_22103947-51b9-4284-9534-fc61a15e82b5" transform="translate(0.27,-0.37)" />
+          </g>
+        </g>
+        <g id="54679166-ecd0-49b6-a614-73cd27f046b4" class="representation-group" />
+      </g>
+      <g id="a01b8433-b09b-4a3c-bc05-c3a270987322" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_357e8023-a2a5-47f6-ae53-a03c468567cd" transform="translate(0.28,-0.47)" />
+          </g>
+        </g>
+        <g id="a01b8433-b09b-4a3c-bc05-c3a270987322" class="representation-group" />
+      </g>
+      <g id="e1d7b198-db61-42ce-88ff-2ee0ccf31530" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_b828defb-417c-46ed-bd82-8303fe316f26" transform="translate(0.35,-0.47)" />
+          </g>
+        </g>
+        <g id="e1d7b198-db61-42ce-88ff-2ee0ccf31530" class="representation-group" />
+      </g>
+      <g id="d7c61fec-4005-4cc4-8cbe-da66bfc1d503" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_4aad64d9-e37c-4f0b-b7f3-d380c52c20ad" transform="translate(0.36,-0.45)" />
+          </g>
+        </g>
+        <g id="d7c61fec-4005-4cc4-8cbe-da66bfc1d503" class="representation-group" />
+      </g>
+      <g id="d09c80dd-c9f0-4282-a404-344f47f280b4" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_208134dc-9da4-4c03-8aae-fd7c34b636f7" transform="translate(0.36,-0.43)" />
+          </g>
+        </g>
+        <g id="d09c80dd-c9f0-4282-a404-344f47f280b4" class="representation-group" />
+      </g>
+      <g id="c57ce07e-a18a-47df-beaf-b8c8ef68b357" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_303e3576-40dc-40a3-91eb-73e5c1f4421c" transform="translate(0.27,-0.41)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="af8f7d23-96be-469a-a577-8ac293770cd9" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_c2f68909-36f6-409c-a20b-cc5d50f8f5da" transform="translate(0.44,-0.28)">
+            <ellipse cx="-3e-06" cy="-4.3e-05" rx="0.0075" ry="0.0075" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <text x="-0.315048" y="0.252448" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1400.0 rpm</text>
+            <text x="-0.285003" y="0.247357" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">40.0 m</text>
+            <text x="-0.285003" y="0.252357" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">84.00 kW</text>
+            <text x="-0.285003" y="0.257357" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4305</text>
+            <text x="-0.315003" y="0.257357" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+            <text x="-0.315003" y="0.247357" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">420.0 m^3/hr</text>
+            <text x="-0.300003" y="0.242357" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+            <text x="-0.300003" y="0.237357" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+            <text x="-0.300003" y="0.232357" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">35.0 barg</text>
+          </g>
+        </g>
+      </g>
+      <g id="bb42b6d9-25c7-45f9-90c6-5aee797f5d31" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_9dfbf964-e317-4755-9007-92e38f10c3a5" transform="translate(0.43,-0.28)" />
+          </g>
+        </g>
+        <g id="bb42b6d9-25c7-45f9-90c6-5aee797f5d31" class="representation-group" />
+      </g>
+      <g id="cd6b220e-0651-4bb8-a56c-c012792096c7" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_a1f6920b-e085-4ef2-84a5-ac82f919a822" transform="translate(0.45,-0.28)" />
+          </g>
+        </g>
+        <g id="cd6b220e-0651-4bb8-a56c-c012792096c7" class="representation-group" />
+      </g>
+    </g>
+    <g id="f622ced5-5972-489d-b7ac-6de64a28daf9" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_88e4cefb-5064-48e0-b3a3-23eb01a9576c" transform="translate(0.14,-0.28)">
+            <ellipse cx="0.0" cy="-0.0" rx="0.0075" ry="0.0075" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <text x="0.114955" y="0.252591" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">600.0 rpm</text>
+            <text x="0.145" y="0.2475" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">10.0 m</text>
+            <text x="0.145" y="0.2525" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">60.00 kW</text>
+            <text x="0.145" y="0.2575" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4308</text>
+            <text x="0.115" y="0.2575" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+            <text x="0.115" y="0.2475" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">200.0 m^3/hr</text>
+            <text x="0.13" y="0.2425" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">80.00 C</text>
+            <text x="0.13" y="0.2375" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+            <text x="0.13" y="0.2325" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">60.0 barg</text>
+          </g>
+        </g>
+      </g>
+      <g id="ca324522-bbed-44f7-8d48-d0b4cd41549b" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_2d63d0b2-de1d-4cbd-b960-e5aaa3e241c5" transform="translate(0.13,-0.28)" />
+          </g>
+        </g>
+        <g id="ca324522-bbed-44f7-8d48-d0b4cd41549b" class="representation-group" />
+      </g>
+      <g id="86918ecb-cc6f-4e37-a2fd-ea5679cf65ad" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_c1f7bea5-3ef4-4d08-8016-d0cd8d8a4592" transform="translate(0.15,-0.28)" />
+          </g>
+        </g>
+        <g id="86918ecb-cc6f-4e37-a2fd-ea5679cf65ad" class="representation-group" />
+      </g>
+    </g>
+    <g id="0c87897a-0033-46b5-bd6e-c5b05a762ea7" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_c29c5627-8681-4ff5-a50f-eac6eb3133c6" transform="translate(0.20,-0.27)">
+            <text x="0.340519" y="0.24008" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">46.8 m^2</text>
+            <text x="0.310519" y="0.24008" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">313.00 kW</text>
+            <text x="0.325519" y="0.25008" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">1.4306</text>
+            <text x="0.340519" y="0.23508" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+            <text x="0.340519" y="0.22508" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">30.0 barg</text>
+            <text x="0.340519" y="0.23008" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-45.00 C</text>
+            <text x="0.340519" y="0.22008" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">-1.0 barg</text>
+            <text x="0.310519" y="0.23508" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">100.00 C</text>
+            <text x="0.310519" y="0.22508" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002822224" fill="rgb(0,0,0)">60.0 barg</text>
+            <text x="0.228019" y="0.23508" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0028" fill="rgb(0,0,0)">Design Temp. max. Chamber 1 / 2</text>
+          </g>
+        </g>
+      </g>
+      <g id="b80760ac-a42c-48a6-98ee-ac90d722cb46" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_7997d7e1-0c9f-479b-94e5-ac3ec32c383f" transform="translate(0.20,-0.32)" />
+          </g>
+        </g>
+        <g id="b80760ac-a42c-48a6-98ee-ac90d722cb46" class="representation-group" />
+      </g>
+      <g id="8974f15b-955b-4544-8f5d-915d7027e6a8" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_74a663de-0305-453c-a334-d56d9e22ca75" transform="translate(0.21,-0.32)" />
+          </g>
+        </g>
+        <g id="8974f15b-955b-4544-8f5d-915d7027e6a8" class="representation-group" />
+      </g>
+      <g id="418a8e23-2256-4d3b-96a3-bd21e80ac00b" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_3b4ee1fb-57f1-4abf-8736-0f23cc2cfa59" transform="translate(0.21,-0.28)" />
+          </g>
+        </g>
+        <g id="418a8e23-2256-4d3b-96a3-bd21e80ac00b" class="representation-group" />
+      </g>
+      <g id="155c561b-789e-4cd3-b59e-b78aed98a85b" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="Nozzle_a6b81d08-816a-45fa-a500-af3d2130b491" transform="translate(0.20,-0.28)" />
+          </g>
+        </g>
+        <g id="155c561b-789e-4cd3-b59e-b78aed98a85b" class="representation-group" />
+      </g>
+    </g>
+    <g id="d96e4e0e-2aec-4d59-a9b2-d33b5275fb51" class="representation-group">
+      <g id="83c0baeb-cccb-4751-923e-64546192f1c7" class="representation-group">
+        <g id="8d07e709-701b-4026-af55-50200678ceb1" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_b3c50aba-66f4-4a03-a4fe-7ced5fda9e9d" transform="translate(0.48,-0.43)" />
+            </g>
+          </g>
+          <g id="8d07e709-701b-4026-af55-50200678ceb1" class="representation-group" />
+        </g>
+        <g id="83c0baeb-cccb-4751-923e-64546192f1c7" class="representation-group">
+          <g class="static">
+            <polyline points="0.4750000000000011,-0.427499999999998 0.47500000000000003,-0.27985719882446203" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="ef87be1a-8331-4a7f-a8d7-95aaa9fb1cc9" class="representation-group">
+        <g id="ef87be1a-8331-4a7f-a8d7-95aaa9fb1cc9" class="representation-group">
+          <g class="static">
+            <polyline points="0.369999981052605,-0.43 0.4725000000000011,-0.42999999999999794" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="de08ee7e-b939-4507-8302-803666f7d953" class="representation-group">
+      <g id="73e41f99-206b-4179-bee8-295f7f5edb75" class="representation-group">
+        <g id="73e41f99-206b-4179-bee8-295f7f5edb75" class="representation-group">
+          <g class="static">
+            <polyline points="0.5450000000000051,-0.3250000036379351 0.545000000000005,-0.27985719882446203" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="c439b4a5-8c45-47c7-86d4-823c894efe7b" class="representation-group">
+        <g id="0bb159c2-fa43-43ec-b13c-1208cb102eaf" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_3d47e899-466f-445f-8ef9-8da372f50520" transform="translate(0.64,-0.28)" />
+            </g>
+          </g>
+          <g id="0bb159c2-fa43-43ec-b13c-1208cb102eaf" class="representation-group" />
+        </g>
+        <g id="c439b4a5-8c45-47c7-86d4-823c894efe7b" class="representation-group">
+          <g class="static">
+            <polyline points="0.545000000000005,-0.27985719882446203 0.64,-0.279857198824463" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="a8a0ec2b-55e9-4d0b-b093-84df5053345f" class="representation-group">
+        <g id="935bc556-3198-42a9-8976-db3347e0893d" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_e82420f0-1802-4ffe-8a07-2f966069cb4c" transform="translate(0.64,-0.29)">
+                <ellipse cx="0.0" cy="-0.0" rx="0.00125" ry="0.00125" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <text x="0.00486" y="0.00648" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" transform="rotate(90.00000000003571 0.00486 0.00648)" fill="rgb(0,0,0)">73KH12-25</text>
+              </g>
+            </g>
+          </g>
+          <g id="935bc556-3198-42a9-8976-db3347e0893d" class="representation-group" />
+        </g>
+        <g id="a8a0ec2b-55e9-4d0b-b093-84df5053345f" class="representation-group">
+          <g class="static">
+            <polyline points="0.64,-0.279857198824463 0.64,-0.29249999999999804" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="7ceae695-297b-46cd-b5da-33e7c5f39423" class="representation-group">
+        <g id="7ceae695-297b-46cd-b5da-33e7c5f39423" class="representation-group">
+          <g class="static">
+            <polyline points="0.64,-0.279857198824463 0.672500000000001,-0.279857198824463" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="b7313b89-2c81-477c-b765-d95ea91db513" class="representation-group">
+        <g id="13af46d4-b1f8-4515-9597-567afd97b94e" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_ec7abf98-a316-4831-ba25-22de05b3d0a0" transform="translate(0.50,-0.28)">
+                <ellipse cx="0.0" cy="-4.3e-05" rx="0.00125" ry="0.00125" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <text x="-0.00581" y="0.004416" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" fill="rgb(0,0,0)">75HB13-50</text>
+              </g>
+            </g>
+          </g>
+          <g id="13af46d4-b1f8-4515-9597-567afd97b94e" class="representation-group" />
+        </g>
+        <g id="895dceb9-419e-4bf9-b261-d06de85a2829" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_58a1d2c1-22c9-4d2d-8c9d-3a7336bbfc5b" transform="translate(0.55,-0.28)" />
+            </g>
+          </g>
+          <g id="895dceb9-419e-4bf9-b261-d06de85a2829" class="representation-group" />
+        </g>
+        <g id="b7313b89-2c81-477c-b765-d95ea91db513" class="representation-group">
+          <g class="static">
+            <polyline points="0.49,-0.27985719882446203 0.5000000000000001,-0.27985719882446203" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="b7313b89-2c81-477c-b765-d95ea91db513" class="representation-group">
+          <g class="static">
+            <polyline points="0.505,-0.27985719882446203 0.545000000000005,-0.27985719882446203" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="6a0aa6f7-60f1-4f0d-aa19-c708ccdabbba" class="representation-group">
+        <g id="83712a01-e159-4713-907e-c66b0d98269f" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_4fa3c3c3-271e-4b90-832f-7ea8437817b3" transform="translate(0.49,-0.28)" />
+            </g>
+          </g>
+          <g id="83712a01-e159-4713-907e-c66b0d98269f" class="representation-group" />
+        </g>
+        <g id="6a0aa6f7-60f1-4f0d-aa19-c708ccdabbba" class="representation-group">
+          <g class="static">
+            <polyline points="0.47500000000000003,-0.27985719882446203 0.49,-0.27985719882446203" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="8ca3eda6-e274-4fe2-8616-ef46c4273d24" class="representation-group">
+        <g id="30078e78-2a47-4bb4-a512-ee106ae2efd1" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_bcceb556-8038-45d5-8e0c-6a4e4e7d0df3" transform="translate(0.49,-0.29)">
+                <ellipse cx="0.0" cy="-0.0" rx="0.00125" ry="0.00125" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <text x="0.004076" y="0.007123" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" transform="rotate(90.00000000003571 0.004076 0.007123)" fill="rgb(0,0,0)">73KH12-25</text>
+              </g>
+            </g>
+          </g>
+          <g id="30078e78-2a47-4bb4-a512-ee106ae2efd1" class="representation-group" />
+        </g>
+        <g id="8ca3eda6-e274-4fe2-8616-ef46c4273d24" class="representation-group">
+          <g class="static">
+            <polyline points="0.48999999999999816,-0.2925 0.49,-0.27985719882446203" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="d392de76-01e4-4fd8-9067-623daa32f907" class="representation-group">
+        <g id="7711365c-0245-40eb-906f-037d782f3d45" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_9d5b0dc1-70fb-44c8-85c0-22d3cc96b409" transform="translate(0.47,-0.28)" />
+            </g>
+          </g>
+          <g id="7711365c-0245-40eb-906f-037d782f3d45" class="representation-group" />
+        </g>
+        <g id="d392de76-01e4-4fd8-9067-623daa32f907" class="representation-group">
+          <g class="static">
+            <polyline points="0.465,-0.27985719882446203 0.47500000000000003,-0.27985719882446203" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="25f3f714-5cfb-474e-858d-21851be10285" class="representation-group">
+        <g id="ed9fa2f9-f8a0-41f1-81a2-dce3de928046" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_c1d77682-169a-45c3-83a9-fba65aa4a518" transform="translate(0.47,-0.28)" />
+            </g>
+          </g>
+          <g id="ed9fa2f9-f8a0-41f1-81a2-dce3de928046" class="representation-group" />
+        </g>
+        <g id="25f3f714-5cfb-474e-858d-21851be10285" class="representation-group">
+          <g class="static">
+            <polyline points="0.457503028590776,-0.27985719882446203 0.465,-0.27985719882446203" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="70e6b490-2069-4036-9914-010ca2e27b9e" class="representation-group">
+        <g id="e611a737-705a-4b88-b570-909f713a526b" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_98bd1141-3d8d-4fa9-ac0c-343235b77442" transform="translate(0.47,-0.27)">
+                <ellipse cx="0.0" cy="-0.0" rx="0.00125" ry="0.00125" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <text x="0.003963" y="0.00648" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" transform="rotate(90.00000000000018 0.003963 0.00648)" fill="rgb(0,0,0)">73KH12-25</text>
+              </g>
+            </g>
+          </g>
+          <g id="e611a737-705a-4b88-b570-909f713a526b" class="representation-group" />
+        </g>
+        <g id="70e6b490-2069-4036-9914-010ca2e27b9e" class="representation-group">
+          <g class="static">
+            <polyline points="0.465,-0.27985719882446203 0.46499999999999997,-0.27" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="d6636542-1bbb-4ee6-bee1-1d9ce45fb8da" class="representation-group">
+      <g id="4f60e0d6-928b-4823-89a4-89fd88de6e61" class="representation-group">
+        <g id="4f60e0d6-928b-4823-89a4-89fd88de6e61" class="representation-group">
+          <g class="static">
+            <polyline points="0.18500000170335099,-0.3199999999999979 0.17250000000000001,-0.319999999999998 0.17250000000000001,-0.19" fill="none" stroke="rgb(0,99,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="14fad072-e3f2-4efc-9db9-13b49a703ecb" class="representation-group">
+      <g id="8a32c28e-d60d-49da-a02c-705016c77e54" class="representation-group">
+        <g id="8a32c28e-d60d-49da-a02c-705016c77e54" class="representation-group">
+          <g class="static">
+            <polyline points="0.22379310009192702,-0.279999999999999 0.24,-0.279999999999999 0.24,-0.1925" fill="none" stroke="rgb(0,99,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="c3ff9a83-7871-40c1-8a91-e5955affc871" class="representation-group">
+      <g id="3d25b081-3c01-4a03-a450-d439a9d92fd2" class="representation-group">
+        <g id="3d25b081-3c01-4a03-a450-d439a9d92fd2" class="representation-group">
+          <g class="static">
+            <polyline points="0.369999981052605,-0.449999999999999 0.545000000000002,-0.449999999999997 0.5450000000000009,-0.36517241325570304" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="45320ab2-2acb-4198-bf1e-f4ede44fb5e6" class="representation-group">
+      <g id="e6e6220c-3fa6-4806-94db-f4f77a023562" class="representation-group">
+        <g id="e6e6220c-3fa6-4806-94db-f4f77a023562" class="representation-group">
+          <g class="static">
+            <polyline points="0.5825000000000031,-0.3250000036379351 0.582500000000003,-0.19" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="36370ddd-4ac4-4b13-819f-a45d1ea224f3" class="representation-group">
+      <g id="71750dc1-cb1a-46ab-996a-61f3a7a67099" class="representation-group">
+        <g id="71750dc1-cb1a-46ab-996a-61f3a7a67099" class="representation-group">
+          <g class="static">
+            <polyline points="0.5525000000000009,-0.36517241325570304 0.552500000000001,-0.38 0.61,-0.38 0.61,-0.19" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="6d1379c8-8762-4e77-b782-fe546f04f573" class="representation-group">
+      <g id="df0d9408-3e55-4f53-b56a-0861cb5cc474" class="representation-group">
+        <g id="10f126f1-ffb1-4dfa-ae58-6dcffbc11f43" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_664250da-bfb2-4614-9558-5edcddd1ae05" transform="translate(0.32,-0.31)">
+                <ellipse cx="1.8e-05" cy="-2.8e-05" rx="0.0005" ry="0.0005" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <text x="0.005277" y="0.005663" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" transform="rotate(90.00000000003686 0.005277 0.005663)" fill="rgb(0,0,0)">75HB13-80</text>
+              </g>
+            </g>
+          </g>
+          <g id="10f126f1-ffb1-4dfa-ae58-6dcffbc11f43" class="representation-group" />
+        </g>
+        <g id="12bf3d6c-a79e-48a9-b860-9f01b3cb02f5" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_9f00214c-8218-4d75-aac2-fb078e6059c1" transform="translate(0.34,-0.28)">
+                <ellipse cx="-2.7e-05" cy="-4.3e-05" rx="0.0005" ry="0.0005" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <text x="-0.006505" y="-0.006633" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" fill="rgb(0,0,0)">75HB13-80</text>
+              </g>
+            </g>
+          </g>
+          <g id="12bf3d6c-a79e-48a9-b860-9f01b3cb02f5" class="representation-group" />
+        </g>
+        <g id="df0d9408-3e55-4f53-b56a-0861cb5cc474" class="representation-group">
+          <g class="static">
+            <polyline points="0.31558180794698204,-0.32541094657305997 0.31558180794698093,-0.313272140751313" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="df0d9408-3e55-4f53-b56a-0861cb5cc474" class="representation-group">
+          <g class="static">
+            <polyline points="0.31558180794698304,-0.308272140751313 0.3155818079469841,-0.27985719882445903 0.34082664332504703,-0.27985719882445903" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="204b3da6-48b0-41c7-adda-22dc65ebd1cd" class="representation-group">
+        <g id="232c0242-395e-442d-b4af-a2044bf660d2" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_a884ca0c-76ea-49cd-a34b-ca7d24df2501" transform="translate(0.37,-0.28)">
+                <text x="0.0" y="-0.006428" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" fill="rgb(0,0,0)">80 / 50</text>
+              </g>
+            </g>
+          </g>
+          <g id="232c0242-395e-442d-b4af-a2044bf660d2" class="representation-group" />
+        </g>
+        <g id="204b3da6-48b0-41c7-adda-22dc65ebd1cd" class="representation-group">
+          <g class="static">
+            <polyline points="0.34582664332504703,-0.27985719882445903 0.368034786208488,-0.27985719882445903" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="cc445ea7-6c09-49d8-a363-66ff27a850c8" class="representation-group">
+        <g id="96418a6d-2d24-47f4-b228-f0f277284585" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="PipingComponent_845ef766-47bb-479f-9d3f-fcb2b265c441" transform="translate(0.40,-0.28)">
+                <ellipse cx="0.0" cy="-4.3e-05" rx="0.00125" ry="0.00125" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <text x="-0.00655" y="-0.006773" text-anchor="start" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002469446" fill="rgb(0,0,0)">73HG12-50</text>
+              </g>
+            </g>
+          </g>
+          <g id="96418a6d-2d24-47f4-b228-f0f277284585" class="representation-group" />
+        </g>
+        <g id="cc445ea7-6c09-49d8-a363-66ff27a850c8" class="representation-group">
+          <g class="static">
+            <polyline points="0.373034786208488,-0.27985719882445903 0.3975,-0.27985719882445903" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="cc445ea7-6c09-49d8-a363-66ff27a850c8" class="representation-group">
+          <g class="static">
+            <polyline points="0.4025,-0.27985719882445903 0.422503028590777,-0.27985719882446" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="442d94b8-a69d-4e20-94f1-652fc3c5a204" class="representation-group">
+      <g id="36ec8c27-57fa-4534-b306-c871c2791068" class="representation-group">
+        <g id="36ec8c27-57fa-4534-b306-c871c2791068" class="representation-group">
+          <g class="static">
+            <polyline points="0.22379310009192302,-0.32 0.24,-0.32 0.24,-0.5025000000000001 0.279976923190897,-0.5025000000000001 0.2799769231908979,-0.477552740892041" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="770a4b6f-6680-4621-a84e-8826b36e3beb" class="representation-group">
+      <g id="616ab708-3d0f-441a-b573-e068d91b49cc" class="representation-group">
+        <g id="616ab708-3d0f-441a-b573-e068d91b49cc" class="representation-group">
+          <g class="static">
+            <polyline points="0.157500000000001,-0.279999999999999 0.18500000170335595,-0.27999999999999703" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="eaef8a76-b8e7-4140-a3cf-50c03c731388" class="representation-group">
+      <g id="8dae3ca2-e566-4917-a035-b860267aa760" class="representation-group">
+        <g id="8dae3ca2-e566-4917-a035-b860267aa760" class="representation-group">
+          <g class="static">
+            <polyline points="0.0850000000000004,-0.28 0.12250000000000004,-0.28000000000000097" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

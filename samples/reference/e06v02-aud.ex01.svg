@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: Imp1.dwg</metadata>
+  <g id="diagram-Imp1.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="85a244d4-be54-48a9-8118-d438b5899041" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A0306" transform="translate(211.26,-386.47) rotate(270.00)" />
+        </g>
+      </g>
+      <g id="f28ede21-177d-4879-b32e-15c8f32c6d25" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Assumed Nozzle" transform="translate(206.26,-375.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="4613a41e-85f3-4ee1-9a1b-43a99566a0a5" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(206.26,-395.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="f9099079-5559-4004-bbb0-a678b1a0450c" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Assumed Nozzle" transform="translate(216.26,-395.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="510eb0ab-96ec-4545-9afd-29f56be4a872" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(216.26,-375.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="f64d78ca-a0d4-4ff9-9218-b49fbc310a7f" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A1502" transform="translate(118.75,-375.00)" />
+        </g>
+      </g>
+      <g id="b167aca6-e2c5-4cef-81b2-9697a042f3d2" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(126.25,-375.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="e1988f52-4a69-4e62-8792-607222bf5712" class="representation-group">
+      <g id="e0b2a6c9-83b9-4d69-8104-a2a66fbfe0a2" class="representation-group" />
+    </g>
+    <g id="5fa0da12-4232-4219-83f8-3b88e90851fb" class="representation-group">
+      <g id="90b69da3-0556-472c-a067-698501f0d12b" class="representation-group" />
+    </g>
+  </g>
+</svg>

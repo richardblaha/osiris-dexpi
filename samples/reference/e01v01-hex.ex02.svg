@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="222.75000000000097" height="297.0" viewBox="0.0 -0.3999999999999999 0.30000000000000127 0.3999999999999999">
+  <rect x="0.0" y="-0.3999999999999999" width="222.75000000000097" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: E01V01-HEX.EX02</metadata>
+  <g id="diagram-E01V01-HEX.EX02" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="0.30000000000000127" y="-0.3999999999999999" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">T100</text>
+    </g>
+    <g id="d1798969-5b67-4ec7-8dda-e5608e0deeaa" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="Equipment_496a4b84-8be4-4580-9366-ed2fa8ad816c" transform="translate(0.30,-0.40)">
+            <path d="M 0.02,-0.03 A 0.04,0.04 0.00 0,0 -0.02,-0.03" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M -0.02,0.03 A 0.04,0.04 0.00 0,0 0.02,0.03" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="202.33849148716507" height="297.0" viewBox="0.0 -0.4550295693113368 0.3099999886751189 0.4550295693113368">
+  <rect x="0.0" y="-0.4550295693113368" width="202.33849148716507" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I01-INTERGRAPH</metadata>
+  <g id="diagram-I01-INTERGRAPH" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g id="559d105b-2c83-4695-8ed0-6e67373cb0b6" class="representation-group">
+      <g class="static">
+        <path d="M 0.29,-0.44 A 0.04,0.04 0.00 0,0 0.25,-0.44" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 0.25,-0.38 A 0.04,0.04 0.00 0,0 0.29,-0.38" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+      </g>
+      <g id="285f2d38-1d4b-4714-8fa3-05720e9dace0" class="representation-group">
+        <g id="285f2d38-1d4b-4714-8fa3-05720e9dace0" class="representation-group" />
+      </g>
+    </g>
+    <g id="73988bcc-c891-4055-a47b-b7d86f72ef4c" class="representation-group">
+      <g id="5b9d72de-2ff9-4d49-848a-313c8a5e9ea5" class="representation-group">
+        <g id="c40fc43f-133e-42fc-9848-2666698f6076" class="representation-group">
+          <g id="c40fc43f-133e-42fc-9848-2666698f6076" class="representation-group" />
+        </g>
+      </g>
+    </g>
+    <g id="ed62e1ca-dbb6-4261-a37f-ef555d1819bb" class="representation-group">
+      <g id="a31c7d11-3cb2-4474-8572-0b0e29638af5" class="representation-group">
+        <g class="static">
+          <polyline points="0.2848556228482089,-0.4550295693113368 0.2848556228482087,-0.45026155712052107" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

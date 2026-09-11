@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I12V01.dwg</metadata>
+  <g id="diagram-I12V01.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="3b20eda2-feb0-4023-9240-5e2cace3c45c" class="representation-group">
+      <g id="551838f4-18cd-499e-8b41-22d93a71bbd0" class="representation-group" />
+    </g>
+    <g id="4d280869-0d8d-42d1-a4b6-bad0078ed28b" class="representation-group">
+      <g id="ce30640d-c205-4b41-990c-2797914dfec8" class="representation-group" />
+      <g id="eedf0073-8e89-469f-9cf5-a782f97ffd57" class="representation-group" />
+    </g>
+    <g id="7ba4fd07-0c79-48e3-9268-dc9a05093623" class="representation-group">
+      <g id="05518c87-705e-4478-92e3-cd46fedf48e9" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A5103" transform="translate(4.83,-5.37) rotate(270.00) scale(0.05,0.05)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="c425089c-1b17-4752-9c56-141fdd2cffce" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A5052ContRoom" transform="translate(3.05,-5.37) scale(0.04,0.04)" />
+        </g>
+      </g>
+    </g>
+    <g id="4ab12567-3ec4-42c7-8470-f1998ae1d1af" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A2101" transform="translate(4.83,-5.37) rotate(270.00) scale(0.05,0.05)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

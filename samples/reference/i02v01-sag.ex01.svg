@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="246.35944700460828" height="297.0" viewBox="0.0 -217.0 180.0 217.0">
+  <rect x="0.0" y="-217.0" width="246.35944700460828" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g id="b6846c60-52d5-40f1-bd91-fd7a8f091baa" class="representation-group">
+      <g id="b8814a53-9502-4cf8-a7bb-f3ca640810a5" class="representation-group">
+        <g id="b8814a53-9502-4cf8-a7bb-f3ca640810a5" class="representation-group">
+          <g class="static">
+            <polyline points="180.0,-217.0 180.0,-182.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="b8814a53-9502-4cf8-a7bb-f3ca640810a5" class="representation-group">
+          <g class="static">
+            <polyline points="180.0,-172.0 180.0,-139.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="2e8bcf53-2981-4a0e-b97f-2fca39b71ca5" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A10|A10|H" transform="translate(140.00,-177.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

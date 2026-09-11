@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { VIEW_IDS } from '../common/constants';
 import { editorHub } from '../editor/editorHub';
-import { catalogItemById } from '../maxgraph/stencils/catalog';
+import { catalogItemById } from './symbolPalette';
 
 type ViewKind = 'symbols' | 'properties';
 

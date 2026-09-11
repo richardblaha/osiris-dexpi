@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="179.91346153846087" height="297.0" viewBox="0.0 -0.52 0.3149999999999988 0.52">
+  <rect x="0.0" y="-0.52" width="179.91346153846087" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I02-INTERGRAPH</metadata>
+  <g id="diagram-I02-INTERGRAPH" class="diagram" fill="rgb(255,255,255)">
+    <g class="border" />
+    <g class="label">
+      <text x="0.2775000000000004" y="-0.47999999999999643" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.002998613" fill="rgb(0,0,0)">HC02</text>
+    </g>
+    <g class="label">
+      <text x="0.3149999999999988" y="-0.48000000000000037" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.0025" transform="rotate(5.336839635508659e-11 0.3149999999999988 -0.48000000000000037)" fill="rgb(0,0,0)">HV 02</text>
+    </g>
+    <g id="21e44a25-7c0d-4360-ad31-b93688465be8" class="representation-group">
+      <g id="0d7ad67b-9c01-4103-bf4d-5d59dc4c12bd" class="representation-group">
+        <g id="0d7ad67b-9c01-4103-bf4d-5d59dc4c12bd" class="representation-group">
+          <g class="static">
+            <polyline points="0.31,-0.52 0.3099999999999989,-0.4825" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="0d7ad67b-9c01-4103-bf4d-5d59dc4c12bd" class="representation-group">
+          <g class="static">
+            <polyline points="0.310000000000001,-0.4775 0.31,-0.44" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="15908577-1320-4acb-928c-ea442a5dcc67" class="representation-group">
+      <g id="d865e5bb-ae08-468d-8aad-a88488201f64" class="representation-group" />
+      <g id="d025a8ea-7db0-4153-8727-4ebe1d9934e0" class="representation-group" />
+    </g>
+    <g id="41d90a5f-3c8f-4ed2-a7ef-297fb66f261f" class="representation-group">
+      <g id="0c5e489b-cbaa-4524-9911-0f110605dd95" class="representation-group">
+        <g class="static">
+          <polyline points="0.28499999999508185,-0.48000018108140396 0.2999999999994716,-0.4799999999999963" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

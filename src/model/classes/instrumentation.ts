@@ -3,7 +3,7 @@
  */
 
 import type { DexpiObject, CustomAttributeOwner, CustomAttribute, DexpiValue, Ref, RefList } from './base';
-import type { Position, Extent, Scale } from './graphics';
+import type { Position, Extent, Scale, GraphicPrimitive } from './graphics';
 
 export interface SignalOffPageConnector extends DexpiObject, CustomAttributeOwner {
   referenceConnector?: Ref;
@@ -39,6 +39,7 @@ export interface ControlledActuator extends DexpiObject, CustomAttributeOwner {
   position?: Position;
   scale?: Scale;
   componentName?: string;
+  graphics?: GraphicPrimitive[];
 }
 
 export interface Positioner extends DexpiObject, CustomAttributeOwner {
@@ -84,6 +85,7 @@ export interface ProcessInstrumentationFunction extends DexpiObject, CustomAttri
   actuatingElectricalFunctions: ActuatingElectricalFunction[];
   position?: Position;
   componentName?: string;
+  graphics?: GraphicPrimitive[];
 }
 
 export interface InstrumentationLoopFunction extends DexpiObject, CustomAttributeOwner {

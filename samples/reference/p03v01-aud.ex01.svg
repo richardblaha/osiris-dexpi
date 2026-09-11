@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: TestCases.dwg</metadata>
+  <g id="diagram-TestCases.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="b314f576-7aeb-4abb-9c29-bba675517b9b" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A0306" transform="translate(470.00,-391.47) rotate(270.00)" />
+        </g>
+      </g>
+      <g id="a9bb983e-3524-4f25-a912-26400e79f216" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(475.00,-380.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="811b5770-cd8a-4759-a0db-8c25200b92d7" class="representation-group">
+      <g id="cfb91869-0e21-4a6c-ac43-3c9912244419" class="representation-group" />
+    </g>
+  </g>
+</svg>

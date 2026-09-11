@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: import5.dwg</metadata>
+  <g id="diagram-import5.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="13e27fe7-5daa-4813-a338-1b8dcf0ecf61" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A1502" transform="translate(436.25,-357.50)" />
+        </g>
+      </g>
+      <g id="f1208010-70dd-4e66-9866-7f4f0138c133" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(428.75,-357.50) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="a4e4d9ed-855c-49de-a87e-585e93a1d72f" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="A0306" transform="translate(528.76,-368.97) rotate(270.00)" />
+        </g>
+      </g>
+      <g id="436cb1cc-c7c0-49e8-bee6-348c734ab089" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(523.76,-377.50) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="2222672b-2c60-4e87-a716-0eb342193feb" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A2606" transform="translate(533.76,-357.50)" />
+          </g>
+        </g>
+      </g>
+      <g id="1030f57c-761e-4df8-aa1c-4a1d72743003" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Assumed Nozzle" transform="translate(533.76,-377.50) scale(2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

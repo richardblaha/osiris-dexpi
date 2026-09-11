@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0.0" height="0.0" viewBox="0.0 0.0 0.0 0.0">
+  <rect x="0.0" y="0.0" width="0.0" height="0.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: I03V01.dwg</metadata>
+  <g id="diagram-I03V01.dwg" class="diagram" fill="rgb(0,0,0)">
+    <g id="ead7d51c-f265-4aac-82cf-0db5a81d7c19" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="ISO 0105 - Tank Vessel with dished endsXMP_20557" transform="translate(10.14,-0.35)" />
+        </g>
+      </g>
+      <g id="9c66015c-5699-4d03-bcb3-3b11475d25b7" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="ISO Flanged NozzleXMP_21470" transform="translate(16.92,-29.46) rotate(270.00) scale(2.50,2.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="9b396321-57a2-447b-9b67-763be3896768" class="representation-group">
+      <g id="46c27723-79ff-4d98-a411-0c4054df37bf" class="representation-group" />
+      <g id="dade397f-a797-4ac6-b587-02a3ea270dd2" class="representation-group" />
+    </g>
+    <g id="01dd8411-7e72-442d-8446-3070e4fff6b1" class="representation-group">
+      <g id="28fac8aa-316a-4608-8617-f9b65fa57c8b" class="representation-group" />
+      <g id="b361cc84-f042-49e0-95ea-f881b12c6fae" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="A5103XMP_20744" transform="translate(43.57,-18.03)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

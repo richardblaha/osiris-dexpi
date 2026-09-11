@@ -3,9 +3,7 @@ import {
   CATALOG_CATEGORY_ORDER,
   type SymbolCatalogItem,
   type SymbolCategory,
-} from '../maxgraph/stencils/catalog';
-import { stencilShapeXmlMap } from '../maxgraph/stencils/sources';
-import { stencilToSvg } from '../maxgraph/stencils/thumbnail';
+} from './symbolPalette';
 import type { SelectionInfo } from '../common/types';
 
 declare function acquireVsCodeApi(): { postMessage: (m: unknown) => void };
@@ -25,7 +23,6 @@ if (root) {
 
 // ── Symbols view ───────────────────────────────────────────────────────
 function initSymbols(container: HTMLElement): void {
-  const xmlMap = stencilShapeXmlMap();
   let query = '';
   let active = false;
 
@@ -71,14 +68,27 @@ function initSymbols(container: HTMLElement): void {
       const grid = document.createElement('div');
       grid.className = 'symbol-grid';
       for (const item of items) {
-        grid.appendChild(renderTile(item, xmlMap.get(item.stencil)));
+        grid.appendChild(renderTile(item));
       }
       section.appendChild(grid);
       list.appendChild(section);
     }
   }
 
-  function renderTile(item: SymbolCatalogItem, shapeXml: string | undefined): HTMLElement {
+  /** A generic category glyph — not a pre-baked DEXPI symbol. Real geometry is
+   *  only known once the document itself defines it (see `renderNodeBody` in
+   *  `webview/exportSvg.ts`), which a freshly-inserted element doesn't have yet. */
+  function genericGlyph(elementType: SymbolCatalogItem['elementType']): string {
+    if (elementType === 'ProcessInstrument') {
+      return '<svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2" /></svg>';
+    }
+    if (elementType === 'PipingComponent') {
+      return '<svg viewBox="0 0 40 40" width="40" height="40"><polygon points="4,10 20,20 4,30 36,30 20,20 36,10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" /></svg>';
+    }
+    return '<svg viewBox="0 0 40 40" width="40" height="40"><rect x="6" y="4" width="28" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2" /></svg>';
+  }
+
+  function renderTile(item: SymbolCatalogItem): HTMLElement {
     const tile = document.createElement('button');
     tile.type = 'button';
     tile.className = 'symbol-tile';
@@ -87,7 +97,7 @@ function initSymbols(container: HTMLElement): void {
 
     const thumb = document.createElement('span');
     thumb.className = 'symbol-thumb';
-    thumb.innerHTML = shapeXml ? stencilToSvg(shapeXml, { size: 40 }) : '';
+    thumb.innerHTML = genericGlyph(item.elementType);
 
     const label = document.createElement('span');
     label.className = 'symbol-label';

@@ -3,7 +3,7 @@
  */
 
 import type { DexpiObject, CustomAttributeOwner, CustomAttribute, DexpiValue, Ref, RefList } from './base';
-import type { Position, Extent, Scale } from './graphics';
+import type { Position, Extent, Scale, GraphicPrimitive } from './graphics';
 
 export interface PipingNode extends DexpiObject {
   nodeNumber?: string | number;
@@ -50,4 +50,6 @@ export interface Equipment extends TaggedPlantItem {
   extent?: Extent;
   scale?: Scale;
   componentName?: string;
+  /** Graphical primitives embedded directly under this element (world/drawing units matching `extent`), as opposed to a `ShapeCatalogue` reference by `componentName`. */
+  graphics?: GraphicPrimitive[];
 }

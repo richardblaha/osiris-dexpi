@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="339.42857142857144" height="297.0" viewBox="0.0 -245.0 280.0 245.0">
+  <rect x="0.0" y="-245.0" width="339.42857142857144" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g id="40ffb1d2-4eba-4537-b8c5-605f357d8b64" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2516" transform="translate(250.00,-232.50)" />
+        </g>
+        <text x="250.0" y="-210.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">H1008</text>
+      </g>
+      <g id="91894a91-f5cf-4fba-808a-3f59d109844b" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X8160" transform="translate(255.00,-220.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="960fdece-81f8-459f-8ec7-f5248af097ec" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81601" transform="translate(245.00,-245.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="d44b130f-d34a-4314-a9a9-529d15b66929" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81602" transform="translate(245.00,-220.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="c390472c-4937-4050-8630-3e64c82e2b0c" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81603" transform="translate(255.00,-245.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="1e04fef0-6fee-42a6-998c-eaf1b2a595ff" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2322" transform="translate(180.00,-220.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="180.0" y="-232.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">P4712</text>
+      </g>
+      <g id="6ad4e5d8-dc44-4e96-af16-d08bbb6b8090" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81604" transform="translate(172.50,-220.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="a3800e17-2a0b-464d-ac7f-9e2a802afeba" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81605" transform="translate(187.50,-220.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="5f753ab1-0182-4029-987a-d6840b7e3358" class="representation-group">
+      <g id="cc7b330c-07f5-4f8d-905a-87c670dd85e8" class="representation-group">
+        <g id="cc7b330c-07f5-4f8d-905a-87c670dd85e8" class="representation-group">
+          <g class="static">
+            <polyline points="120.0,-220.0 167.5,-220.0" fill="none" stroke="rgb(0,0,1)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="12e8d89b-414f-4ad0-a9db-c5033107712c" class="representation-group">
+      <g id="238e9a8d-d7ad-44d9-b38d-11f3186d5bdf" class="representation-group">
+        <g id="238e9a8d-d7ad-44d9-b38d-11f3186d5bdf" class="representation-group">
+          <g class="static">
+            <polyline points="192.5,-220.0 240.0,-220.0" fill="none" stroke="rgb(0,0,1)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="d9885790-d421-477c-9d04-19c1fa78daa9" class="representation-group">
+      <g id="b39393e0-0ebe-4cbc-b1ac-ceab6a796c01" class="representation-group">
+        <g id="b39393e0-0ebe-4cbc-b1ac-ceab6a796c01" class="representation-group">
+          <g class="static">
+            <polyline points="220.0,-160.0 220.0,-245.0 240.0,-245.0" fill="none" stroke="rgb(0,255,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="fe369ddd-40ce-4682-ae24-91a02d807a33" class="representation-group">
+      <g id="bd201b24-9267-4d34-a183-e8b9e3864ba1" class="representation-group">
+        <g id="bd201b24-9267-4d34-a183-e8b9e3864ba1" class="representation-group">
+          <g class="static">
+            <polyline points="260.0,-220.0 280.0,-220.0 280.0,-160.0" fill="none" stroke="rgb(0,255,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

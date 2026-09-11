@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="417.76807228915663" height="297.0" viewBox="0.0 -415.0 583.75 415.0">
+  <rect x="0.0" y="-415.0" width="417.76807228915663" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: FB.001</metadata>
+  <g id="diagram-FB.001" class="diagram" fill="rgb(255,255,255)">
+    <g class="border">
+      <text x="465.0" y="-26.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Date</text>
+      <text x="465.0" y="-22.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Name</text>
+      <text x="465.0" y="-18.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Checked</text>
+      <text x="465.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Standard</text>
+      <text x="503.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Replaced by: </text>
+      <text x="503.0" y="-18.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Replacement for: </text>
+      <text x="503.0" y="-22.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Origin: </text>
+      <text x="503.0" y="-30.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Draw. no. customer: </text>
+      <text x="503.0" y="-34.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Draw. no. engineer: </text>
+      <text x="548.0" y="-26.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Unit: =A10.A10.A10</text>
+      <text x="548.0" y="-22.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Location: </text>
+      <text x="576.0" y="-18.0" text-anchor="end" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">EX01</text>
+      <text x="564.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">From:</text>
+      <text x="404.0" y="-42.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Project-No.: SO1</text>
+      <text x="404.0" y="-38.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Project: Base project iDB</text>
+      <text x="503.0" y="-42.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Customer: </text>
+      <text x="503.0" y="-38.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Order number: </text>
+      <text x="436.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Date</text>
+      <text x="452.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Name</text>
+      <text x="412.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Change</text>
+      <text x="404.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Ind.</text>
+      <text x="564.0" y="-18.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Sheet:</text>
+      <text x="576.0" y="-14.0" text-anchor="end" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">1</text>
+      <text x="477.0" y="-26.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">01.01.1997</text>
+      <text x="477.0" y="-22.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">CSY</text>
+      <text x="404.0" y="-34.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">P&amp;ID acc. to EN 10628, DIN A2</text>
+      <text x="5.0" y="-415.0" text-anchor="end" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" transform="rotate(90.0 5.0 -415.0)" fill="rgb(0,0,0)">Passing on and reproduction of this document and use and disclosure of its contents are prohibited unless expressly permitted.
+The owner reserves all rights in the event of the grant of a patent or the registration of a utility model or design.</text>
+      <text x="15.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">1</text>
+      <text x="65.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">2</text>
+      <text x="115.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">3</text>
+      <text x="165.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">4</text>
+      <text x="215.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">5</text>
+      <text x="265.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">6</text>
+      <text x="315.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">7</text>
+      <text x="365.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">8</text>
+      <text x="420.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">9</text>
+      <text x="480.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">10</text>
+      <text x="535.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">11</text>
+      <text x="15.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">A</text>
+      <text x="15.0" y="-370.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">B</text>
+      <text x="15.0" y="-320.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">C</text>
+      <text x="15.0" y="-270.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">D</text>
+      <text x="15.0" y="-220.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">E</text>
+      <text x="15.0" y="-165.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">F</text>
+      <text x="15.0" y="-110.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">G</text>
+      <text x="15.0" y="-57.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">H</text>
+      <text x="15.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">1</text>
+      <text x="65.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">2</text>
+      <text x="115.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">3</text>
+      <text x="165.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">4</text>
+      <text x="215.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">5</text>
+      <text x="265.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">6</text>
+      <text x="315.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">7</text>
+      <text x="365.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">8</text>
+      <text x="420.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">9</text>
+      <text x="480.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">10</text>
+      <text x="535.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">11</text>
+      <text x="583.75" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">A</text>
+      <text x="583.75" y="-370.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">B</text>
+      <text x="583.75" y="-320.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">C</text>
+      <text x="583.75" y="-270.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">D</text>
+      <text x="583.75" y="-220.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">E</text>
+      <text x="583.75" y="-165.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">F</text>
+      <text x="583.75" y="-110.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">G</text>
+      <text x="583.75" y="-57.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">H</text>
+    </g>
+    <g class="border">
+      <text x="465.0" y="-26.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Date</text>
+      <text x="465.0" y="-22.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Name</text>
+      <text x="465.0" y="-18.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Checked</text>
+      <text x="465.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Standard</text>
+      <text x="503.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Replaced by: </text>
+      <text x="503.0" y="-18.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Replacement for: </text>
+      <text x="503.0" y="-22.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Origin: </text>
+      <text x="503.0" y="-30.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Draw. no. customer: </text>
+      <text x="503.0" y="-34.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Draw. no. engineer: </text>
+      <text x="548.0" y="-26.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Unit: =A10.A10.A10</text>
+      <text x="548.0" y="-22.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Location: </text>
+      <text x="576.0" y="-18.0" text-anchor="end" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">EX01</text>
+      <text x="564.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">From:</text>
+      <text x="404.0" y="-42.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Project-No.: SO1</text>
+      <text x="404.0" y="-38.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Project: Base project iDB</text>
+      <text x="503.0" y="-42.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Customer: </text>
+      <text x="503.0" y="-38.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Order number: </text>
+      <text x="436.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Date</text>
+      <text x="452.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Name</text>
+      <text x="412.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Change</text>
+      <text x="404.0" y="-14.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Ind.</text>
+      <text x="564.0" y="-18.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">Sheet:</text>
+      <text x="576.0" y="-14.0" text-anchor="end" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">1</text>
+      <text x="477.0" y="-26.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">01.01.1997</text>
+      <text x="477.0" y="-22.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">CSY</text>
+      <text x="404.0" y="-34.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" fill="rgb(0,0,0)">P&amp;ID acc. to EN 10628, DIN A2</text>
+      <text x="5.0" y="-415.0" text-anchor="end" dy="0.5em" font-family="'Arial', Arial" font-size="2.91041666666667" transform="rotate(90.0 5.0 -415.0)" fill="rgb(0,0,0)">Passing on and reproduction of this document and use and disclosure of its contents are prohibited unless expressly permitted.
+The owner reserves all rights in the event of the grant of a patent or the registration of a utility model or design.</text>
+      <text x="15.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">1</text>
+      <text x="65.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">2</text>
+      <text x="115.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">3</text>
+      <text x="165.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">4</text>
+      <text x="215.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">5</text>
+      <text x="265.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">6</text>
+      <text x="315.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">7</text>
+      <text x="365.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">8</text>
+      <text x="420.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">9</text>
+      <text x="480.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">10</text>
+      <text x="535.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">11</text>
+      <text x="15.0" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">A</text>
+      <text x="15.0" y="-370.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">B</text>
+      <text x="15.0" y="-320.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">C</text>
+      <text x="15.0" y="-270.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">D</text>
+      <text x="15.0" y="-220.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">E</text>
+      <text x="15.0" y="-165.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">F</text>
+      <text x="15.0" y="-110.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">G</text>
+      <text x="15.0" y="-57.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">H</text>
+      <text x="15.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">1</text>
+      <text x="65.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">2</text>
+      <text x="115.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">3</text>
+      <text x="165.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">4</text>
+      <text x="215.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">5</text>
+      <text x="265.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">6</text>
+      <text x="315.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">7</text>
+      <text x="365.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">8</text>
+      <text x="420.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">9</text>
+      <text x="480.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">10</text>
+      <text x="535.0" y="-10.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">11</text>
+      <text x="583.75" y="-415.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">A</text>
+      <text x="583.75" y="-370.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">B</text>
+      <text x="583.75" y="-320.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">C</text>
+      <text x="583.75" y="-270.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">D</text>
+      <text x="583.75" y="-220.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">E</text>
+      <text x="583.75" y="-165.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">F</text>
+      <text x="583.75" y="-110.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">G</text>
+      <text x="583.75" y="-57.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.45016666666667" fill="rgb(0,0,0)">H</text>
+    </g>
+    <g class="label">
+      <text x="71.5" y="-264.58" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">=A10.A10.A10.47121.S1</text>
+    </g>
+    <g class="label">
+      <text x="145.05" y="-264.5959" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">=A10.A10.A10.47122.S1</text>
+    </g>
+    <g class="label">
+      <text x="203.75" y="-215.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 203.75 -215.0)" fill="rgb(0,0,0)">=A10.A10.A10.47131.S1</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="236.25" y="-292.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 236.25 -292.5)" fill="rgb(0,0,0)">=A10.A10.A10.47124.S1</text>
+    </g>
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label">
+      <text x="374.17" y="-299.15" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 374.17 -299.15)" fill="rgb(0,0,0)">=A10.A10.A10.47125.S1</text>
+    </g>
+    <g class="label">
+      <text x="325.6" y="-344.08" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">=A10.A10.A10.47125.S2</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="206.25" y="-348.75" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 206.25 -348.75)" fill="rgb(0,0,0)">=A10.A10.A10.47123.S1</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="302.5" y="-352.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(360.0 302.5 -352.5)" fill="rgb(0,0,0)">=A10.A10.A10.47127.S1</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="153.75" y="-215.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 153.75 -215.0)" fill="rgb(0,0,0)">=A10.A10.A10.47130.S1</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="478.75" y="-216.25" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 478.75 -216.25)" fill="rgb(0,0,0)">=A10.A10.A10.47140.S1</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="506.25" y="-215.0" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" transform="rotate(90.0 506.25 -215.0)" fill="rgb(0,0,0)">=A10.A10.A10.47141.S1</text>
+    </g>
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label">
+      <text x="401.25" y="-253.75" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">=A10.A10.A10.47126.S4</text>
+    </g>
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label">
+      <text x="120.5" y="-97.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">20 m</text>
+    </g>
+    <g class="label">
+      <text x="150.0" y="-97.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">4 m</text>
+    </g>
+    <g class="label">
+      <text x="315.0" y="-96.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">10.0 m</text>
+    </g>
+    <g class="label">
+      <text x="286.0" y="-90.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">600 1/min</text>
+    </g>
+    <g class="label">
+      <text x="315.0" y="-89.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">60 kW</text>
+    </g>
+    <g class="label">
+      <text x="285.5" y="-97.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">200 m³/h</text>
+    </g>
+    <g class="label">
+      <text x="120.0" y="-32.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">420 m³/h</text>
+    </g>
+    <g class="label">
+      <text x="149.5" y="-32.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">40.0 m</text>
+    </g>
+    <g class="label">
+      <text x="120.5" y="-25.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">1400 1/min</text>
+    </g>
+    <g class="label">
+      <text x="150.5" y="-24.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">0.084 kW</text>
+    </g>
+    <g class="label">
+      <text x="120.0" y="-127.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-0.1 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="150.0" y="-127.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-0.1 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="120.0" y="-120.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">0.1 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="150.0" y="-119.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">0.05 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="120.0" y="-112.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-45 °C</text>
+    </g>
+    <g class="label">
+      <text x="150.0" y="-113.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-45 °C</text>
+    </g>
+    <g class="label">
+      <text x="120.5" y="-104.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">100 °C</text>
+    </g>
+    <g class="label">
+      <text x="150.5" y="-105.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">100 °C</text>
+    </g>
+    <g class="label">
+      <text x="120.0" y="-89.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">22 m³</text>
+    </g>
+    <g class="label">
+      <text x="150.5" y="-90.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">4 m³</text>
+    </g>
+    <g class="label" />
+    <g class="label" />
+    <g class="label">
+      <text x="120.5" y="-62.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-1 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="121.0" y="-54.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">60 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="120.0" y="-47.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-45 °C</text>
+    </g>
+    <g class="label">
+      <text x="120.0" y="-40.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">100 °C</text>
+    </g>
+    <g class="label">
+      <text x="302.5" y="-125.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-0.5 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="302.5" y="-117.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">60 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="302.5" y="-110.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-45 °C</text>
+    </g>
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label">
+      <text x="303.75" y="-102.75" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">80 °C</text>
+    </g>
+    <g class="label">
+      <text x="450.0" y="-126.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-1 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="480.0" y="-127.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-1 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="450.0" y="-120.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">60 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="480.5" y="-120.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">30 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="450.5" y="-112.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-45 °C</text>
+    </g>
+    <g class="label">
+      <text x="480.5" y="-112.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-45 °C</text>
+    </g>
+    <g class="label">
+      <text x="450.0" y="-105.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">100 °C</text>
+    </g>
+    <g class="label">
+      <text x="450.5" y="-90.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">800 m</text>
+    </g>
+    <g class="label">
+      <text x="450.5" y="-97.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">313 kW</text>
+    </g>
+    <g class="label">
+      <text x="480.0" y="-98.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">46.8 m²</text>
+    </g>
+    <g class="label">
+      <text x="480.0" y="-90.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">2200 mm</text>
+    </g>
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label" />
+    <g class="label">
+      <text x="284.5" y="-63.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-1 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="315.5" y="-62.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-1 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="285.0" y="-55.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">60 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="315.0" y="-55.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">30 kg/(m·s²)</text>
+    </g>
+    <g class="label">
+      <text x="285.0" y="-47.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-45 °C</text>
+    </g>
+    <g class="label">
+      <text x="315.0" y="-47.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">-45 °C</text>
+    </g>
+    <g class="label">
+      <text x="285.0" y="-40.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">100 °C</text>
+    </g>
+    <g class="label">
+      <text x="315.0" y="-40.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">100 °C</text>
+    </g>
+    <g class="label">
+      <text x="284.5" y="-33.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">313 kW</text>
+    </g>
+    <g class="label">
+      <text x="315.5" y="-32.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">46.8 m²</text>
+    </g>
+    <g class="label">
+      <text x="285.0" y="-25.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">850 mm</text>
+    </g>
+    <g class="label">
+      <text x="315.0" y="-25.0" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">1100 mm</text>
+    </g>
+    <g class="label" />
+    <g class="label">
+      <text x="480.0" y="-105.5" text-anchor="start" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">100 °C</text>
+    </g>
+    <g id="6328ce27-020c-42c0-a857-ef7d4ff9bd0a" class="representation-group">
+      <g class="static">
+        <path d="M 252.50,-350.00 A 21.25,21.25 0.00 0,0 232.50,-350.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 232.50,-325.00 A 21.25,21.25 0.00 0,0 252.50,-325.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <text x="242.5" y="-336.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">T4750</text>
+      </g>
+      <g id="aef314c7-638c-4406-9ae9-a463ee58ecd1" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X8160" transform="translate(235.15,-350.99) rotate(270.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="42d69ee2-bad3-4066-8d7c-145b486b207d" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81601" transform="translate(242.50,-322.50) rotate(90.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="7e564225-e968-4e24-a75a-eb3149dd1344" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X8159" transform="translate(232.50,-340.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="205d1580-39aa-478e-9037-fedb23283440" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81602" transform="translate(232.50,-328.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="3793ad74-850d-4b21-89fc-61dee2779171" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81603" transform="translate(250.00,-351.00) rotate(270.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="b19b214a-2b3d-4646-857a-adfa7999c62c" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81604" transform="translate(252.50,-348.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="9a1500fe-b554-4741-b96a-30d314083026" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81605" transform="translate(252.50,-339.50)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3f2b9db6-e945-4a3a-868c-3b7bdf505c2a" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="2301" transform="translate(106.50,-260.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <text x="105.5" y="-269.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">P4712</text>
+      </g>
+      <g id="7fde7329-bb47-4bf6-822c-c742b310b8e7" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81606" transform="translate(99.00,-260.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="7794791d-1fb4-4d3a-9028-58434ff93814" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81607" transform="translate(114.00,-260.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="fd8ee60f-48cf-4e9b-be44-a6288d55cec0" class="representation-group">
+      <g class="static">
+        <text x="190.43" y="-252.54" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">H1008</text>
+      </g>
+      <g id="47664d4e-c802-4858-8cfa-93d0efc589de" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81608" transform="translate(195.43,-260.04)" />
+          </g>
+        </g>
+      </g>
+      <g id="ea1f8954-3fbe-40b4-bc88-41e357a336dd" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X81609" transform="translate(185.43,-285.04) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="1e72449c-5031-4926-b423-d80a2390d878" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816010" transform="translate(185.43,-260.04) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="80657d5d-f96d-4554-8908-93b8ede53e84" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816011" transform="translate(195.43,-285.04)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="50669bf3-429c-4514-a85c-99b2a40a39c1" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="230112" transform="translate(332.50,-260.00)">
+            <ellipse cx="0.0" cy="-0.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <ellipse cx="332.5" cy="-260.0" rx="7.5" ry="7.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <ellipse cx="332.5" cy="-260.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <text x="331.5" y="-270.5" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">P4711</text>
+      </g>
+      <g id="fc4150d0-1bed-477e-8895-ba46f8b2d792" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816013" transform="translate(325.00,-260.00) rotate(180.00)" />
+          </g>
+        </g>
+      </g>
+      <g id="e913cc63-8681-4288-8ce7-248d3e7ebcb7" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816014" transform="translate(340.00,-260.00)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="17d7f081-28bc-4aa2-aa07-f136ac10be78" class="representation-group">
+      <g class="static">
+        <path d="M 455.77,-309.98 A 10.62,10.62 0.00 0,0 455.77,-299.98" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 490.77,-299.98 A 10.62,10.62 0.00 0,0 490.77,-309.98" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <text x="448.27" y="-304.98" text-anchor="middle" dy="0.5em" font-family="'Arial', Arial" font-size="3.52777777777778" fill="rgb(0,0,0)">H1007</text>
+      </g>
+      <g id="639ba315-d439-461c-85cc-33d0408a3123" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816015" transform="translate(488.27,-299.98) rotate(90.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="ed2e25fd-263d-4b01-a50b-6d011a015f42" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816016" transform="translate(457.77,-299.98) rotate(90.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="95d0fcb5-2b83-45f1-8cd0-3866e6ed8400" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816017" transform="translate(458.27,-309.98) rotate(270.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="5ca4aa9c-08a3-4e81-b719-0ceb383a2edf" class="representation-group">
+        <g class="static">
+          <g>
+            <g id="X816018" transform="translate(464.77,-309.98) rotate(270.00)">
+              <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="366e898a-6d42-4d02-b409-ea26be608050" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A50|A10|A60|A60|A40" transform="translate(435.00,-348.00) rotate(180.00) scale(-1.00,1.00)" />
+        </g>
+      </g>
+    </g>
+    <g id="740e2057-2a44-4428-ae8b-38a150c90bfb" class="representation-group">
+      <g id="2c6ddf2f-ff24-4012-a5df-13a5bf1b3ca7" class="representation-group">
+        <g id="2c6ddf2f-ff24-4012-a5df-13a5bf1b3ca7" class="representation-group">
+          <g class="static">
+            <polyline points="56.25,-260.0 94.0,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="70d86e3b-bd74-4ee3-8832-6ee25258ac9b" class="representation-group">
+      <g id="8eb6165c-74e7-4130-a07b-98d00ff4f607" class="representation-group">
+        <g id="8eb6165c-74e7-4130-a07b-98d00ff4f607" class="representation-group">
+          <g class="static">
+            <polyline points="119.0,-260.0 180.43,-260.04" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3ecf6a12-3bf8-4e10-a1ba-8689f9217b39" class="representation-group">
+      <g id="7fffac6a-d381-46f5-b4cd-2fe24beb80bc" class="representation-group">
+        <g id="7fffac6a-d381-46f5-b4cd-2fe24beb80bc" class="representation-group">
+          <g class="static">
+            <polyline points="200.43,-260.04 210.0,-260.04 210.0,-195.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="866fd422-cdc0-49b6-b343-10739a19335b" class="representation-group">
+      <g id="f47aaf79-6ebe-476c-b9d0-5a6eb54e7fa9" class="representation-group">
+        <g id="f47aaf79-6ebe-476c-b9d0-5a6eb54e7fa9" class="representation-group">
+          <g class="static">
+            <polyline points="457.5,-265.0 457.5,-292.48 457.77,-292.48 457.77,-294.98" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="04b7ac2e-f854-442f-8cd1-d3439849b7f7" class="representation-group">
+        <g id="fa2f367b-c196-465a-8827-542ef7945faf" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X807128" transform="translate(356.25,-242.50) rotate(270.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="04b7ac2e-f854-442f-8cd1-d3439849b7f7" class="representation-group">
+          <g class="static">
+            <polyline points="356.25,-255.0 356.25,-247.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="a94a9d28-4d88-4cb1-99b0-3d0505eedb4c" class="representation-group">
+        <g id="2821033e-2b21-46a4-8f5a-dd86544e3836" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X807129" transform="translate(393.75,-276.25) rotate(270.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="5.0" cy="-0.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="a94a9d28-4d88-4cb1-99b0-3d0505eedb4c" class="representation-group">
+          <g class="static">
+            <polyline points="393.75,-265.0 393.75,-271.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="603224da-ce23-4afc-b604-7dfaefb95472" class="representation-group">
+        <g id="101ff74d-dd7c-48d4-8028-ef833260887f" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X807131" transform="translate(526.25,-276.25) rotate(90.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="603224da-ce23-4afc-b604-7dfaefb95472" class="representation-group">
+          <g class="static">
+            <polyline points="526.25,-265.0 526.25,-271.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="27d60efe-2a62-487d-aae6-c1db87c79f13" class="representation-group">
+        <g id="27d60efe-2a62-487d-aae6-c1db87c79f13" class="representation-group">
+          <g class="static">
+            <polyline points="531.25,-260.0 542.5,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="58ad58d2-f883-42c6-98c2-c06e6609f063" class="representation-group">
+        <g id="66a65f03-9375-45bd-b77f-534c508f0d97" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A40|A20|A30|A1039" transform="translate(356.25,-260.00) rotate(180.00)" />
+            </g>
+          </g>
+        </g>
+        <g id="58ad58d2-f883-42c6-98c2-c06e6609f063" class="representation-group">
+          <g class="static">
+            <polyline points="345.0,-260.0 351.25,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="57a439f0-e73f-490d-ac41-48797f85ab5a" class="representation-group">
+        <g id="1e510ee4-2255-4409-a64b-9c503a1a5217" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A40|A20|A30|A10" transform="translate(378.75,-260.00)" />
+            </g>
+          </g>
+        </g>
+        <g id="57a439f0-e73f-490d-ac41-48797f85ab5a" class="representation-group">
+          <g class="static">
+            <polyline points="361.25,-260.0 373.75,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="dbdd7d92-1784-4689-9d30-d96bee47dde9" class="representation-group">
+        <g id="865a6d0f-21ff-490f-a70a-44d2cad074ed" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A40|A20|A30|A1040" transform="translate(393.75,-260.00)" />
+            </g>
+          </g>
+        </g>
+        <g id="dbdd7d92-1784-4689-9d30-d96bee47dde9" class="representation-group">
+          <g class="static">
+            <polyline points="383.75,-260.0 388.75,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="6f4dde14-fe96-4f80-ab23-c9e01c98021f" class="representation-group">
+        <g id="e2c08745-378d-4451-b205-0290400139c8" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X807130" transform="translate(427.50,-260.00) rotate(180.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="e4c7afb9-882c-47c1-a399-01f18df5e9dd" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A40|A20|A30|A1041" transform="translate(457.50,-260.00)" />
+            </g>
+          </g>
+        </g>
+        <g id="6f4dde14-fe96-4f80-ab23-c9e01c98021f" class="representation-group">
+          <g class="static">
+            <polyline points="398.75,-260.0 422.5,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="6f4dde14-fe96-4f80-ab23-c9e01c98021f" class="representation-group">
+          <g class="static">
+            <polyline points="432.5,-260.0 452.5,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="0d3fd7d6-8733-46ed-97aa-024a06838ac5" class="representation-group">
+        <g id="31ad41bf-99a3-4d1e-9d1f-1e34b2775228" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A40|A20|A30|A1042" transform="translate(526.25,-260.00)" />
+            </g>
+          </g>
+        </g>
+        <g id="0d3fd7d6-8733-46ed-97aa-024a06838ac5" class="representation-group">
+          <g class="static">
+            <polyline points="462.5,-260.0 521.25,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="fa9fbd79-c09f-4f9b-8d73-f669a33d5137" class="representation-group">
+      <g id="0c5e4434-1aaf-4952-a893-53f3523bd2b6" class="representation-group">
+        <g id="5d828de6-8f12-4d89-894c-7f9594dca0d7" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A30|A10|A10|A40|A10" transform="translate(242.50,-298.75) rotate(90.00) scale(-1.00,1.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="0.75" ry="0.75" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-0.0" rx="0.75" ry="0.75" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-5.0" rx="1.0" ry="1.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="7120ed99-4fc4-4f21-8205-ad235f12d18c" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X8165" transform="translate(255.00,-260.00)">
+                <ellipse cx="-5.0" cy="-2.5" rx="1.26" ry="1.26" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="-5.0" cy="-2.5" rx="1.26" ry="1.26" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="0c5e4434-1aaf-4952-a893-53f3523bd2b6" class="representation-group">
+          <g class="static">
+            <polyline points="242.5,-317.5 242.5,-303.75" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="0c5e4434-1aaf-4952-a893-53f3523bd2b6" class="representation-group">
+          <g class="static">
+            <polyline points="242.5,-293.75 242.5,-260.0 250.0,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="617425b8-0ad4-468b-9ac5-9d8ffd1d306d" class="representation-group">
+        <g id="617425b8-0ad4-468b-9ac5-9d8ffd1d306d" class="representation-group">
+          <g class="static">
+            <polyline points="260.0,-260.0 271.25,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="8be1423e-af2a-430b-9c19-69b591808034" class="representation-group">
+        <g id="32dbec39-9a09-4d22-917a-fbc80919ce0c" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="X8071" transform="translate(301.25,-260.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="2.5" ry="2.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="8be1423e-af2a-430b-9c19-69b591808034" class="representation-group">
+          <g class="static">
+            <polyline points="281.25,-260.0 296.25,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="8be1423e-af2a-430b-9c19-69b591808034" class="representation-group">
+          <g class="static">
+            <polyline points="306.25,-260.0 320.0,-260.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="2d7f263b-d85b-4eb0-ac68-bdfbffd88066" class="representation-group">
+      <g id="aafdb43d-c62a-4d0c-8ee1-cf6a8c6b00ed" class="representation-group">
+        <g id="aafdb43d-c62a-4d0c-8ee1-cf6a8c6b00ed" class="representation-group">
+          <g class="static">
+            <polyline points="378.75,-265.0 378.75,-334.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="83bbd95f-3aa1-4b36-b063-7f3cd2096c60" class="representation-group">
+        <g id="83bbd95f-3aa1-4b36-b063-7f3cd2096c60" class="representation-group">
+          <g class="static">
+            <polyline points="373.75,-339.5 257.5,-339.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="bfb165e3-c772-4b3c-944f-1e3fae77eb21" class="representation-group">
+      <g id="ef91a1db-66f1-418d-bc2f-0afa700b3c0a" class="representation-group">
+        <g id="929debd1-76c5-4aea-9066-4816b14daaa9" class="representation-group" />
+        <g id="ef91a1db-66f1-418d-bc2f-0afa700b3c0a" class="representation-group">
+          <g class="static">
+            <polyline points="200.43,-285.04 212.5,-285.04 212.5,-302.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="ef91a1db-66f1-418d-bc2f-0afa700b3c0a" class="representation-group">
+          <g class="static">
+            <polyline points="212.5,-312.5 212.5,-375.0 235.15,-375.0 235.15,-355.99" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="236ccab9-4a1e-42c0-b78f-9b39098489c6" class="representation-group">
+      <g id="f8ee4fb5-3094-4430-a1e8-46dad68c7d50" class="representation-group">
+        <g id="eb099f6c-0b02-4f42-a1ce-c37b7ba8875b" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A30|A10|A10|A10|A1032" transform="translate(458.27,-337.50) rotate(90.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="f8ee4fb5-3094-4430-a1e8-46dad68c7d50" class="representation-group">
+          <g class="static">
+            <polyline points="458.27,-314.98 458.27,-332.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="f8ee4fb5-3094-4430-a1e8-46dad68c7d50" class="representation-group">
+          <g class="static">
+            <polyline points="458.27,-342.5 458.27,-348.0 257.5,-348.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="c0b2b7e9-f850-41cc-8c7e-6e98efda5ea0" class="representation-group">
+      <g id="c987521c-adde-4a95-84c2-a6cbfe4a79ff" class="representation-group">
+        <g id="5b2fdf4c-9c23-47ee-801f-9f3fd7b9ce1f" class="representation-group">
+          <g class="static">
+            <g>
+              <g id="@30|M00|A50|A10|A30|A10|A10|A10|A1033" transform="translate(491.25,-330.00)">
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+                <ellipse cx="0.0" cy="-0.0" rx="1.25" ry="1.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="c987521c-adde-4a95-84c2-a6cbfe4a79ff" class="representation-group">
+          <g class="static">
+            <polyline points="512.5,-195.0 512.5,-255.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="c987521c-adde-4a95-84c2-a6cbfe4a79ff" class="representation-group">
+          <g class="static">
+            <polyline points="512.5,-265.0 512.5,-330.0 496.25,-330.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="c987521c-adde-4a95-84c2-a6cbfe4a79ff" class="representation-group">
+          <g class="static">
+            <polyline points="486.25,-330.0 464.77,-330.0 464.77,-314.98" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="3d730641-b25d-47b6-8299-9e55c94c405b" class="representation-group">
+      <g id="3c39ed58-fd12-4178-9c2f-26bdfc0dbf78" class="representation-group">
+        <g id="3c39ed58-fd12-4178-9c2f-26bdfc0dbf78" class="representation-group">
+          <g class="static">
+            <polyline points="160.0,-195.0 159.9999,-255.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="3c39ed58-fd12-4178-9c2f-26bdfc0dbf78" class="representation-group">
+          <g class="static">
+            <polyline points="160.0,-268.75 160.0,-285.04 180.43,-285.04" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="30f06ea1-c392-4f65-a5fd-9ff7c4f0beda" class="representation-group">
+      <g id="525cc9d9-1322-4f82-be1f-ed57ccda4a9e" class="representation-group">
+        <g id="525cc9d9-1322-4f82-be1f-ed57ccda4a9e" class="representation-group">
+          <g class="static">
+            <polyline points="488.27,-294.98 488.27,-265.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+        <g id="525cc9d9-1322-4f82-be1f-ed57ccda4a9e" class="representation-group">
+          <g class="static">
+            <polyline points="488.27,-255.0 488.27,-195.0 488.75,-195.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="2e2737c2-a555-4d8e-b455-a1cf37b49ca1" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A10|A10|H" transform="translate(168.75,-307.50)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="800d0e55-cdf9-4931-bb9c-771e9c00eff9" class="representation-group">
+        <g class="static">
+          <polyline points="212.5,-307.5 176.25,-307.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="691925ee-86b3-4915-b1ac-4684ae8145d0" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A10|A10|P" transform="translate(393.75,-300.00)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="7f708c5b-8a0c-44c4-ba32-b7c535c7b285" class="representation-group">
+        <g class="static">
+          <polyline points="393.75,-281.25 393.75,-295.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="98b8725a-846e-48b5-8a8f-0a90944eec99" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A10|A10|T" transform="translate(250.00,-376.25)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="3b019cee-bc37-4be1-b809-479c0f432a06" class="representation-group">
+        <g class="static">
+          <polyline points="250.0,-356.0 250.0,-371.25" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+      <g id="65964c2e-5b6d-4e6f-a157-2fb02c92c681" class="representation-group">
+        <g class="static">
+          <polyline points="257.5,-376.25 491.25,-376.25 491.25,-345.0" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+    <g id="5d0d364b-dd86-4720-bcc0-7d28261e69e4" class="representation-group">
+      <g class="static">
+        <g>
+          <g id="@30|M00|A60|A10|A10|P34" transform="translate(526.25,-297.50)">
+            <path d="M -2.50,-5.00 A 5.00,5.00 0.00 0,0 -2.50,5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+            <path d="M 2.50,5.00 A 5.00,5.00 0.00 0,0 2.50,-5.00" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+          </g>
+        </g>
+      </g>
+      <g id="2b745157-aa09-4669-933b-a0b22cbdffa7" class="representation-group">
+        <g class="static">
+          <polyline points="526.25,-281.25 526.25,-292.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+      <g id="dd2608e4-3c0d-4787-9cdf-8b784d9fd961" class="representation-group">
+        <g class="static">
+          <polyline points="526.25,-302.5 526.25,-337.5 473.27,-337.5" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

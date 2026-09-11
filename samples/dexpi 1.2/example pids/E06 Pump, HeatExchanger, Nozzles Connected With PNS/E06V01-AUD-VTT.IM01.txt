@@ -1,1 +1,0 @@
-The connection elemennt of the pipe segment is empty: we cannot detect that the pipe is connected to the nozzles.

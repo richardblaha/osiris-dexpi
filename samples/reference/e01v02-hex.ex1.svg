@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="161.96318670921207" height="297.0" viewBox="0.0 -0.4400999886751195 0.2399999886751195 0.4400999886751195">
+  <rect x="0.0" y="-0.4400999886751195" width="161.96318670921207" height="297.0" fill="#f0f0f0" />
+  <metadata>DEXPI Diagram: E01-INTERGRAPH</metadata>
+  <g id="diagram-E01-INTERGRAPH" class="diagram" fill="rgb(255,255,255)">
+    <g class="label">
+      <text x="0.1999999999999988" y="-0.3999999999999994" text-anchor="middle" dy="0.5em" font-family="'Intergraph ISO', Arial" font-size="0.004938892" fill="rgb(0,0,0)">T100</text>
+    </g>
+    <g id="f6dfd9eb-5999-423a-90a2-f4410258817f" class="representation-group">
+      <g class="static">
+        <path d="M 0.22,-0.42 A 0.04,0.04 0.00 0,0 0.18,-0.42" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+        <path d="M 0.18,-0.37 A 0.04,0.04 0.00 0,0 0.22,-0.37" fill="none" stroke="rgb(0,0,0)" stroke-width="0.3" vector-effect="non-scaling-stroke" />
+      </g>
+    </g>
+  </g>
+</svg>
