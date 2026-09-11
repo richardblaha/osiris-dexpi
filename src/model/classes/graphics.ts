@@ -21,6 +21,12 @@ export interface Extent {
   max: Point;
 }
 
+/** Per-instance `<Scale X Y>` applied to a component's native 2D symbol footprint. */
+export interface Scale {
+  x: number;
+  y: number;
+}
+
 export interface Presentation {
   r?: number;
   g?: number;

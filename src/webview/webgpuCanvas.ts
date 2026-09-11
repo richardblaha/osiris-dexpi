@@ -15,6 +15,7 @@ import { WebGpuPidAdapter } from '../webgpu/adapter';
 import { SpatialCullingController } from '../webgpu/spatial/cullingController';
 import { OrthogonalRouter } from '../webgpu/routing/orthogonalRouter';
 import { InteractionOverlay } from './interactionOverlay';
+import { DiagramSvgLayer } from './diagramSvgLayer';
 import type { PidView, PidViewNode, PidViewEdge } from '../model/view/projection';
 import { projectToView } from '../model/view/projection';
 import { exportPidViewToSvg } from './exportSvg';
@@ -40,10 +41,12 @@ export class WebGpuVisualCanvas {
   private adapter = new WebGpuPidAdapter();
   private culler = new SpatialCullingController({ marginPx: 200 });
   private overlay: InteractionOverlay;
+  private diagramLayer: DiagramSvgLayer;
 
   private currentView: PidView | null = null;
   private gridVisible = true;
   private initialized = false;
+  private hasAutoFitted = false;
 
   // History Stack (Undo / Redo)
   private undoStack: string[] = [];
@@ -83,6 +86,11 @@ export class WebGpuVisualCanvas {
 
     this.container.appendChild(this.canvasElement);
     this.engine = new WebGpuPidEngine(this.canvasElement);
+
+    // Draws real stencil/piping/text content on top of the WebGPU canvas (which
+    // only paints simplified placeholder shapes); layered below the interaction
+    // overlay's selection/routing/DRC chrome, appended right after it below.
+    this.diagramLayer = new DiagramSvgLayer(this.container);
 
     this.overlay = new InteractionOverlay(this.container, {
       onTextEdited: (elementId, newText) => {
@@ -169,9 +177,27 @@ export class WebGpuVisualCanvas {
       this.engine.renderFrame();
     }
 
-    // 3. Update overlay with flow direction arrows and DRC markers
+    // 3. Draw the real diagram content (stencils, piping, labels) as SVG
+    this.diagramLayer.render(view, this.engine.camera);
+
+    // 4. Update overlay with flow direction arrows and DRC markers
     this.updateFlowArrowsAndDrc();
+    this.syncOverlays();
+
+    // On the very first model load, frame the whole diagram — otherwise the
+    // camera starts at world (0,0)/zoom 1, which for a real-world-sized DEXPI
+    // diagram shows only a small, arbitrary corner of it (looking like a pile
+    // of unrelated, overlapping fragments rather than a laid-out P&ID).
+    if (!this.hasAutoFitted && view.nodes.length > 0) {
+      this.hasAutoFitted = true;
+      this.zoomFit();
+    }
+  }
+
+  /** Keeps the interaction-chrome overlay and the diagram content layer's viewBox in sync with the camera. */
+  private syncOverlays(): void {
     this.overlay.update(this.engine.camera);
+    this.diagramLayer.setViewBox(this.engine.camera);
   }
 
   // ── Navigation & View Controls ──────────────────────────────────────────
@@ -180,14 +206,14 @@ export class WebGpuVisualCanvas {
     this.engine.camera.zoom = Math.min(50.0, this.engine.camera.zoom * 1.25);
     this.callbacks.onZoomChanged?.(this.getZoom());
     this.engine.renderFrame();
-    this.overlay.update(this.engine.camera);
+    this.syncOverlays();
   }
 
   public zoomOut(): void {
     this.engine.camera.zoom = Math.max(0.01, this.engine.camera.zoom * 0.8);
     this.callbacks.onZoomChanged?.(this.getZoom());
     this.engine.renderFrame();
-    this.overlay.update(this.engine.camera);
+    this.syncOverlays();
   }
 
   public zoomReset(): void {
@@ -196,7 +222,7 @@ export class WebGpuVisualCanvas {
     this.engine.camera.y = 0;
     this.callbacks.onZoomChanged?.(1.0);
     this.engine.renderFrame();
-    this.overlay.update(this.engine.camera);
+    this.syncOverlays();
   }
 
   public zoomFit(): void {
@@ -230,7 +256,7 @@ export class WebGpuVisualCanvas {
 
     this.callbacks.onZoomChanged?.(this.getZoom());
     this.engine.renderFrame();
-    this.overlay.update(this.engine.camera);
+    this.syncOverlays();
   }
 
   public toggleGrid(): void {
@@ -408,7 +434,7 @@ export class WebGpuVisualCanvas {
         this.engine.camera.zoom = Math.max(0.005, Math.min(100.0, this.cameraZoom * factor));
         this.callbacks.onZoomChanged?.(this.getZoom());
         this.engine.renderFrame();
-        this.overlay.update(this.engine.camera);
+        this.syncOverlays();
       },
       { passive: false }
     );
@@ -443,14 +469,14 @@ export class WebGpuVisualCanvas {
         // Start pipeline drawing mode
         this.connectingStartPort = nearbyPort;
         this.overlay.setRoutePreview([{ x: nearbyPort.worldX, y: nearbyPort.worldY }, world]);
-        this.overlay.update(this.engine.camera);
+        this.syncOverlays();
         return;
       } else if (this.connectingStartPort.nodeId !== nearbyPort.nodeId) {
         // Complete connection!
         this.completePipelineConnection(this.connectingStartPort, nearbyPort);
         this.connectingStartPort = null;
         this.overlay.setRoutePreview(null);
-        this.overlay.update(this.engine.camera);
+        this.syncOverlays();
         return;
       }
     }
@@ -459,7 +485,7 @@ export class WebGpuVisualCanvas {
     if (this.connectingStartPort) {
       this.connectingStartPort = null;
       this.overlay.setRoutePreview(null);
-      this.overlay.update(this.engine.camera);
+      this.syncOverlays();
     }
 
     // 2. Hit-test nodes
@@ -534,7 +560,7 @@ export class WebGpuVisualCanvas {
       });
 
       this.overlay.setRoutePreview(routePts);
-      this.overlay.update(this.engine.camera);
+      this.syncOverlays();
       return;
     }
 
@@ -546,7 +572,7 @@ export class WebGpuVisualCanvas {
         x2: world.x,
         y2: world.y,
       });
-      this.overlay.update(this.engine.camera);
+      this.syncOverlays();
       return;
     }
 
@@ -580,7 +606,7 @@ export class WebGpuVisualCanvas {
       this.engine.camera.x -= dx / this.engine.camera.zoom;
       this.engine.camera.y -= dy / this.engine.camera.zoom;
       this.engine.renderFrame();
-      this.overlay.update(this.engine.camera);
+      this.syncOverlays();
       return;
     }
 
@@ -589,10 +615,10 @@ export class WebGpuVisualCanvas {
     if (hoveredNode) {
       const ports = this.getNodePorts(hoveredNode);
       this.overlay.setHoveredPorts(ports);
-      this.overlay.update(this.engine.camera);
+      this.syncOverlays();
     } else {
       this.overlay.setHoveredPorts([]);
-      this.overlay.update(this.engine.camera);
+      this.syncOverlays();
     }
   };
 
@@ -616,7 +642,7 @@ export class WebGpuVisualCanvas {
       });
 
       this.selectNodes(matched);
-      this.overlay.update(this.engine.camera);
+      this.syncOverlays();
       return;
     }
 
@@ -765,7 +791,7 @@ export class WebGpuVisualCanvas {
       this.overlay.setMarqueeRect(null);
       this.overlay.setRoutePreview(null);
       this.clearSelection();
-      this.overlay.update(this.engine.camera);
+      this.syncOverlays();
     }
   };
 
@@ -824,7 +850,7 @@ export class WebGpuVisualCanvas {
     this.selectedNodes = nodes;
     this.selectedEdge = null;
     this.overlay.setSelectedNodes(nodes);
-    this.overlay.update(this.engine.camera);
+    this.syncOverlays();
 
     if (nodes.length === 1) {
       const node = nodes[0];
@@ -858,7 +884,7 @@ export class WebGpuVisualCanvas {
     this.selectedEdge = edge;
     this.selectedNodes = [];
     this.overlay.setSelectedEdge(edge);
-    this.overlay.update(this.engine.camera);
+    this.syncOverlays();
 
     const attrs: Record<string, { value: string; units?: string }> = {};
     for (const [k, v] of Object.entries(edge.attributes || {})) {
@@ -880,7 +906,7 @@ export class WebGpuVisualCanvas {
     this.selectedEdge = null;
     this.overlay.setSelectedNodes([]);
     this.overlay.setSelectedEdge(null);
-    this.overlay.update(this.engine.camera);
+    this.syncOverlays();
     this.callbacks.onSelectionChanged(null);
   }
 
@@ -1155,7 +1181,7 @@ export class WebGpuVisualCanvas {
   private onResize = (): void => {
     this.resizeCanvas();
     this.engine.renderFrame();
-    this.overlay.update(this.engine.camera);
+    this.syncOverlays();
   };
 
   private resizeCanvas(): void {
@@ -1176,6 +1202,7 @@ export class WebGpuVisualCanvas {
     window.removeEventListener('pointerup', this.onPointerUp);
     window.removeEventListener('keydown', this.onKeyDown);
     this.overlay.dispose();
+    this.diagramLayer.dispose();
     this.engine.dispose();
     if (this.canvasElement.parentElement) {
       this.canvasElement.parentElement.removeChild(this.canvasElement);

@@ -17,7 +17,7 @@ import type {
 import type { RawNode } from '../raw';
 import { childNamed, childrenNamed } from '../raw';
 import { parseGenericAttributeSets } from './genericAttributes';
-import { parsePosition } from './geometry';
+import { parsePosition, parseScale } from './geometry';
 import { parseAssociations, AssociationEntry } from './association';
 import type { ParseContext } from '../core';
 
@@ -50,11 +50,14 @@ export function parseActuatingSystem(
     const compProteusId = cn.attrs.ID || `ControlledActuator-${Date.now()}`;
     const compClass = cn.attrs.ComponentClass || 'ControlledActuator';
     const compPos = parsePosition(cn);
+    const compScale = parseScale(cn);
     const { typedAttributes, customAttributes } = parseGenericAttributeSets(cn, compClass);
 
     const actuator = make<ControlledActuator>(compClass, {
       proteusId: compProteusId,
       position: compPos,
+      scale: compScale,
+      componentName: cn.attrs.ComponentName,
       customAttributes,
       ...typedAttributes,
       _proteus: {
@@ -146,6 +149,7 @@ export function parseProcessInstrumentationFunction(
     dexpiClass,
     componentClassUri,
     position,
+    componentName: node.attrs.ComponentName,
     processInstrumentationFunctionNumber: functionNumber,
     processInstrumentationFunctionCategory: category,
     processSignalGeneratingFunctions,

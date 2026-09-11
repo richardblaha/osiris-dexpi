@@ -64,8 +64,10 @@ describe('WebGpuVisualCanvas Interactivity & Editing', () => {
   });
 
   it('renders model and computes bounding extents for zoomFit', () => {
+    // The very first renderModel() auto-fits the camera to the diagram so a
+    // newly opened file isn't shown at an arbitrary world (0,0)/zoom-1 crop.
     canvas.renderModel(sampleView);
-    expect(canvas.getZoom()).toBe(1.0);
+    expect(canvas.getZoom()).toBeGreaterThan(0);
 
     canvas.zoomFit();
     expect(canvas.getZoom()).toBeGreaterThan(0);

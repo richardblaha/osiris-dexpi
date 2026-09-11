@@ -9,6 +9,7 @@ import type { PidView, PidViewNode, PidViewEdge } from '../model/view/projection
 import { catalogStencilFor, SymbolElementType } from '../maxgraph/stencils/catalog';
 import { getStencilXml } from '../maxgraph/stencils/registry';
 import { JumperDetector } from '../webgpu/routing/jumperDetector';
+import { getComponentShape, type ShapePrimitive } from '../model/componentShapes';
 
 export interface SvgExportOptions {
   theme?: 'dark' | 'light';
@@ -16,12 +17,18 @@ export interface SvgExportOptions {
   includeBackground?: boolean;
 }
 
+export interface DiagramMarkupOptions {
+  theme?: 'dark' | 'light';
+  /** Whether to draw flow-direction arrow glyphs on pipe segments. Callers that already
+   *  render their own (e.g. the live interaction overlay) should pass `false` to avoid doubling up. */
+  includeFlowArrows?: boolean;
+}
+
 export function exportPidViewToSvg(view: PidView, options: SvgExportOptions = {}): string {
   if (!view || (!view.nodes.length && !view.edges.length)) {
     return '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"></svg>';
   }
 
-  const isDark = options.theme !== 'light';
   const pad = options.padding ?? 50;
 
   // 1. Calculate diagram bounding box
@@ -60,8 +67,33 @@ export function exportPidViewToSvg(view: PidView, options: SvgExportOptions = {}
   const vbW = Math.max(200, Math.round(maxX - minX + pad * 2));
   const vbH = Math.max(150, Math.round(maxY - minY + pad * 2));
 
-  // 2. Palette and style definitions
-  const bgColor = isDark ? '#161a22' : '#ffffff';
+  const parts: string[] = [];
+  parts.push(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vbX} ${vbY} ${vbW} ${vbH}" width="${vbW}" height="${vbH}">`
+  );
+
+  if (options.includeBackground !== false) {
+    const bgColor = options.theme === 'light' ? '#ffffff' : '#161a22';
+    parts.push(`<rect x="${vbX}" y="${vbY}" width="${vbW}" height="${vbH}" fill="${bgColor}" />`);
+  }
+
+  parts.push(renderPidViewDiagramMarkup(view, { theme: options.theme, includeFlowArrows: true }));
+  parts.push('</svg>');
+  return parts.join('\n');
+}
+
+/**
+ * Renders the actual diagram content (stencil shapes, piping, labels) as an SVG
+ * fragment — `<defs>` + `<g id="pipelines">` + `<g id="symbols">` — using real-world
+ * coordinates and no outer `<svg>`/viewBox of its own. Shared by `exportPidViewToSvg`
+ * (which wraps it with a computed viewBox for standalone export) and the live
+ * on-screen `DiagramSvgLayer`, which wraps it with a viewBox tracking the pan/zoom camera.
+ */
+export function renderPidViewDiagramMarkup(view: PidView, options: DiagramMarkupOptions = {}): string {
+  const isDark = options.theme !== 'light';
+  const includeFlowArrows = options.includeFlowArrows !== false;
+
+  // Palette and style definitions
   const pipeProcessColor = isDark ? '#f0f4f8' : '#1e293b';
   const pipeSignalColor = isDark ? '#00f2fe' : '#0284c7';
   const equipStroke = isDark ? '#f0f4f8' : '#0f172a';
@@ -76,14 +108,10 @@ export function exportPidViewToSvg(view: PidView, options: SvgExportOptions = {}
   const labelColor = isDark ? '#94a3b8' : '#64748b';
 
   const parts: string[] = [];
-  parts.push(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vbX} ${vbY} ${vbW} ${vbH}" width="${vbW}" height="${vbH}">`
-  );
 
   parts.push('<defs>');
   parts.push('<style>');
   parts.push(`
-    .bg { fill: ${bgColor}; }
     .pipe-process { stroke: ${pipeProcessColor}; stroke-width: 2.5px; fill: none; stroke-linecap: round; stroke-linejoin: round; }
     .pipe-signal { stroke: ${pipeSignalColor}; stroke-width: 1.5px; stroke-dasharray: 5,4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
     .flow-arrow-process { fill: ${pipeProcessColor}; stroke: ${pipeProcessColor}; stroke-width: 1px; }
@@ -92,16 +120,12 @@ export function exportPidViewToSvg(view: PidView, options: SvgExportOptions = {}
     .valve-shape { stroke: ${valveStroke}; fill: ${valveFill}; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; }
     .inst-shape { stroke: ${instStroke}; fill: ${instFill}; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; }
     .nozzle-shape { stroke: ${nozzleStroke}; fill: ${nozzleFill}; stroke-width: 1.5px; stroke-linejoin: round; }
-    .tag-text { fill: ${tagColor}; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; text-anchor: middle; }
-    .sub-tag { fill: ${labelColor}; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 8px; font-weight: 600; text-anchor: middle; }
-    .line-label { fill: ${labelColor}; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9px; text-anchor: middle; }
+    .tag-text { fill: ${tagColor}; font-family: 'osifont', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; text-anchor: middle; }
+    .sub-tag { fill: ${labelColor}; font-family: 'osifont', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 8px; font-weight: 600; text-anchor: middle; }
+    .line-label { fill: ${labelColor}; font-family: 'osifont', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9px; text-anchor: middle; }
   `);
   parts.push('</style>');
   parts.push('</defs>');
-
-  if (options.includeBackground !== false) {
-    parts.push(`<rect class="bg" x="${vbX}" y="${vbY}" width="${vbW}" height="${vbH}" />`);
-  }
 
   // 3. Render Pipelines & Edges (underneath symbols)
   parts.push('<g id="pipelines">');
@@ -156,7 +180,7 @@ export function exportPidViewToSvg(view: PidView, options: SvgExportOptions = {}
         }
 
         // Draw flow arrow if segment is long enough
-        if (len >= 24) {
+        if (includeFlowArrows && len >= 24) {
           const mx = (p1.x + p2.x) * 0.5;
           const my = (p1.y + p2.y) * 0.5;
           const ux = dx / len;
@@ -236,7 +260,6 @@ export function exportPidViewToSvg(view: PidView, options: SvgExportOptions = {}
   }
   parts.push('</g>');
 
-  parts.push('</svg>');
   return parts.join('\n');
 }
 
@@ -247,10 +270,6 @@ function resolveElementType(kind: string): SymbolElementType {
 }
 
 function renderNodeBody(node: PidViewNode, w: number, h: number, out: string[]): void {
-  const elemType = resolveElementType(node.kind);
-  const stencilId = catalogStencilFor(elemType, node.dexpiClass || '');
-  const stencilXml = getStencilXml(stencilId);
-
   const styleClass =
     node.kind === 'equipment'
       ? 'equip-shape'
@@ -259,6 +278,22 @@ function renderNodeBody(node: PidViewNode, w: number, h: number, out: string[]):
       : node.kind === 'nozzle'
       ? 'nozzle-shape'
       : 'valve-shape';
+
+  // The real Proteus `ComponentName` (e.g. "VESSEL_WITH_DISHED_HEADS_SHAPE") is a
+  // far more precise signal for which symbol to draw than guessing from the DEXPI
+  // class alone — try it first.
+  const knownShape = getComponentShape(node.componentName);
+  if (knownShape) {
+    const rendered = renderComponentShape(knownShape, w, h, styleClass);
+    if (rendered) {
+      out.push(rendered);
+      return;
+    }
+  }
+
+  const elemType = resolveElementType(node.kind);
+  const stencilId = catalogStencilFor(elemType, node.dexpiClass || '');
+  const stencilXml = getStencilXml(stencilId);
 
   if (stencilXml) {
     const rendered = renderStencilGeometry(stencilXml, w, h, styleClass);
@@ -270,6 +305,45 @@ function renderNodeBody(node: PidViewNode, w: number, h: number, out: string[]):
 
   // Fallback parametric CAD geometries matching WebGPU slices
   renderFallbackGeometry(node, w, h, styleClass, out);
+}
+
+/** Renders a precise `componentShapes.ts` definition, stretched from its native box to `w` x `h`. */
+function renderComponentShape(
+  shape: { w: number; h: number; primitives: ShapePrimitive[] },
+  w: number,
+  h: number,
+  styleClass: string
+): string | null {
+  if (shape.primitives.length === 0) return null;
+
+  const sx = shape.w > 0 ? w / shape.w : 1;
+  const sy = shape.h > 0 ? h / shape.h : 1;
+  const tx = (x: number) => (x * sx).toFixed(2);
+  const ty = (y: number) => (y * sy).toFixed(2);
+
+  const parts: string[] = [];
+  for (const prim of shape.primitives) {
+    if (prim.kind === 'polyline') {
+      const pts = prim.points.map(([x, y]) => `${tx(x)},${ty(y)}`).join(' ');
+      parts.push(`<polyline class="${styleClass}" points="${pts}" />`);
+    } else if (prim.kind === 'ellipse') {
+      if (prim.fillBackground) {
+        parts.push(
+          `<ellipse class="${styleClass}" cx="${tx(prim.cx)}" cy="${ty(prim.cy)}" rx="${(prim.rx * sx).toFixed(2)}" ry="${(prim.ry * sy).toFixed(2)}" style="fill: var(--canvas-bg, #161a22)" />`
+        );
+      }
+      parts.push(
+        `<ellipse class="${styleClass}" cx="${tx(prim.cx)}" cy="${ty(prim.cy)}" rx="${(prim.rx * sx).toFixed(2)}" ry="${(prim.ry * sy).toFixed(2)}" />`
+      );
+    } else if (prim.kind === 'arc') {
+      const rx = (prim.r * sx).toFixed(2);
+      const ry = (prim.r * sy).toFixed(2);
+      parts.push(
+        `<path class="${styleClass}" d="M ${tx(prim.from[0])} ${ty(prim.from[1])} A ${rx} ${ry} 0 ${prim.largeArc ?? 0} ${prim.sweep ?? 0} ${tx(prim.to[0])} ${ty(prim.to[1])}" />`
+      );
+    }
+  }
+  return parts.join('\n');
 }
 
 function renderStencilGeometry(

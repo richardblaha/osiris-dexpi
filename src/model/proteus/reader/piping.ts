@@ -20,7 +20,7 @@ import type { PipingNode } from '../../classes/equipment';
 import type { RawNode } from '../raw';
 import { childNamed, childrenNamed } from '../raw';
 import { parseGenericAttributeSets } from './genericAttributes';
-import { parsePosition, parseExtent, parseCenterLine } from './geometry';
+import { parsePosition, parseExtent, parseScale, parseCenterLine } from './geometry';
 import type { ParseContext } from '../core';
 
 export interface PendingSegmentConnection {
@@ -42,6 +42,7 @@ export function parsePipingComponent(node: RawNode, ctx: ParseContext): PipingCo
 
   const position = parsePosition(node);
   const extent = parseExtent(node);
+  const scale = parseScale(node);
 
   // Parse ConnectionPoints -> Node
   const nodes: PipingNode[] = [];
@@ -93,6 +94,8 @@ export function parsePipingComponent(node: RawNode, ctx: ParseContext): PipingCo
     nodes,
     position,
     extent,
+    scale,
+    componentName: node.attrs.ComponentName,
     attributes: typedAttributes,
     customAttributes,
     _proteus: {
@@ -131,6 +134,9 @@ export function parsePipeOffPageConnector(
   const connector = make<PipeOffPageConnector>(dexpiClass, {
     proteusId,
     nodes,
+    position: parsePosition(node),
+    scale: parseScale(node),
+    componentName: node.attrs.ComponentName,
     _proteus: {
       attrs: { ...node.attrs },
       extra: [...node.children],

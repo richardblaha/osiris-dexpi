@@ -3,13 +3,24 @@
    Professional monochrome P&ID rendering, theme-aware.
    ========================================================================== */
 
+/* ISO 3098 technical lettering font (github.com/hikikomori82/osifont, GPLv3+font
+   exception) — used for all diagram text (tags, line labels) to match the look
+   of CAD/P&ID technical drawings instead of a generic UI sans-serif. */
+@font-face {
+  font-family: 'osifont';
+  src: url('./fonts/osifont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* P&ID drawing tokens consumed by the maxGraph stylesheet (see canvas.ts). */
   --pid-stroke: #1b1b1b;
   --pid-fill: #ffffff;
   --pid-font: #1b1b1b;
   --pid-instrument-fill: #ffffff;
-  --pid-font-family: Helvetica, Arial, 'Segoe UI', sans-serif;
+  --pid-font-family: 'osifont', Helvetica, Arial, 'Segoe UI', sans-serif;
 
   --canvas-bg: #ffffff;
   --canvas-grid: rgba(0, 0, 0, 0.06);

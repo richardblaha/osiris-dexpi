@@ -3,7 +3,7 @@
  */
 
 import type { DexpiObject, CustomAttributeOwner, CustomAttribute, DexpiValue, Ref } from './base';
-import type { Position, Extent } from './graphics';
+import type { Position, Extent, Scale } from './graphics';
 import type { PipingNode } from './equipment';
 
 export interface PipingConnection extends DexpiObject {
@@ -34,6 +34,8 @@ export interface PipingComponent extends PipingNetworkSegmentItem {
   customAttributes: CustomAttribute[];
   position?: Position;
   extent?: Extent;
+  scale?: Scale;
+  componentName?: string;
 }
 
 export interface PipeOffPageConnector extends PipingNetworkSegmentItem {
@@ -43,6 +45,8 @@ export interface PipeOffPageConnector extends PipingNetworkSegmentItem {
   connectedOffPageConnector?: Ref;
   label?: string;
   position?: Position;
+  scale?: Scale;
+  componentName?: string;
 }
 
 export interface PropertyBreak extends PipingNetworkSegmentItem {

@@ -2,7 +2,7 @@
  * Proteus XML geometry parsing helpers (Position, Extent, Scale, CenterLine).
  */
 
-import type { Point, Position, Extent } from '../../classes/graphics';
+import type { Point, Position, Extent, Scale } from '../../classes/graphics';
 import type { RawNode } from '../raw';
 import { childNamed, childrenNamed } from '../raw';
 
@@ -64,6 +64,19 @@ export function parseExtent(containerNode: RawNode): Extent | undefined {
   const max = parsePoint(maxNode) || { x: 0, y: 0 };
 
   return { min, max };
+}
+
+/**
+ * Piping components, actuators and other small 2D symbols rarely carry an
+ * `<Extent>` — instead Proteus gives them a per-instance `<Scale X Y>` applied
+ * to their native (unscaled) stencil footprint.
+ */
+export function parseScale(containerNode: RawNode): Scale | undefined {
+  const scaleNode = childNamed(containerNode, 'Scale');
+  if (!scaleNode) return undefined;
+  const x = parseFloat(scaleNode.attrs.X ?? '1');
+  const y = parseFloat(scaleNode.attrs.Y ?? '1');
+  return { x: isNaN(x) ? 1 : x, y: isNaN(y) ? 1 : y };
 }
 
 export function parseCenterLine(containerNode: RawNode): { points: { x: number; y: number }[] } | undefined {

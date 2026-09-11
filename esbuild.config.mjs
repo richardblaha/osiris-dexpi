@@ -15,6 +15,10 @@ const copyAssets = () => {
   if (fs.existsSync('src/panel/panel.css')) {
     fs.copyFileSync('src/panel/panel.css', 'dist/panel.css');
   }
+  if (fs.existsSync('media/fonts/osifont.woff')) {
+    fs.mkdirSync('dist/fonts', { recursive: true });
+    fs.copyFileSync('media/fonts/osifont.woff', 'dist/fonts/osifont.woff');
+  }
 };
 
 copyAssets();

@@ -3,7 +3,7 @@
  */
 
 import type { DexpiObject, CustomAttributeOwner, CustomAttribute, DexpiValue, Ref, RefList } from './base';
-import type { Position, Extent } from './graphics';
+import type { Position, Extent, Scale } from './graphics';
 
 export interface PipingNode extends DexpiObject {
   nodeNumber?: string | number;
@@ -48,4 +48,6 @@ export interface Equipment extends TaggedPlantItem {
   customAttributes: CustomAttribute[];
   position?: Position;
   extent?: Extent;
+  scale?: Scale;
+  componentName?: string;
 }

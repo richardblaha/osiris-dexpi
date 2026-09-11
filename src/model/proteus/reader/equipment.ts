@@ -8,7 +8,7 @@ import type { Equipment, Nozzle, Chamber, PipingNode } from '../../classes/equip
 import type { RawNode } from '../raw';
 import { childNamed, childrenNamed } from '../raw';
 import { parseGenericAttributeSets } from './genericAttributes';
-import { parsePosition, parseExtent } from './geometry';
+import { parsePosition, parseExtent, parseScale } from './geometry';
 import type { ParseContext } from '../core';
 
 export function parseNozzle(node: RawNode, parentEquipmentId: string, ctx: ParseContext): Nozzle {
@@ -113,6 +113,7 @@ export function parseEquipment(node: RawNode, ctx: ParseContext): Equipment {
 
   const position = parsePosition(node);
   const extent = parseExtent(node);
+  const scale = parseScale(node);
 
   const nozzleNodes = childrenNamed(node, 'Nozzle');
   const nozzles = nozzleNodes.map((n) => parseNozzle(n, proteusId, ctx));
@@ -129,6 +130,8 @@ export function parseEquipment(node: RawNode, ctx: ParseContext): Equipment {
     tagName: tagName || proteusId,
     position,
     extent,
+    scale,
+    componentName: node.attrs.ComponentName,
     nozzles,
     chambers,
     attributes: typedAttributes,

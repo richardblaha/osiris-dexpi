@@ -8,6 +8,7 @@ import type { DexpiModel } from '../classes/dexpiModel';
 import type { TaggedPlantItem, Equipment, Nozzle } from '../classes/equipment';
 import type { PipingComponent } from '../classes/piping';
 import type { ProcessInstrumentationFunction, ActuatingSystem } from '../classes/instrumentation';
+import { getComponentShape } from '../componentShapes';
 
 export type PidNodeKind =
   | 'equipment'
@@ -24,6 +25,8 @@ export interface PidViewNode {
   kind: PidNodeKind;
   dexpiClass: string;
   componentClassUri?: string;
+  /** Proteus `ComponentName` (e.g. "GLOBE_VALVE_SHAPE") — the most precise signal for which symbol to draw. */
+  componentName?: string;
   tagName: string;
   x: number;
   y: number;
@@ -111,6 +114,76 @@ function getDefaultWidth(dexpiClass: string): number {
     default:
       return 80;
   }
+}
+
+/**
+ * Piping components (valves, tees, reducers...) and actuators almost never carry
+ * an `<Extent>` in Proteus XML — instead each carries a per-instance `<Scale X Y>`
+ * applied to a small, roughly-universal native 2D symbol footprint. Confirmed by
+ * cross-checking a real GlobeValve's `<Scale X="0.4">` against the 4mm gap between
+ * its two connection-point `<Position>`s (10 * 0.4 = 4), and a ControlledActuator's
+ * reference stencil geometry (an 18x9 bounding box). Without this, components
+ * lacking Extent fell back to `getDefaultWidth/Height`'s much larger constants
+ * (tuned for equipment) and rendered many times too big, overlapping everything.
+ */
+const NOMINAL_PIPING_SYMBOL_W = 10;
+const NOMINAL_PIPING_SYMBOL_H = 5;
+const NOMINAL_ACTUATOR_SYMBOL_W = 18;
+const NOMINAL_ACTUATOR_SYMBOL_H = 9;
+const NOMINAL_INSTRUMENT_SYMBOL_SIZE = 10;
+
+/**
+ * Native (pre-`<Scale>`) footprints for equipment stencils, cross-checked against
+ * a real reference render's own shape geometry (e.g. PLATE_TYPE_HEAT_EXCHANGER_SHAPE
+ * spans 30x10 before its per-instance Scale is applied). Used whenever an
+ * Equipment has no `<Extent>` of its own — which Proteus/DEXPI exports commonly
+ * omit in favor of `<Scale>`, just like piping components and actuators.
+ */
+function getNominalEquipmentSize(dexpiClass: string): { w: number; h: number } {
+  switch (dexpiClass) {
+    case 'CentrifugalPump':
+    case 'PositiveDisplacementPump':
+    case 'ReciprocatingPump':
+      return { w: 15, h: 15 };
+    case 'StorageTank':
+    case 'Tank':
+    case 'VerticalVessel':
+      return { w: 20, h: 30 };
+    case 'HorizontalVessel':
+      return { w: 30, h: 20 };
+    case 'DistillationColumn':
+      return { w: 20, h: 60 };
+    case 'PlateHeatExchanger':
+      return { w: 30, h: 10 };
+    case 'TubularHeatExchanger':
+    case 'ShellAndTubeHeatExchanger':
+      return { w: 35, h: 10 };
+    default:
+      return { w: 20, h: 20 };
+  }
+}
+
+function resolveScaledSize(
+  extentW: number | undefined,
+  extentH: number | undefined,
+  instanceScale: { x: number; y: number } | undefined,
+  componentName: string | undefined,
+  nominal: { w: number; h: number },
+  fallback: { w: number; h: number },
+  U: number
+): { w: number; h: number } {
+  if (extentW !== undefined && extentH !== undefined) return { w: extentW, h: extentH };
+  // The real Proteus `ComponentName` shape's own native footprint beats our rough
+  // per-class guess whenever we recognize it (see componentShapes.ts).
+  const knownShape = getComponentShape(componentName);
+  const nativeSize = knownShape ?? nominal;
+  if (instanceScale) {
+    return { w: nativeSize.w * instanceScale.x * U, h: nativeSize.h * instanceScale.y * U };
+  }
+  if (knownShape) {
+    return { w: knownShape.w * U, h: knownShape.h * U };
+  }
+  return { w: fallback.w * U, h: fallback.h * U };
 }
 
 function getDefaultHeight(dexpiClass: string): number {
@@ -248,9 +321,12 @@ export function projectToView(model: DexpiModel): PidView {
   const scale = maxX - minX <= 500 && maxY - minY <= 500 ? 3 : 1;
 
   // Inputs are raw file-unit coordinates; output is display pixels.
-  const flipY = (y: number, hMm: number = 0): number => {
-    return Math.round((maxY - y * U - hMm) * scale);
-  };
+  // `<Position><Location>` marks the *center* of a component's symbol (verified
+  // against real files: e.g. a Tank's Location X="194" Y="198" matches its own
+  // reference-rendered `translate(194,-198)`), never a corner — callers that
+  // place an anchored w x h box must subtract half its (already display-scale)
+  // width/height themselves; centerline/waypoint callers use these bare.
+  const flipY = (y: number): number => Math.round((maxY - y * U) * scale);
   const scaleX = (x: number): number => Math.round(x * U * scale);
 
   // Fallback layout for items with no <Position> at all (common in semantic-only
@@ -297,15 +373,24 @@ export function projectToView(model: DexpiModel): PidView {
     // position). Gate on the extent's *presence* instead.
     const extW = eq.extent && eq.extent.max.x - eq.extent.min.x > 0 ? (eq.extent.max.x - eq.extent.min.x) * U : undefined;
     const extH = eq.extent && eq.extent.max.y - eq.extent.min.y > 0 ? (eq.extent.max.y - eq.extent.min.y) * U : undefined;
-    const w = (extW ?? getDefaultWidth(dexpiClass)) * scale;
-    const h = (extH ?? getDefaultHeight(dexpiClass)) * scale;
+    const eqSize = resolveScaledSize(
+      extW,
+      extH,
+      eq.scale,
+      eq.componentName,
+      getNominalEquipmentSize(dexpiClass),
+      { w: getDefaultWidth(dexpiClass), h: getDefaultHeight(dexpiClass) },
+      U
+    );
+    const w = eqSize.w * scale;
+    const h = eqSize.h * scale;
 
     const eqFallback = nextFallback(100, 100);
     const rawX = eq.position?.location.x ?? eqFallback.x;
     const rawY = eq.position?.location.y ?? eqFallback.y;
 
-    const x = scaleX(rawX);
-    const y = flipY(rawY, h / scale);
+    const x = scaleX(rawX) - w / 2;
+    const y = flipY(rawY) - h / 2;
 
     const eqId = eq.proteusId || eq.id;
 
@@ -314,6 +399,7 @@ export function projectToView(model: DexpiModel): PidView {
       kind: 'equipment',
       dexpiClass,
       componentClassUri: eq.componentClassUri,
+      componentName: eq.componentName,
       tagName: eq.tagName || eqId,
       x,
       y,
@@ -383,15 +469,24 @@ export function projectToView(model: DexpiModel): PidView {
         const dexpiClass = pComp.dexpiClass || 'PipingComponent';
         const compExtW = pComp.extent && pComp.extent.max.x - pComp.extent.min.x > 0 ? (pComp.extent.max.x - pComp.extent.min.x) * U : undefined;
         const compExtH = pComp.extent && pComp.extent.max.y - pComp.extent.min.y > 0 ? (pComp.extent.max.y - pComp.extent.min.y) * U : undefined;
-        const cw = (compExtW ?? getDefaultWidth(dexpiClass)) * scale;
-        const ch = (compExtH ?? getDefaultHeight(dexpiClass)) * scale;
+        const compSize = resolveScaledSize(
+          compExtW,
+          compExtH,
+          pComp.scale,
+          pComp.componentName,
+          { w: NOMINAL_PIPING_SYMBOL_W, h: NOMINAL_PIPING_SYMBOL_H },
+          { w: getDefaultWidth(dexpiClass), h: getDefaultHeight(dexpiClass) },
+          U
+        );
+        const cw = compSize.w * scale;
+        const ch = compSize.h * scale;
 
         const pCompFallback = nextFallback(200, 200);
         const rawX = pComp.position?.location.x ?? pCompFallback.x;
         const rawY = pComp.position?.location.y ?? pCompFallback.y;
 
-        const cx = scaleX(rawX);
-        const cy = flipY(rawY, ch / scale);
+        const cx = scaleX(rawX) - cw / 2;
+        const cy = flipY(rawY) - ch / 2;
         const compId = pComp.proteusId || pComp.id;
 
         const compNode: PidViewNode = {
@@ -399,6 +494,7 @@ export function projectToView(model: DexpiModel): PidView {
           kind: 'pipingComponent',
           dexpiClass,
           componentClassUri: pComp.componentClassUri,
+          componentName: pComp.componentName,
           tagName: pComp.tagName || compId,
           x: cx,
           y: cy,
@@ -449,7 +545,9 @@ export function projectToView(model: DexpiModel): PidView {
     const pifFallback = nextFallback(300, 300);
     const rawX = pif.position?.location.x ?? pifFallback.x;
     const rawY = pif.position?.location.y ?? pifFallback.y;
-    const size = 44 * scale;
+    const instShape = getComponentShape(pif.componentName);
+    const instW = (instShape?.w ?? NOMINAL_INSTRUMENT_SYMBOL_SIZE) * U * scale;
+    const instH = (instShape?.h ?? NOMINAL_INSTRUMENT_SYMBOL_SIZE) * U * scale;
 
     const tagName = [pif.processInstrumentationFunctionCategory, pif.processInstrumentationFunctionNumber]
       .filter(Boolean)
@@ -462,11 +560,12 @@ export function projectToView(model: DexpiModel): PidView {
       kind: 'instrument',
       dexpiClass: pif.dexpiClass || 'ProcessInstrumentationFunction',
       componentClassUri: pif.componentClassUri,
+      componentName: pif.componentName,
       tagName,
-      x: scaleX(rawX),
-      y: flipY(rawY, size / scale),
-      w: Math.round(size),
-      h: Math.round(size),
+      x: scaleX(rawX) - instW / 2,
+      y: flipY(rawY) - instH / 2,
+      w: Math.round(instW),
+      h: Math.round(instH),
       attributes: flattenAttributes(pif),
       sourcePath: ['conceptualModel', 'processInstrumentationFunctions', pif.id],
     };
@@ -506,8 +605,12 @@ export function projectToView(model: DexpiModel): PidView {
     const actFallback = nextFallback(350, 350);
     const rawX = position?.location.x ?? actFallback.x;
     const rawY = position?.location.y ?? actFallback.y;
-    const aw = 44 * scale;
-    const ah = 52 * scale;
+    const actuatorScale = actuator?.scale;
+    const actShape = getComponentShape(actuator?.componentName);
+    const nominalActW = actShape?.w ?? NOMINAL_ACTUATOR_SYMBOL_W;
+    const nominalActH = actShape?.h ?? NOMINAL_ACTUATOR_SYMBOL_H;
+    const aw = (actuatorScale ? nominalActW * actuatorScale.x : 44) * U * scale;
+    const ah = (actuatorScale ? nominalActH * actuatorScale.y : 52) * U * scale;
 
     const actId = act.proteusId || act.id;
 
@@ -515,9 +618,10 @@ export function projectToView(model: DexpiModel): PidView {
       id: actId,
       kind: 'actuator',
       dexpiClass: 'ActuatingSystem',
+      componentName: actuator?.componentName,
       tagName: act.actuatingSystemNumber || actId,
-      x: scaleX(rawX),
-      y: flipY(rawY, ah / scale),
+      x: scaleX(rawX) - aw / 2,
+      y: flipY(rawY) - ah / 2,
       w: Math.round(aw),
       h: Math.round(ah),
       attributes: flattenAttributes(act),
