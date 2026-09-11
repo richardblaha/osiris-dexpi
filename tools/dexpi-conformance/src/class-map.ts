@@ -45,7 +45,12 @@ export function classesEquivalent(a: string, b: string): boolean {
   const nb = norm(b);
   if (!na || !nb) return true; // unknown on either side → don't cry wolf
   if (na === nb) return true;
+  // "Unknown" (our extraction gave up) and "CustomEquipment" (pyDEXPI has no
+  // specific Python class for this ComponentClass and fell back to a generic
+  // one) both mean "the source of truth didn't have a specific name" — not a
+  // real class disagreement, so don't flag it as one.
   if (na === 'unknown' || nb === 'unknown') return true;
+  if (na === 'customequipment' || nb === 'customequipment') return true;
   const ga = GROUP_OF.get(na);
   const gb = GROUP_OF.get(nb);
   if (ga !== undefined && ga === gb) return true;

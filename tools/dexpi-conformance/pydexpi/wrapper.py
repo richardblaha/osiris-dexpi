@@ -108,6 +108,8 @@ def render(in_path: Path, out_path: Path, pretty: bool) -> dict:
     from pydexpi.loaders.proteus_serializer import ProteusSerializer
     from pydexpi.loaders.svg_loader import DrawDiagram
 
+    from model_dump import classmap_for_model  # same directory, see sys.path below
+
     xml, notes = sanitize(in_path.read_text(encoding="utf-8"))
 
     try:
@@ -135,6 +137,18 @@ def render(in_path: Path, out_path: Path, pretty: bool) -> dict:
             "reason": f"render failed — {exc.__class__.__name__}: {exc}",
             "notes": notes,
         }
+
+    # Class map: rendered `<g id>` -> real DEXPI class + tag, from the SAME
+    # `model` instance that was just rendered. It MUST be the same instance —
+    # pydantic mints a fresh id for every load_from_string() call, so a second,
+    # separate parse of identical XML would produce a classmap that doesn't
+    # match this SVG's `<g id>` values at all (see model_dump.py's docstring).
+    classmap_path = out_path.with_suffix(".classmap.json")
+    try:
+        classmap = classmap_for_model(model)
+        classmap_path.write_text(json.dumps({"groups": classmap}, indent=2), encoding="utf-8")
+    except Exception as exc:  # noqa: BLE001 — the classmap is an enhancement, not required
+        notes.append(f"classmap generation failed ({exc.__class__.__name__}: {exc}); reference class names will fall back to shape-name guessing")
 
     return {
         "status": "ok",

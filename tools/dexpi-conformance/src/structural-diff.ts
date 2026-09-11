@@ -14,7 +14,7 @@ import * as path from 'node:path';
 import { ProteusReader } from '../../../src/model/proteus/reader/index.js';
 import { projectToView } from '../../../src/model/view/projection.js';
 import { activeCorpus, loadCorpus } from './corpus.js';
-import { extractOurs, extractReference } from './model-extract.js';
+import { extractOurs, extractReference, loadClassMap } from './model-extract.js';
 import { classesEquivalent } from './class-map.js';
 import { CONFIG_JSON, OFFICIAL_SVG_DIR, REF_SVG_DIR, REPO_ROOT, RESULTS_JSON, REPORT_DIR } from './paths.js';
 import {
@@ -273,7 +273,9 @@ export function runDiff(only?: string): RunResults {
       continue;
     }
 
-    const refModel = extractReference(fs.readFileSync(refPath, 'utf-8'));
+    const classMapPath = path.join(REF_SVG_DIR, `${e.id}.classmap.json`);
+    const classMap = fs.existsSync(classMapPath) ? loadClassMap(classMapPath) : undefined;
+    const refModel = extractReference(fs.readFileSync(refPath, 'utf-8'), classMap);
     rows.push(diffOne(e.id, refModel, ourModel, cfg));
   }
 

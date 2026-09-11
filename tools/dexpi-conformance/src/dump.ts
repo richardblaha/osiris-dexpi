@@ -5,7 +5,7 @@ import * as path from 'node:path';
 import { ProteusReader } from '../../../src/model/proteus/reader/index.js';
 import { projectToView } from '../../../src/model/view/projection.js';
 import { loadCorpus } from './corpus.js';
-import { extractOurs, extractReference } from './model-extract.js';
+import { extractOurs, extractReference, loadClassMap } from './model-extract.js';
 import { OFFICIAL_SVG_DIR, REF_SVG_DIR, REPO_ROOT } from './paths.js';
 
 export function dump(id: string): void {
@@ -18,13 +18,16 @@ export function dump(id: string): void {
   const refSvgPath = [path.join(REF_SVG_DIR, `${id}.svg`), path.join(OFFICIAL_SVG_DIR, `${id}.svg`)].find((p) =>
     fs.existsSync(p)
   );
-  const ref = refSvgPath ? extractReference(fs.readFileSync(refSvgPath, 'utf-8')) : null;
+  const classMapPath = path.join(REF_SVG_DIR, `${id}.classmap.json`);
+  const classMap = fs.existsSync(classMapPath) ? loadClassMap(classMapPath) : undefined;
+  const ref = refSvgPath ? extractReference(fs.readFileSync(refSvgPath, 'utf-8'), classMap) : null;
 
   const show = (m: typeof ours) => {
     console.log(`  bbox ${JSON.stringify(m.bbox)}`);
     console.log(`  ${m.symbols.length} symbols:`);
+    const fmt = (n: number) => (Math.abs(n) >= 5 ? n.toFixed(0) : n.toPrecision(3));
     for (const s of m.symbols)
-      console.log(`    ${s.dexpiClass.padEnd(28)} @(${s.cx.toFixed(0)},${s.cy.toFixed(0)}) ${s.w.toFixed(0)}x${s.h.toFixed(0)} ${s.tag ?? ''}`);
+      console.log(`    ${s.dexpiClass.padEnd(28)} @(${fmt(s.cx)},${fmt(s.cy)}) ${fmt(s.w)}x${fmt(s.h)} ${s.tag ?? ''}`);
     console.log(`  ${m.connections.length} connections, ${m.labels.length} labels`);
   };
 

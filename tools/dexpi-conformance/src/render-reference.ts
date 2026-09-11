@@ -36,6 +36,7 @@ export interface ReferenceManifestEntry {
   primitives?: number; // drawn primitives in the reference SVG
   svg?: string; // repo-relative path to the generated reference SVG
   officialSvg?: string; // repo-relative path to a copied official reference SVG
+  classmap?: string; // repo-relative path to the representation-group -> DEXPI class map
 }
 
 interface ReferenceManifest {
@@ -77,6 +78,13 @@ async function renderOne(entry: CorpusEntry): Promise<ReferenceManifestEntry> {
     }
     const prims = (fs.readFileSync(outAbs, 'utf-8').match(/<(polyline|polygon|circle|ellipse|path|rect)\b/g) || []).length;
     const empty = prims < MIN_REFERENCE_PRIMITIVES;
+
+    // wrapper.py writes a sibling <id>.classmap.json (rendered `<g id>` -> real
+    // DEXPI class + tag) from the exact model instance it rendered — see
+    // pydexpi/model_dump.py's docstring for why it can't be a separate process.
+    const classmapAbs = outAbs.replace(/\.svg$/, '.classmap.json');
+    const classmap = fs.existsSync(classmapAbs) ? path.relative(REPO_ROOT, classmapAbs) : undefined;
+
     return {
       id: entry.id,
       status: empty ? 'empty' : 'ok',
@@ -86,6 +94,7 @@ async function renderOne(entry: CorpusEntry): Promise<ReferenceManifestEntry> {
       notes: res.notes ?? [],
       primitives: prims,
       svg: path.relative(REPO_ROOT, outAbs),
+      classmap,
     };
   } catch (err: unknown) {
     // wrapper exits 1 on unrenderable but still prints JSON on stdout

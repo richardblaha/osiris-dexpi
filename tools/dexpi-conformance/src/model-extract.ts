@@ -15,6 +15,7 @@
  */
 import './shim.js';
 
+import * as fs from 'node:fs';
 import type { PidView } from '../../../src/model/view/projection.js';
 import type { DiagramConnection, DiagramLabel, DiagramModel, DiagramSymbol } from './types.js';
 import { bboxValid, merge, subtreeBBox, subtreePolylines, type BBox } from './svg-geom.js';
@@ -106,7 +107,21 @@ function isNested(g: Element): boolean {
   return false;
 }
 
-export function extractReference(svg: string): DiagramModel {
+export type ReferenceClassMap = Map<string, { class: string; tag?: string | null }>;
+
+/** Loads a `<id>.classmap.json` written by pydexpi/model_dump.py. */
+export function loadClassMap(jsonPath: string): ReferenceClassMap | undefined {
+  try {
+    const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8')) as {
+      groups: Record<string, { class: string; tag?: string | null }>;
+    };
+    return new Map(Object.entries(data.groups));
+  } catch {
+    return undefined;
+  }
+}
+
+export function extractReference(svg: string, classMap?: ReferenceClassMap): DiagramModel {
   const doc = new DOMParser().parseFromString(svg, 'text/xml');
   const groups = Array.from(doc.getElementsByTagName('g')).filter(
     (g) => g.getAttribute('class') === 'representation-group'
@@ -123,12 +138,47 @@ export function extractReference(svg: string): DiagramModel {
     if (seen.has(id)) continue;
     if (g.childNodes.length === 0) continue; // the self-closing duplicate
     seen.add(id);
-    if (isNested(g)) continue;
 
     const box = subtreeBBox(g);
     if (!bboxValid(box)) continue;
-    bb = merge(bb, box);
     const c = centroid(box);
+
+    // Authoritative class from pyDEXPI's conceptual model (model_dump.py),
+    // keyed by this same RepresentationGroup id. This works regardless of
+    // nesting depth — a valve sitting inside a piping-network wrapper group is
+    // just as real a symbol as a top-level piece of equipment.
+    const known = classMap?.get(id);
+    if (known) {
+      if (known.class === 'Nozzle') continue; // ours excludes nozzles from symbols[] too
+      bb = merge(bb, box);
+      if (known.class === 'PipingNetworkSegment') {
+        // A segment is a connection in `ours` (an edge), not a symbol — route
+        // it the same way here, using its longest drawn polyline as the run.
+        const polys = subtreePolylines(g);
+        const longest = polys.sort((a, b) => b.length - a.length)[0] || [];
+        connections.push({ id, kind: 'pipe', polyline: longest.map(([x, y]) => ({ x, y })) });
+        continue;
+      }
+      symbols.push({
+        id,
+        dexpiClass: known.class,
+        kind: 'equipment',
+        cx: c.cx,
+        cy: c.cy,
+        w: c.w,
+        h: c.h,
+        rotation: 0,
+        mirrored: false,
+        tag: known.tag ?? undefined,
+      });
+      continue;
+    }
+
+    // No conceptual-model hit (classMap absent, or this is a structural
+    // wrapper group / pipe run with no represented object) — fall back to the
+    // shape-name heuristic, then the label / thin-pipe heuristics.
+    if (isNested(g)) continue; // avoid double-counting a wrapper's own bbox as a symbol
+    bb = merge(bb, box);
 
     if (isLabelGroup(g)) {
       const t = g.getElementsByTagName('text')[0];
@@ -152,17 +202,19 @@ export function extractReference(svg: string): DiagramModel {
       continue;
     }
 
-    symbols.push({
-      id,
-      dexpiClass: shape ? shapeNameToClass(shape) : 'Unknown',
-      kind: 'equipment',
-      cx: c.cx,
-      cy: c.cy,
-      w: c.w,
-      h: c.h,
-      rotation: 0,
-      mirrored: false,
-    });
+    if (shape) {
+      symbols.push({
+        id,
+        dexpiClass: shapeNameToClass(shape),
+        kind: 'equipment',
+        cx: c.cx,
+        cy: c.cy,
+        w: c.w,
+        h: c.h,
+        rotation: 0,
+        mirrored: false,
+      });
+    }
   }
 
   return {

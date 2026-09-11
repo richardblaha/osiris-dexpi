@@ -166,7 +166,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-aud-ex01",
@@ -174,7 +174,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-aud-ex02",
@@ -182,7 +182,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-aud-ex03",
@@ -190,7 +190,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-aud-ex04",
@@ -198,7 +198,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-avv-ex01",
@@ -238,7 +238,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-hex-ex03",
@@ -246,7 +246,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-ing-ex01",
@@ -270,7 +270,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 8 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 8 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-sag-ex02",
@@ -278,7 +278,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 8 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 8 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v01-ver-ex01",
@@ -294,7 +294,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v02-hex-ex1",
@@ -302,7 +302,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E01/e01v02-ver-ex01",
@@ -318,7 +318,7 @@
       "version": "1.2",
       "task": "E02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E02/e02v01-aud-ex02",
@@ -326,7 +326,7 @@
       "version": "1.2",
       "task": "E02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E02/e02v01-avv-ex01",
@@ -374,7 +374,7 @@
       "version": "1.2",
       "task": "E02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E02/e02v01-sag-ex01",
@@ -406,7 +406,7 @@
       "version": "1.2",
       "task": "E02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E02/e02v02-ver-ex01",
@@ -422,7 +422,7 @@
       "version": "1.2",
       "task": "E02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E02/e02v01-hex-ex04",
@@ -446,7 +446,7 @@
       "version": "1.2",
       "task": "E03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E03/e03v01-aud-ex02",
@@ -454,7 +454,7 @@
       "version": "1.2",
       "task": "E03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E03/e03v01-avv-ex01",
@@ -470,7 +470,7 @@
       "version": "1.2",
       "task": "E03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 7 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E03/e03v01-ver-ex01",
@@ -486,7 +486,7 @@
       "version": "1.2",
       "task": "E03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E04/e04v01-aud-ex01",
@@ -494,7 +494,7 @@
       "version": "1.2",
       "task": "E04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E04/e04v01-aud-ex02",
@@ -502,7 +502,7 @@
       "version": "1.2",
       "task": "E04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E04/e04v01-avv-ex01",
@@ -534,7 +534,7 @@
       "version": "1.2",
       "task": "E04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E05/e05v01-aud-ex01",
@@ -542,7 +542,7 @@
       "version": "1.2",
       "task": "E05",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E05/e05v01-aud-ex02",
@@ -550,7 +550,7 @@
       "version": "1.2",
       "task": "E05",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E05/e05v01-avv-ex01",
@@ -582,7 +582,7 @@
       "version": "1.2",
       "task": "E05",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E06/e06v01-hex-ex02",
@@ -598,7 +598,7 @@
       "version": "1.2",
       "task": "E06",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E06/e06v01-avv-ex01",
@@ -622,7 +622,7 @@
       "version": "1.2",
       "task": "E06",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E07/e07v01-hex-ex02",
@@ -630,7 +630,7 @@
       "version": "1.2",
       "task": "E07",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E07/e07v01-sag-ex01",
@@ -638,7 +638,7 @@
       "version": "1.2",
       "task": "E07",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E07/e07v01-ver-ex01",
@@ -654,7 +654,7 @@
       "version": "1.2",
       "task": "E08",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E09/e09v01-hex-ex02",
@@ -694,7 +694,7 @@
       "version": "1.2",
       "task": "E13",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 9 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 9 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/E14/e14v01-ver-ex01",
@@ -718,7 +718,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 14 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 14 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I01/i01v01-sag-ex01",
@@ -750,7 +750,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I01/i01v02-hex-ex03",
@@ -758,7 +758,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 14 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 14 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I01/i01v02-ing-ex01",
@@ -766,7 +766,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I01/i01v02-sag-ex01",
@@ -798,7 +798,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I01/i01v02-hex-ex1",
@@ -806,7 +806,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I01/i01v02-aud-ex01",
@@ -814,7 +814,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I02/i02-v01-ing-ex01",
@@ -822,7 +822,7 @@
       "version": "1.2",
       "task": "I02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 4 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I02/i02-v01-ing-ex02",
@@ -830,7 +830,7 @@
       "version": "1.2",
       "task": "I02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 4 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I02/i02v01-avv-ex01",
@@ -846,7 +846,7 @@
       "version": "1.2",
       "task": "I02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 4 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I02/i02v01-hex-ex03",
@@ -870,7 +870,7 @@
       "version": "1.2",
       "task": "I02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I02/i02v02-aud-ex01",
@@ -878,7 +878,7 @@
       "version": "1.2",
       "task": "I02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I03/i03v01-avv-ex01",
@@ -894,7 +894,7 @@
       "version": "1.2",
       "task": "I03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 9 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 9 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I03/i03v01-hex-ex03",
@@ -918,7 +918,7 @@
       "version": "1.2",
       "task": "I03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I03/i03v02-aud-ex01",
@@ -926,7 +926,7 @@
       "version": "1.2",
       "task": "I03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I04/i04-v01-ing-ex01",
@@ -934,7 +934,7 @@
       "version": "1.2",
       "task": "I04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 7 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I04/i04-v01-ing-ex02",
@@ -942,7 +942,7 @@
       "version": "1.2",
       "task": "I04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 7 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I04/i04-v01-ing-ex03",
@@ -950,7 +950,7 @@
       "version": "1.2",
       "task": "I04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 7 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I04/i04v01-hex-ex04",
@@ -958,7 +958,7 @@
       "version": "1.2",
       "task": "I04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 7 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I04/i04v01-hex-ex05",
@@ -982,7 +982,7 @@
       "version": "1.2",
       "task": "I04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I04/i04v02-aud-ex01",
@@ -990,7 +990,7 @@
       "version": "1.2",
       "task": "I04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I05/i05v01-sag-ex01",
@@ -1006,7 +1006,7 @@
       "version": "1.2",
       "task": "I05",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I05/i05v02-aud-ex01",
@@ -1014,7 +1014,7 @@
       "version": "1.2",
       "task": "I05",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I06/i06v01-sag-ex01",
@@ -1030,7 +1030,7 @@
       "version": "1.2",
       "task": "I06",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I06/i06v02-aud-ex01",
@@ -1038,7 +1038,7 @@
       "version": "1.2",
       "task": "I06",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I07/i07v01-sag-ex01",
@@ -1054,7 +1054,7 @@
       "version": "1.2",
       "task": "I07",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I07/i07v02-aud-ex01",
@@ -1062,7 +1062,7 @@
       "version": "1.2",
       "task": "I07",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I08/i08v01-sag-ex01",
@@ -1078,7 +1078,7 @@
       "version": "1.2",
       "task": "I08",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I08/i08v02-aud-ex01",
@@ -1086,7 +1086,7 @@
       "version": "1.2",
       "task": "I08",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I09/i09v01-sag-ex01",
@@ -1094,7 +1094,7 @@
       "version": "1.2",
       "task": "I09",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 14 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 14 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I09/i09v01-aud-ex01",
@@ -1102,7 +1102,7 @@
       "version": "1.2",
       "task": "I09",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I09/i09v02-hex-ex02",
@@ -1110,7 +1110,7 @@
       "version": "1.2",
       "task": "I09",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I09/i09v02-hex-ex03",
@@ -1126,7 +1126,7 @@
       "version": "1.2",
       "task": "I09",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I09/i09v02-aud-ex01",
@@ -1134,7 +1134,7 @@
       "version": "1.2",
       "task": "I09",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I10/i10v01-sag-ex01",
@@ -1142,7 +1142,7 @@
       "version": "1.2",
       "task": "I10",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 11 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 11 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I10/i10v01-aud-ex01",
@@ -1150,7 +1150,7 @@
       "version": "1.2",
       "task": "I10",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I10/i10v02-aud-ex01",
@@ -1158,7 +1158,7 @@
       "version": "1.2",
       "task": "I10",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I11/i11-v01-ing-ex01",
@@ -1166,7 +1166,7 @@
       "version": "1.2",
       "task": "I11",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 4 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I11/i11v01-hex-ex02",
@@ -1174,7 +1174,7 @@
       "version": "1.2",
       "task": "I11",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 2 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I11/i11v01-hex-ex03",
@@ -1198,7 +1198,7 @@
       "version": "1.2",
       "task": "I11",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I11/i11v02-aud-ex01",
@@ -1206,7 +1206,7 @@
       "version": "1.2",
       "task": "I11",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I12/i12-v01-ing-ex01",
@@ -1214,7 +1214,7 @@
       "version": "1.2",
       "task": "I12",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 4 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I12/i12v01-hex-ex02",
@@ -1222,7 +1222,7 @@
       "version": "1.2",
       "task": "I12",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 4 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I12/i12v01-hex-ex03",
@@ -1246,7 +1246,7 @@
       "version": "1.2",
       "task": "I12",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/I12/i12v02-aud-ex01",
@@ -1254,7 +1254,7 @@
       "version": "1.2",
       "task": "I12",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P01/p01v01-aud-ex01",
@@ -1262,7 +1262,7 @@
       "version": "1.2",
       "task": "P01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P01/p01v01-avv-ex01",
@@ -1294,7 +1294,7 @@
       "version": "1.2",
       "task": "P01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 11 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 11 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P01/p01v01-ing-ex02-aud-ex01",
@@ -1302,7 +1302,7 @@
       "version": "1.2",
       "task": "P01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P01/p01v01-ing-ex02",
@@ -1310,7 +1310,7 @@
       "version": "1.2",
       "task": "P01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 11 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 11 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P01/p01v01-sag-ex01",
@@ -1326,7 +1326,7 @@
       "version": "1.2",
       "task": "P01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P01/p01v01-sag-ex02",
@@ -1342,7 +1342,7 @@
       "version": "1.2",
       "task": "P01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P02/p02v01-intergraph-post",
@@ -1350,7 +1350,7 @@
       "version": "1.2",
       "task": "P02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 2 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P02/p02v01-intergraph-post-c",
@@ -1358,7 +1358,7 @@
       "version": "1.2",
       "task": "P02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 2 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P02/p02v01-ingv02-audv01",
@@ -1366,7 +1366,7 @@
       "version": "1.2",
       "task": "P02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P02/p02v01-avv-ex01",
@@ -1390,7 +1390,7 @@
       "version": "1.2",
       "task": "P02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P02/p02v01-sag-ex02",
@@ -1414,7 +1414,7 @@
       "version": "1.2",
       "task": "P02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 8 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 8 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P03/p03v01-aud-ex01",
@@ -1422,7 +1422,7 @@
       "version": "1.2",
       "task": "P03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P03/p03v01-avv-ex01",
@@ -1446,7 +1446,7 @@
       "version": "1.2",
       "task": "P03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P04/p04v01-aud-ex01",
@@ -1454,7 +1454,7 @@
       "version": "1.2",
       "task": "P04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.2/P04/p04v01-avv-ex01",
@@ -1486,7 +1486,7 @@
       "version": "1.2",
       "task": "P04",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 1 drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)"
     },
     {
       "id": "1.3/C01/c01v04-ver-ex01",
