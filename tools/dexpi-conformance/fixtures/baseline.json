@@ -8,7 +8,7 @@
     {
       "id": "1.2/C01/c01v01-hex-ex02",
       "status": "FAIL",
-      "structuralScore": 0.6774
+      "structuralScore": 0.7097
     },
     {
       "id": "1.2/C01/c01v01-hex-ex03",
@@ -23,7 +23,7 @@
     {
       "id": "1.2/C01/c01v01-sag-ex02",
       "status": "FAIL",
-      "structuralScore": 0.1471
+      "structuralScore": 0.1176
     },
     {
       "id": "1.2/C02/c02v01-hex-ex02",
@@ -193,7 +193,7 @@
     {
       "id": "1.2/I02/i02v01-sag-ex01",
       "status": "FAIL",
-      "structuralScore": 0.5
+      "structuralScore": 0
     },
     {
       "id": "1.2/I03/i03v01-hex-ex03",
@@ -223,7 +223,7 @@
     {
       "id": "1.2/I06/i06v01-sag-ex01",
       "status": "FAIL",
-      "structuralScore": 0
+      "structuralScore": 0.125
     },
     {
       "id": "1.2/I07/i07v01-sag-ex01",

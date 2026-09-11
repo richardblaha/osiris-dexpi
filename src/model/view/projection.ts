@@ -278,8 +278,14 @@ export function projectToView(model: DexpiModel): PidView {
     const eq = item as Equipment;
     const dexpiClass = eq.dexpiClass || 'Equipment';
 
-    const w = (eq.extent?.max.x && eq.extent?.min.x ? (eq.extent.max.x - eq.extent.min.x) * U : getDefaultWidth(dexpiClass)) * scale;
-    const h = (eq.extent?.max.y && eq.extent?.min.y ? (eq.extent.max.y - eq.extent.min.y) * U : getDefaultHeight(dexpiClass)) * scale;
+    // `extent?.max.x && extent?.min.x` used to gate on numeric truthiness, which
+    // wrongly fell through to the default size whenever a bound was exactly 0
+    // (common — extents are frequently expressed relative to the item's own
+    // position). Gate on the extent's *presence* instead.
+    const extW = eq.extent && eq.extent.max.x - eq.extent.min.x > 0 ? (eq.extent.max.x - eq.extent.min.x) * U : undefined;
+    const extH = eq.extent && eq.extent.max.y - eq.extent.min.y > 0 ? (eq.extent.max.y - eq.extent.min.y) * U : undefined;
+    const w = (extW ?? getDefaultWidth(dexpiClass)) * scale;
+    const h = (extH ?? getDefaultHeight(dexpiClass)) * scale;
 
     const rawX = eq.position?.location.x ?? 100 / U;
     const rawY = eq.position?.location.y ?? 100 / U;
@@ -361,8 +367,10 @@ export function projectToView(model: DexpiModel): PidView {
         if (!('dexpiClass' in comp)) continue;
         const pComp = comp as PipingComponent;
         const dexpiClass = pComp.dexpiClass || 'PipingComponent';
-        const cw = getDefaultWidth(dexpiClass) * scale;
-        const ch = getDefaultHeight(dexpiClass) * scale;
+        const compExtW = pComp.extent && pComp.extent.max.x - pComp.extent.min.x > 0 ? (pComp.extent.max.x - pComp.extent.min.x) * U : undefined;
+        const compExtH = pComp.extent && pComp.extent.max.y - pComp.extent.min.y > 0 ? (pComp.extent.max.y - pComp.extent.min.y) * U : undefined;
+        const cw = (compExtW ?? getDefaultWidth(dexpiClass)) * scale;
+        const ch = (compExtH ?? getDefaultHeight(dexpiClass)) * scale;
 
         const rawX = pComp.position?.location.x ?? 200 / U;
         const rawY = pComp.position?.location.y ?? 200 / U;
