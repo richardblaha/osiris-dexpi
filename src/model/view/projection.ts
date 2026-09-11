@@ -479,8 +479,16 @@ export function projectToView(model: DexpiModel): PidView {
 
   // 4. Actuating Systems
   for (const act of cm.actuatingSystems) {
-    const rawX = act.position?.location.x ?? 350 / U;
-    const rawY = act.position?.location.y ?? 350 / U;
+    // `<ActuatingSystem>` itself rarely carries its own <Position> — the real
+    // placement lives on its first `<ActuatingSystemComponent>` child (the
+    // controlled actuator), which projectToView used to ignore entirely, so
+    // every actuator without an (essentially always absent) system-level
+    // position fell back to the same fixed point and stacked on top of each
+    // other.
+    const actuator = act.controlledActuators?.[0];
+    const position = act.position ?? actuator?.position;
+    const rawX = position?.location.x ?? 350 / U;
+    const rawY = position?.location.y ?? 350 / U;
     const aw = 44 * scale;
     const ah = 52 * scale;
 
