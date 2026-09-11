@@ -26,6 +26,7 @@ import { dump } from './dump.js';
 import { renderReport } from './report.js';
 import { runVisualDiff } from './visual-diff.js';
 import { checkRegression, writeBaseline } from './baseline.js';
+import { renderSymbolMatrix } from './symbol-matrix.js';
 
 function parseArgs(argv: string[]): { cmd: string; only?: string; flags: Set<string> } {
   const [cmd = 'run', ...rest] = argv;
@@ -110,7 +111,7 @@ async function main(): Promise<void> {
       console.log(`report → ${new URL('../report/index.html', import.meta.url).pathname}`);
       return;
     case 'symbol-matrix':
-      return notImplemented('symbol-matrix');
+      return void renderSymbolMatrix();
     case 'baseline':
       return void writeBaseline();
     case 'check-regression':
