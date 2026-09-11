@@ -23,7 +23,7 @@
     {
       "id": "1.2/C01/c01v01-sag-ex02",
       "status": "FAIL",
-      "structuralScore": 0.1176
+      "structuralScore": 0.1765
     },
     {
       "id": "1.2/C02/c02v01-hex-ex02",
@@ -98,11 +98,11 @@
     {
       "id": "1.2/E02/e02v01-sag-ex01",
       "status": "FAIL",
-      "structuralScore": 0
+      "structuralScore": 0.25
     },
     {
       "id": "1.2/E02/e02v01-sag-ex02",
-      "status": "FAIL",
+      "status": "PASS",
       "structuralScore": 1
     },
     {
@@ -117,7 +117,7 @@
     },
     {
       "id": "1.2/E04/e04v01-sag-ex01",
-      "status": "FAIL",
+      "status": "PASS",
       "structuralScore": 1
     },
     {
@@ -168,7 +168,7 @@
     {
       "id": "1.2/I01/i01v01-sag-ex02",
       "status": "FAIL",
-      "structuralScore": 0
+      "structuralScore": 0.5
     },
     {
       "id": "1.2/I01/i01v02-sag-ex01",
@@ -193,7 +193,7 @@
     {
       "id": "1.2/I02/i02v01-sag-ex01",
       "status": "FAIL",
-      "structuralScore": 0
+      "structuralScore": 0.5
     },
     {
       "id": "1.2/I03/i03v01-hex-ex03",
@@ -287,13 +287,13 @@
     },
     {
       "id": "1.2/P03/p03v01-sag-ex01",
-      "status": "FAIL",
-      "structuralScore": 0
+      "status": "WARN",
+      "structuralScore": 1
     },
     {
       "id": "1.2/P04/p04v01-sag-ex01",
-      "status": "FAIL",
-      "structuralScore": 0
+      "status": "WARN",
+      "structuralScore": 1
     },
     {
       "id": "1.3/C01/c01v04-ver-ex01",

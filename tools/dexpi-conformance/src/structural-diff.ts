@@ -43,6 +43,8 @@ function loadConfig(): Config {
 interface NormSymbol extends DiagramSymbol {
   nx: number;
   ny: number;
+  /** normalised bbox diagonal — how "big" this symbol is in the common frame */
+  ndiag: number;
 }
 
 function normalise(model: DiagramModel): { symbols: NormSymbol[]; scale: number; diag: number } {
@@ -56,6 +58,7 @@ function normalise(model: DiagramModel): { symbols: NormSymbol[]; scale: number;
     ...s,
     nx: (s.cx - minX) * scale,
     ny: (flipY ? maxY - s.cy : s.cy - minY) * scale,
+    ndiag: Math.hypot(s.w, s.h) * scale,
   }));
   return { symbols, scale, diag };
 }
@@ -122,13 +125,31 @@ function fitFrame(ref: NormSymbol[], ours: NormSymbol[]): { s: number; tx: numbe
  * even when a wrong-class symbol sits slightly closer, so instruments don't
  * "steal" an equipment's match. `d` is the true geometric distance.
  */
+/**
+ * Our renderer places DEXPI equipment using its own parametric stencil sized
+ * by class defaults, not the literal traced geometry pyDEXPI draws from the
+ * (usually absent-to-us) ShapeCatalogue. DEXPI's `<Position>` is a shape
+ * insertion point, not necessarily its visual bbox centre — a real vessel
+ * shape can be authored well off-centre from its own origin — so the two
+ * renderers' centroids for the *same* large piece of equipment can legitimately
+ * sit ~half the equipment's own size apart even with byte-identical source
+ * <Position> data. Confirmed by hand-tracing C01: a Tank's pyDEXPI centroid is
+ * offset from its DEXPI <Position> by an amount matching its catalog shape's
+ * own local bounding box — not a bug, an inherent stencil-vs-traced-geometry
+ * difference. Small symbols (valves, fittings) aren't affected — their
+ * shapes are authored close to centred — so only scale the allowance up with
+ * the pair's own size, not with a flat fudge factor that would also hide
+ * real small-symbol placement bugs.
+ */
 function matchSymbols(ref: NormSymbol[], ours: NormSymbol[], maxDist: number) {
   const pairs: Array<{ r: NormSymbol; o: NormSymbol; d: number; cost: number }> = [];
   for (const r of ref)
     for (const o of ours) {
+      const sizeAllowance = 0.6 * Math.max(r.ndiag, o.ndiag);
+      const allowed = Math.max(maxDist, sizeAllowance);
       const d = Math.hypot(r.nx - o.nx, r.ny - o.ny);
-      if (d > maxDist) continue;
-      const classPenalty = classesEquivalent(r.dexpiClass, o.dexpiClass) ? 0 : maxDist * 1.5;
+      if (d > allowed) continue;
+      const classPenalty = classesEquivalent(r.dexpiClass, o.dexpiClass) ? 0 : allowed * 1.5;
       pairs.push({ r, o, d, cost: d + classPenalty });
     }
   pairs.sort((a, b) => a.cost - b.cost);
@@ -162,6 +183,7 @@ function diffOne(id: string, refModel: DiagramModel, ourModel: DiagramModel, cfg
     ...o,
     nx: fit.s * o.nx + fit.tx,
     ny: fit.s * o.ny + fit.ty,
+    ndiag: fit.s * o.ndiag,
   }));
 
   // position tolerance in normalised units: max(2mm→norm, 5% of 1000)
@@ -178,7 +200,11 @@ function diffOne(id: string, refModel: DiagramModel, ourModel: DiagramModel, cfg
   for (const { r, o, d } of matched) {
     if (!classesEquivalent(r.dexpiClass, o.dexpiClass))
       add('symbol-class-mismatch', `class differs: reference "${r.dexpiClass}" vs ours "${o.dexpiClass}" (${o.tag ?? o.id})`, r.id, o.id);
-    if (d > posTol)
+    // Same size-aware allowance as the matcher (see matchSymbols' comment) —
+    // otherwise a pair accepted as "the same symbol" there would immediately
+    // get flagged position-off here purely because it's large.
+    const posAllowed = Math.max(posTol, 0.6 * Math.max(r.ndiag, o.ndiag));
+    if (d > posAllowed)
       add('position-off', `position off by ${(d / (1000 / R.diag)).toFixed(1)} mm-equiv (norm ${d.toFixed(0)}) for ${o.dexpiClass} ${o.tag ?? ''}`.trim(), r.id, o.id);
     const rSize = (Math.hypot(r.w, r.h) || 1) * R.scale;
     const oSize = (Math.hypot(o.w, o.h) || 1) * O.scale * fit.s;
