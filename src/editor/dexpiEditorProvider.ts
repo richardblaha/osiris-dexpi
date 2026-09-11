@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { CUSTOM_EDITOR_VIEW_TYPE } from '../common/constants';
+import { CUSTOM_EDITOR_VIEW_TYPES } from '../common/constants';
 import { WebviewToExtensionMessage } from '../common/types';
 import { ProteusReader } from '../model/proteus/reader';
 import { projectToView } from '../model/view/projection';
@@ -8,7 +8,6 @@ import { DexpiSyncManager } from './syncManager';
 import { editorHub } from './editorHub';
 
 export class DexpiEditorProvider implements vscode.CustomTextEditorProvider {
-  private static readonly viewType = CUSTOM_EDITOR_VIEW_TYPE;
   private static readonly activeSyncManagers = new Map<vscode.WebviewPanel, DexpiSyncManager>();
   private readonly validator = new DexpiValidator();
   private readonly diagnosticCollection: vscode.DiagnosticCollection;
@@ -26,10 +25,17 @@ export class DexpiEditorProvider implements vscode.CustomTextEditorProvider {
 
   public static register(context: vscode.ExtensionContext): vscode.Disposable {
     const provider = new DexpiEditorProvider(context);
-    return vscode.window.registerCustomEditorProvider(DexpiEditorProvider.viewType, provider, {
-      webviewOptions: { retainContextWhenHidden: true },
-      supportsMultipleEditorsPerDocument: true,
-    });
+    // Bind the same provider under both view types: the narrow, DEXPI-specific
+    // extensions (.dexpi, .proteus.xml, ...) get it as the default editor, while
+    // generic *.xml files (the official Proteus/DEXPI extension, but shared with
+    // countless non-DEXPI documents) only offer it as an "Open With" option.
+    const disposables = CUSTOM_EDITOR_VIEW_TYPES.map((viewType) =>
+      vscode.window.registerCustomEditorProvider(viewType, provider, {
+        webviewOptions: { retainContextWhenHidden: true },
+        supportsMultipleEditorsPerDocument: true,
+      })
+    );
+    return vscode.Disposable.from(...disposables);
   }
 
   public async resolveCustomTextEditor(

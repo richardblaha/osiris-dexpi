@@ -1,9 +1,14 @@
 export const EXTENSION_ID = 'osiris-dexpi';
 export const CUSTOM_EDITOR_VIEW_TYPE = 'osiris.dexpiEditor';
+/** Secondary registration of the same editor, contributed at "option" priority for generic `*.xml` files
+ *  (Proteus/DEXPI XML has no reserved extension of its own) so it doesn't hijack every XML file by default. */
+export const CUSTOM_EDITOR_VIEW_TYPE_XML = 'osiris.dexpiEditor.xml';
+export const CUSTOM_EDITOR_VIEW_TYPES = [CUSTOM_EDITOR_VIEW_TYPE, CUSTOM_EDITOR_VIEW_TYPE_XML] as const;
 
 export const COMMANDS = {
   OPEN_DESIGN: 'osiris-dexpi.openDesign',
   OPEN_SOURCE: 'osiris-dexpi.openSource',
+  OPEN_ARCHIVE: 'osiris-dexpi.openArchive',
   EXPORT_SVG: 'osiris-dexpi.exportSvg',
   VALIDATE: 'osiris-dexpi.validate',
   START_MCP: 'osiris-dexpi.startMcpServer',

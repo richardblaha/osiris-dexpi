@@ -32,8 +32,11 @@
   },
   "activationEvents": [
     "onCustomEditor:osiris.dexpiEditor",
+    "onCustomEditor:osiris.dexpiEditor.xml",
+    "onFileSystem:dexpi-zip",
     "onCommand:osiris-dexpi.openDesign",
     "onCommand:osiris-dexpi.openSource",
+    "onCommand:osiris-dexpi.openArchive",
     "onCommand:osiris-dexpi.startMcpServer"
   ],
   "contributes": {
@@ -44,9 +47,31 @@
         "selector": [
           {
             "filenamePattern": "*.dexpi"
+          },
+          {
+            "filenamePattern": "*.proteus.xml"
+          },
+          {
+            "filenamePattern": "*.dexpi.xml"
+          },
+          {
+            "filenamePattern": "*.pid.xml"
+          },
+          {
+            "filenamePattern": "*.plant.xml"
           }
         ],
         "priority": "default"
+      },
+      {
+        "viewType": "osiris.dexpiEditor.xml",
+        "displayName": "Osiris DEXPI Visual Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.xml"
+          }
+        ],
+        "priority": "option"
       }
     ],
     "commands": [
@@ -61,6 +86,12 @@
         "title": "Open Source (XML)",
         "category": "Osiris DEXPI",
         "icon": "$(code)"
+      },
+      {
+        "command": "osiris-dexpi.openArchive",
+        "title": "Open DEXPI P&ID from Archive (.zip)...",
+        "category": "Osiris DEXPI",
+        "icon": "$(file-zip)"
       },
       {
         "command": "osiris-dexpi.exportSvg",
@@ -84,23 +115,35 @@
       "editor/title": [
         {
           "command": "osiris-dexpi.openDesign",
-          "when": "resourceExtname == .dexpi && activeCustomEditorId != osiris.dexpiEditor",
+          "when": "(resourceExtname == .dexpi || resourceExtname == .xml) && activeCustomEditorId != osiris.dexpiEditor && activeCustomEditorId != osiris.dexpiEditor.xml",
           "group": "navigation@1"
         },
         {
           "command": "osiris-dexpi.openSource",
-          "when": "activeCustomEditorId == osiris.dexpiEditor",
+          "when": "activeCustomEditorId == osiris.dexpiEditor || activeCustomEditorId == osiris.dexpiEditor.xml",
           "group": "navigation@1"
         },
         {
           "command": "osiris-dexpi.validate",
-          "when": "activeCustomEditorId == osiris.dexpiEditor",
+          "when": "activeCustomEditorId == osiris.dexpiEditor || activeCustomEditorId == osiris.dexpiEditor.xml",
           "group": "navigation@2"
         },
         {
           "command": "osiris-dexpi.exportSvg",
-          "when": "activeCustomEditorId == osiris.dexpiEditor",
+          "when": "activeCustomEditorId == osiris.dexpiEditor || activeCustomEditorId == osiris.dexpiEditor.xml",
           "group": "navigation@3"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "osiris-dexpi.openArchive",
+          "when": "resourceExtname == .zip",
+          "group": "navigation@1"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "osiris-dexpi.openArchive"
         }
       ]
     },
@@ -154,12 +197,14 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
+    "adm-zip": "^0.5.18",
     "fast-xml-parser": "^4.5.1",
     "rbush": "^4.0.1",
     "ws": "^8.18.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.8",
     "@types/node": "^22.13.9",
     "@types/vscode": "^1.90.0",
     "@types/ws": "^8.5.14",

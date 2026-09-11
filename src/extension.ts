@@ -6,6 +6,9 @@ import { DexpiEditorProvider } from './editor/dexpiEditorProvider';
 import { editorHub } from './editor/editorHub';
 import { SymbolsViewProvider, PropertiesViewProvider } from './panel/pidViews';
 import { DexpiModelService } from './model/service';
+import { isDexpiFileName } from './common/fileTypes';
+import { DEXPI_ZIP_SCHEME, DexpiZipFsProvider } from './editor/dexpiZipFsProvider';
+import { openDexpiArchive } from './editor/dexpiArchive';
 
 let ipcServer: http.Server | null = null;
 let outputChannel: vscode.OutputChannel;
@@ -30,6 +33,12 @@ export function activate(context: vscode.ExtensionContext): void {
     { dispose: () => editorHub.dispose() }
   );
 
+  context.subscriptions.push(
+    vscode.workspace.registerFileSystemProvider(DEXPI_ZIP_SCHEME, new DexpiZipFsProvider(), {
+      isCaseSensitive: true,
+    })
+  );
+
   // 2. Register Commands
   context.subscriptions.push(
     vscode.commands.registerCommand(COMMANDS.OPEN_DESIGN, async (uri?: vscode.Uri) => {
@@ -45,6 +54,12 @@ export function activate(context: vscode.ExtensionContext): void {
       // Flush in-memory canvas edits before switching to text editor
       await DexpiEditorProvider.flushAll();
       await vscode.commands.executeCommand('workbench.action.toggleEditorType');
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand(COMMANDS.OPEN_ARCHIVE, async (uri?: vscode.Uri) => {
+      await openDexpiArchive(uri);
     })
   );
 
@@ -106,14 +121,12 @@ function getActiveDexpiDocument(): vscode.TextDocument | undefined {
   if (hubDoc) return hubDoc;
 
   const activeEditor = vscode.window.activeTextEditor;
-  if (activeEditor && (activeEditor.document.fileName.endsWith('.dexpi') || activeEditor.document.fileName.endsWith('.xml'))) {
+  if (activeEditor && isDexpiFileName(activeEditor.document.fileName)) {
     return activeEditor.document;
   }
 
   // Fallback: search open text documents
-  const dexpiDocs = vscode.workspace.textDocuments.filter(
-    (d) => d.fileName.endsWith('.dexpi') || d.fileName.endsWith('.xml')
-  );
+  const dexpiDocs = vscode.workspace.textDocuments.filter((d) => isDexpiFileName(d.fileName));
   return dexpiDocs[0];
 }
 
