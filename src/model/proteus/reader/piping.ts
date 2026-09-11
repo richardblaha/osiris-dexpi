@@ -90,7 +90,12 @@ export function parsePipingComponent(node: RawNode, ctx: ParseContext): PipingCo
     proteusId,
     dexpiClass,
     componentClassUri,
-    tagName: tagName || proteusId,
+    // Most Proteus piping components (valves, tees, reducers...) carry no
+    // `TagName` at all — leave it unset rather than falling back to the raw
+    // element ID, or every untagged symbol would show its internal XML ID as
+    // a label (e.g. "GlobeValve-2", "PipeTee-3") instead of staying unlabeled
+    // like the reference renderer draws them.
+    tagName,
     nodes,
     position,
     extent,

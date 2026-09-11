@@ -276,6 +276,7 @@ const RDL_CLASS_ALIASES: Record<string, string> = {
   PressureVessel: 'VerticalVessel',
   ProcessColumn: 'DistillationColumn',
   PlateAndShellHeatExchanger: 'PlateHeatExchanger',
+  TubularHeatExchanger: 'ShellAndTubeHeatExchanger',
   ReciprocatingPump: 'PositiveDisplacementPump',
   DisplacementPump: 'PositiveDisplacementPump',
   // Valves

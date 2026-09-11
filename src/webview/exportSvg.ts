@@ -213,6 +213,8 @@ export function renderPidViewDiagramMarkup(view: PidView, options: DiagramMarkup
   parts.push('</g>');
 
   // 4. Render Nodes & Stencils
+  const labelCandidates: LabelCandidate[] = [];
+
   parts.push('<g id="symbols">');
   for (const node of view.nodes) {
     // Skip standalone child nozzles here; they are rendered with their parent equipment
@@ -235,12 +237,11 @@ export function renderPidViewDiagramMarkup(view: PidView, options: DiagramMarkup
     renderNodeBody(node, w, h, parts);
     parts.push('</g>');
 
-    // Tag name label (always upright, not rotated/mirrored)
+    // Tag name label (always upright, not rotated/mirrored) — collected now,
+    // placed after every shape is known so overlapping labels can be nudged
+    // apart instead of stacking on top of each other.
     if (node.tagName) {
-      const tagY = node.y + h + 14;
-      parts.push(
-        `<text class="tag-text" x="${cx.toFixed(1)}" y="${tagY.toFixed(1)}">${node.tagName}</text>`
-      );
+      addLabelCandidate(labelCandidates, node.tagName, cx, node.y + h + 14, 'tag-text', 11);
     }
 
     // Render explicit child nozzles attached to this equipment
@@ -252,15 +253,71 @@ export function renderPidViewDiagramMarkup(view: PidView, options: DiagramMarkup
         `<rect class="nozzle-shape" x="${noz.x}" y="${noz.y}" width="${nw}" height="${nh}" rx="1" />`
       );
       if (noz.tagName) {
-        parts.push(
-          `<text class="sub-tag" x="${(noz.x + nw * 0.5).toFixed(1)}" y="${(noz.y - 3).toFixed(1)}">${noz.tagName}</text>`
-        );
+        addLabelCandidate(labelCandidates, noz.tagName, noz.x + nw * 0.5, noz.y - 3, 'sub-tag', 8);
       }
     }
   }
   parts.push('</g>');
 
+  // 5. Render Labels — on top of every shape, nudged apart where they'd overlap.
+  parts.push('<g id="labels">');
+  for (const box of resolveLabelCollisions(labelCandidates)) {
+    parts.push(`<text class="${box.cls}" x="${box.x.toFixed(1)}" y="${box.y.toFixed(1)}">${box.text}</text>`);
+  }
+  parts.push('</g>');
+
   return parts.join('\n');
+}
+
+interface LabelCandidate {
+  text: string;
+  /** Anchor is horizontally centered on `x`, baseline at `y` (matches `text-anchor: middle`). */
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  cls: string;
+}
+
+/** Rough (monospace-ish) text width estimate — no DOM/canvas metrics available at export time. */
+function addLabelCandidate(out: LabelCandidate[], text: string, x: number, y: number, cls: string, fontSize: number): void {
+  out.push({ text, x, y, w: text.length * fontSize * 0.6, h: fontSize * 1.2, cls });
+}
+
+/**
+ * Greedily nudges each label straight down, in placement order, until it no
+ * longer overlaps an already-placed label's box. Not a true force-directed
+ * layout — just enough to stop adjacent small components' tags from stacking
+ * directly on top of each other, which is the common case on a dense P&ID.
+ */
+function resolveLabelCollisions(candidates: LabelCandidate[]): LabelCandidate[] {
+  const placed: LabelCandidate[] = [];
+  const padding = 1;
+  const maxAttempts = 8;
+
+  for (const candidate of candidates) {
+    let box = { ...candidate };
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      const overlapping = placed.find((p) => boxesOverlap(box, p, padding));
+      if (!overlapping) break;
+      box = { ...box, y: box.y + box.h + padding };
+    }
+    placed.push(box);
+  }
+
+  return placed;
+}
+
+function boxesOverlap(a: LabelCandidate, b: LabelCandidate, padding: number): boolean {
+  const aLeft = a.x - a.w / 2 - padding;
+  const aRight = a.x + a.w / 2 + padding;
+  const aTop = a.y - a.h - padding;
+  const aBottom = a.y + padding;
+  const bLeft = b.x - b.w / 2 - padding;
+  const bRight = b.x + b.w / 2 + padding;
+  const bTop = b.y - b.h - padding;
+  const bBottom = b.y + padding;
+  return aLeft < bRight && aRight > bLeft && aTop < bBottom && aBottom > bTop;
 }
 
 function resolveElementType(kind: string): SymbolElementType {

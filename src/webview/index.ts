@@ -41,16 +41,9 @@ async function initWebview(): Promise<void> {
       onZoomReset: () => canvas?.zoomReset(),
       onZoomFit: () => canvas?.zoomFit(),
       onToggleGrid: () => canvas?.toggleGrid(),
-      onUndo: () => canvas?.undo(),
-      onRedo: () => canvas?.redo(),
-      onRotate: () => canvas?.rotateSelected(),
-      onMirror: () => canvas?.mirrorSelected(),
-      onReverseFlow: () => canvas?.reverseFlowSelected(),
-      onToggleLineMode: () => {
-        const next = canvas?.toggleLineMode();
-        if (next) overlay.setLineMode(next);
-      },
-      onDelete: () => canvas?.deleteSelected(),
+      // Editing (undo/redo/rotate/mirror/flow-reverse/line-mode/delete) is off for
+      // now while diagram rendering fidelity is being tuned — see
+      // WebGpuVisualCanvas.INTERACTIVE_EDITING. Only pan/zoom/grid stay live.
     },
     { position: readState().overlayPosition ?? 'top-right' }
   );

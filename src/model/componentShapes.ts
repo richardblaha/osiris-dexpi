@@ -116,32 +116,16 @@ export const COMPONENT_SHAPES: Record<string, ComponentShapeDef> = {
       arc([-10, 12.5], [10, 12.5], 21.25),
     ],
   },
-  PLATE_TYPE_HEAT_EXCHANGER_SHAPE: {
-    w: 30,
-    h: 10,
-    primitives: [
-      poly([-15, -5], [15, -5], [15, 5], [-15, 5], [-15, -5]),
-      poly([-12.5, -5], [12.5, 5]),
-      poly([-12.5, 5], [12.5, -5]),
-      poly([-7.5, -5], [-7.5, 5]),
-      poly([0, -5], [0, 5]),
-      poly([7.5, -5], [7.5, 5]),
-    ],
-  },
-  FLOATING_HEAD_TUBE_BUNDLE_HEAT_EXCHANGER_SHAPE: {
-    w: 35,
-    h: 10,
-    primitives: [
-      poly([-17.5, -5], [17.5, -5], [17.5, 5], [-17.5, 5], [-17.5, -5]),
-      poly([-12.5, -5], [-12.5, 5]),
-      poly([-17.5, 0], [-12.5, 0]),
-      poly([-12.5, -2.5], [10, -2.5]),
-      poly([-12.5, -0.833333], [10, -0.833333]),
-      poly([-12.5, 0.833333], [10, 0.833333]),
-      poly([-12.5, 2.5], [10, 2.5]),
-      poly([10, -3.75], [12.5, -3.75], [12.5, 3.75], [10, 3.75], [10, -3.75]),
-    ],
-  },
+  // PLATE_TYPE_HEAT_EXCHANGER_SHAPE and FLOATING_HEAD_TUBE_BUNDLE_HEAT_EXCHANGER_SHAPE
+  // intentionally omitted: this hand-rolled approximation drew a short, wide box
+  // with a single crosshatch, when the real pyDEXPI reference render (and the
+  // vendored draw.io "Plate and Frame Heat Exchanger" / "Heat Exchanger (Straight
+  // Tubes)" stencils in maxgraph/stencils/vendor/heat_exchangers.xml) draw a tall
+  // multi-plate box and a tube-bundle box respectively — genuinely different
+  // shapes, not just differently scaled. Leaving these two out of this table lets
+  // `renderNodeBody` (exportSvg.ts) fall through to those stencils instead. The
+  // native w/h used for Scale-based sizing lives on in `getNominalEquipmentSize`
+  // below (30x10 / 35x10), unchanged.
   CONTROLLED_ACTUATOR_SHAPE: {
     w: 18,
     h: 9,

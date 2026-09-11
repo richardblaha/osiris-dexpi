@@ -6,7 +6,7 @@
 
 import type { DexpiModel } from '../classes/dexpiModel';
 import type { TaggedPlantItem, Equipment, Nozzle } from '../classes/equipment';
-import type { PipingComponent } from '../classes/piping';
+import type { PipingComponent, Pipe } from '../classes/piping';
 import type { ProcessInstrumentationFunction, ActuatingSystem } from '../classes/instrumentation';
 import { getComponentShape } from '../componentShapes';
 
@@ -495,7 +495,10 @@ export function projectToView(model: DexpiModel): PidView {
           dexpiClass,
           componentClassUri: pComp.componentClassUri,
           componentName: pComp.componentName,
-          tagName: pComp.tagName || compId,
+          // No fallback to the raw element ID here: most piping components
+          // legitimately carry no TagName, and `PidViewNode.tagName` being ''
+          // is what suppresses the label in the renderer (see exportSvg.ts).
+          tagName: pComp.tagName || '',
           x: cx,
           y: cy,
           w: Math.round(cw),
@@ -510,24 +513,52 @@ export function projectToView(model: DexpiModel): PidView {
 
       // Segment Connections / Pipes
       const label = [seg.fluidCode, seg.nominalDiameterRepresentation].filter(Boolean).join(' ') || pns.lineNumber || '';
+      const segId = seg.proteusId || seg.id;
 
-      const waypoints = seg.centerLine?.points
-        ? seg.centerLine.points.map((pt) => ({
-            x: scaleX(pt.x),
-            y: flipY(pt.y),
-          }))
-        : [];
+      // A `<PipingNetworkSegment>` can chain several inline components, each
+      // separated by its own `<CenterLine>` leg (e.g. tap -> valve -> tee -> next
+      // tap) — `resolveSegmentConnections` (piping.ts) already resolves each leg's
+      // own source/target into `seg.connections` (one `Pipe`/`DirectPipingConnection`
+      // per leg). The old code drew only the segment's first-seen CenterLine as a
+      // single edge, silently discarding every leg after the first inline component
+      // and leaving visible gaps wherever a segment had more than one.
+      const pipeLegs = seg.connections.filter(
+        (c): c is Pipe => !!(c as Pipe).centerLine?.points?.length
+      );
 
-      if (seg.sourceItem && seg.targetItem) {
-        const segId = seg.proteusId || seg.id;
+      if (pipeLegs.length > 0) {
+        pipeLegs.forEach((leg, legIdx) => {
+          const waypoints = leg.centerLine!.points.map((pt) => ({ x: scaleX(pt.x), y: flipY(pt.y) }));
+          if (waypoints.length < 2) return;
+          const edge: PidViewEdge = {
+            id: `${segId}-edge-${legIdx}`,
+            kind: 'pipe',
+            lineKind: 'pipe',
+            dexpiClass: 'PipingNetworkSegment',
+            sourceId: leg.sourceItem ? resolveNodeId(leg.sourceItem) : '',
+            sourceNode: resolveNodeId(leg.sourceNode),
+            targetId: leg.targetItem ? resolveNodeId(leg.targetItem) : '',
+            targetNode: resolveNodeId(leg.targetNode),
+            waypoints,
+            label,
+            fluidCode: seg.fluidCode,
+            attributes: flattenAttributes(seg),
+            sourcePath: ['conceptualModel', 'pipingNetworkSystems', pns.id, 'segments', seg.id],
+          };
+          edges.push(edge);
+        });
+      } else if (seg.centerLine?.points && seg.centerLine.points.length >= 2) {
+        // Fallback for segments with geometry that never made it into `connections`
+        // (e.g. no `<Connection>` chain resolved at all) — still draw what we have.
+        const waypoints = seg.centerLine.points.map((pt) => ({ x: scaleX(pt.x), y: flipY(pt.y) }));
         const edge: PidViewEdge = {
           id: `${segId}-edge`,
           kind: 'pipe',
           lineKind: 'pipe',
           dexpiClass: 'PipingNetworkSegment',
-          sourceId: resolveNodeId(seg.sourceItem),
+          sourceId: seg.sourceItem ? resolveNodeId(seg.sourceItem) : '',
           sourceNode: resolveNodeId(seg.sourceNode),
-          targetId: resolveNodeId(seg.targetItem),
+          targetId: seg.targetItem ? resolveNodeId(seg.targetItem) : '',
           targetNode: resolveNodeId(seg.targetNode),
           waypoints,
           label,

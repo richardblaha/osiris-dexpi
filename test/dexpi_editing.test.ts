@@ -125,7 +125,9 @@ describe('DEXPI Complete Editing Suite', () => {
     expect(updatedModel.conceptualModel!.taggedPlantItems[0].id).toBe('P-101');
   });
 
-  it('Phase 2: rotates and mirrors selected nodes on R and M keys', () => {
+  // Interactive editing is temporarily disabled (WebGpuVisualCanvas.INTERACTIVE_EDITING = false)
+  // while diagram rendering fidelity is being tuned — re-enable once it's flipped back on.
+  it.skip('Phase 2: rotates and mirrors selected nodes on R and M keys', () => {
     const model = createSampleModel();
     const view = projectToView(model);
     canvas.renderModel(view);
@@ -150,7 +152,8 @@ describe('DEXPI Complete Editing Suite', () => {
     expect(pumpInModel.attributes?.mirrored).toBe('true');
   });
 
-  it('Phase 3: auto-splits an edge when dropping an in-line valve and auto-heals when deleted', () => {
+  // Interactive editing is temporarily disabled (WebGpuVisualCanvas.INTERACTIVE_EDITING = false).
+  it.skip('Phase 3: auto-splits an edge when dropping an in-line valve and auto-heals when deleted', () => {
     const sampleView: PidView = {
       nodes: [
         { id: 'N1', kind: 'equipment', dexpiClass: 'CentrifugalPump', tagName: 'P-1', x: 100, y: 100, w: 40, h: 40, attributes: {} },
@@ -213,7 +216,8 @@ describe('DEXPI Complete Editing Suite', () => {
     expect(sampleView.edges[0].targetId).toBe('N2');
   });
 
-  it('Phase 4: reverses flow direction on F key', () => {
+  // Interactive editing is temporarily disabled (WebGpuVisualCanvas.INTERACTIVE_EDITING = false).
+  it.skip('Phase 4: reverses flow direction on F key', () => {
     const sampleView: PidView = {
       nodes: [
         { id: 'A', kind: 'equipment', dexpiClass: 'CentrifugalPump', tagName: 'A', x: 50, y: 50, w: 40, h: 40, attributes: {} },
@@ -249,7 +253,8 @@ describe('DEXPI Complete Editing Suite', () => {
     expect(edge.waypoints[1].x).toBe(90);
   });
 
-  it('Phase 5: supports Undo and Redo operations', () => {
+  // Interactive editing is temporarily disabled (WebGpuVisualCanvas.INTERACTIVE_EDITING = false).
+  it.skip('Phase 5: supports Undo and Redo operations', () => {
     const sampleView: PidView = {
       nodes: [
         { id: 'NODE-1', kind: 'equipment', dexpiClass: 'StorageTank', tagName: 'TK-1', x: 50, y: 50, w: 60, h: 80, attributes: {} },

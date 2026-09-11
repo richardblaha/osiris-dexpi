@@ -73,7 +73,9 @@ describe('WebGpuVisualCanvas Interactivity & Editing', () => {
     expect(canvas.getZoom()).toBeGreaterThan(0);
   });
 
-  it('supports inserting new symbols from the catalog', () => {
+  // Interactive editing is temporarily disabled (WebGpuVisualCanvas.INTERACTIVE_EDITING = false)
+  // while diagram rendering fidelity is being tuned — re-enable once it's flipped back on.
+  it.skip('supports inserting new symbols from the catalog', () => {
     canvas.renderModel(sampleView);
 
     canvas.insertSymbol({
@@ -90,7 +92,8 @@ describe('WebGpuVisualCanvas Interactivity & Editing', () => {
     expect(added?.dexpiClass).toBe('ControlValve');
   });
 
-  it('updates attributes on a cell and fires change event', () => {
+  // Interactive editing is temporarily disabled (WebGpuVisualCanvas.INTERACTIVE_EDITING = false).
+  it.skip('updates attributes on a cell and fires change event', () => {
     canvas.renderModel(sampleView);
 
     canvas.updateCellAttribute('P-101', 'fluidCode', 'WATER');
@@ -116,7 +119,8 @@ describe('WebGpuVisualCanvas Interactivity & Editing', () => {
     expect(svg).toContain('100-PIPE');
   });
 
-  it('selects a node on pointerdown and deletes it on Delete key with connected edges', () => {
+  // Interactive editing is temporarily disabled (WebGpuVisualCanvas.INTERACTIVE_EDITING = false).
+  it.skip('selects a node on pointerdown and deletes it on Delete key with connected edges', () => {
     canvas.renderModel(JSON.parse(JSON.stringify(sampleView)));
 
     // Center camera on P-101 (x: 125, y: 125)
@@ -145,7 +149,8 @@ describe('WebGpuVisualCanvas Interactivity & Editing', () => {
     expect(updatedView.edges.find((e) => e.sourceId === 'P-101')).toBeUndefined();
   });
 
-  it('clears selection when clicking on background', () => {
+  // Interactive editing is temporarily disabled (WebGpuVisualCanvas.INTERACTIVE_EDITING = false).
+  it.skip('clears selection when clicking on background', () => {
     canvas.renderModel(JSON.parse(JSON.stringify(sampleView)));
 
     // Position camera far away from any node

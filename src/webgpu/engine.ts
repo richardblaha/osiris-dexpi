@@ -27,6 +27,24 @@ import { WebGpuPidAdapter, GpuBufferPackage } from './adapter';
 import type { PidView } from '../model/view/projection';
 
 export class WebGpuPidEngine {
+  /**
+   * The WebGPU symbol/text passes below paint only 7 hardcoded generic
+   * placeholder shapes (see `resolveSymbolTypeId` in adapter.ts) and glyph
+   * quads against a `dummyAtlasTexture` (no real font ever gets rasterized
+   * into it) — they were never meant to be the final visual, only a
+   * performance backbone. `DiagramSvgLayer` (webview/diagramSvgLayer.ts) now
+   * draws the real, per-component-accurate stencil geometry and text on top
+   * every frame, so this placeholder layer just shows through as a
+   * mispositioned "ghost" behind it — generic shapes and dummy-textured glyph
+   * boxes at slightly different proportions than the real symbol, exactly the
+   * "components placed wrong" / "partial background" artifacts. Skipping
+   * these two passes leaves only the accurate SVG layer on screen; the line
+   * pass stays since pipe routing already matches and has no per-shape
+   * proportion to get wrong.
+   */
+  private static readonly RENDER_PLACEHOLDER_SYMBOLS = false;
+  private static readonly RENDER_PLACEHOLDER_TEXT = false;
+
   private adapter!: GPUAdapter;
   private device!: GPUDevice;
   private context!: GPUCanvasContext;
@@ -477,7 +495,7 @@ export class WebGpuPidEngine {
     }
 
     // 2. Draw Symbols
-    if (this.activeInstanceCount > 0 && this.symbolBindGroup) {
+    if (WebGpuPidEngine.RENDER_PLACEHOLDER_SYMBOLS && this.activeInstanceCount > 0 && this.symbolBindGroup) {
       renderPass.setPipeline(this.symbolPipeline);
       renderPass.setBindGroup(0, this.symbolBindGroup);
       renderPass.setVertexBuffer(0, this.stencilVertexBuffer);
@@ -501,7 +519,7 @@ export class WebGpuPidEngine {
     }
 
     // 3. Draw Text
-    if (this.activeGlyphCount > 0 && this.textBindGroup) {
+    if (WebGpuPidEngine.RENDER_PLACEHOLDER_TEXT && this.activeGlyphCount > 0 && this.textBindGroup) {
       renderPass.setPipeline(this.textPipeline);
       renderPass.setBindGroup(0, this.textBindGroup);
       renderPass.draw(6, this.activeGlyphCount, 0, 0);

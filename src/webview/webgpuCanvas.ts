@@ -36,6 +36,23 @@ interface ConnectionPort {
 }
 
 export class WebGpuVisualCanvas {
+  /**
+   * Interactive editing (select, drag, connect, inline-edit, rotate/mirror/delete)
+   * is off for now while diagram rendering fidelity is being tuned — only pan and
+   * zoom stay live. Flip this back on to restore the full CAD interaction set.
+   */
+  private static readonly INTERACTIVE_EDITING = false;
+
+  /**
+   * Flow-direction arrows and DRC validation badges (the small triangle/circle
+   * markers `InteractionOverlay` draws over the diagram) are off for now too —
+   * pure focus on the diagram rendering itself (`DiagramSvgLayer`) while its
+   * fidelity is tuned. Selection gizmo / hover ports / marquee / route-preview
+   * are already inert since they're only ever populated from the interactive
+   * gestures gated by `INTERACTIVE_EDITING` above.
+   */
+  private static readonly SHOW_OVERLAY_DECORATIONS = false;
+
   private canvasElement: HTMLCanvasElement;
   private engine: WebGpuPidEngine;
   private adapter = new WebGpuPidAdapter();
@@ -130,6 +147,7 @@ export class WebGpuVisualCanvas {
   }
 
   public undo(): void {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     if (this.undoStack.length === 0 || !this.currentView) return;
     this.redoStack.push(JSON.stringify(this.currentView));
     this.currentView = JSON.parse(this.undoStack.pop()!);
@@ -139,6 +157,7 @@ export class WebGpuVisualCanvas {
   }
 
   public redo(): void {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     if (this.redoStack.length === 0 || !this.currentView) return;
     this.undoStack.push(JSON.stringify(this.currentView));
     this.currentView = JSON.parse(this.redoStack.pop()!);
@@ -291,6 +310,7 @@ export class WebGpuVisualCanvas {
   }
 
   public rotateSelected(): void {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     if (this.selectedNodes.length > 0 && this.currentView) {
       this.saveUndoState();
       for (const node of this.selectedNodes) {
@@ -303,6 +323,7 @@ export class WebGpuVisualCanvas {
   }
 
   public mirrorSelected(): void {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     if (this.selectedNodes.length > 0 && this.currentView) {
       this.saveUndoState();
       for (const node of this.selectedNodes) {
@@ -314,6 +335,7 @@ export class WebGpuVisualCanvas {
   }
 
   public reverseFlowSelected(): void {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     if (this.selectedEdge && this.currentView) {
       this.saveUndoState();
       const tmpSrc = this.selectedEdge.sourceId;
@@ -331,6 +353,7 @@ export class WebGpuVisualCanvas {
   }
 
   public deleteSelected(): void {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     if (!this.currentView) return;
 
     if (this.selectedNodes.length > 0) {
@@ -373,6 +396,7 @@ export class WebGpuVisualCanvas {
   // ── Palette Insertion & Attribute Updates ───────────────────────────────
 
   public insertSymbol(item: any): void {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     if (!this.currentView) return;
     this.saveUndoState();
     const newNode: PidViewNode = {
@@ -398,6 +422,7 @@ export class WebGpuVisualCanvas {
   }
 
   public updateCellAttribute(id: string, property: string, value: any): void {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     if (!this.currentView) return;
     const node = this.currentView.nodes.find((n) => n.id === id);
     if (node) {
@@ -461,6 +486,12 @@ export class WebGpuVisualCanvas {
     const world = this.screenToWorld(e.clientX, e.clientY);
     this.dragStartX = e.clientX;
     this.dragStartY = e.clientY;
+
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) {
+      // Selection/drag/connect are off for now — every left-button drag just pans.
+      this.isDragging = true;
+      return;
+    }
 
     // 1. Check if clicking on an active connection port (Start drawing a pipeline)
     const nearbyPort = this.findNearbyPort(world.x, world.y);
@@ -535,6 +566,23 @@ export class WebGpuVisualCanvas {
 
   private onPointerMove = (e: PointerEvent): void => {
     const world = this.screenToWorld(e.clientX, e.clientY);
+
+    // Selection/drag/connect/hover-port previews are off for now — fall straight
+    // through to panning (step 4 below).
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) {
+      if (this.isDragging) {
+        const dx = e.clientX - this.dragStartX;
+        const dy = e.clientY - this.dragStartY;
+        this.dragStartX = e.clientX;
+        this.dragStartY = e.clientY;
+
+        this.engine.camera.x -= dx / this.engine.camera.zoom;
+        this.engine.camera.y -= dy / this.engine.camera.zoom;
+        this.engine.renderFrame();
+        this.syncOverlays();
+      }
+      return;
+    }
 
     // 1. Pipeline drawing preview update
     if (this.connectingStartPort) {
@@ -623,6 +671,11 @@ export class WebGpuVisualCanvas {
   };
 
   private onPointerUp = (e: PointerEvent): void => {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) {
+      this.isDragging = false;
+      return;
+    }
+
     const world = this.screenToWorld(e.clientX, e.clientY);
 
     // 1. Finish Marquee Selection
@@ -663,6 +716,7 @@ export class WebGpuVisualCanvas {
   };
 
   private onDoubleClick = (e: MouseEvent): void => {
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
     const world = this.screenToWorld(e.clientX, e.clientY);
     const hitNode = this.hitTestNode(world.x, world.y);
 
@@ -680,6 +734,7 @@ export class WebGpuVisualCanvas {
   private onKeyDown = (e: KeyboardEvent): void => {
     const targetTag = (e.target as HTMLElement)?.tagName?.toLowerCase();
     if (targetTag === 'input' || targetTag === 'textarea') return;
+    if (!WebGpuVisualCanvas.INTERACTIVE_EDITING) return;
 
     // Undo / Redo
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
@@ -973,6 +1028,12 @@ export class WebGpuVisualCanvas {
 
   private updateFlowArrowsAndDrc(): void {
     if (!this.currentView) return;
+
+    if (!WebGpuVisualCanvas.SHOW_OVERLAY_DECORATIONS) {
+      this.overlay.setFlowArrows([]);
+      this.overlay.setValidationIssues([]);
+      return;
+    }
 
     // 1. Flow direction arrows
     const arrows: Array<{ x: number; y: number; angleRad: number }> = [];

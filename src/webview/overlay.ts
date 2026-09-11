@@ -38,6 +38,11 @@ const GRID_ICON =
   '<path fill="none" stroke="currentColor" stroke-width="1" ' +
   'd="M1 5.5h14M1 10.5h14M5.5 1v14M10.5 1v14M1 1h14v14H1z"/></svg>';
 
+const FIT_ICON =
+  '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">' +
+  '<path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" ' +
+  'd="M1 5V1h4M11 1h4v4M15 11v4h-4M5 15H1v-4"/></svg>';
+
 /**
  * Modular control overlay floating above the canvas. The container itself is
  * `pointer-events: none` so it never steals pans / drags on empty canvas; only
@@ -76,8 +81,15 @@ export class CanvasOverlay {
         handlers.onZoomFit();
       });
       const inb = makeButton('+', 'Zoom in', () => handlers.onZoomIn());
+      const fit = document.createElement('button');
+      fit.type = 'button';
+      fit.className = 'canvas-overlay__btn';
+      fit.innerHTML = FIT_ICON;
+      fit.title = 'Fit diagram to view';
+      fit.setAttribute('aria-label', 'Fit diagram to view');
+      fit.addEventListener('click', () => handlers.onZoomFit());
 
-      group.append(out, label, inb);
+      group.append(out, label, inb, fit);
       this.element.append(group);
       this.zoomLabel = label;
     }
