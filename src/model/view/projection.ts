@@ -253,6 +253,19 @@ export function projectToView(model: DexpiModel): PidView {
   };
   const scaleX = (x: number): number => Math.round(x * U * scale);
 
+  // Fallback layout for items with no <Position> at all (common in semantic-only
+  // / partial DEXPI files, e.g. the DEXPI instrumentation test cases). Every
+  // fallback used to be a fixed point per item type, so 2+ unpositioned items
+  // of the same kind rendered exactly on top of each other. Cascade them into
+  // a small grid instead so at least nothing is literally invisible.
+  let fallbackSlot = 0;
+  const nextFallback = (baseXmm: number, baseYmm: number): { x: number; y: number } => {
+    const col = fallbackSlot % 6;
+    const row = Math.floor(fallbackSlot / 6);
+    fallbackSlot++;
+    return { x: (baseXmm + col * 70) / U, y: (baseYmm + row * 70) / U };
+  };
+
   const cm = model.conceptualModel;
   if (!cm) {
     return { nodes, edges, labels, bounds: { x: 0, y: 0, w: 1200, h: 800 } };
@@ -287,8 +300,9 @@ export function projectToView(model: DexpiModel): PidView {
     const w = (extW ?? getDefaultWidth(dexpiClass)) * scale;
     const h = (extH ?? getDefaultHeight(dexpiClass)) * scale;
 
-    const rawX = eq.position?.location.x ?? 100 / U;
-    const rawY = eq.position?.location.y ?? 100 / U;
+    const eqFallback = nextFallback(100, 100);
+    const rawX = eq.position?.location.x ?? eqFallback.x;
+    const rawY = eq.position?.location.y ?? eqFallback.y;
 
     const x = scaleX(rawX);
     const y = flipY(rawY, h / scale);
@@ -372,8 +386,9 @@ export function projectToView(model: DexpiModel): PidView {
         const cw = (compExtW ?? getDefaultWidth(dexpiClass)) * scale;
         const ch = (compExtH ?? getDefaultHeight(dexpiClass)) * scale;
 
-        const rawX = pComp.position?.location.x ?? 200 / U;
-        const rawY = pComp.position?.location.y ?? 200 / U;
+        const pCompFallback = nextFallback(200, 200);
+        const rawX = pComp.position?.location.x ?? pCompFallback.x;
+        const rawY = pComp.position?.location.y ?? pCompFallback.y;
 
         const cx = scaleX(rawX);
         const cy = flipY(rawY, ch / scale);
@@ -431,8 +446,9 @@ export function projectToView(model: DexpiModel): PidView {
 
   // 3. Process Instrumentation Functions & Actuators
   for (const pif of cm.processInstrumentationFunctions) {
-    const rawX = pif.position?.location.x ?? 300 / U;
-    const rawY = pif.position?.location.y ?? 300 / U;
+    const pifFallback = nextFallback(300, 300);
+    const rawX = pif.position?.location.x ?? pifFallback.x;
+    const rawY = pif.position?.location.y ?? pifFallback.y;
     const size = 44 * scale;
 
     const tagName = [pif.processInstrumentationFunctionCategory, pif.processInstrumentationFunctionNumber]
@@ -487,8 +503,9 @@ export function projectToView(model: DexpiModel): PidView {
     // other.
     const actuator = act.controlledActuators?.[0];
     const position = act.position ?? actuator?.position;
-    const rawX = position?.location.x ?? 350 / U;
-    const rawY = position?.location.y ?? 350 / U;
+    const actFallback = nextFallback(350, 350);
+    const rawX = position?.location.x ?? actFallback.x;
+    const rawY = position?.location.y ?? actFallback.y;
     const aw = 44 * scale;
     const ah = 52 * scale;
 
