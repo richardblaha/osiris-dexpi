@@ -1,8 +1,8 @@
 {
   "toolVersion": "0.1.0",
   "counts": {
-    "proteus-graphics": 14,
-    "empty-reference": 140,
+    "proteus-graphics": 62,
+    "empty-reference": 92,
     "semantic-only": 66,
     "unrenderable": 0
   },
@@ -125,24 +125,24 @@
       "path": "samples/dexpi 1.2/example pids/C04 DEXPI Example Pump Plate Heat Exchanger/C04V01-HEX.EX02.xml",
       "version": "1.2",
       "task": "C04",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/C04/c04v01-ing-ex01",
       "path": "samples/dexpi 1.2/example pids/C04 DEXPI Example Pump Plate Heat Exchanger/C04V01-ING.EX01.xml",
       "version": "1.2",
       "task": "C04",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/C04/c04v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/C04 DEXPI Example Pump Plate Heat Exchanger/C04V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "C04",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/C05/c05v01-sag-ex01",
@@ -166,7 +166,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E01/e01v01-aud-ex01",
@@ -238,7 +238,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E01/e01v01-hex-ex03",
@@ -246,23 +246,23 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E01/e01v01-ing-ex01",
       "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-ING.EX01.xml",
       "version": "1.2",
       "task": "E01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E01/e01v01-ing-ex02",
       "path": "samples/dexpi 1.2/example pids/E01 Tank/E01V01-ING.EX02.xml",
       "version": "1.2",
       "task": "E01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E01/e01v01-sag-ex01",
@@ -270,7 +270,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 8 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E01/e01v01-sag-ex02",
@@ -278,7 +278,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 8 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E01/e01v01-ver-ex01",
@@ -302,7 +302,7 @@
       "version": "1.2",
       "task": "E01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E01/e01v02-ver-ex01",
@@ -357,16 +357,16 @@
       "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-HEX.EX02.xml",
       "version": "1.2",
       "task": "E02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E02/e02v01-ing-ex01",
       "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-ING.EX01.xml",
       "version": "1.2",
       "task": "E02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E02/e02v01-ing-ex02-aud-im01",
@@ -381,16 +381,16 @@
       "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "E02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 9 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E02/e02v01-sag-ex02",
       "path": "samples/dexpi 1.2/example pids/E02 Tank with Nozzles/E02V01-SAG.EX02.xml",
       "version": "1.2",
       "task": "E02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 9 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E02/e02v01-ver-ex01",
@@ -422,23 +422,23 @@
       "version": "1.2",
       "task": "E02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E02/e02v01-hex-ex04",
       "path": "samples/dexpi 1.2/example pids/E02 Tank with nozzels/E02V01-HEX.EX04.xml",
       "version": "1.2",
       "task": "E02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E03/e03v01-hex-ex02",
       "path": "samples/dexpi 1.2/example pids/E03 HeatExchanger With Nozzles/E03V01-HEX.EX02.xml",
       "version": "1.2",
       "task": "E03",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E03/e03v01-aud-ex01",
@@ -470,7 +470,7 @@
       "version": "1.2",
       "task": "E03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E03/e03v01-ver-ex01",
@@ -517,16 +517,16 @@
       "path": "samples/dexpi 1.2/example pids/E04 HeatExchanger With Nozzles/E04V01-HEX.EX02.xml",
       "version": "1.2",
       "task": "E04",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E04/e04v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/E04 HeatExchanger With Nozzles/E04V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "E04",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E04/e04v02-aud-ex01",
@@ -565,16 +565,16 @@
       "path": "samples/dexpi 1.2/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V01-HEX.EX02.xml",
       "version": "1.2",
       "task": "E05",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E05/e05v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/E05 Pump With Nozzles And HeatExchanger With Nozzles/E05V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "E05",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E05/e05v02-aud-ex01",
@@ -589,8 +589,8 @@
       "path": "samples/dexpi 1.2/example pids/E06 Pump%2C HeatExchanger%2C Nozzles Connected With PNS/E06V01-HEX.EX02.xml",
       "version": "1.2",
       "task": "E06",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E06/e06v01-aud-ex01",
@@ -613,8 +613,8 @@
       "path": "samples/dexpi 1.2/example pids/E06 Pump, HeatExchanger, Nozzles Connected With PNS/E06V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "E06",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E06/e06v02-aud-ex01",
@@ -661,32 +661,32 @@
       "path": "samples/dexpi 1.2/example pids/E09 Tank with equipment bar/E09V01-HEX.EX02.xml",
       "version": "1.2",
       "task": "E09",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E09/e09v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/E09 Tank with equipment bar/E09V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "E09",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E11/e11v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/E11 Heat Exchanger with Chambers and Equipment Bar/E11V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "E11",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E12/e12v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/E12 Heat Exchanger with Chambers, Nozzles and Equipment Bar/E12V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "E12",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 1 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/E13/e13v01-sag-ex01",
@@ -694,7 +694,7 @@
       "version": "1.2",
       "task": "E13",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 9 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/E14/e14v01-ver-ex01",
@@ -718,23 +718,23 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 14 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I01/i01v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I01/i01v01-sag-ex02",
       "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V01-SAG.EX02.xml",
       "version": "1.2",
       "task": "I01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I01/i01v01-ver-ex01",
@@ -758,7 +758,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 14 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I01/i01v02-ing-ex01",
@@ -766,31 +766,31 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I01/i01v02-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02-SAG.EX01.xml",
       "version": "1.2",
       "task": "I01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I01/i01v02-sag-ex02",
       "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02-SAG.EX02.xml",
       "version": "1.2",
       "task": "I01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I01/i01v02-sag-ex03",
       "path": "samples/dexpi 1.2/example pids/I01 Measurement/I01V02-SAG.EX03.xml",
       "version": "1.2",
       "task": "I01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I01/i01v02-hex-ex02",
@@ -798,7 +798,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I01/i01v02-hex-ex1",
@@ -806,7 +806,7 @@
       "version": "1.2",
       "task": "I01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I01/i01v02-aud-ex01",
@@ -853,16 +853,16 @@
       "path": "samples/dexpi 1.2/example pids/I02 Control/I02V01-HEX.EX03.xml",
       "version": "1.2",
       "task": "I02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I02/i02v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/I02 Control/I02V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I02/i02v01-aud-ex01",
@@ -894,23 +894,23 @@
       "version": "1.2",
       "task": "I03",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 9 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I03/i03v01-hex-ex03",
       "path": "samples/dexpi 1.2/example pids/I03 Measurement and Control/I03V01-HEX.EX03.xml",
       "version": "1.2",
       "task": "I03",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 10 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I03/i03v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/I03 Measurement and Control/I03V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I03",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 8 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I03/i03v01-aud-ex01",
@@ -965,16 +965,16 @@
       "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04V01-HEX.EX05.xml",
       "version": "1.2",
       "task": "I04",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 9 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I04/i04v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/I04 Measurement and Control/I04V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I04",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I04/i04v01-aud-ex01",
@@ -997,8 +997,8 @@
       "path": "samples/dexpi 1.2/example pids/I05 Two flow indications and flow ratio control in CCR/I05V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I05",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 14 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I05/i05v01-aud-ex01",
@@ -1021,8 +1021,8 @@
       "path": "samples/dexpi 1.2/example pids/I06 CCR flow indication and high alarm, flow control, control valve/I06V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I06",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 9 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I06/i06v01-aud-ex01",
@@ -1045,8 +1045,8 @@
       "path": "samples/dexpi 1.2/example pids/I07 Local and CCR pressure indic., alarm and safety switch/I07V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I07",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I07/i07v01-aud-ex01",
@@ -1069,8 +1069,8 @@
       "path": "samples/dexpi 1.2/example pids/I08 Local pressure indication, CCR pressure indication, alarms and switches/I08V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I08",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I08/i08v01-aud-ex01",
@@ -1094,7 +1094,7 @@
       "version": "1.2",
       "task": "I09",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 14 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I09/i09v01-aud-ex01",
@@ -1110,15 +1110,15 @@
       "version": "1.2",
       "task": "I09",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I09/i09v02-hex-ex03",
       "path": "samples/dexpi 1.2/example pids/I09 Measurement/I09V02-HEX.EX03.xml",
       "version": "1.2",
       "task": "I09",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I09/i09v02-hex-ex1",
@@ -1126,7 +1126,7 @@
       "version": "1.2",
       "task": "I09",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 6 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I09/i09v02-aud-ex01",
@@ -1142,7 +1142,7 @@
       "version": "1.2",
       "task": "I10",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 4 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 11 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/I10/i10v01-aud-ex01",
@@ -1181,16 +1181,16 @@
       "path": "samples/dexpi 1.2/example pids/I11 Measurement/I11V01-HEX.EX03.xml",
       "version": "1.2",
       "task": "I11",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I11/i11v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/I11 Measurement/I11V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I11",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 5 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I11/i11v01-aud-ex01i",
@@ -1229,16 +1229,16 @@
       "path": "samples/dexpi 1.2/example pids/I12 Control/I12V01-HEX.EX03.xml",
       "version": "1.2",
       "task": "I12",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 7 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I12/i12v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/I12 Control/I12V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "I12",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 8 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/I12/i12v01-aud-ex01",
@@ -1285,8 +1285,8 @@
       "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-HEX.EX03.xml",
       "version": "1.2",
       "task": "P01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/P01/p01v01-ing-ex01",
@@ -1294,7 +1294,7 @@
       "version": "1.2",
       "task": "P01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 11 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/P01/p01v01-ing-ex02-aud-ex01",
@@ -1310,15 +1310,15 @@
       "version": "1.2",
       "task": "P01",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 11 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/P01/p01v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-SAG.EX01.xml",
       "version": "1.2",
       "task": "P01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/P01/p01v01-sag-ex02-aud-ex01",
@@ -1333,8 +1333,8 @@
       "path": "samples/dexpi 1.2/example pids/P01 Pipe FromTo Nozzles/P01V01-SAG.EX02.xml",
       "version": "1.2",
       "task": "P01",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/P01/p01v02-aud-ex01-xml",
@@ -1397,16 +1397,16 @@
       "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/P02V01-SAG.EX02.xml",
       "version": "1.2",
       "task": "P02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/P02/p02v01-sag-ex01",
       "path": "samples/dexpi 1.2/example pids/P02 Pipe From OPC to Nozzle/P02V01_SAG.EX01.xml",
       "version": "1.2",
       "task": "P02",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/P02/p02v02-hex-ex02",
@@ -1414,7 +1414,7 @@
       "version": "1.2",
       "task": "P02",
       "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "reason": "pyDEXPI reference has only 8 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
     },
     {
       "id": "1.2/P03/p03v01-aud-ex01",
@@ -1437,8 +1437,8 @@
       "path": "samples/dexpi 1.2/example pids/P03 Pipe With Edge/P03V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "P03",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 2 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/P03/p03v02-aud-ex01-xml",
@@ -1477,8 +1477,8 @@
       "path": "samples/dexpi 1.2/example pids/P04 Pipe With Intersection/P04V01-SAG.EX01.XML",
       "version": "1.2",
       "task": "P04",
-      "classification": "empty-reference",
-      "reason": "pyDEXPI reference has only 3 drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve"
+      "classification": "proteus-graphics",
+      "referenceRendered": true
     },
     {
       "id": "1.2/P04/p04v02-aud-ex01-xml",

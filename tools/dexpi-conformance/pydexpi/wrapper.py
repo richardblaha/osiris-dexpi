@@ -86,6 +86,21 @@ def sanitize(xml: str) -> tuple[str, list[str]]:
 
     if tag != original:
         xml = xml.replace(original, tag, 1)
+
+    # pyDEXPI's graphical-primitive factory
+    # (proteus_parser.parser_factory.ParserFactory.make_graphical_primitive_parsers)
+    # recognises PolyLine/Polygon/Ellipse/Circle/EllipseArc/TrimmedCurve/ConnectorLine/
+    # Text — but not the bare Proteus `<Line>` primitive (two Coordinate points,
+    # same shape as PolyLine). Every <Line> inside a Shape/DrawingBorder/Label is
+    # silently dropped, so straight edges vanish from otherwise-complete shapes.
+    # <Line> has no attributes of its own in the corpus (verified), and a
+    # PolylineParser reads its Presentation/Coordinate children generically
+    # regardless of tag name, so renaming is safe and produces an identical object.
+    n_lines = xml.count("<Line>")
+    if n_lines:
+        xml = xml.replace("<Line>", "<PolyLine>").replace("</Line>", "</PolyLine>")
+        notes.append(f"renamed {n_lines}x <Line> -> <PolyLine> (pyDEXPI has no parser for the bare Line primitive)")
+
     return xml, notes
 
 

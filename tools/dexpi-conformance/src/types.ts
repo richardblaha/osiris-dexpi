@@ -2,8 +2,8 @@
 
 export type CorpusClassification =
   | 'proteus-graphics' // pyDEXPI produces a geometry-rich reference → in the PASS/FAIL corpus
-  | 'empty-reference' // parses + has positions, but pyDEXPI's render is near-empty
-  //                     (shapes live in an external ShapeCatalogue) → structural-only
+  | 'empty-reference' // parses + has positions, but pyDEXPI's render is too sparse
+  //                     to compare geometrically (single-feature test fixtures) → excluded
   | 'semantic-only' // parses, but carries no geometry at all → excluded
   | 'unrenderable'; // parser/data error even after the wrapper's fixes → excluded
 

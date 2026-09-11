@@ -24,6 +24,14 @@ None of the affected attributes influence the rendered drawing.
 Issues 1 and 2 also emit a spurious `WARNING` for files that *do* carry a valid
 value in a different form; that warning is harmless and ignored.
 
+| # | pyDEXPI code | Fails when | Symptom | Wrapper fix |
+|---|---|---|---|---|
+| 5 | `ParserFactory.make_graphical_primitive_parsers` (`parser_factory.py`) only maps tags `PolyLine, Polygon, Ellipse, Circle, EllipseArc, TrimmedCurve, ConnectorLine, Text` | a `Shape`/`DrawingBorder`/`Label` contains a bare `<Line>` primitive (two `<Coordinate>` points — same shape as `PolyLine`, just a different Proteus tag) | the `<Line>` is silently dropped — no error, the primitive just never appears, so shapes render with missing edges or (when a shape is *only* lines) not at all | rename `<Line>`/`</Line>` → `<PolyLine>`/`</PolyLine>` in the input text. `<Line>` carries no attributes in the corpus (verified) and `PolylineParser` reads its `Presentation`/`Coordinate` children generically regardless of tag name, so the renamed element parses into an identical `PolyLine` object. |
+
+This one is the highest-impact fix: it moved the "geometry-rich" reference count
+from 14/220 to 62/220 (files whose shapes are drawn mostly with straight lines —
+most valves and fittings — were otherwise reported as near-empty).
+
 ## Genuine source-file defects (NOT worked around)
 
 - Some 1.3 example files (`C02`, `C03`, …) use `Attribute = "value"` with spaces

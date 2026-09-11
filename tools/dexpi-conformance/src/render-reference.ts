@@ -81,7 +81,7 @@ async function renderOne(entry: CorpusEntry): Promise<ReferenceManifestEntry> {
       id: entry.id,
       status: empty ? 'empty' : 'ok',
       reason: empty
-        ? `pyDEXPI reference has only ${prims} drawn primitives — shapes are likely in an external ShapeCatalogue it can't resolve`
+        ? `pyDEXPI reference has only ${prims} drawn primitives — embedded ShapeCatalogue shapes are too sparse for a meaningful geometric comparison (common in the single-feature E/I/P DEXPI test fixtures)`
         : undefined,
       notes: res.notes ?? [],
       primitives: prims,
