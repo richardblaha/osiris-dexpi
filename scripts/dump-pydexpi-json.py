@@ -7,7 +7,9 @@ from pydexpi.loaders.proteus_serializer import ProteusSerializer
 from pydexpi.loaders.json_serializer import JsonSerializer
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-SAMPLE_FILE = REPO_ROOT / "samples" / "c01v04-ver.ex01.dexpi"
+SAMPLE_FILE = (
+    REPO_ROOT / "samples" / "dexpi 1.3" / "example pids" / "C01 DEXPI Reference P&ID" / "C01V04-VER.EX01.xml"
+)
 OUT_FILE = REPO_ROOT / "samples" / "reference" / "c01.pydexpi.json"
 
 def main() -> None:

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlantModel ID="PlantModel-001">
+  <PlantInformation Application="osiris-dexpi" ApplicationVersion="0.1.0" Date="2026-09-08" Discipline="PID" Is3D="no" OriginatingSystem="osiris-dexpi" OriginatingSystemVendor="richardblaha" OriginatingSystemVersion="0.1.0" SchemaVersion="4.1.1" Time="12:00:00" Units="mm">
+    <UnitsOfMeasure Distance="mm" Pressure="bar" Temperature="C" Flow="m3/h"/>
+  </PlantInformation>
+  <MetaData ID="MetaData-1" ComponentClass="MetaData" ComponentClassURI="http://sandbox.dexpi.org/rdl/MetaData">
+    <GenericAttributes Set="DexpiAttributes" Number="4">
+      <GenericAttribute Name="DrawingNameAssignmentClass" AttributeURI="http://data.posccaesar.org/rdl/RDS2102503531" Format="string" Value="Feed Water Preheating"/>
+      <GenericAttribute Name="DrawingNumberAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/DrawingNumberAssignmentClass" Format="string" Value="PID-101"/>
+      <GenericAttribute Name="CreationDateRepresentationAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/CreationDateRepresentationAssignmentClass" Format="string" Value="2026-09-08"/>
+      <GenericAttribute Name="TotalNumberOfSheets" AttributeURI="http://sandbox.dexpi.org/rdl/TotalNumberOfSheets" Format="integer" Value="1"/>
+    </GenericAttributes>
+  </MetaData>
+  <PipingNetworkSystem ID="PNS-001" ComponentClass="PipingNetworkSystem" ComponentClassURI="http://data.posccaesar.org/rdl/RDS270359">
+    <GenericAttributes Set="DexpiAttributes" Number="2">
+      <GenericAttribute Name="LineNumberAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/LineNumberAssignmentClass" Format="string" Value="L-101-WATER"/>
+      <GenericAttribute Name="FluidCodeAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/FluidCodeAssignmentClass" Format="string" Value="RAW"/>
+    </GenericAttributes>
+    <PipingNetworkSegment ID="SEG-001" ComponentClass="PipingNetworkSegment" ComponentClassURI="http://data.posccaesar.org/rdl/RDS267704">
+      <GenericAttributes Set="DexpiAttributes" Number="3">
+        <GenericAttribute Name="FluidCodeAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/FluidCodeAssignmentClass" Format="string" Value="RAW"/>
+        <GenericAttribute Name="NominalDiameterRepresentationAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass" Format="string" Value="DN 80"/>
+        <GenericAttribute Name="SegmentNumberAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/SegmentNumberAssignmentClass" Format="string" Value="S1"/>
+      </GenericAttributes>
+      <CenterLine NumPoints="2">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="100" Y="100"/>
+        <Coordinate X="140" Y="100"/>
+      </CenterLine>
+      <PipingComponent ID="V-101" ComponentClass="GateValve" ComponentClassURI="http://data.posccaesar.org/rdl/RDS416204" ComponentName="GATE_VALVE_SHAPE">
+        <Position>
+          <Location X="140" Y="100" Z="0"/>
+          <Axis X="0" Y="0" Z="1"/>
+          <Reference X="1" Y="0" Z="0"/>
+        </Position>
+        <ConnectionPoints FlowIn="1" FlowOut="2" NumPoints="2">
+          <Node Type="process" ID="PipingNode-V101-1">
+            <Position><Location X="135" Y="100" Z="0"/></Position>
+          </Node>
+          <Node Type="process" ID="PipingNode-V101-2">
+            <Position><Location X="145" Y="100" Z="0"/></Position>
+          </Node>
+        </ConnectionPoints>
+        <GenericAttributes Set="DexpiAttributes" Number="2">
+          <GenericAttribute Name="PipingComponentNumberAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/PipingComponentNumberAssignmentClass" Format="string" Value="V-101"/>
+          <GenericAttribute Name="TagName" Format="string" Value="V-101"/>
+        </GenericAttributes>
+      </PipingComponent>
+      <CenterLine NumPoints="2">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="145" Y="100"/>
+        <Coordinate X="175" Y="100"/>
+      </CenterLine>
+      <Connection FromID="TK-101-N1" FromNode="1" ToID="P-101A-N1" ToNode="1"/>
+    </PipingNetworkSegment>
+    <PipingNetworkSegment ID="SEG-002" ComponentClass="PipingNetworkSegment" ComponentClassURI="http://data.posccaesar.org/rdl/RDS267704">
+      <GenericAttributes Set="DexpiAttributes" Number="3">
+        <GenericAttribute Name="FluidCodeAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/FluidCodeAssignmentClass" Format="string" Value="RAW"/>
+        <GenericAttribute Name="NominalDiameterRepresentationAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass" Format="string" Value="DN 80"/>
+        <GenericAttribute Name="SegmentNumberAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/SegmentNumberAssignmentClass" Format="string" Value="S2"/>
+      </GenericAttributes>
+      <CenterLine NumPoints="2">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="195" Y="100"/>
+        <Coordinate X="285" Y="100"/>
+      </CenterLine>
+      <Connection FromID="P-101A-N2" FromNode="1" ToID="HEX-101-N1" ToNode="1"/>
+    </PipingNetworkSegment>
+  </PipingNetworkSystem>
+  <ProcessInstrumentationFunction ID="PIF-001" ComponentClass="ProcessInstrumentationFunction" ComponentClassURI="http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction" ComponentName="INSTRUMENTATION_BUBBLE_SHAPE">
+    <Position>
+      <Location X="235" Y="140" Z="0"/>
+      <Axis X="0" Y="0" Z="1"/>
+      <Reference X="1" Y="0" Z="0"/>
+    </Position>
+    <Label ID="PIF-001-Label" ComponentClass="ProcessInstrumentationFunctionLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionLabel">
+      <Text String="FT-101" Font="Calibri" Height="3" Width="0" Justification="CenterCenter">
+        <Presentation R="0" G="0" B="0"/>
+        <Position>
+          <Location X="235" Y="140" Z="0"/>
+          <Axis X="0" Y="0" Z="1"/>
+          <Reference X="1" Y="0" Z="0"/>
+        </Position>
+      </Text>
+    </Label>
+    <GenericAttributes Set="DexpiAttributes" Number="2">
+      <GenericAttribute Name="ProcessInstrumentationFunctionCategory" AttributeURI="http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategory" Format="string" Value="FT"/>
+      <GenericAttribute Name="ProcessInstrumentationFunctionNumber" AttributeURI="http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionNumber" Format="string" Value="101"/>
+    </GenericAttributes>
+    <Association Type="is location of" ItemID="SEG-002"/>
+  </ProcessInstrumentationFunction>
+  <InstrumentationLoopFunction ID="ILF-001" ComponentClass="InstrumentationLoopFunction" ComponentClassURI="http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
+    <GenericAttributes Set="DexpiAttributes" Number="1">
+      <GenericAttribute Name="LoopNumberAssignmentClass" AttributeURI="http://sandbox.dexpi.org/rdl/LoopNumberAssignmentClass" Format="string" Value="101"/>
+    </GenericAttributes>
+    <Association Type="has member" ItemID="PIF-001"/>
+  </InstrumentationLoopFunction>
+  <Equipment ID="TK-101" ComponentClass="StorageTank" ComponentClassURI="http://data.posccaesar.org/rdl/RDS445139" ComponentName="STORAGE_TANK_SHAPE">
+    <Position>
+      <Location X="70" Y="100" Z="0"/>
+      <Axis X="0" Y="0" Z="1"/>
+      <Reference X="1" Y="0" Z="0"/>
+    </Position>
+    <Extent>
+      <Min X="40" Y="70"/>
+      <Max X="100" Y="130"/>
+    </Extent>
+    <Label ID="TK-101-Label" ComponentClass="EquipmentTagNameLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/EquipmentTagNameLabel">
+      <Text String="TK-101" Font="Calibri" Height="4" Width="0" Justification="CenterCenter">
+        <Presentation R="0" G="0" B="0"/>
+        <Position>
+          <Location X="70" Y="135" Z="0"/>
+          <Axis X="0" Y="0" Z="1"/>
+          <Reference X="1" Y="0" Z="0"/>
+        </Position>
+      </Text>
+    </Label>
+    <Nozzle ID="TK-101-N1" ComponentClass="Nozzle" ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214" ComponentName="NOZZLE_SHAPE">
+      <Position>
+        <Location X="100" Y="100" Z="0"/>
+        <Axis X="0" Y="0" Z="1"/>
+        <Reference X="1" Y="0" Z="0"/>
+      </Position>
+      <Label ID="TK-101-N1-Label" ComponentClass="NozzleStandardLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/NozzleStandardLabel">
+        <Text String="N1" Font="Calibri" Height="2.5" Width="0" Justification="CenterCenter">
+          <Position><Location X="105" Y="100" Z="0"/></Position>
+        </Text>
+      </Label>
+      <ConnectionPoints NumPoints="1">
+        <Node Type="process" ID="PipingNode-TK-1">
+          <Position><Location X="100" Y="100" Z="0"/></Position>
+        </Node>
+      </ConnectionPoints>
+    </Nozzle>
+    <GenericAttributes Set="DexpiAttributes" Number="2">
+      <GenericAttribute Name="Volume" Format="double" Value="50"/>
+      <GenericAttribute Name="DesignPressure" Format="double" Value="0.5"/>
+    </GenericAttributes>
+  </Equipment>
+  <Equipment ID="P-101A" ComponentClass="CentrifugalPump" ComponentClassURI="http://data.posccaesar.org/rdl/RDS416834" ComponentName="CENTRIFUGAL_PUMP_SHAPE">
+    <Position>
+      <Location X="185" Y="100" Z="0"/>
+      <Axis X="0" Y="0" Z="1"/>
+      <Reference X="1" Y="0" Z="0"/>
+    </Position>
+    <Label ID="P-101A-Label" ComponentClass="EquipmentTagNameLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/EquipmentTagNameLabel">
+      <Text String="P-101A" Font="Calibri" Height="4" Width="0" Justification="CenterCenter">
+        <Presentation R="0" G="0" B="0"/>
+        <Position>
+          <Location X="185" Y="120" Z="0"/>
+          <Axis X="0" Y="0" Z="1"/>
+          <Reference X="1" Y="0" Z="0"/>
+        </Position>
+      </Text>
+    </Label>
+    <Nozzle ID="P-101A-N1" ComponentClass="Nozzle" ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214" ComponentName="NOZZLE_SHAPE">
+      <Position>
+        <Location X="175" Y="100" Z="0"/>
+        <Axis X="0" Y="0" Z="1"/>
+        <Reference X="1" Y="0" Z="0"/>
+      </Position>
+      <Label ID="P-101A-N1-Label" ComponentClass="NozzleStandardLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/NozzleStandardLabel">
+        <Text String="N1" Font="Calibri" Height="2.5" Width="0" Justification="CenterCenter">
+          <Position><Location X="170" Y="100" Z="0"/></Position>
+        </Text>
+      </Label>
+      <ConnectionPoints NumPoints="1">
+        <Node Type="process" ID="PipingNode-P101A-1">
+          <Position><Location X="175" Y="100" Z="0"/></Position>
+        </Node>
+      </ConnectionPoints>
+    </Nozzle>
+    <Nozzle ID="P-101A-N2" ComponentClass="Nozzle" ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214" ComponentName="NOZZLE_SHAPE">
+      <Position>
+        <Location X="195" Y="100" Z="0"/>
+        <Axis X="0" Y="0" Z="1"/>
+        <Reference X="1" Y="0" Z="0"/>
+      </Position>
+      <Label ID="P-101A-N2-Label" ComponentClass="NozzleStandardLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/NozzleStandardLabel">
+        <Text String="N2" Font="Calibri" Height="2.5" Width="0" Justification="CenterCenter">
+          <Position><Location X="200" Y="100" Z="0"/></Position>
+        </Text>
+      </Label>
+      <ConnectionPoints NumPoints="1">
+        <Node Type="process" ID="PipingNode-P101A-2">
+          <Position><Location X="195" Y="100" Z="0"/></Position>
+        </Node>
+      </ConnectionPoints>
+    </Nozzle>
+    <GenericAttributes Set="DexpiAttributes" Number="2">
+      <GenericAttribute Name="Power" Format="double" Value="7.5"/>
+      <GenericAttribute Name="Capacity" Format="double" Value="25"/>
+    </GenericAttributes>
+  </Equipment>
+  <Equipment ID="HEX-101" ComponentClass="PlateHeatExchanger" ComponentClassURI="http://sandbox.dexpi.org/rdl/PlateHeatExchanger" ComponentName="PLATE_HEAT_EXCHANGER_SHAPE">
+    <Position>
+      <Location X="300" Y="100" Z="0"/>
+      <Axis X="0" Y="0" Z="1"/>
+      <Reference X="1" Y="0" Z="0"/>
+    </Position>
+    <Label ID="HEX-101-Label" ComponentClass="EquipmentTagNameLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/EquipmentTagNameLabel">
+      <Text String="HEX-101" Font="Calibri" Height="4" Width="0" Justification="CenterCenter">
+        <Presentation R="0" G="0" B="0"/>
+        <Position>
+          <Location X="300" Y="125" Z="0"/>
+          <Axis X="0" Y="0" Z="1"/>
+          <Reference X="1" Y="0" Z="0"/>
+        </Position>
+      </Text>
+    </Label>
+    <Nozzle ID="HEX-101-N1" ComponentClass="Nozzle" ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214" ComponentName="NOZZLE_SHAPE">
+      <Position>
+        <Location X="285" Y="100" Z="0"/>
+        <Axis X="0" Y="0" Z="1"/>
+        <Reference X="1" Y="0" Z="0"/>
+      </Position>
+      <Label ID="HEX-101-N1-Label" ComponentClass="NozzleStandardLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/NozzleStandardLabel">
+        <Text String="N1" Font="Calibri" Height="2.5" Width="0" Justification="CenterCenter">
+          <Position><Location X="280" Y="100" Z="0"/></Position>
+        </Text>
+      </Label>
+      <ConnectionPoints NumPoints="1">
+        <Node Type="process" ID="PipingNode-HEX-1">
+          <Position><Location X="285" Y="100" Z="0"/></Position>
+        </Node>
+      </ConnectionPoints>
+    </Nozzle>
+    <Nozzle ID="HEX-101-N2" ComponentClass="Nozzle" ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214" ComponentName="NOZZLE_SHAPE">
+      <Position>
+        <Location X="315" Y="100" Z="0"/>
+        <Axis X="0" Y="0" Z="1"/>
+        <Reference X="1" Y="0" Z="0"/>
+      </Position>
+      <Label ID="HEX-101-N2-Label" ComponentClass="NozzleStandardLabel" ComponentClassURI="http://sandbox.dexpi.org/rdl/NozzleStandardLabel">
+        <Text String="N2" Font="Calibri" Height="2.5" Width="0" Justification="CenterCenter">
+          <Position><Location X="320" Y="100" Z="0"/></Position>
+        </Text>
+      </Label>
+      <ConnectionPoints NumPoints="1">
+        <Node Type="process" ID="PipingNode-HEX-2">
+          <Position><Location X="315" Y="100" Z="0"/></Position>
+        </Node>
+      </ConnectionPoints>
+    </Nozzle>
+    <GenericAttributes Set="DexpiAttributes" Number="1">
+      <GenericAttribute Name="Duty" Format="double" Value="350"/>
+    </GenericAttributes>
+  </Equipment>
+  <Drawing Name="Feed Water Preheating" Type="PID">
+    <Presentation R="1" G="1" B="1"/>
+    <Extent>
+      <Min X="0" Y="0"/>
+      <Max X="420" Y="297"/>
+    </Extent>
+    <DrawingBorder>
+      <PolyLine NumPoints="5">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="5" Y="5"/>
+        <Coordinate X="415" Y="5"/>
+        <Coordinate X="415" Y="292"/>
+        <Coordinate X="5" Y="292"/>
+        <Coordinate X="5" Y="5"/>
+      </PolyLine>
+    </DrawingBorder>
+  </Drawing>
+  <ShapeCatalogue Name="Shapes">
+    <Equipment ID="STORAGE_TANK_SHAPE" ComponentName="STORAGE_TANK_SHAPE">
+      <PolyLine NumPoints="5">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="-25" Y="-25"/>
+        <Coordinate X="25" Y="-25"/>
+        <Coordinate X="25" Y="25"/>
+        <Coordinate X="-25" Y="25"/>
+        <Coordinate X="-25" Y="-25"/>
+      </PolyLine>
+    </Equipment>
+    <Equipment ID="CENTRIFUGAL_PUMP_SHAPE" ComponentName="CENTRIFUGAL_PUMP_SHAPE">
+      <Circle Radius="10">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Position><Location X="0" Y="0" Z="0"/></Position>
+      </Circle>
+      <PolyLine NumPoints="2">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="-10" Y="0"/>
+        <Coordinate X="10" Y="0"/>
+      </PolyLine>
+    </Equipment>
+    <Equipment ID="PLATE_HEAT_EXCHANGER_SHAPE" ComponentName="PLATE_HEAT_EXCHANGER_SHAPE">
+      <PolyLine NumPoints="5">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="-15" Y="-20"/>
+        <Coordinate X="15" Y="-20"/>
+        <Coordinate X="15" Y="20"/>
+        <Coordinate X="-15" Y="20"/>
+        <Coordinate X="-15" Y="-20"/>
+      </PolyLine>
+    </Equipment>
+    <PipingComponent ID="GATE_VALVE_SHAPE" ComponentName="GATE_VALVE_SHAPE">
+      <Polygon NumPoints="4">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="-5" Y="-5"/>
+        <Coordinate X="5" Y="5"/>
+        <Coordinate X="5" Y="-5"/>
+        <Coordinate X="-5" Y="5"/>
+      </Polygon>
+    </PipingComponent>
+    <Nozzle ID="NOZZLE_SHAPE" ComponentName="NOZZLE_SHAPE">
+      <PolyLine NumPoints="2">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Coordinate X="0" Y="-3"/>
+        <Coordinate X="0" Y="3"/>
+      </PolyLine>
+    </Nozzle>
+    <Instrumentation ID="INSTRUMENTATION_BUBBLE_SHAPE" ComponentName="INSTRUMENTATION_BUBBLE_SHAPE">
+      <Circle Radius="8">
+        <Presentation LineType="0" LineWeight="0.5" R="0" G="0" B="0"/>
+        <Position><Location X="0" Y="0" Z="0"/></Position>
+      </Circle>
+    </Instrumentation>
+  </ShapeCatalogue>
+</PlantModel>

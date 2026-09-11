@@ -5,7 +5,7 @@ import { ProteusReader } from '../src/model/proteus/reader';
 import { fromEnvelope } from '../src/model/envelope';
 
 describe('Proteus Reader vs pyDEXPI Oracle Parity', () => {
-  const c01Path = path.resolve(__dirname, '../samples/c01v04-ver.ex01.dexpi');
+  const c01Path = path.resolve(__dirname, '../samples/dexpi 1.3/example pids/C01 DEXPI Reference P&ID/C01V04-VER.EX01.xml');
   const oraclePath = path.resolve(__dirname, '../samples/reference/c01.pydexpi.json');
 
   const c01Xml = fs.readFileSync(c01Path, 'utf-8');
